@@ -73,16 +73,16 @@ D:\ERP USERSHOW                            D:\GitHub\DSE-UserView (ssdhameliya/D
 All verified IP addresses, DNS mappings, ports, databases, and SSH credentials across Hostinger and Oracle Cloud Infrastructure (OCI):
 
 ### 2.1 Hostinger DNS Records (Domain: `jasviindustries.in`)
-| Domain / Subdomain | Target IP / Host | Environment | Destination / Role |
-| :--- | :--- | :---: | :--- |
-| **`jasviindustries.in`** | `130.210.35.1` | **PROD** | Public Company Showcase / Root |
-| **`www.jasviindustries.in`** | `130.210.35.1` | **PROD** | Public Company Showcase (CNAME to `@`) |
-| **`erp.jasviindustries.in`** | `130.210.35.1` | **PROD** | Production Decoupled Web ERP Admin Studio |
-| **`api.jasviindustries.in`** | `130.210.35.1` | **PROD** | Production REST Backend API (Port `8080`) |
-| **`web-uat.jasviindustries.in`** | `144.24.109.1` | **UAT** | UAT Public Showcase Staging |
-| **`erp-uat.jasviindustries.in`** | `144.24.109.1` | **UAT** | UAT Decoupled Web ERP Testing Studio |
-| **`api-uat.jasviindustries.in`** | `144.24.109.1` | **UAT** | UAT REST Backend API (Port `8081`) |
-| **`mobile-uat.jasviindustries.in`**| `ssdhameliya.github.io` | **UAT** | Mobile PWA Gateway |
+| Domain / Subdomain | Target IP / Host | Environment | Destination / Role | Source Repository |
+| :--- | :--- | :---: | :--- | :--- |
+| **`jasviindustries.in`** | `130.210.35.1` | **PROD** | Public 3D Showcase / Root (`/srv/dse-erp/web/public`) | `ssdhameliya/DSE-UserView` |
+| **`www.jasviindustries.in`** | `130.210.35.1` | **PROD** | Public 3D Showcase (CNAME to `@`) | `ssdhameliya/DSE-UserView` |
+| **`erp.jasviindustries.in`** | `130.210.35.1` | **PROD** | Production Web ERP Admin Studio (`/srv/dse-erp/web/admin`) | `ssdhameliya/DSE-ERP-Enterprise` |
+| **`api.jasviindustries.in`** | `130.210.35.1` | **PROD** | Production REST Backend API (Port `8080`) | `ssdhameliya/DSE-ERP` |
+| **`web-uat.jasviindustries.in`** | `144.24.109.1` | **UAT** | UAT Public 3D Showcase Staging (`/srv/dse-erp/web/public`) | `ssdhameliya/DSE-UserView` |
+| **`erp-uat.jasviindustries.in`** | `144.24.109.1` | **UAT** | UAT Web ERP Testing Studio (`/srv/dse-erp/web/admin`) | `ssdhameliya/DSE-ERP-Enterprise` |
+| **`api-uat.jasviindustries.in`** | `144.24.109.1` | **UAT** | UAT REST Backend API (Port `8081`) | `ssdhameliya/DSE-ERP` |
+| **`mobile-uat.jasviindustries.in`**| `ssdhameliya.github.io` | **UAT** | Mobile PWA Gateway | `ssdhameliya.github.io` |
 
 ### 2.2 Oracle Cloud (OCI) Server Specification & Paths
 | Parameter | Production (PROD) | Testing (UAT) |
@@ -100,36 +100,37 @@ All verified IP addresses, DNS mappings, ports, databases, and SSH credentials a
 
 ## 3. Decoupled Multi-Platform Architecture
 
-DSE-ERP uses a **clean decoupled architecture**. The backend server is a stateless, high-performance Spring Boot REST API. Both Desktop and Web clients connect to the identical REST endpoints using Bearer JWT authentication:
+DSE-ERP uses a **clean decoupled architecture**. The backend server is a stateless, high-performance Spring Boot REST API serving Desktop, Web Admin, and Public UserView Showcase:
 
 ```
-                                  MULTI-USER CLOUD PLATFORM
-                                               │
-                       ┌───────────────────────┴───────────────────────┐
-                       ▼                                               ▼
-          [ Desktop Client (JavaFX 25) ]                 [ Web Client (HTML5 / CSS3 / JS) ]
-          70 FXML Pages                                  MVC SPA Architecture (D:\ERP Website\admin)
-          Bearer JWT Auth (/api/**)                      Bearer JWT Auth (/api/**)
-          Local Workstation Runtime                      Served via Caddy file_server on OCI VM
-                       │                                               │
-                       └───────────────────────┬───────────────────────┘
-                                               │
-                                               ▼
-                              [ Spring Boot 4.1.0 Backend ]
-                              (org.example.server - Port 8080 / 8081)
-                              Stateless JWT SecurityConfig (/api/**)
-                              227 Business Services & Repositories
-                              Zero Embedded UI / Zero Vaadin
-                                               │
-                                               ▼
-                              [ Shared Pure Java Contracts ]
-                              (org.example.shared)
-                              DocumentCalculationEngine, PermissionCatalog,
-                              AmountInWordsConverter, Code128Encoder
-                                               │
-                                               ▼
-                              [ PostgreSQL Relational Database ]
-                              (Single Source of Truth, 60+ Flyway Migrations)
+                                      MULTI-PLATFORM CLOUD ECOSYSTEM
+                                                     │
+         ┌───────────────────────────────────────────┼───────────────────────────────────────────┐
+         ▼                                           ▼                                           ▼
+[ Desktop Client (JavaFX 25) ]        [ Web Admin Studio (HTML5/CSS3/JS) ]        [ UserView Showcase (HTML5/3D) ]
+70 FXML Pages                         MVC SPA Architecture (D:\ERP Website\admin)  3D Coverflow/Claymorphism (D:\ERP USERSHOW)
+Bearer JWT Auth (/api/**)             Bearer JWT Auth (/api/**)                   Public Hydration (/api/public/** & JSON)
+Local Workstation Runtime             Served via Caddy at erp.jasviindustries.in  Served via Caddy at jasviindustries.in
+Repo: ssdhameliya/DSE-ERP             Repo: ssdhameliya/DSE-ERP-Enterprise        Repo: ssdhameliya/DSE-UserView
+         │                                           │                                           │
+         └───────────────────────────────────────────┼───────────────────────────────────────────┘
+                                                     │
+                                                     ▼
+                                    [ Spring Boot 4.1.0 Backend ]
+                                    (org.example.server - Port 8080 / 8081)
+                                    Stateless JWT SecurityConfig (/api/**)
+                                    227 Business Services & Repositories
+                                    Zero Embedded UI / Zero Vaadin
+                                                     │
+                                                     ▼
+                                    [ Shared Pure Java Contracts ]
+                                    (org.example.shared)
+                                    DocumentCalculationEngine, PermissionCatalog,
+                                    AmountInWordsConverter, Code128Encoder
+                                                     │
+                                                     ▼
+                                    [ PostgreSQL Relational Database ]
+                                    (Single Source of Truth, 60+ Flyway Migrations)
 ```
 
 ### 3.1 Web Client Architecture Standards (`D:\ERP Website\admin`)
@@ -144,7 +145,18 @@ DSE-ERP uses a **clean decoupled architecture**. The backend server is a statele
 * **Universal Attachment & Document Lightbox:**
   - Attachments across Sales, Purchase, Inward, Outward, and Master records are previewed via `window.openUniversalPreviewModal()` and fetched with Bearer JWT tokens via `ApiService.viewFile()`.
 
-### 3.2 Backend Security & Filter Chain (`SecurityConfig.java`)
+### 3.2 UserView Showcase Architecture Standards (`D:\ERP USERSHOW` / `DSE-UserView`)
+* **Interactive 3D & Claymorphism Client:** The public showcase application is written in high-performance HTML5, CSS3, and Vanilla JavaScript with zero heavy framework overhead:
+  - `index.html`: Claymorphism layout, 3D Hero canvas constellation, Swiper 11 3D Coverflow machinery workstation showcase, dynamic portfolio, and instant blueprint RFQ modal.
+  - `css/style.css`: Dark industrial claymorphism tokens, ambient mesh glows, tactile card tilt, and hardware-accelerated animations.
+  - `js/main.js`: Particle constellation canvas physics, mouse tilt physics, Swiper 11 carousel lifecycle, and dynamic hydration engine.
+  - `data/showcase.json`: Baseline JSON data schema for hero KPIs, machine specs, portfolio tags, and plant contacts.
+* **100% Dynamic Hydration Pipeline:**
+  - `loadShowcaseData()` first fetches from `/api/public/showcase`.
+  - Automatically falls back to `data/showcase.json` if offline or during local testing, ensuring zero broken UI.
+  - Re-hydrates Swiper Coverflow and 3D card tilt listeners dynamically upon fresh DOM injection.
+
+### 3.3 Backend Security & Filter Chain (`SecurityConfig.java`)
 * **Stateless JWT Security (`/api/**`):** Stateless Bearer token authentication (`SessionCreationPolicy.STATELESS`). Exclusively serves both the JavaFX Desktop Client and the Web Client API requests.
 * **CORS & Forward Headers:** Configured for cross-origin web access and native reverse-proxy forwarding (`server.forward-headers-strategy=native`).
 
@@ -200,7 +212,8 @@ DSE-ERP uses a **clean decoupled architecture**. The backend server is a statele
 
 ### 5.1 Version Governance
 * **Desktop / Server Version:** Governed strictly by `.mvn/maven.config` (`-Drevision=11.0.0`).
-* **Web Client Version:** Governed by `admin/version.json` and `admin/js/version.js` (`11.0.0.01`, tag `web-v11.0.0.01`).
+* **Web Admin Client Version:** Governed by `admin/version.json` and `admin/js/version.js` (`11.0.0.01`, tag `web-v11.0.0.01`).
+* **UserView Showcase Version:** Governed by git tags in `ssdhameliya/DSE-UserView` (`showcase-v1.0.0` or `v1.0.0`) and `data/showcase.json` (`"version": 1`).
 * **Release Notes:** Every release must update `desktop/src/main/resources/release-notes.md` and add `CHANGELOG-<version>.md`.
 
 ---
