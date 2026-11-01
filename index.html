@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jasvi Industries | Advanced Digital Engineering & 3D Precision Showcase</title>
+  <title>Jasvi Industries | High-Pressure Precision Valves & 3D Flow Systems</title>
   
   <!-- Preconnect Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +13,7 @@
   <!-- Swiper 3D Carousel Styles -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   
-  <!-- Claymorphism & Motion Styles -->
+  <!-- Industrial Glassmorphism & Motion Styles -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -21,9 +21,36 @@
   <!-- Ambient Backdrop Glows -->
   <div class="ambient-glow glow-top-right"></div>
   <div class="ambient-glow glow-bottom-left"></div>
+  <div class="ambient-glow glow-center-amber"></div>
 
   <!-- ==========================================================================
-       Header & Navigation Bar
+       Top Contact Ribbon
+       ========================================================================== -->
+  <div class="top-ribbon">
+    <div class="container ribbon-wrapper">
+      <div class="ribbon-item">
+        <span class="ribbon-dot"></span>
+        <span>Surat Manufacturing Plant &bull; ISO 9001:2015 & API 598 Certified</span>
+      </div>
+      <div class="ribbon-contacts">
+        <a href="tel:+919876543210" class="ribbon-link">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +91 98765 43210
+        </a>
+        <a href="mailto:info@jasviindustries.in" class="ribbon-link">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@jasviindustries.in
+        </a>
+        <a href="https://wa.me/919876543210" target="_blank" class="ribbon-whatsapp">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.077-2.222-.555-1.956-.807-3.208-2.802-3.306-2.932-.098-.13-.787-1.047-.787-1.995 0-.948.497-1.414.673-1.607.177-.193.385-.242.513-.242.128 0 .257.002.37.008.12.006.28-.046.438.334.164.395.559 1.364.608 1.463.05.099.083.214.017.346-.066.132-.099.214-.197.33-.099.115-.208.257-.297.346-.104.103-.213.216-.092.423.121.207.538.887 1.155 1.436.796.708 1.467.927 1.675 1.03.208.104.33.087.452-.053.123-.14.526-.612.666-.822.14-.21.28-.175.47-.105.19.07 1.202.567 1.409.67.207.104.346.154.396.242.05.088.05.511-.094.916z"/></svg>
+          Direct WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Glassmorphic Header & Navigation Bar
        ========================================================================== -->
   <header class="site-header">
     <div class="container nav-wrapper">
@@ -31,16 +58,16 @@
         <div class="brand-icon">JI</div>
         <div>
           <span class="brand-title">JASVI INDUSTRIES</span>
-          <span class="brand-subtitle">Precision Engineering</span>
+          <span class="brand-subtitle">Precision Valves & Flow Control</span>
         </div>
       </a>
 
       <nav>
         <ul class="nav-menu">
-          <li><a href="#showcase-3d" class="nav-link">3D Machinery</a></li>
-          <li><a href="#portfolio" class="nav-link">Showcase</a></li>
-          <li><a href="#process" class="nav-link">Quality & Process</a></li>
-          <li><a href="#rfq" class="nav-link">Instant RFQ</a></li>
+          <li><a href="#valves" class="nav-link">Valve Matrix</a></li>
+          <li><a href="#showcase-3d" class="nav-link">3D Workstations</a></li>
+          <li><a href="#quality" class="nav-link">Testing & Metrology</a></li>
+          <li><a href="#rfq" class="nav-link">Blueprint RFQ</a></li>
         </ul>
       </nav>
 
@@ -54,13 +81,13 @@
           </svg>
           Client ERP Portal
         </a>
-        <a href="#rfq" class="btn btn-primary btn-sm">Request Quote</a>
+        <a href="#rfq" class="btn btn-primary btn-sm">Instant RFQ</a>
       </div>
     </div>
   </header>
 
   <!-- ==========================================================================
-       Hero Section with Interactive 3D Particle Canvas
+       Hero Section with Interactive 3D Fluid Particle Canvas
        ========================================================================== -->
   <section class="hero-section">
     <div class="hero-bg-overlay"></div>
@@ -70,170 +97,155 @@
       <div class="hero-content reveal">
         <div class="badge-pill">
           <span class="pulse-dot"></span>
-          <span id="hero-badge-text">Next-Gen Industrial Digital Engineering</span>
+          <span id="hero-badge-text">ISO 9001:2015 & API 598 Certified Flow Systems</span>
         </div>
-        <h1 class="hero-title" id="hero-title">Precision Machining. Zero Compromise.</h1>
+        <h1 class="hero-title" id="hero-title">Precision Valves & Flow Control. Zero Leakage. Micron Tolerance.</h1>
         <p class="hero-lead" id="hero-lead">
-          Jasvi Industries delivers micron-tolerance 5-axis CNC milling, high-speed turning, and turnkey contract fabrication for global aerospace, EV, and high-tech engineering partners.
+          Jasvi Industries manufactures micron-precision instrumentation needle valves, manifold blocks, ball valves, and flow control systems rated up to 10,000 PSI for global aerospace, chemical, cryogenic, and energy partners.
         </p>
         <div class="hero-buttons">
           <a href="#rfq" class="btn btn-primary">
-            <span>Instant Blueprint RFQ</span>
+            <span>Configure Technical RFQ</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
-          <a href="#showcase-3d" class="btn btn-secondary">Explore 3D Machinery</a>
+          <a href="#valves" class="btn btn-secondary">Explore Valve Matrix</a>
         </div>
       </div>
 
-      <!-- 3D Tilt Metric Cards -->
+      <!-- 3D Tilt Glass Metric Cards -->
       <div class="hero-stats-grid reveal reveal-delay-1" id="hero-stats-grid">
         <div class="stat-card">
-          <div class="stat-number">15<span>+</span></div>
-          <div class="stat-label">Years Industrial Mastery</div>
+          <div class="stat-number">10,000<span> PSI</span></div>
+          <div class="stat-label">API 598 Hydro Shell Tested</div>
         </div>
         <div class="stat-card">
-          <div class="stat-number">±0.01<span>mm</span></div>
-          <div class="stat-label">CMM Verified Tolerance</div>
+          <div class="stat-number">0<span> PPM</span></div>
+          <div class="stat-label">Helium Bubble-Tight Leak Standard</div>
         </div>
         <div class="stat-card">
-          <div class="stat-number">10K<span>+</span></div>
-          <div class="stat-label">Precision Parts Delivered</div>
+          <div class="stat-number">±0.005<span> mm</span></div>
+          <div class="stat-label">CMM Seat & Spindle Precision</div>
         </div>
         <div class="stat-card">
-          <div class="stat-number">ISO<span>9001</span></div>
-          <div class="stat-label">Certified Quality System</div>
+          <div class="stat-number">2500<span> #</span></div>
+          <div class="stat-label">Max ASME Pressure Class Rating</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ==========================================================================
-       Infinite Marquee Ticker (Engineering Standards & Tech)
+       Infinite Marquee Ticker (Fluid Engineering Standards)
        ========================================================================== -->
   <div class="marquee-container">
     <div class="marquee-track" id="marquee-track">
-      <div class="marquee-pill"><span>•</span> ISO 9001:2015 Certified System</div>
-      <div class="marquee-pill"><span>•</span> 5-Axis Simultaneous VMC</div>
-      <div class="marquee-pill"><span>•</span> ±0.005mm Micron Tolerance</div>
-      <div class="marquee-pill"><span>•</span> CMM 3D Metrology Lab</div>
-      <div class="marquee-pill"><span>•</span> Aerospace Ti-6Al-4V Grade</div>
-      <div class="marquee-pill"><span>•</span> 100% Full Material Traceability</div>
-      <div class="marquee-pill"><span>•</span> DFM Blueprint Analysis</div>
-      <div class="marquee-pill"><span>•</span> Automated Live-Tooling Turning</div>
+      <div class="marquee-pill"><span>&bull;</span> API 598 Hydrostatic Shell & Seat Tested</div>
+      <div class="marquee-pill"><span>&bull;</span> 10,000 PSI Max Working Pressure</div>
+      <div class="marquee-pill"><span>&bull;</span> NACE MR0175 / ISO 15156 Sour Gas Compliant</div>
+      <div class="marquee-pill"><span>&bull;</span> 5-Axis Simultaneous VMC Machined Bodies</div>
+      <div class="marquee-pill"><span>&bull;</span> 100% Helium Mass Spectrometer Leak Tested</div>
+      <div class="marquee-pill"><span>&bull;</span> EN 10204 Type 3.1 Material Traceability</div>
+      <div class="marquee-pill"><span>&bull;</span> Cryogenic -196&deg;C to +450&deg;C High-Temp Seals</div>
+      <div class="marquee-pill"><span>&bull;</span> Fire-Safe Design Certified (API 607 / ISO 10497)</div>
       <!-- Duplicate for Seamless Infinite Loop -->
-      <div class="marquee-pill"><span>•</span> ISO 9001:2015 Certified System</div>
-      <div class="marquee-pill"><span>•</span> 5-Axis Simultaneous VMC</div>
-      <div class="marquee-pill"><span>•</span> ±0.005mm Micron Tolerance</div>
-      <div class="marquee-pill"><span>•</span> CMM 3D Metrology Lab</div>
-      <div class="marquee-pill"><span>•</span> Aerospace Ti-6Al-4V Grade</div>
-      <div class="marquee-pill"><span>•</span> 100% Full Material Traceability</div>
-      <div class="marquee-pill"><span>•</span> DFM Blueprint Analysis</div>
-      <div class="marquee-pill"><span>•</span> Automated Live-Tooling Turning</div>
+      <div class="marquee-pill"><span>&bull;</span> API 598 Hydrostatic Shell & Seat Tested</div>
+      <div class="marquee-pill"><span>&bull;</span> 10,000 PSI Max Working Pressure</div>
+      <div class="marquee-pill"><span>&bull;</span> NACE MR0175 / ISO 15156 Sour Gas Compliant</div>
+      <div class="marquee-pill"><span>&bull;</span> 5-Axis Simultaneous VMC Machined Bodies</div>
+      <div class="marquee-pill"><span>&bull;</span> 100% Helium Mass Spectrometer Leak Tested</div>
+      <div class="marquee-pill"><span>&bull;</span> EN 10204 Type 3.1 Material Traceability</div>
+      <div class="marquee-pill"><span>&bull;</span> Cryogenic -196&deg;C to +450&deg;C High-Temp Seals</div>
+      <div class="marquee-pill"><span>&bull;</span> Fire-Safe Design Certified (API 607 / ISO 10497)</div>
     </div>
   </div>
 
   <!-- ==========================================================================
-       3D Coverflow Slide Showcase Section (Like theneutec.com)
+       Valve Catalog & Live Specification Matrix (Glassmorphic Engine)
+       ========================================================================== -->
+  <section id="valves" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="badge-pill">Industrial Valve Catalog</div>
+        <h2 class="section-title">High-Pressure Valve Matrix</h2>
+        <p class="section-subtitle">
+          Engineered for severe-service fluid dynamics. Filter by category, inspect micro-machined tolerances, and review real-time flow coefficients.
+        </p>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="portfolio-filters reveal reveal-delay-1" id="valve-category-filters">
+        <button class="filter-btn active" data-filter="all">All Valves</button>
+        <button class="filter-btn" data-filter="needle">Needle & Gauge</button>
+        <button class="filter-btn" data-filter="manifold">2, 3 & 5-Way Manifolds</button>
+        <button class="filter-btn" data-filter="ball">Process Ball Valves</button>
+        <button class="filter-btn" data-filter="check">Check & Non-Return</button>
+        <button class="filter-btn" data-filter="dbb">Double Block & Bleed</button>
+      </div>
+
+      <!-- Valve Cards Grid -->
+      <div class="portfolio-grid" id="valve-cards-grid">
+        <!-- Dynamically Hydrated by js/main.js -->
+      </div>
+
+      <!-- Interactive Valve Specification Inspector (Side-by-Side Glass Panel) -->
+      <div class="valve-inspector-box reveal reveal-delay-2" id="valve-inspector">
+        <div class="inspector-header">
+          <div>
+            <span class="inspector-tag" id="inspect-tag">Selected Model Spec Sheet</span>
+            <h3 class="inspector-title" id="inspect-title">High-Pressure Forged Needle Valve (6,000 / 10,000 PSI)</h3>
+          </div>
+          <button class="btn btn-secondary btn-sm" id="btn-add-to-rfq-quick">Configure in RFQ Studio &darr;</button>
+        </div>
+
+        <div class="inspector-grid">
+          <div class="inspector-col">
+            <h4 class="col-heading">Dimensional & Fluid Parameters</h4>
+            <div class="spec-table-wrap">
+              <table class="spec-table">
+                <tbody>
+                  <tr><td>Available Nominal Sizes</td><td id="inspect-sizes">1/4", 3/8", 1/2", 3/4", 1"</td></tr>
+                  <tr><td>End Connections</td><td id="inspect-ends">NPT Female, NPT Male, Tube OD</td></tr>
+                  <tr><td>Flow Coefficient (Cv)</td><td id="inspect-cv">0.35 to 1.80</td></tr>
+                  <tr><td>Operating Temperature</td><td id="inspect-temp">-54&deg;C to 232&deg;C (PTFE) / up to 450&deg;C (Grafoil)</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="inspector-col">
+            <h4 class="col-heading">Material Metallurgy (MOC Options)</h4>
+            <div class="material-pills-row" id="inspect-materials">
+              <span class="mat-pill active">SS316 / 316L</span>
+              <span class="mat-pill">Duplex 2205</span>
+              <span class="mat-pill">Inconel 625</span>
+              <span class="mat-pill">Monel 400</span>
+            </div>
+            <p class="inspector-desc" id="inspect-desc">
+              One-piece forged body with non-rotating stem tip and packing below thread design for hazardous high-pressure isolation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       3D Coverflow Slide Showcase Section (Swiper 11)
        ========================================================================== -->
   <section id="showcase-3d" class="section">
     <div class="container">
       <div class="section-header reveal">
-        <div class="badge-pill">Interactive 3D Coverflow</div>
-        <h2 class="section-title">Advanced Machinery & Workstations</h2>
+        <div class="badge-pill">Swiper 11 3D Coverflow</div>
+        <h2 class="section-title">Precision Machining & Valve Test Workstations</h2>
         <p class="section-subtitle">
-          Swipe, drag, or hover across our high-precision CNC stations, climate-controlled metrology suites, and automated fabrication cells.
+          Swipe or drag through our climate-controlled 5-axis CNC machining centers, automated hydrostatic test benches, and Zeiss 3D CMM metrology suites.
         </p>
       </div>
 
       <!-- Swiper 3D Coverflow Container -->
       <div class="swiper swiper-showcase-container reveal reveal-delay-1">
         <div class="swiper-wrapper" id="machinery-swiper-wrapper">
-          <!-- Slide 1: 5-Axis VMC -->
-          <div class="swiper-slide">
-            <div class="slide-img-box">
-              <img src="assets/images/machine_vmc_5axis.jpg" alt="5-Axis VMC" class="slide-img">
-            </div>
-            <div class="slide-content">
-              <span class="slide-badge">Simultaneous Multi-Axis</span>
-              <h3 class="slide-title">5-Axis VMC Machining</h3>
-              <p class="slide-desc">Engineered for impellers, aerospace turbine blades, and compound complex housings in a single clamping.</p>
-              <div class="slide-specs-table">
-                <div class="spec-row"><span class="k">Working Area:</span><span class="v">1200 x 800 x 600 mm</span></div>
-                <div class="spec-row"><span class="k">Positional Accuracy:</span><span class="v">±0.004 mm</span></div>
-                <div class="spec-row"><span class="k">Direct Spindle:</span><span class="v">15,000 RPM HSK-A63</span></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 2: CNC Turning -->
-          <div class="swiper-slide">
-            <div class="slide-img-box">
-              <img src="assets/images/machine_cnc_turning.jpg" alt="CNC Precision Turning" class="slide-img">
-            </div>
-            <div class="slide-content">
-              <span class="slide-badge">Live-Tooling Lathe</span>
-              <h3 class="slide-title">CNC Precision Turning</h3>
-              <p class="slide-desc">Twin-spindle turning centers with driven tools for mill-turn rotational components and high-precision shafts.</p>
-              <div class="slide-specs-table">
-                <div class="spec-row"><span class="k">Max Chucking Dia:</span><span class="v">Ø 450 mm</span></div>
-                <div class="spec-row"><span class="k">Bed Length:</span><span class="v">Up to 1000 mm</span></div>
-                <div class="spec-row"><span class="k">Surface Quality:</span><span class="v">Ra 0.35 µm</span></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 3: CMM Inspection -->
-          <div class="swiper-slide">
-            <div class="slide-img-box">
-              <img src="assets/images/quality_cmm_inspection.jpg" alt="CMM Metrology QC" class="slide-img">
-            </div>
-            <div class="slide-content">
-              <span class="slide-badge">Metrology & Traceability</span>
-              <h3 class="slide-title">3D CNC CMM Quality Lab</h3>
-              <p class="slide-desc">Climate-controlled Clean Room metrology with laser line probes and Renishaw 5-axis scanning heads.</p>
-              <div class="slide-specs-table">
-                <div class="spec-row"><span class="k">Resolution:</span><span class="v">0.0001 mm (0.1µ)</span></div>
-                <div class="spec-row"><span class="k">Standards:</span><span class="v">ISO 10360-2 Certified</span></div>
-                <div class="spec-row"><span class="k">Reporting:</span><span class="v">Full PPAP Level 3 / FAI</span></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 4: Smart Factory -->
-          <div class="swiper-slide">
-            <div class="slide-img-box">
-              <img src="assets/images/hero_smart_factory.jpg" alt="Smart Factory Floor" class="slide-img">
-            </div>
-            <div class="slide-content">
-              <span class="slide-badge">Industry 4.0 Digital Twin</span>
-              <h3 class="slide-title">Smart Manufacturing Cell</h3>
-              <p class="slide-desc">Connected IoT machining floor with live telemetry, automated tool life management, and zero downtime scheduling.</p>
-              <div class="slide-specs-table">
-                <div class="spec-row"><span class="k">Telemetry:</span><span class="v">Live Spindle Load / OEE</span></div>
-                <div class="spec-row"><span class="k">Traceability:</span><span class="v">QR / Barcoded Batches</span></div>
-                <div class="spec-row"><span class="k">Capacity:</span><span class="v">24/7 Lights-Out Operations</span></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 5: Digital RFQ Pipeline -->
-          <div class="swiper-slide">
-            <div class="slide-img-box">
-              <img src="assets/images/ui_mockup_catalog_rfq.jpg" alt="Digital RFQ Workflow" class="slide-img">
-            </div>
-            <div class="slide-content">
-              <span class="slide-badge">Automated DFM Suite</span>
-              <h3 class="slide-title">Instant Blueprint Engineering</h3>
-              <p class="slide-desc">Algorithmic CAD analysis detecting tool reachability, undercut warnings, and material cost optimization.</p>
-              <div class="slide-specs-table">
-                <div class="spec-row"><span class="k">CAD Support:</span><span class="v">STEP, IGES, DXF, SLDPRT</span></div>
-                <div class="spec-row"><span class="k">Turnaround:</span><span class="v">&lt; 24 Hour Quotes</span></div>
-                <div class="spec-row"><span class="k">Integration:</span><span class="v">Direct to Jasvi ERP</span></div>
-              </div>
-            </div>
-          </div>
+          <!-- Dynamically Hydrated by js/main.js -->
         </div>
-
         <!-- 3D Slider Pagination Indicator -->
         <div class="swiper-pagination"></div>
       </div>
@@ -241,99 +253,38 @@
   </section>
 
   <!-- ==========================================================================
-       Interactive 3D Project Portfolio
-       ========================================================================== -->
-  <section id="portfolio" class="section" style="background: rgba(12, 21, 39, 0.45);">
-    <div class="container">
-      <div class="section-header reveal">
-        <div class="badge-pill">Portfolio & Case Studies</div>
-        <h2 class="section-title">Engineered Components Showcase</h2>
-        <p class="section-subtitle">
-          Hover over each card to experience dynamic 3D perspective tilting. Real components engineered by Jasvi Industries.
-        </p>
-      </div>
-
-      <!-- Filter Buttons -->
-      <div class="portfolio-filters reveal reveal-delay-1" id="portfolio-filters">
-        <button class="filter-btn active" data-filter="all">All Industries</button>
-        <button class="filter-btn" data-filter="aerospace">Aerospace</button>
-        <button class="filter-btn" data-filter="automotive">Automotive & EV</button>
-        <button class="filter-btn" data-filter="energy">Energy & Hydraulics</button>
-      </div>
-
-      <div class="portfolio-grid" id="portfolio-grid">
-        <!-- Item 1 -->
-        <div class="portfolio-item reveal" data-category="aerospace">
-          <span class="portfolio-tag">Aerospace</span>
-          <h3 class="portfolio-title">Titanium Impeller Rotor</h3>
-          <p class="portfolio-meta">Machined from solid Grade 5 Titanium billet using 5-axis continuous milling.</p>
-          <div class="portfolio-badges">
-            <span class="mini-badge">Ti-6Al-4V</span>
-            <span class="mini-badge">±0.008 mm</span>
-            <span class="mini-badge">CMM Inspected</span>
-          </div>
-        </div>
-
-        <!-- Item 2 -->
-        <div class="portfolio-item reveal reveal-delay-1" data-category="automotive">
-          <span class="portfolio-tag">Automotive & EV</span>
-          <h3 class="portfolio-title">EV Motor Housing Manifold</h3>
-          <p class="portfolio-meta">Integrated cooling jacket with leak-proof O-ring channels and precision bore tolerances.</p>
-          <div class="portfolio-badges">
-            <span class="mini-badge">Al 6061-T6</span>
-            <span class="mini-badge">H7 Bore Fit</span>
-            <span class="mini-badge">Pressure Tested</span>
-          </div>
-        </div>
-
-        <!-- Item 3 -->
-        <div class="portfolio-item reveal reveal-delay-2" data-category="energy">
-          <span class="portfolio-tag">Energy & Hydraulics</span>
-          <h3 class="portfolio-title">High-Pressure Valve Spool</h3>
-          <p class="portfolio-meta">Sub-micron cylindrical grinding and micro-honing for 450 bar hydraulic circuits.</p>
-          <div class="portfolio-badges">
-            <span class="mini-badge">SS 316L</span>
-            <span class="mini-badge">Ra 0.2 µm</span>
-            <span class="mini-badge">Cryo Treated</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
        4-Step Quality & Execution Workflow (Roadmap)
        ========================================================================== -->
-  <section id="process" class="section">
+  <section id="quality" class="section">
     <div class="container">
       <div class="section-header reveal">
-        <div class="badge-pill">Execution Blueprint</div>
-        <h2 class="section-title">From Blueprint to Global Dispatch</h2>
+        <div class="badge-pill">Quality & Traceability Pipeline</div>
+        <h2 class="section-title">4-Stage Valve Manufacturing & Testing Benchmark</h2>
         <p class="section-subtitle">
-          Our four-phase execution pipeline guarantees predictable lead times, zero defect tolerance, and end-to-end traceability.
+          Every valve undergoes 100% material authentication, micron CNC machining, and automated pressure hold before dispatch.
         </p>
       </div>
 
       <div class="timeline-grid" id="timeline-grid">
         <div class="timeline-step reveal">
           <div class="step-num">01</div>
-          <h3 class="step-title">DFM Feasibility</h3>
-          <p class="step-desc">CAD model review, toolpath simulation, and material yield optimization within 24 hours.</p>
+          <h3 class="step-title">Spectro & PMI Ingestion</h3>
+          <p class="step-desc">100% Positive Material Identification (PMI) and optical emission spectro analysis on forged billets to verify chemical composition.</p>
         </div>
         <div class="timeline-step reveal reveal-delay-1">
           <div class="step-num">02</div>
-          <h3 class="step-title">CNC Machining</h3>
-          <p class="step-desc">Multi-axis automated machining with calibrated tooling and real-time spindle monitoring.</p>
+          <h3 class="step-title">5-Axis CNC Precision</h3>
+          <p class="step-desc">Single-setup continuous 5-axis milling and micro-honing guaranteeing seat squareness and mirror-finished spherical balls.</p>
         </div>
         <div class="timeline-step reveal reveal-delay-2">
           <div class="step-num">03</div>
-          <h3 class="step-title">CMM Metrology</h3>
-          <p class="step-desc">100% dimensional verification against GD&T specs with digital CMM inspection reports.</p>
+          <h3 class="step-title">API 598 Hydro & Gas Testing</h3>
+          <p class="step-desc">1.5x working pressure hydrostatic shell hold test followed by high-pressure bubble-tight nitrogen seat leakage verification.</p>
         </div>
         <div class="timeline-step reveal reveal-delay-3">
           <div class="step-num">04</div>
-          <h3 class="step-title">Global Delivery</h3>
-          <p class="step-desc">VCI anti-rust barrier packaging and barcoded shipment with complete material certificates.</p>
+          <h3 class="step-title">CMM & EN 10204 3.1 MTC</h3>
+          <p class="step-desc">Digital coordinate measuring machine dimensional sign-off, laser serial marking, and full material test certificate issuance.</p>
         </div>
       </div>
     </div>
@@ -346,61 +297,89 @@
     <div class="container">
       <div class="rfq-box reveal">
         <div class="section-header" style="margin-bottom: 36px;">
-          <div class="badge-pill">Instant Blueprint Evaluation</div>
-          <h2 class="section-title">Request Technical Quotation</h2>
+          <div class="badge-pill">Engineering RFQ Studio</div>
+          <h2 class="section-title">Request Technical Valve Quotation</h2>
           <p class="section-subtitle">
-            Upload your CAD drawing (.STEP, .IGES, .DXF, .PDF) for a rapid DFM feedback report and quotation within 24 hours.
+            Configure your technical valve requirements or upload engineering blueprints (.STEP, .IGES, .DXF, .PDF) for automated DFM and quotation.
           </p>
         </div>
 
         <!-- Success Notification Banner -->
-        <div id="rfqSuccess" style="display: none; background: rgba(16, 185, 129, 0.15); border: 1px solid var(--emerald); border-radius: 14px; padding: 18px 24px; margin-bottom: 24px; text-align: center; color: #a7f3d0; font-weight: 600;">
-          ✓ RFQ Received! Our engineering team will review your drawings and deliver a formal quotation within 24 hours.
+        <div id="rfqSuccess" style="display: none;" class="rfq-success-alert">
+          &check; Technical RFQ Received! Transmitted directly into Jasvi ERP sales pipeline. Our flow engineering team will issue a formal quotation within 24 hours.
         </div>
 
         <form id="rfqForm">
           <div class="rfq-form-grid">
             <div class="form-group">
-              <label class="form-label">Full Name *</label>
-              <input type="text" class="form-input" required placeholder="John Doe">
+              <label class="form-label">Full Name / Engineering Contact *</label>
+              <input type="text" id="rfq-name" class="form-input" required placeholder="Dr. / Er. / Mr. Contact Name">
             </div>
             <div class="form-group">
-              <label class="form-label">Corporate Email *</label>
-              <input type="email" class="form-input" required placeholder="johndoe@company.com">
+              <label class="form-label">Corporate Email Address *</label>
+              <input type="email" id="rfq-email" class="form-input" required placeholder="engineer@enterprise.com">
             </div>
             <div class="form-group">
-              <label class="form-label">Target Material *</label>
-              <select class="form-select" required>
-                <option value="">Select Material...</option>
-                <option value="aluminum">Aluminium (6061-T6 / 7075-T6)</option>
-                <option value="stainless">Stainless Steel (304 / 316L / 17-4PH)</option>
-                <option value="titanium">Titanium (Grade 2 / Grade 5)</option>
-                <option value="brass">Brass & Copper Alloys</option>
-                <option value="mild-steel">Mild Steel / Tool Steel</option>
-                <option value="other">Other High-Performance Alloy</option>
+              <label class="form-label">Target Valve Type *</label>
+              <select id="rfq-valve-type" class="form-select" required>
+                <option value="needle">High-Pressure Needle Valve (6K/10K PSI)</option>
+                <option value="manifold">2, 3 or 5-Way Instrument Manifold</option>
+                <option value="ball">Trunnion / Floating Process Ball Valve</option>
+                <option value="check">Dual-Plate / Poppet Check Valve</option>
+                <option value="dbb">Double Block & Bleed Monoflange Valve</option>
+                <option value="custom">Custom CNC Manifold Block / Skid</option>
               </select>
             </div>
             <div class="form-group">
-              <label class="form-label">Expected Batch Quantity *</label>
-              <select class="form-select" required>
-                <option value="">Select Quantity Range...</option>
-                <option value="prototype">Prototype (1 - 10 Units)</option>
-                <option value="pilot">Pilot Batch (10 - 100 Units)</option>
-                <option value="production">Series Production (100 - 5,000 Units)</option>
-                <option value="high-volume">High-Volume Annual Contract (5,000+ Units)</option>
+              <label class="form-label">Material of Construction (MOC) *</label>
+              <select id="rfq-material" class="form-select" required>
+                <option value="ss316">Stainless Steel 316 / 316L (Standard)</option>
+                <option value="duplex">Duplex Stainless Steel 2205</option>
+                <option value="super-duplex">Super Duplex 2507</option>
+                <option value="inconel">Inconel 625 / 825</option>
+                <option value="monel">Monel 400 (Marine/Oxygen)</option>
+                <option value="hastelloy">Hastelloy C-276 (Severe Acid)</option>
+                <option value="carbon-steel">ASTM A105 / A350 LF2 (Low Temp)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Nominal Bore Size *</label>
+              <select id="rfq-size" class="form-select" required>
+                <option value="1/4">1/4" (DN6)</option>
+                <option value="3/8">3/8" (DN10)</option>
+                <option value="1/2" selected>1/2" (DN15)</option>
+                <option value="3/4">3/4" (DN20)</option>
+                <option value="1">1" (DN25)</option>
+                <option value="1-1/2">1-1/2" (DN40)</option>
+                <option value="2">2" (DN50)</option>
+                <option value="3+">3" to 8" (Class 150-600)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Pressure Class / Rating *</label>
+              <select id="rfq-pressure" class="form-select" required>
+                <option value="1000">1,000 WOG (Class 150)</option>
+                <option value="3000">3,000 PSI (Class 800)</option>
+                <option value="6000" selected>6,000 PSI (Class 1500)</option>
+                <option value="10000">10,000 PSI (Class 2500)</option>
+                <option value="special">Ultra High Pressure (15,000+ PSI)</option>
               </select>
             </div>
             <div class="form-group full-width">
-              <label class="form-label">CAD / Blueprint Drawing (.STEP, .IGS, .PDF, .DXF)</label>
-              <input type="file" class="form-input" style="padding: 10px;">
+              <label class="form-label">CAD / Blueprint Drawing Upload (.STEP, .IGES, .PDF, .DWG, .PNG - Max 10MB)</label>
+              <input type="file" id="rfq-file" class="form-input" style="padding: 10px;" accept=".pdf,.step,.stp,.iges,.igs,.dxf,.dwg,.png,.jpg">
             </div>
             <div class="form-group full-width">
-              <label class="form-label">Critical Tolerances & Technical Specifications</label>
-              <textarea class="form-textarea" placeholder="Detail any critical surface finish requirements, GD&T tolerances, heat treatments, or delivery deadlines..."></textarea>
+              <label class="form-label">Severe Service Notes (Fluid Media, Temperature, Fire-Safe, NACE Sour Gas)</label>
+              <textarea id="rfq-notes" class="form-textarea" placeholder="Detail specific chemical media (e.g. wet H2S, dry chlorine, hydrogen), operating temperatures, testing certifications (e.g. Helium leak, EN 10204 3.1), or quantity..."></textarea>
             </div>
-            <div class="form-group full-width" style="margin-top: 10px;">
-              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 18px; font-size: 16px;">
-                Submit Technical RFQ Specification
+            <div class="form-group full-width rfq-action-buttons">
+              <button type="submit" class="btn btn-primary btn-submit-rfq">
+                Submit Technical RFQ to Jasvi ERP
+              </button>
+              <button type="button" class="btn btn-secondary" id="btn-download-pdf">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download PDF Spec Sheet
               </button>
             </div>
           </div>
@@ -410,7 +389,7 @@
   </section>
 
   <!-- ==========================================================================
-       Corporate Footer
+       Corporate Glass Footer
        ========================================================================== -->
   <footer class="site-footer">
     <div class="container">
@@ -420,24 +399,24 @@
             <div class="brand-icon">JI</div>
             <div>
               <span class="brand-title">JASVI INDUSTRIES</span>
-              <span class="brand-subtitle">Precision Engineering</span>
+              <span class="brand-subtitle">Precision Valves & Flow Control</span>
             </div>
           </div>
           <p style="font-size: 14px; margin-bottom: 18px;">
-            Premier Indian manufacturer specializing in high-tolerance 5-axis CNC milling, precision turning, and turnkey industrial solutions for global enterprise clients.
+            Premier Indian manufacturer specializing in high-pressure instrumentation needle valves, manifold blocks, ball valves, and turnkey severe-service fluid control solutions.
           </p>
           <span class="mini-badge" style="color: var(--cyan); border-color: rgba(56, 189, 248, 0.3);">
-            ISO 9001:2015 Certified
+            ISO 9001:2015 & API 598 Certified
           </span>
         </div>
 
         <div class="footer-col">
-          <h4>Capabilities</h4>
+          <h4>Valve Portfolio</h4>
           <ul class="footer-links">
-            <li><a href="#showcase-3d" class="footer-link">5-Axis VMC Machining</a></li>
-            <li><a href="#showcase-3d" class="footer-link">CNC Precision Turning</a></li>
-            <li><a href="#showcase-3d" class="footer-link">3D CMM Metrology QC</a></li>
-            <li><a href="#showcase-3d" class="footer-link">Smart Factory Digital Twin</a></li>
+            <li><a href="#valves" class="footer-link">High-Pressure Needle Valves</a></li>
+            <li><a href="#valves" class="footer-link">2, 3 & 5-Way Valve Manifolds</a></li>
+            <li><a href="#valves" class="footer-link">Trunnion & Floating Ball Valves</a></li>
+            <li><a href="#valves" class="footer-link">Double Block & Bleed Valves</a></li>
           </ul>
         </div>
 
@@ -446,8 +425,8 @@
           <ul class="footer-links">
             <li><a href="https://erp.jasviindustries.in/" target="_blank" class="footer-link" style="color: var(--cyan);">Client ERP Portal</a></li>
             <li><a href="#rfq" class="footer-link">Instant Blueprint RFQ</a></li>
-            <li><a href="#portfolio" class="footer-link">Component Portfolio</a></li>
-            <li><a href="#process" class="footer-link">Quality Assurance</a></li>
+            <li><a href="#showcase-3d" class="footer-link">Machining Workstations</a></li>
+            <li><a href="#quality" class="footer-link">Quality & Testing Pipeline</a></li>
           </ul>
         </div>
 
@@ -467,14 +446,15 @@
       </div>
 
       <div class="footer-bottom">
-        <div>&copy; 2026 Jasvi Industries. All rights reserved.</div>
-        <div>3D Interactive Physics &bull; Zero Bloat &bull; 100% Server Authoritative</div>
+        <div>&copy; 2026 Jasvi Industries. All rights reserved. &bull; Precision Valves & Flow Controls</div>
+        <div>100% Server Authoritative &bull; Glassmorphism Architecture &bull; Zero Bloat</div>
       </div>
     </div>
   </footer>
 
-  <!-- Swiper.js Bundle -->
+  <!-- Vendor Libraries: Defensively Guarded -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <!-- Main Interactive Engine -->
   <script src="js/main.js"></script>
 </body>

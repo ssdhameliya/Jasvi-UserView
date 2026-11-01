@@ -1,46 +1,141 @@
 {
-  "version": 1,
-  "lastModified": "2026-10-31T19:00:00Z",
+  "version": 2,
+  "lastModified": "2026-11-01T15:15:00Z",
   "branding": {
     "companyName": "JASVI INDUSTRIES",
-    "tagline": "Precision Engineering",
-    "badgeText": "Next-Gen Industrial Digital Engineering",
+    "division": "Precision Valves & Flow Control",
+    "tagline": "Advanced Fluid Engineering",
+    "badgeText": "Zero-Leakage High-Pressure Industrial Flow Systems",
     "portalUrl": "https://erp.jasviindustries.in/"
   },
   "hero": {
-    "badge": "Next-Gen Industrial Digital Engineering",
-    "headline": "Precision Machining. Zero Compromise.",
-    "leadParagraph": "Jasvi Industries delivers micron-tolerance 5-axis CNC milling, high-speed turning, and turnkey contract fabrication for global aerospace, EV, and high-tech engineering partners.",
-    "primaryCta": { "label": "Instant Blueprint RFQ", "anchor": "#rfq" },
-    "secondaryCta": { "label": "Explore 3D Machinery", "anchor": "#showcase-3d" },
+    "badge": "ISO 9001:2015 & API 598 Certified Flow Systems",
+    "headline": "Precision Valves & Flow Control. Zero Leakage. Micron Tolerance.",
+    "leadParagraph": "Jasvi Industries manufactures micron-precision instrumentation needle valves, manifold blocks, ball valves, and flow control systems rated up to 10,000 PSI for global aerospace, chemical, cryogenic, and energy partners.",
+    "primaryCta": { "label": "Configure Technical RFQ", "anchor": "#rfq" },
+    "secondaryCta": { "label": "Explore Valve Matrix", "anchor": "#valves" },
     "kpiStats": [
-      { "id": "stat-1", "number": "15", "suffix": "+", "label": "Years Industrial Mastery" },
-      { "id": "stat-2", "number": "±0.01", "suffix": "mm", "label": "CMM Verified Tolerance" },
-      { "id": "stat-3", "number": "10K", "suffix": "+", "label": "Precision Parts Delivered" },
-      { "id": "stat-4", "number": "ISO", "suffix": "9001", "label": "Certified Quality System" }
+      { "id": "stat-1", "number": "10,000", "suffix": " PSI", "label": "API 598 Hydro Shell Tested" },
+      { "id": "stat-2", "number": "0", "suffix": " PPM", "label": "Helium Bubble-Tight Leak Standard" },
+      { "id": "stat-3", "number": "±0.005", "suffix": " mm", "label": "CMM Seat & Spindle Precision" },
+      { "id": "stat-4", "number": "2500", "suffix": " #", "label": "Max ASME Pressure Class Rating" }
     ]
   },
   "marquee": [
-    "ISO 9001:2015 Certified System",
-    "5-Axis Simultaneous VMC",
-    "±0.005mm Micron Tolerance",
-    "CMM 3D Metrology Lab",
-    "Aerospace Ti-6Al-4V Grade",
-    "100% Full Material Traceability",
-    "DFM Blueprint Analysis",
-    "Automated Live-Tooling Turning"
+    "API 598 Hydrostatic Shell & Seat Tested",
+    "10,000 PSI Max Working Pressure",
+    "NACE MR0175 / ISO 15156 Sour Gas Compliant",
+    "5-Axis Simultaneous VMC Machined Bodies",
+    "100% Helium Mass Spectrometer Leak Tested",
+    "EN 10204 Type 3.1 Material Traceability",
+    "Cryogenic -196°C to +450°C High-Temp Seals",
+    "Fire-Safe Design Certified (API 607 / ISO 10497)"
+  ],
+  "valveCategories": [
+    { "key": "all", "label": "All Valves" },
+    { "key": "needle", "label": "Needle & Gauge Valves" },
+    { "key": "manifold", "label": "2, 3 & 5-Way Manifolds" },
+    { "key": "ball", "label": "Process Ball Valves" },
+    { "key": "check", "label": "Check & Non-Return" },
+    { "key": "dbb", "label": "Double Block & Bleed" }
+  ],
+  "valveProducts": [
+    {
+      "id": "v-needle-6k",
+      "category": "needle",
+      "tag": "Needle Valve",
+      "title": "High-Pressure Forged Needle Valve (6,000 / 10,000 PSI)",
+      "meta": "One-piece forged body with non-rotating stem tip and packing below thread design for hazardous high-pressure isolation.",
+      "badges": ["SS316 / Monel", "6,000 - 10,000 PSI", "NACE MR0175"],
+      "sizes": ["1/4\"", "3/8\"", "1/2\"", "3/4\"", "1\""],
+      "endConnections": ["NPT Female x Female", "NPT Male x Female", "Twin Ferrule Tube OD"],
+      "materials": ["SS316/316L", "Duplex 2205", "Inconel 625", "Monel 400"],
+      "cv": "0.35 to 1.80",
+      "tempRange": "-54°C to 232°C (PTFE) / up to 450°C (Grafoil)",
+      "active": true
+    },
+    {
+      "id": "v-manifold-5w",
+      "category": "manifold",
+      "tag": "Instrument Manifold",
+      "title": "5-Way Differential Pressure Valve Manifold",
+      "meta": "Compact direct-mount valve manifold integrating two block valves, one equalizer valve, and two vent valves for differential pressure transmitters.",
+      "badges": ["Direct Mount", "6,000 PSI Rated", "Zero Dead Space"],
+      "sizes": ["1/2\" NPT", "Flanged to IEC 61518"],
+      "endConnections": ["1/2\" NPT Female", "Direct Transmitter Flange Mount"],
+      "materials": ["SS316", "Super Duplex 2507", "Hastelloy C-276"],
+      "cv": "0.52",
+      "tempRange": "-40°C to 260°C",
+      "active": true
+    },
+    {
+      "id": "v-ball-3pc",
+      "category": "ball",
+      "tag": "Ball Valve",
+      "title": "3-Piece High-Pressure Trunnion Ball Valve",
+      "meta": "Full-bore 3-piece bolted body design with micro-lapped spherical ball, blow-out proof stem, and spring-energized seats.",
+      "badges": ["Full Port", "Class 150 - 2500", "Fire-Safe API 607"],
+      "sizes": ["1/2\"", "3/4\"", "1\"", "1-1/2\"", "2\"", "3\"", "4\""],
+      "endConnections": ["Flanged ASME B16.5 RF/RTJ", "Socket Weld", "Butt Weld"],
+      "materials": ["ASTM A182 F316", "A350 LF2", "Duplex 2205"],
+      "cv": "18.5 to 420.0",
+      "tempRange": "-50°C to 200°C (PEEK) / 350°C (Metal-to-Metal)",
+      "active": true
+    },
+    {
+      "id": "v-check-dual",
+      "category": "check",
+      "tag": "Non-Return",
+      "title": "Dual-Plate Wafer Check Valve",
+      "meta": "Compact resilient-seated check valve with spring-loaded dual plates preventing pressure surges and water hammer in industrial piping.",
+      "badges": ["Zero Backflow", "Wafer / Lug", "API 594"],
+      "sizes": ["2\"", "3\"", "4\"", "6\"", "8\"", "10\""],
+      "endConnections": ["Wafer ASME Class 150 / 300 / 600"],
+      "materials": ["WCB Carbon Steel", "CF8M Stainless", "Aluminium Bronze"],
+      "cv": "45.0 to 1850.0",
+      "tempRange": "-29°C to 180°C",
+      "active": true
+    },
+    {
+      "id": "v-dbb-monoflange",
+      "category": "dbb",
+      "tag": "DBB Valve",
+      "title": "Double Block & Bleed (DBB) Monoflange Valve",
+      "meta": "Integrated primary isolate, vent, and secondary isolate in a single forged compact body replacing traditional bulky piping manifolds.",
+      "badges": ["Compact Monoflange", "Weight Saving 70%", "ASME B16.5"],
+      "sizes": ["1/2\"", "3/4\"", "1\"", "1-1/2\"", "2\""],
+      "endConnections": ["Flange x 1/2\" NPT Female", "Flange x Flange"],
+      "materials": ["SS316/316L", "Monel 400", "Inconel 825"],
+      "cv": "0.45",
+      "tempRange": "-54°C to 450°C",
+      "active": true
+    },
+    {
+      "id": "v-manifold-2w",
+      "category": "manifold",
+      "tag": "Instrument Manifold",
+      "title": "2-Way Block & Bleed Gauge Manifold",
+      "meta": "Designed for pressure gauges, pressure switches, and absolute pressure transmitters with isolate and calibration vent ports.",
+      "badges": ["Gauge Calibration", "10,000 PSI", "Bonnet Lock Pin"],
+      "sizes": ["1/2\" NPT Male x 1/2\" NPT Female", "1/2\" NPT Female x Female"],
+      "endConnections": ["1/2\" NPT Threaded"],
+      "materials": ["SS316", "Duplex 2205"],
+      "cv": "0.38",
+      "tempRange": "-54°C to 232°C",
+      "active": true
+    }
   ],
   "machinerySection": {
-    "badge": "Interactive 3D Coverflow",
-    "title": "Advanced Machinery & Workstations",
-    "subtitle": "Swipe, drag, or hover across our high-precision CNC stations, climate-controlled metrology suites, and automated fabrication cells."
+    "badge": "Swiper 11 3D Coverflow",
+    "title": "Precision Machining & Valve Test Workstations",
+    "subtitle": "Swipe or drag through our climate-controlled 5-axis CNC machining centers, automated hydrostatic test benches, and Zeiss 3D CMM metrology suites."
   },
   "machinery": [
     {
       "id": "mach-vmc-5axis",
       "badge": "Simultaneous Multi-Axis",
-      "title": "5-Axis VMC Machining",
-      "description": "Engineered for impellers, aerospace turbine blades, and compound complex housings in a single clamping.",
+      "title": "5-Axis VMC Valve Body Milling",
+      "description": "Solid forging billet machining for complex multi-port valve bodies and manifold blocks in a single clamping setup.",
       "image": "assets/images/machine_vmc_5axis.jpg",
       "specs": [
         { "key": "Working Area", "value": "1200 x 800 x 600 mm" },
@@ -53,119 +148,79 @@
     {
       "id": "mach-cnc-turning",
       "badge": "Live-Tooling Lathe",
-      "title": "CNC Precision Turning",
-      "description": "Twin-spindle turning centers with driven tools for mill-turn rotational components and high-precision shafts.",
+      "title": "CNC Precision Ball & Stem Turning",
+      "description": "Twin-spindle CNC turning centers generating sub-micron spherical balls, valve stems, and gland packing seats.",
       "image": "assets/images/machine_cnc_turning.jpg",
       "specs": [
         { "key": "Max Chucking Dia", "value": "Ø 450 mm" },
-        { "key": "Bed Length", "value": "Up to 1000 mm" },
-        { "key": "Surface Quality", "value": "Ra 0.35 µm" }
+        { "key": "Sphericity Deviation", "value": "< 0.003 mm" },
+        { "key": "Surface Roughness", "value": "Ra 0.15 µm (Mirror)" }
       ],
       "active": true,
       "sortOrder": 2
     },
     {
-      "id": "mach-cmm-lab",
-      "badge": "Metrology & Traceability",
-      "title": "3D CNC CMM Quality Lab",
-      "description": "Climate-controlled Clean Room metrology with laser line probes and Renishaw 5-axis scanning heads.",
+      "id": "mach-hydro-test",
+      "badge": "Pressure Bench",
+      "title": "10,000 PSI Automated Hydro Test Rig",
+      "description": "Digital hydrostatic shell test, high-pressure nitrogen seat leak test, and helium sniffer test conforming to API 598.",
       "image": "assets/images/quality_cmm_inspection.jpg",
       "specs": [
-        { "key": "Resolution", "value": "0.0001 mm (0.1µ)" },
-        { "key": "Standards", "value": "ISO 10360-2 Certified" },
-        { "key": "Reporting", "value": "Full PPAP Level 3 / FAI" }
+        { "key": "Max Test Pressure", "value": "15,000 PSI (1034 Bar)" },
+        { "key": "Leak Detection", "value": "Digital Transducer 0.01 bar" },
+        { "key": "Traceability", "value": "Automated Chart Logging" }
       ],
       "active": true,
       "sortOrder": 3
     },
     {
-      "id": "mach-smart-cell",
-      "badge": "Industry 4.0 Digital Twin",
-      "title": "Smart Manufacturing Cell",
-      "description": "Connected IoT machining floor with live telemetry, automated tool life management, and zero downtime scheduling.",
+      "id": "mach-cmm-lab",
+      "badge": "Metrology Suite",
+      "title": "Zeiss 3D CNC CMM Quality Lab",
+      "description": "Temperature-controlled Clean Room metrology with laser line probes and Renishaw 5-axis scanning heads.",
       "image": "assets/images/hero_smart_factory.jpg",
       "specs": [
-        { "key": "Telemetry", "value": "Live Spindle Load / OEE" },
-        { "key": "Traceability", "value": "QR / Barcoded Batches" },
-        { "key": "Capacity", "value": "24/7 Lights-Out Operations" }
+        { "key": "Resolution", "value": "0.0001 mm (0.1µ)" },
+        { "key": "Standards", "value": "ISO 10360-2 Certified" },
+        { "key": "Inspection Reports", "value": "Full FAI & EN 10204 3.1" }
       ],
       "active": true,
       "sortOrder": 4
-    },
-    {
-      "id": "mach-dfm-pipeline",
-      "badge": "Automated DFM Suite",
-      "title": "Instant Blueprint Engineering",
-      "description": "Algorithmic CAD analysis detecting tool reachability, undercut warnings, and material cost optimization.",
-      "image": "assets/images/ui_mockup_catalog_rfq.jpg",
-      "specs": [
-        { "key": "CAD Support", "value": "STEP, IGES, DXF, SLDPRT" },
-        { "key": "Turnaround", "value": "< 24 Hour Quotes" },
-        { "key": "Integration", "value": "Direct to Jasvi ERP" }
-      ],
-      "active": true,
-      "sortOrder": 5
     }
   ],
-  "portfolioSection": {
-    "badge": "Portfolio & Case Studies",
-    "title": "Engineered Components Showcase",
-    "subtitle": "Hover over each card to experience dynamic 3D perspective tilting. Real components engineered by Jasvi Industries."
-  },
-  "portfolio": {
-    "categories": [
-      { "key": "all", "label": "All Industries" },
-      { "key": "aerospace", "label": "Aerospace" },
-      { "key": "automotive", "label": "Automotive & EV" },
-      { "key": "energy", "label": "Energy & Hydraulics" }
-    ],
-    "items": [
-      {
-        "id": "port-1",
-        "category": "aerospace",
-        "tag": "Aerospace",
-        "title": "Titanium Impeller Rotor",
-        "meta": "Machined from solid Grade 5 Titanium billet using 5-axis continuous milling.",
-        "badges": ["Ti-6Al-4V", "±0.008 mm", "CMM Inspected"],
-        "active": true
-      },
-      {
-        "id": "port-2",
-        "category": "automotive",
-        "tag": "Automotive & EV",
-        "title": "EV Motor Housing Manifold",
-        "meta": "Integrated cooling jacket with leak-proof O-ring channels and precision bore tolerances.",
-        "badges": ["Al 6061-T6", "H7 Bore Fit", "Pressure Tested"],
-        "active": true
-      },
-      {
-        "id": "port-3",
-        "category": "energy",
-        "tag": "Energy & Hydraulics",
-        "title": "High-Pressure Valve Spool",
-        "meta": "Sub-micron cylindrical grinding and micro-honing for 450 bar hydraulic circuits.",
-        "badges": ["SS 316L", "Ra 0.2 µm", "Cryo Treated"],
-        "active": true
-      }
-    ]
-  },
   "processSection": {
-    "badge": "Execution Blueprint",
-    "title": "From Blueprint to Global Dispatch",
-    "subtitle": "Our four-phase execution pipeline guarantees predictable lead times, zero defect tolerance, and end-to-end traceability."
+    "badge": "Quality & Traceability Pipeline",
+    "title": "4-Stage Valve Manufacturing & Testing Benchmark",
+    "subtitle": "Every valve undergoes 100% material authentication, micron CNC machining, and automated pressure hold before dispatch."
   },
   "process": [
-    { "step": "01", "title": "DFM Feasibility", "description": "CAD model review, toolpath simulation, and material yield optimization within 24 hours." },
-    { "step": "02", "title": "CNC Machining", "description": "Multi-axis automated machining with calibrated tooling and real-time spindle monitoring." },
-    { "step": "03", "title": "CMM Metrology", "description": "100% dimensional verification against GD&T specs with digital CMM inspection reports." },
-    { "step": "04", "title": "Global Delivery", "description": "VCI anti-rust barrier packaging and barcoded shipment with complete material certificates." }
+    {
+      "step": "01",
+      "title": "Spectro & PMI Ingestion",
+      "description": "100% Positive Material Identification (PMI) and optical emission spectro analysis on forged billets to verify chemical composition."
+    },
+    {
+      "step": "02",
+      "title": "5-Axis CNC Precision",
+      "description": "Single-setup continuous 5-axis milling and micro-honing guaranteeing seat squareness and mirror-finished spherical balls."
+    },
+    {
+      "step": "03",
+      "title": "API 598 Hydro & Gas Testing",
+      "description": "1.5x working pressure hydrostatic shell hold test followed by high-pressure bubble-tight nitrogen seat leakage verification."
+    },
+    {
+      "step": "04",
+      "title": "CMM & EN 10204 3.1 MTC",
+      "description": "Digital coordinate measuring machine dimensional sign-off, laser serial marking, and full material test certificate issuance."
+    }
   ],
   "contact": {
     "plantAddress": "Plot No. 42, GIDC Industrial Estate,\nSurat, Gujarat, India.",
     "email": "info@jasviindustries.in",
     "phone": "+91 98765 43210",
-    "certification": "ISO 9001:2015 Certified",
-    "tagline": "Premier Indian manufacturer specializing in high-tolerance 5-axis CNC milling, precision turning, and turnkey industrial solutions for global enterprise clients.",
+    "certification": "ISO 9001:2015 & API 598 Certified",
+    "tagline": "Premier Indian manufacturer specializing in high-pressure instrumentation valves, manifold blocks, and turnkey fluid control solutions.",
     "copyrightYear": 2026
   }
 }
