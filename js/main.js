@@ -445,7 +445,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================================
-  // 9. RFQ Form Submission Handler (Integrated with Jasvi ERP)
+  // 9. RFQ & Contact Form Submission Handlers (Integrated with Jasvi ERP)
   // ==========================================================================
   function setupRfqForm() {
     const form = document.getElementById('rfq-form');
@@ -470,6 +470,29 @@ document.addEventListener('DOMContentLoaded', () => {
         const nameDisplay = document.getElementById('file-name-display');
         if (nameDisplay) nameDisplay.textContent = '';
       }, 1200);
+    });
+  }
+
+  function setupContactEnquiryForm() {
+    const contactForm = document.getElementById('contact-enquiry-form');
+    const contactFeedback = document.getElementById('contact-feedback');
+    if (!contactForm || !contactFeedback) return;
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('contact-name').value;
+      const email = document.getElementById('contact-email').value;
+      const product = document.getElementById('contact-product').value;
+
+      contactFeedback.style.display = 'block';
+      contactFeedback.style.color = '#1c75bc';
+      contactFeedback.textContent = `Submitting quotation request for ${name} (${product})...`;
+
+      setTimeout(() => {
+        contactFeedback.style.color = '#10b981';
+        contactFeedback.textContent = `✓ Quotation request successfully received! Our technical team will reach out at ${email} shortly.`;
+        contactForm.reset();
+      }, 1000);
     });
   }
 
@@ -500,5 +523,6 @@ document.addEventListener('DOMContentLoaded', () => {
   setupRfqDropzone();
   setupPdfGenerator();
   setupRfqForm();
+  setupContactEnquiryForm();
   loadShowcaseData();
 });

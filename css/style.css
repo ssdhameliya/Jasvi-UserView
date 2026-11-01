@@ -1228,3 +1228,284 @@ img, svg {
     height: 320px;
   }
 }
+
+
+/* ==========================================================================
+   Sub-Page Banners (Liquid Blue Wave with Glowing Vignettes - Contact Screenshot)
+   ========================================================================== */
+.subpage-banner {
+  position: relative;
+  background: radial-gradient(circle at center, #0f3e66 0%, #06182c 100%);
+  padding: 55px 0 75px 0;
+  overflow: hidden;
+  color: #ffffff;
+  border-bottom: 2px solid var(--brand-blue);
+}
+
+.subpage-banner-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+  gap: 20px;
+}
+
+.subpage-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  color: #ffffff;
+  text-align: center;
+  flex: 1;
+  letter-spacing: 0.5px;
+}
+
+/* Glowing Neon-Rimmed Circular Vignettes (Exact match to Contact Screenshot) */
+.banner-vignette {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  flex-shrink: 0;
+}
+
+.banner-vignette-circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #ffffff;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 
+    0 0 0 3px #1c75bc,
+    0 0 0 7px rgba(56, 189, 248, 0.45),
+    0 0 35px rgba(56, 189, 248, 0.6);
+  overflow: hidden;
+}
+
+.banner-vignette-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ==========================================================================
+   Dedicated Contact Page 2-Column Split Layout (Exact match to Screenshot)
+   ========================================================================== */
+.contact-page-container {
+  max-width: 1140px;
+  margin: -40px auto 80px auto;
+  position: relative;
+  z-index: 10;
+  padding: 0 20px;
+}
+
+.contact-split-box {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+  background: #ffffff;
+}
+
+/* Left Column: Solid Blue "Let's Talk" Card */
+.contact-talk-card {
+  background: var(--brand-blue);
+  color: #ffffff;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.talk-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 3vw, 2.8rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.talk-narrative {
+  color: #e0f2fe;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+.talk-info-group {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.talk-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.talk-info-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.talk-info-label {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.talk-info-val {
+  font-size: 0.95rem;
+  color: #dbeafe;
+  line-height: 1.5;
+}
+
+/* Right Column: Clean White "Get a Quotation Now" Card */
+.contact-quote-card {
+  background: #ffffff;
+  padding: 50px 40px;
+}
+
+.quote-overline {
+  color: var(--brand-blue);
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.quote-heading {
+  font-size: clamp(1.8rem, 2.5vw, 2.3rem);
+  font-weight: 800;
+  color: var(--dark-primary);
+  margin-bottom: 28px;
+}
+
+.quote-form-group {
+  margin-bottom: 18px;
+}
+
+.quote-input,
+.quote-select,
+.quote-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  background: #f8fafc;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.quote-input:focus,
+.quote-select:focus,
+.quote-textarea:focus {
+  outline: none;
+  background: #ffffff;
+  border-color: var(--brand-blue);
+  box-shadow: 0 0 0 3px rgba(28, 117, 188, 0.15);
+}
+
+.btn-submit-quote {
+  background: var(--brand-blue);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btn-submit-quote:hover {
+  background: var(--brand-blue-dark);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Dedicated Gallery Page Layout
+   ========================================================================== */
+.gallery-grid-section {
+  padding: 60px 0 80px 0;
+  background: var(--bg-page);
+}
+
+.facility-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.facility-photo-card {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid #e2e8f0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.facility-photo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+.facility-photo-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.facility-card-caption {
+  padding: 18px;
+}
+
+.facility-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--dark-primary);
+  margin-bottom: 6px;
+}
+
+.facility-card-sub {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 900px) {
+  .contact-split-box {
+    grid-template-columns: 1fr;
+  }
+  .banner-vignette {
+    display: none;
+  }
+  .facility-photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .facility-photo-grid {
+    grid-template-columns: 1fr;
+  }
+}
