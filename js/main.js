@@ -218,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
       : valves.filter(v => v.category === filter);
 
     grid.innerHTML = filtered.map((v) => `
-      <div class="hydrevo-card" data-id="${v.id}" data-category="${v.category}">
+      <a href="product-detail.html?id=${v.id}" class="hydrevo-card" data-id="${v.id}" data-category="${v.category}">
         <!-- Top-Right Watermark Monogram (Hydrevo HE / Jasvi JI) -->
         <span class="card-watermark">JI</span>
         <div class="card-img-wrap">
@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <!-- Solid Blue Bottom Label Ribbon (Image 4) -->
         <div class="card-bottom-ribbon">${v.ribbonTitle || v.title}</div>
-      </div>
+      </a>
     `).join('');
 
     // Attach click events to each card
@@ -476,6 +476,23 @@ document.addEventListener('DOMContentLoaded', () => {
   function setupContactEnquiryForm() {
     const contactForm = document.getElementById('contact-enquiry-form');
     const contactFeedback = document.getElementById('contact-feedback');
+    const productSelect = document.getElementById('contact-product');
+    
+    // Auto pre-select product from URL parameter (?product=...)
+    const params = new URLSearchParams(window.location.search);
+    const prodParam = params.get('product');
+    if (productSelect && prodParam) {
+      for (let i = 0; i < productSelect.options.length; i++) {
+        const optText = productSelect.options[i].text.toLowerCase();
+        const optVal = productSelect.options[i].value.toLowerCase();
+        const search = prodParam.toLowerCase();
+        if (optText.includes(search) || optVal.includes(search) || search.includes(optVal)) {
+          productSelect.selectedIndex = i;
+          break;
+        }
+      }
+    }
+
     if (!contactForm || !contactFeedback) return;
 
     contactForm.addEventListener('submit', (e) => {
@@ -497,7 +514,50 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================================
-  // 10. Main Hydration Controller
+  // 10. Dedicated Product Detail Page Hydrator (Matching Image 2 1:1)
+  // ==========================================================================
+  function initProductDetailPage(valves) {
+    const detailContainer = document.querySelector('.product-detail-container');
+    if (!detailContainer || !valves || valves.length === 0) return;
+
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id') || 'v-manifold-5w';
+    const valve = valves.find(v => v.id === id) || valves[0];
+
+    const titleEl = document.getElementById('detail-page-title');
+    const imgEl = document.getElementById('detail-product-img');
+    const para1El = document.getElementById('detail-para-1');
+    const para2El = document.getElementById('detail-para-2');
+    const specSurface = document.getElementById('spec-surface');
+    const specMaterial = document.getElementById('spec-material');
+    const specApplication = document.getElementById('spec-application');
+    const specShape = document.getElementById('spec-shape');
+    const specPressure = document.getElementById('spec-pressure');
+    const enquiryBtn = document.getElementById('detail-enquiry-btn');
+
+    if (titleEl) titleEl.textContent = valve.ribbonTitle || valve.title;
+    if (imgEl) {
+      imgEl.src = valve.image;
+      imgEl.alt = valve.title;
+    }
+    if (para1El) {
+      para1El.innerHTML = `<strong>Jasvi Industries</strong> is a leading manufacturer, supplier and exporter of <strong>${valve.ribbonTitle || valve.title}</strong> in Ahmedabad & Surat (Gujarat, India). We provide precision-engineered Severe-Service fluid systems designed to regulate high-pressure media with zero leakage. Manufactured using superior ${Array.isArray(valve.materials) ? valve.materials.join(', ') : 'SS316 / Duplex'} alloys that are resistive to corrosion, rust, and severe abrasive chemicals, this valve is engineered to last for an extended operational lifecycle. It can be effortlessly integrated with critical process piping and hydraulic systems. Clients can procure these precision components from us at highly competitive direct-manufacturer rates.`;
+    }
+    if (para2El) {
+      para2El.textContent = valve.meta || 'Precision-machined severe-service valve engineered according to ASME B16.34 and API 598 standards.';
+    }
+    if (specSurface) specSurface.textContent = 'Grinding Finish / Micro-Lapped Seat';
+    if (specMaterial) specMaterial.textContent = Array.isArray(valve.materials) ? valve.materials.join(' / ') : 'SS316 / Duplex 2205 / Inconel';
+    if (specApplication) specApplication.textContent = 'Severe-Service Instrumentation & Process Piping';
+    if (specShape) specShape.textContent = valve.tag || 'Forged Monoblock';
+    if (specPressure) specPressure.textContent = (valve.badges && valve.badges[1]) ? valve.badges[1] : 'Up to 10,000 PSI / 250 Bar';
+    if (enquiryBtn) {
+      enquiryBtn.href = `contact.html?product=${encodeURIComponent(valve.ribbonTitle || valve.title)}`;
+    }
+  }
+
+  // ==========================================================================
+  // 11. Main Hydration Controller
   // ==========================================================================
   async function loadShowcaseData() {
     try {
@@ -508,6 +568,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (showcaseData.valveProducts) {
         renderHydrevoProductGrid(showcaseData.valveProducts, 'all');
         setupCategoryFilters(showcaseData.valveProducts);
+        initProductDetailPage(showcaseData.valveProducts);
       }
 
       if (showcaseData.workstations) {

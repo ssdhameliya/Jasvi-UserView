@@ -1509,3 +1509,260 @@ img, svg {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* ==========================================================================
+   Full-Bleed Edge-to-Edge Hero Layout (Zero Left/Right White Margins)
+   ========================================================================== */
+.hero-section-fullbleed {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background: linear-gradient(135deg, #f8fafc 0%, #e8f2fa 100%);
+  padding: 50px 0 65px 0;
+  border-bottom: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+.hero-fullbleed-wrapper {
+  width: 100%;
+  padding: 0 clamp(20px, 5vw, 80px);
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ==========================================================================
+   Header Dropdown Menu: "OUR PRODUCTS ▾"
+   ========================================================================== */
+.nav-item-dropdown {
+  position: relative;
+}
+
+.nav-item-dropdown .arrow-down {
+  font-size: 0.75rem;
+  margin-left: 3px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item-dropdown:hover .arrow-down {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 270px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  padding: 8px 0;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  z-index: 1050;
+}
+
+.nav-item-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--dark-primary);
+  text-transform: none;
+  letter-spacing: 0;
+  border-bottom: 1px solid #f8fafc;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.dropdown-menu li:last-child a {
+  border-bottom: none;
+}
+
+.dropdown-menu li a:hover {
+  background: var(--brand-blue-subtle);
+  color: var(--brand-blue);
+  padding-left: 24px;
+}
+
+/* ==========================================================================
+   Dedicated Product Detail Screen (Matching Hydrevo Image 2 1:1)
+   ========================================================================== */
+.product-detail-container {
+  max-width: 1180px;
+  margin: 40px auto 80px auto;
+  padding: 0 20px;
+}
+
+.detail-card-wrapper {
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  padding: 45px;
+}
+
+/* Top Row: Photo on studio black (Left) + 2 Narrative paragraphs (Right) */
+.detail-top-row {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 40px;
+  align-items: flex-start;
+  margin-bottom: 45px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.detail-img-box {
+  border: 2px solid #111827;
+  border-radius: 6px;
+  background: #0b0f19;
+  padding: 25px;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+  position: relative;
+  overflow: hidden;
+}
+
+.detail-img-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.detail-img-box:hover img {
+  transform: scale(1.06);
+}
+
+.detail-narrative {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--text-body);
+}
+
+.detail-narrative p strong {
+  color: var(--dark-primary);
+  font-weight: 700;
+}
+
+/* Bottom Row: Blue-Header Specifications Table (Left) + Enquiry Button (Right) */
+.detail-bottom-row {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.spec-table-container {
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.spec-table-blue-header {
+  background: var(--brand-blue);
+  color: #ffffff;
+  padding: 12px 20px;
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.spec-table-detail {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.spec-table-detail td {
+  padding: 10px 16px;
+  font-size: 0.92rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.spec-table-detail tr:last-child td {
+  border-bottom: none;
+}
+
+.spec-table-detail td:first-child {
+  font-weight: 600;
+  color: var(--dark-primary);
+  width: 42%;
+  border-right: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.spec-table-detail td:last-child {
+  color: var(--text-body);
+  font-weight: 500;
+}
+
+.detail-cta-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hydrevo Signature Solid Blue "Enquiry Now 👆" Button with Hand Pointer */
+.btn-enquiry-finger {
+  background: var(--brand-blue);
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  padding: 16px 38px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 6px 20px rgba(28, 117, 188, 0.35);
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-enquiry-finger:hover {
+  background: var(--brand-blue-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(28, 117, 188, 0.45);
+  color: #ffffff;
+}
+
+.btn-enquiry-finger .finger-icon {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+/* Fullbleed Hero Responsive */
+@media (max-width: 992px) {
+  .hero-fullbleed-wrapper {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+  .detail-top-row,
+  .detail-bottom-row {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}

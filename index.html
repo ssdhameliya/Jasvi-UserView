@@ -70,7 +70,17 @@
         <ul class="nav-menu">
           <li><a href="index.html" class="nav-link active">HOME</a></li>
           <li><a href="about.html" class="nav-link">ABOUT</a></li>
-          <li><a href="products.html" class="nav-link">OUR PRODUCTS</a></li>
+          <li class="nav-item-dropdown">
+            <a href="products.html" class="nav-link">OUR PRODUCTS <span class="arrow-down">&#9662;</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="product-detail.html?id=v-needle-6k">High-Pressure Needle Valves</a></li>
+              <li><a href="product-detail.html?id=v-manifold-5w">Instrumentation Manifold Blocks</a></li>
+              <li><a href="product-detail.html?id=v-ball-trunnion">Severe-Service Ball Valves</a></li>
+              <li><a href="product-detail.html?id=v-check-piston">High-Pressure Check Valves</a></li>
+              <li><a href="product-detail.html?id=v-dbb-monoflange">DBB Monoflange Valves</a></li>
+              <li><a href="product-detail.html?id=v-gauge-bleed">Multi-Port Gauge Valves</a></li>
+            </ul>
+          </li>
           <li><a href="gallery.html" class="nav-link">GALLERY</a></li>
           <li><a href="contact.html" class="nav-link">CONTACT</a></li>
         </ul>
@@ -89,12 +99,12 @@
   </header>
 
   <!-- ==========================================================================
-       3. Hero Banner with Dynamic Angular Geometry (Hydrevo Style - Image 1)
+       3. Full-Bleed Edge-to-Edge Hero Banner (Zero Side Margins - Image 1)
        ========================================================================== -->
-  <section class="hero-section">
+  <section class="hero-section-fullbleed">
     <canvas id="hero-canvas"></canvas>
 
-    <div class="container hero-grid">
+    <div class="hero-fullbleed-wrapper">
       <div class="hero-left">
         <!-- Hydrevo Top Dark Badge -->
         <div class="hero-tag-badge" id="hero-badge-tag">JASVI VALVES</div>
