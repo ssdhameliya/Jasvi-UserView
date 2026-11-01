@@ -993,17 +993,25 @@ img, svg {
 }
 
 .swiper-container-wrap {
-  padding: 30px 0;
+  padding: 20px 0 44px;
+  width: 100%;
+}
+
+.swiper-showcase-container {
+  width: 100%;
+  overflow: hidden;
+  padding: 8px 4px 44px;
 }
 
 .swiper-showcase-container .swiper-slide {
-  width: 480px;
-  max-width: 90vw;
+  height: auto;
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
 }
 
 .slide-img-wrap {

@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================================
-  // 2. Swiper 3D Coverflow Initialization (Facility Workstations)
+  // 2. Swiper Full-Width 3-Column Showcase Initialization (Facility Workstations)
   // ==========================================================================
   function initSwiperCoverflow() {
     if (typeof Swiper === 'undefined') return;
@@ -141,23 +141,27 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     swiperInstance = new Swiper('.swiper-showcase-container', {
-      effect: 'coverflow',
+      effect: 'slide',
       grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: 'auto',
+      centeredSlides: false,
+      slidesPerView: 1,
+      spaceBetween: 24,
       loop: true,
-      speed: 700,
+      speed: 650,
       autoplay: {
-        delay: 3500,
+        delay: 3200,
         disableOnInteraction: false,
         pauseOnMouseEnter: true
       },
-      coverflowEffect: {
-        rotate: 18,
-        stretch: 0,
-        depth: 140,
-        modifier: 1,
-        slideShadows: true
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 24
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 28
+        }
       },
       pagination: {
         el: '.swiper-pagination',

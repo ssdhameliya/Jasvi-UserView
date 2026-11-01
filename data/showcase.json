@@ -194,9 +194,30 @@
     {
       "id": "ws-3",
       "name": "Zeiss 3D CNC Coordinate Measuring Machine (CMM)",
-      "badge": "Laser Metrology & Metrology",
+      "badge": "Laser Metrology & Inspection",
       "image": "assets/images/quality_cmm_inspection.jpg",
       "desc": "Sub-micron volumetric laser and probe metrology validating dimensional geometry, roundness, and seat finishes according to ISO 9001:2015."
+    },
+    {
+      "id": "ws-4",
+      "name": "Cleanroom Valve Assembly & Hydro-Test Bay",
+      "badge": "API 598 & ISO 15848 Testing",
+      "image": "assets/images/hero_smart_factory.jpg",
+      "desc": "Climate-controlled cleanroom assembly equipped with automated 10,000 PSI hydrostatic shell test benches and helium mass spectrometer leak detection."
+    },
+    {
+      "id": "ws-5",
+      "name": "10,000 PSI Needle & Gauge Valve Finishing Cell",
+      "badge": "Severe-Service Barstock Cell",
+      "image": "assets/images/hero_valve_needle.jpg",
+      "desc": "Dedicated CNC barstock machining, thread rolling, and micro-lapping cell for forged SS316, Duplex 2205, and Inconel 625 instrumentation needle valves."
+    },
+    {
+      "id": "ws-6",
+      "name": "5-Way Manifold Deep-Hole Drilling & Honing Suite",
+      "badge": "IEC 61518 Manifold Production",
+      "image": "assets/images/hero_valve_manifold.jpg",
+      "desc": "High-precision gun-drilling, burr-free intersection honing, and automated seat pressure verification for 2-way, 3-way, and 5-way manifold blocks."
     }
   ]
 }
