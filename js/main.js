@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
       draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(28, 117, 188, ${this.alpha})`;
+        ctx.fillStyle = `rgba(16, 185, 129, ${this.alpha})`;
         ctx.fill();
       }
     }
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(28, 117, 188, ${0.15 * (1 - dist / 90)})`;
+            ctx.strokeStyle = `rgba(16, 185, 129, ${0.18 * (1 - dist / 90)})`;
             ctx.lineWidth = 0.8;
             ctx.stroke();
           }
@@ -337,15 +337,15 @@ document.addEventListener('DOMContentLoaded', () => {
     ['dragenter', 'dragover'].forEach(evt => {
       dropzone.addEventListener(evt, (e) => {
         e.preventDefault();
-        dropzone.style.borderColor = '#1c75bc';
-        dropzone.style.background = '#e0f2fe';
+        dropzone.style.borderColor = '#059669';
+        dropzone.style.background = 'rgba(209, 250, 229, 0.85)';
       });
     });
 
     ['dragleave', 'drop'].forEach(evt => {
       dropzone.addEventListener(evt, (e) => {
         e.preventDefault();
-        dropzone.style.borderColor = 'rgba(28, 117, 188, 0.35)';
+        dropzone.style.borderColor = 'rgba(5, 150, 105, 0.35)';
         dropzone.style.background = 'var(--brand-blue-subtle)';
       });
     });
@@ -385,7 +385,7 @@ document.addEventListener('DOMContentLoaded', () => {
       };
 
       // Header Banner
-      doc.setFillColor(28, 117, 188); // Hydrevo Blue #1c75bc
+      doc.setFillColor(5, 150, 105); // Jasvi Emerald Green #059669
       doc.rect(0, 0, 210, 32, 'F');
 
       doc.setFont('helvetica', 'bold');
@@ -399,18 +399,18 @@ document.addEventListener('DOMContentLoaded', () => {
       doc.text('https://jasviindustries.in • info@jasviindustries.in', 15, 28);
 
       // Document Title
-      doc.setTextColor(17, 24, 39);
+      doc.setTextColor(6, 78, 59);
       doc.setFont('helvetica', 'bold');
       doc.setFontSize(14);
       doc.text('TECHNICAL VALVE SPECIFICATION DATA SHEET', 15, 45);
 
-      doc.setDrawColor(28, 117, 188);
+      doc.setDrawColor(5, 150, 105);
       doc.setLineWidth(0.8);
       doc.line(15, 48, 195, 48);
 
       // Model Specs
       doc.setFontSize(11);
-      doc.setTextColor(28, 117, 188);
+      doc.setTextColor(5, 150, 105);
       doc.text(`Model: ${valve.title}`, 15, 57);
 
       doc.setFontSize(10);
@@ -438,19 +438,19 @@ document.addEventListener('DOMContentLoaded', () => {
         doc.setTextColor(75, 85, 99);
         doc.text(value, 80, currentY);
 
-        doc.setDrawColor(241, 245, 249);
+        doc.setDrawColor(236, 253, 245);
         doc.line(15, currentY + 3, 195, currentY + 3);
         currentY += 10;
       });
 
       // Manufacturing Guarantee Box
       currentY += 8;
-      doc.setFillColor(248, 250, 252);
-      doc.setDrawColor(28, 117, 188);
+      doc.setFillColor(240, 253, 244);
+      doc.setDrawColor(5, 150, 105);
       doc.rect(15, currentY, 180, 28, 'FD');
 
       doc.setFont('helvetica', 'bold');
-      doc.setTextColor(28, 117, 188);
+      doc.setTextColor(5, 150, 105);
       doc.text('Jasvi Manufacturing & Zero-Leakage Guarantee', 20, currentY + 8);
 
       doc.setFont('helvetica', 'normal');
@@ -484,11 +484,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const valveType = document.getElementById('rfq-valve-type').value;
 
       feedback.style.display = 'block';
-      feedback.style.color = '#1c75bc';
+      feedback.style.color = '#059669';
       feedback.textContent = `Connecting to Jasvi ERP... Registering technical RFQ for ${name} (${valveType})...`;
 
       setTimeout(() => {
-        feedback.style.color = '#10b981';
+        feedback.style.color = '#047857';
         feedback.textContent = `✓ Technical RFQ successfully registered in Jasvi ERP! An engineering quote will be sent to ${email} within 2 hours.`;
         form.reset();
         const nameDisplay = document.getElementById('file-name-display');
@@ -526,11 +526,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const product = document.getElementById('contact-product').value;
 
       contactFeedback.style.display = 'block';
-      contactFeedback.style.color = '#1c75bc';
+      contactFeedback.style.color = '#059669';
       contactFeedback.textContent = `Submitting quotation request for ${name} (${product})...`;
 
       setTimeout(() => {
-        contactFeedback.style.color = '#10b981';
+        contactFeedback.style.color = '#047857';
         contactFeedback.textContent = `✓ Quotation request successfully received! Our technical team will reach out at ${email} shortly.`;
         contactForm.reset();
       }, 1000);
@@ -550,6 +550,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const titleEl = document.getElementById('detail-page-title');
     const imgEl = document.getElementById('detail-product-img');
+    const vigLeftEl = document.getElementById('banner-vignette-left');
     const para1El = document.getElementById('detail-para-1');
     const para2El = document.getElementById('detail-para-2');
     const specSurface = document.getElementById('spec-surface');
@@ -563,6 +564,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (imgEl) {
       imgEl.src = valve.image;
       imgEl.alt = valve.title;
+    }
+    if (vigLeftEl) {
+      vigLeftEl.src = valve.image;
+      vigLeftEl.alt = valve.title;
     }
     if (para1El) {
       para1El.innerHTML = `<strong>Jasvi Industries</strong> is a leading manufacturer, supplier and exporter of <strong>${valve.ribbonTitle || valve.title}</strong> in Ahmedabad & Surat (Gujarat, India). We provide precision-engineered Severe-Service fluid systems designed to regulate high-pressure media with zero leakage. Manufactured using superior ${Array.isArray(valve.materials) ? valve.materials.join(', ') : 'SS316 / Duplex'} alloys that are resistive to corrosion, rust, and severe abrasive chemicals, this valve is engineered to last for an extended operational lifecycle. It can be effortlessly integrated with critical process piping and hydraulic systems. Clients can procure these precision components from us at highly competitive direct-manufacturer rates.`;

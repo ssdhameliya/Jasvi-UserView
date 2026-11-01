@@ -140,7 +140,7 @@
       "materials": ["SS316", "Brass Alloy", "Alloy 400"],
       "cv": "0.40 to 3.20",
       "tempRange": "-40°C to 200°C (Viton / Kalrez O-Rings)",
-      "image": "assets/images/product_check_valve.svg",
+      "image": "assets/images/hero_valve_check.jpg",
       "active": false
     },
     {
@@ -172,7 +172,7 @@
       "materials": ["SS316", "Carbon Steel A105", "Alloy 20"],
       "cv": "0.55",
       "tempRange": "-54°C to 232°C",
-      "image": "assets/images/product_gauge_valve.svg",
+      "image": "assets/images/hero_valve_gauge.jpg",
       "active": false
     }
   ],
