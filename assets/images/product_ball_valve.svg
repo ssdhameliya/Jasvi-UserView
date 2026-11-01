@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="valve-steel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="35%" stop-color="#cbd5e1"/>
+      <stop offset="70%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#475569"/>
+    </linearGradient>
+    <linearGradient id="lever-blue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1c75bc"/>
+      <stop offset="70%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <filter id="ball-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="7" stdDeviation="6" flood-color="#000000" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="160" cy="214" rx="95" ry="12" fill="#e2e8f0"/>
+
+  <g filter="url(#ball-shadow)">
+    <!-- Central Ball Valve Body (Spherical & 3-Piece Flanged) -->
+    <!-- Left Flange -->
+    <rect x="55" y="115" width="22" height="70" rx="3" fill="url(#valve-steel)" stroke="#334155" stroke-width="2"/>
+    <circle cx="66" cy="126" r="3.5" fill="#1e293b"/>
+    <circle cx="66" cy="150" r="3.5" fill="#1e293b"/>
+    <circle cx="66" cy="174" r="3.5" fill="#1e293b"/>
+
+    <!-- Right Flange -->
+    <rect x="243" y="115" width="22" height="70" rx="3" fill="url(#valve-steel)" stroke="#334155" stroke-width="2"/>
+    <circle cx="254" cy="126" r="3.5" fill="#1e293b"/>
+    <circle cx="254" cy="150" r="3.5" fill="#1e293b"/>
+    <circle cx="254" cy="174" r="3.5" fill="#1e293b"/>
+
+    <!-- Left & Right Pipe Conduits -->
+    <rect x="77" y="128" width="30" height="44" fill="#cbd5e1" stroke="#334155" stroke-width="1.5"/>
+    <rect x="213" y="128" width="30" height="44" fill="#cbd5e1" stroke="#334155" stroke-width="1.5"/>
+
+    <!-- Central Body Chamber -->
+    <ellipse cx="160" cy="150" rx="55" ry="38" fill="url(#valve-steel)" stroke="#334155" stroke-width="2.5"/>
+    
+    <!-- 4 Heavy-Duty Body Tie Bolts -->
+    <circle cx="120" cy="130" r="5" fill="#64748b" stroke="#1e293b" stroke-width="1.5"/>
+    <circle cx="200" cy="130" r="5" fill="#64748b" stroke="#1e293b" stroke-width="1.5"/>
+    <circle cx="120" cy="170" r="5" fill="#64748b" stroke="#1e293b" stroke-width="1.5"/>
+    <circle cx="200" cy="170" r="5" fill="#64748b" stroke="#1e293b" stroke-width="1.5"/>
+
+    <!-- Neck & ISO 5211 Mounting Pad -->
+    <rect x="146" y="90" width="28" height="28" rx="2" fill="url(#valve-steel)" stroke="#334155" stroke-width="2"/>
+    <rect x="140" y="86" width="40" height="6" rx="1.5" fill="#475569"/>
+
+    <!-- Heavy-Duty Operating Lever Handle (Blue Vinyl Sleeve) -->
+    <!-- Metal Stem Base -->
+    <polygon points="152,86 168,86 172,60 148,60" fill="#94a3b8" stroke="#334155" stroke-width="1.5"/>
+    <!-- Quarter Turn Arm -->
+    <path d="M 148,62 L 65,48 C 58,47 55,42 58,35 C 61,28 68,28 75,30 L 165,44 Z" fill="url(#lever-blue)" stroke="#0f172a" stroke-width="2"/>
+    <circle cx="160" cy="56" r="5" fill="#ffffff" stroke="#1c75bc" stroke-width="2"/>
+    <!-- Grip Rivet -->
+    <circle cx="75" cy="38" r="3" fill="#ffffff"/>
+  </g>
+</svg>

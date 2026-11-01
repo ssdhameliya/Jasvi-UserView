@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gauge-metal" x1="0%" y1="0%" x2="100%" y2="80%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="35%" stop-color="#cbd5e1"/>
+      <stop offset="70%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#475569"/>
+    </linearGradient>
+    <linearGradient id="gauge-handle" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <filter id="gauge-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="7" stdDeviation="6" flood-color="#000000" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="160" cy="214" rx="90" ry="12" fill="#e2e8f0"/>
+
+  <g filter="url(#gauge-shadow)">
+    <!-- Multi-Port Gauge Valve Body (Square Forged Barstock) -->
+    <!-- Inlet Male NPT Nipple on Left -->
+    <rect x="45" y="135" width="55" height="30" rx="2" fill="url(#gauge-metal)" stroke="#334155" stroke-width="2"/>
+    <line x1="55" y1="135" x2="55" y2="165" stroke="#94a3b8" stroke-width="2"/>
+    <line x1="67" y1="135" x2="67" y2="165" stroke="#94a3b8" stroke-width="2"/>
+    <line x1="79" y1="135" x2="79" y2="165" stroke="#94a3b8" stroke-width="2"/>
+
+    <!-- Central Square Body -->
+    <rect x="100" y="115" width="115" height="70" rx="4" fill="url(#gauge-metal)" stroke="#334155" stroke-width="2.5"/>
+
+    <!-- Outlet Gauge Port (Threaded Female 1/2" NPT) on Right -->
+    <rect x="215" y="130" width="45" height="40" rx="3" fill="url(#gauge-metal)" stroke="#334155" stroke-width="2"/>
+    <circle cx="237" cy="150" r="10" fill="#1e293b"/>
+
+    <!-- Auxiliary Vent/Bleed Port on Bottom -->
+    <rect x="142" y="185" width="30" height="20" rx="2" fill="#94a3b8" stroke="#334155" stroke-width="1.5"/>
+    <circle cx="157" cy="195" r="5" fill="#1e293b"/>
+
+    <!-- Needle Bonnet & Stem Rising Up -->
+    <rect x="144" y="80" width="28" height="35" rx="2" fill="url(#gauge-metal)" stroke="#334155" stroke-width="2"/>
+    <rect x="148" y="72" width="20" height="8" rx="2" fill="#1c75bc"/>
+    <rect x="152" y="50" width="12" height="22" fill="#cbd5e1" stroke="#334155" stroke-width="1.5"/>
+
+    <!-- T-Bar Handle -->
+    <rect x="90" y="38" width="135" height="13" rx="6.5" fill="url(#gauge-handle)" stroke="#1c75bc" stroke-width="2"/>
+    <circle cx="157.5" cy="44.5" r="4.5" fill="#1c75bc" stroke="#ffffff" stroke-width="1"/>
+  </g>
+</svg>

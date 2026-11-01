@@ -1,226 +1,202 @@
 {
-  "version": 2,
-  "lastModified": "2026-11-01T15:15:00Z",
+  "version": 3,
+  "lastModified": "2026-11-01T15:45:00Z",
   "branding": {
     "companyName": "JASVI INDUSTRIES",
     "division": "Precision Valves & Flow Control",
     "tagline": "Advanced Fluid Engineering",
-    "badgeText": "Zero-Leakage High-Pressure Industrial Flow Systems",
-    "portalUrl": "https://erp.jasviindustries.in/"
+    "badgeText": "Mfg. of High-Pressure Needle Valves, Manifold Blocks and Flow Control Systems",
+    "portalUrl": "https://erp.jasviindustries.in/",
+    "contact": {
+      "phone": "+91 98765 43210",
+      "email": "info@jasviindustries.in",
+      "whatsapp": "+919876543210",
+      "location": "Surat & Ahmedabad (Gujarat, India)"
+    }
   },
   "hero": {
-    "badge": "ISO 9001:2015 & API 598 Certified Flow Systems",
-    "headline": "Precision Valves & Flow Control. Zero Leakage. Micron Tolerance.",
-    "leadParagraph": "Jasvi Industries manufactures micron-precision instrumentation needle valves, manifold blocks, ball valves, and flow control systems rated up to 10,000 PSI for global aerospace, chemical, cryogenic, and energy partners.",
-    "primaryCta": { "label": "Configure Technical RFQ", "anchor": "#rfq" },
-    "secondaryCta": { "label": "Explore Valve Matrix", "anchor": "#valves" },
-    "kpiStats": [
-      { "id": "stat-1", "number": "10,000", "suffix": " PSI", "label": "API 598 Hydro Shell Tested" },
-      { "id": "stat-2", "number": "0", "suffix": " PPM", "label": "Helium Bubble-Tight Leak Standard" },
-      { "id": "stat-3", "number": "±0.005", "suffix": " mm", "label": "CMM Seat & Spindle Precision" },
-      { "id": "stat-4", "number": "2500", "suffix": " #", "label": "Max ASME Pressure Class Rating" }
-    ]
+    "badgeTag": "JASVI VALVES",
+    "headline": "HIGH-PRESSURE PRECISION VALVES",
+    "subTagline": "Mfg. of High-Pressure Needle Valves, Manifold Blocks and Flow Control Systems",
+    "features": [
+      "Rated up to 10,000 PSI Working Pressure",
+      "100% API 598 Hydrostatic Shell & Helium Leak Tested",
+      "SS316, Duplex 2205, Inconel 625 & Monel 400 Metallurgy"
+    ],
+    "primaryCta": { "label": "Explore Valve Series", "anchor": "#products" },
+    "secondaryCta": { "label": "Configure Technical RFQ", "anchor": "#rfq" }
   },
-  "marquee": [
-    "API 598 Hydrostatic Shell & Seat Tested",
-    "10,000 PSI Max Working Pressure",
-    "NACE MR0175 / ISO 15156 Sour Gas Compliant",
-    "5-Axis Simultaneous VMC Machined Bodies",
-    "100% Helium Mass Spectrometer Leak Tested",
-    "EN 10204 Type 3.1 Material Traceability",
-    "Cryogenic -196°C to +450°C High-Temp Seals",
-    "Fire-Safe Design Certified (API 607 / ISO 10497)"
+  "welcome": {
+    "subtitle": "Mfg. of High-Pressure Needle Valves, Manifold Blocks and Flow Control Systems",
+    "heading": "Welcome To Jasvi Industries",
+    "paragraphs": [
+      "We \"Jasvi Industries\" are a leading Manufacturer, supplier and exporter of a wide range of High-Pressure Needle Valves, 2, 3 & 5-Way Manifold Blocks, Process Ball Valves, Check Valves, Double Block & Bleed (DBB) Valves etc. Situated in Surat & Ahmedabad (Gujarat, India), We have constructed a wide and well functional infrastructural unit that plays an important role in the growth of our company. We offer these precision severe-service products at reasonable rates and deliver these within the promised time-frame.",
+      "With the consistent innovations and precision engineering in fluid handling technology, everyone is resorting to severe-service valves for bringing efficiency that too at zero leakage. We have been consistently innovating and manufacturing our products with the help of the latest 5-axis CNC technology and have been successful in providing products and services which make industrial flow operations safer and much more dependable. This fact has made us a major manufacturer and supplier of severe-service instrumentation valves. Due to these reasons, we have extended domestic boundaries across India to international export markets spanning the Middle East, Southeast Asia, Africa, and Europe. The company is growing very rapidly and has plans to extend its operations in many more countries across the globe.",
+      "We have a huge number of talented engineers and CNC tooling specialists who are qualified and skillful because of their rich experience in this industry. These specialists work very efficiently in order to manufacture the best quality valves across the industry and provide quality service to the clients."
+    ],
+    "cta": { "label": "READ MORE ABOUT US →", "anchor": "#about" }
+  },
+  "trustBadges": [
+    {
+      "id": "trust-1",
+      "icon": "document",
+      "title": "FOUNDED IN THE YEAR 2017",
+      "description": "Providing best quality high-pressure instrumentation valves, manifold blocks, and severe-service fluid fittings to our precious customers in the industries."
+    },
+    {
+      "id": "trust-2",
+      "icon": "shield",
+      "title": "QUALITY ASSURANCE",
+      "description": "Our commitment to quality measures (ISO 9001:2015 & API 598 hydrostatic testing) and continuous improvement has earned us a reputation for excellence."
+    }
+  ],
+  "processSteps": [
+    {
+      "step": "1",
+      "icon": "meeting",
+      "title": "MEETING",
+      "description": "Technical consultation, process fluid parameter review & CAD engineering alignment."
+    },
+    {
+      "step": "2",
+      "icon": "manufacturing",
+      "title": "MANUFACTURING",
+      "description": "5-Axis simultaneous VMC machining, CNC turning & micron-tolerance spindle lapping."
+    },
+    {
+      "step": "3",
+      "icon": "delivery",
+      "title": "DELIVERY",
+      "description": "100% API 598 hydro shell tested, bubble-tight certified & worldwide export dispatch."
+    }
   ],
   "valveCategories": [
-    { "key": "all", "label": "All Valves" },
-    { "key": "needle", "label": "Needle & Gauge Valves" },
-    { "key": "manifold", "label": "2, 3 & 5-Way Manifolds" },
-    { "key": "ball", "label": "Process Ball Valves" },
-    { "key": "check", "label": "Check & Non-Return" },
-    { "key": "dbb", "label": "Double Block & Bleed" }
+    { "key": "all", "label": "All Products" },
+    { "key": "needle", "label": "Needle Valves" },
+    { "key": "manifold", "label": "Manifold Blocks" },
+    { "key": "ball", "label": "Ball Valves" },
+    { "key": "check", "label": "Check Valves" },
+    { "key": "dbb", "label": "DBB Monoflange" }
   ],
   "valveProducts": [
     {
       "id": "v-needle-6k",
       "category": "needle",
       "tag": "Needle Valve",
-      "title": "High-Pressure Forged Needle Valve (6,000 / 10,000 PSI)",
-      "meta": "One-piece forged body with non-rotating stem tip and packing below thread design for hazardous high-pressure isolation.",
+      "ribbonTitle": "High-Pressure Needle Valve",
+      "title": "Forged High-Pressure Needle Valve (6,000 / 10,000 PSI)",
+      "meta": "One-piece forged body with non-rotating stem tip, safety back-seating, and packing below thread design for severe high-pressure isolation.",
       "badges": ["SS316 / Monel", "6,000 - 10,000 PSI", "NACE MR0175"],
       "sizes": ["1/4\"", "3/8\"", "1/2\"", "3/4\"", "1\""],
       "endConnections": ["NPT Female x Female", "NPT Male x Female", "Twin Ferrule Tube OD"],
       "materials": ["SS316/316L", "Duplex 2205", "Inconel 625", "Monel 400"],
       "cv": "0.35 to 1.80",
       "tempRange": "-54°C to 232°C (PTFE) / up to 450°C (Grafoil)",
+      "image": "assets/images/product_needle_valve.svg",
       "active": true
     },
     {
       "id": "v-manifold-5w",
       "category": "manifold",
-      "tag": "Instrument Manifold",
-      "title": "5-Way Differential Pressure Valve Manifold",
-      "meta": "Compact direct-mount valve manifold integrating two block valves, one equalizer valve, and two vent valves for differential pressure transmitters.",
-      "badges": ["Direct Mount", "6,000 PSI Rated", "Zero Dead Space"],
-      "sizes": ["1/2\" NPT", "Flanged to IEC 61518"],
-      "endConnections": ["1/2\" NPT Female", "Direct Transmitter Flange Mount"],
+      "tag": "Manifold Block",
+      "ribbonTitle": "Hydraulic & Instrument Manifold Block",
+      "title": "2, 3 & 5-Way Instrumentation Manifold Block",
+      "meta": "Direct-mount and remote-mount manifold blocks designed for differential pressure transmitters, incorporating isolate, equalize, and vent valves.",
+      "badges": ["5-Valve Direct Mount", "6,000 PSI Rating", "API 598 Tested"],
+      "sizes": ["1/2\" NPT Process", "1/4\" NPT Vent", "Flange to Transmitter IEC 61518"],
+      "endConnections": ["Flange x NPT", "NPT Female x NPT Female", "Coplanar Mount"],
       "materials": ["SS316", "Super Duplex 2507", "Hastelloy C-276"],
-      "cv": "0.52",
-      "tempRange": "-40°C to 260°C",
-      "active": true
+      "cv": "0.45 to 0.70 per valve line",
+      "tempRange": "-50°C to 240°C (PTFE) / 450°C (Graphite)",
+      "image": "assets/images/product_manifold_block.svg",
+      "active": false
     },
     {
-      "id": "v-ball-3pc",
+      "id": "v-ball-trunnion",
       "category": "ball",
       "tag": "Ball Valve",
-      "title": "3-Piece High-Pressure Trunnion Ball Valve",
-      "meta": "Full-bore 3-piece bolted body design with micro-lapped spherical ball, blow-out proof stem, and spring-energized seats.",
-      "badges": ["Full Port", "Class 150 - 2500", "Fire-Safe API 607"],
+      "ribbonTitle": "Precision Process Ball Valve",
+      "title": "Severe-Service Process Ball Valve (Class 150 - 2500)",
+      "meta": "Two-piece and three-piece forged body ball valve featuring floating and trunnion-mounted balls, fire-safe graphite seals, and blowout-proof stems.",
+      "badges": ["Class 150-2500", "Fire Safe API 607", "Zero Bubble Leak"],
       "sizes": ["1/2\"", "3/4\"", "1\"", "1-1/2\"", "2\"", "3\"", "4\""],
-      "endConnections": ["Flanged ASME B16.5 RF/RTJ", "Socket Weld", "Butt Weld"],
-      "materials": ["ASTM A182 F316", "A350 LF2", "Duplex 2205"],
-      "cv": "18.5 to 420.0",
-      "tempRange": "-50°C to 200°C (PEEK) / 350°C (Metal-to-Metal)",
-      "active": true
+      "endConnections": ["ASME B16.5 Flanged", "Socket Weld", "Threaded NPT/BSPT"],
+      "materials": ["ASTM A182 F316", "A105 Forged Carbon", "Duplex F51"],
+      "cv": "8.5 to 480.0",
+      "tempRange": "-196°C to +350°C",
+      "image": "assets/images/product_ball_valve.svg",
+      "active": false
     },
     {
-      "id": "v-check-dual",
+      "id": "v-check-piston",
       "category": "check",
-      "tag": "Non-Return",
-      "title": "Dual-Plate Wafer Check Valve",
-      "meta": "Compact resilient-seated check valve with spring-loaded dual plates preventing pressure surges and water hammer in industrial piping.",
-      "badges": ["Zero Backflow", "Wafer / Lug", "API 594"],
-      "sizes": ["2\"", "3\"", "4\"", "6\"", "8\"", "10\""],
-      "endConnections": ["Wafer ASME Class 150 / 300 / 600"],
-      "materials": ["WCB Carbon Steel", "CF8M Stainless", "Aluminium Bronze"],
-      "cv": "45.0 to 1850.0",
-      "tempRange": "-29°C to 180°C",
-      "active": true
+      "tag": "Check Valve",
+      "ribbonTitle": "High-Pressure Check Valve",
+      "title": "High-Pressure Piston & Ball Check Valve (6,000 PSI)",
+      "meta": "Unidirectional severe-service non-return valve engineered for back-flow prevention with fast-shut cracking pressure springs.",
+      "badges": ["Zero Backflow", "6,000 PSI Rated", "Cracking 1/3/10 PSI"],
+      "sizes": ["1/4\"", "3/8\"", "1/2\"", "3/4\"", "1\""],
+      "endConnections": ["Double Ferrule Compression", "NPT Female", "Male NPT"],
+      "materials": ["SS316", "Brass Alloy", "Alloy 400"],
+      "cv": "0.40 to 3.20",
+      "tempRange": "-40°C to 200°C (Viton / Kalrez O-Rings)",
+      "image": "assets/images/product_check_valve.svg",
+      "active": false
     },
     {
       "id": "v-dbb-monoflange",
       "category": "dbb",
-      "tag": "DBB Valve",
-      "title": "Double Block & Bleed (DBB) Monoflange Valve",
-      "meta": "Integrated primary isolate, vent, and secondary isolate in a single forged compact body replacing traditional bulky piping manifolds.",
-      "badges": ["Compact Monoflange", "Weight Saving 70%", "ASME B16.5"],
-      "sizes": ["1/2\"", "3/4\"", "1\"", "1-1/2\"", "2\""],
-      "endConnections": ["Flange x 1/2\" NPT Female", "Flange x Flange"],
-      "materials": ["SS316/316L", "Monel 400", "Inconel 825"],
-      "cv": "0.45",
+      "tag": "DBB Monoflange",
+      "ribbonTitle": "Double Block & Bleed (DBB) Valve",
+      "title": "Slimline DBB Monoflange Valve Assembly",
+      "meta": "Integrates primary isolate, secondary isolate, and bleed needles into a single forged monoflange body, eliminating multiple piping leak paths.",
+      "badges": ["ASME B16.5 Monoflange", "Weight & Leak Saver", "API 6D Design"],
+      "sizes": ["1/2\" to 2\" Flanged RF / RTJ", "Vent 1/4\" NPT"],
+      "endConnections": ["ASME 150# to 2500# Flanged Inlet", "NPT Instrument Outlet"],
+      "materials": ["SS316/316L", "Inconel 825", "Duplex 2205"],
+      "cv": "0.35 to 1.20",
       "tempRange": "-54°C to 450°C",
-      "active": true
+      "image": "assets/images/product_dbb_valve.svg",
+      "active": false
     },
     {
-      "id": "v-manifold-2w",
-      "category": "manifold",
-      "tag": "Instrument Manifold",
-      "title": "2-Way Block & Bleed Gauge Manifold",
-      "meta": "Designed for pressure gauges, pressure switches, and absolute pressure transmitters with isolate and calibration vent ports.",
-      "badges": ["Gauge Calibration", "10,000 PSI", "Bonnet Lock Pin"],
-      "sizes": ["1/2\" NPT Male x 1/2\" NPT Female", "1/2\" NPT Female x Female"],
-      "endConnections": ["1/2\" NPT Threaded"],
-      "materials": ["SS316", "Duplex 2205"],
-      "cv": "0.38",
+      "id": "v-gauge-bleed",
+      "category": "needle",
+      "tag": "Gauge Valve",
+      "ribbonTitle": "Multi-Port Gauge & Bleed Valve",
+      "title": "Multi-Port Gauge Isolation & Calibration Valve",
+      "meta": "Forged multi-port valve with one inlet and three outlet/vent ports, ideal for pressure gauge mounting, venting, and field calibration ports.",
+      "badges": ["Multi-Port 1/2\" NPT", "6,000 PSI Rating", "Bleed Plug Included"],
+      "sizes": ["1/2\" NPT Male x 1/2\" NPT Female (3 Outlets)"],
+      "endConnections": ["NPT Male Inlet x NPT Female Outlets"],
+      "materials": ["SS316", "Carbon Steel A105", "Alloy 20"],
+      "cv": "0.55",
       "tempRange": "-54°C to 232°C",
-      "active": true
+      "image": "assets/images/product_gauge_valve.svg",
+      "active": false
     }
   ],
-  "machinerySection": {
-    "badge": "Swiper 11 3D Coverflow",
-    "title": "Precision Machining & Valve Test Workstations",
-    "subtitle": "Swipe or drag through our climate-controlled 5-axis CNC machining centers, automated hydrostatic test benches, and Zeiss 3D CMM metrology suites."
-  },
-  "machinery": [
+  "workstations": [
     {
-      "id": "mach-vmc-5axis",
-      "badge": "Simultaneous Multi-Axis",
-      "title": "5-Axis VMC Valve Body Milling",
-      "description": "Solid forging billet machining for complex multi-port valve bodies and manifold blocks in a single clamping setup.",
+      "id": "ws-1",
+      "name": "DMG MORI 5-Axis Simultaneous VMC",
+      "badge": "Sub-Micron Machining",
       "image": "assets/images/machine_vmc_5axis.jpg",
-      "specs": [
-        { "key": "Working Area", "value": "1200 x 800 x 600 mm" },
-        { "key": "Positional Accuracy", "value": "±0.004 mm" },
-        { "key": "Direct Spindle", "value": "15,000 RPM HSK-A63" }
-      ],
-      "active": true,
-      "sortOrder": 1
+      "desc": "Simultaneous 5-axis high-speed machining for complex valve body profiles, angle seats, and manifold internal chambers with ±0.005mm accuracy."
     },
     {
-      "id": "mach-cnc-turning",
-      "badge": "Live-Tooling Lathe",
-      "title": "CNC Precision Ball & Stem Turning",
-      "description": "Twin-spindle CNC turning centers generating sub-micron spherical balls, valve stems, and gland packing seats.",
+      "id": "ws-2",
+      "name": "Doosan High-Precision CNC Turning Suite",
+      "badge": "Spindle & Stem Turning",
       "image": "assets/images/machine_cnc_turning.jpg",
-      "specs": [
-        { "key": "Max Chucking Dia", "value": "Ø 450 mm" },
-        { "key": "Sphericity Deviation", "value": "< 0.003 mm" },
-        { "key": "Surface Roughness", "value": "Ra 0.15 µm (Mirror)" }
-      ],
-      "active": true,
-      "sortOrder": 2
+      "desc": "Rigid dual-spindle CNC turning centers generating super-finished non-rotating valve stems, bonnet threads, and bubble-tight valve seat contours."
     },
     {
-      "id": "mach-hydro-test",
-      "badge": "Pressure Bench",
-      "title": "10,000 PSI Automated Hydro Test Rig",
-      "description": "Digital hydrostatic shell test, high-pressure nitrogen seat leak test, and helium sniffer test conforming to API 598.",
+      "id": "ws-3",
+      "name": "Zeiss 3D CNC Coordinate Measuring Machine (CMM)",
+      "badge": "Laser Metrology & Metrology",
       "image": "assets/images/quality_cmm_inspection.jpg",
-      "specs": [
-        { "key": "Max Test Pressure", "value": "15,000 PSI (1034 Bar)" },
-        { "key": "Leak Detection", "value": "Digital Transducer 0.01 bar" },
-        { "key": "Traceability", "value": "Automated Chart Logging" }
-      ],
-      "active": true,
-      "sortOrder": 3
-    },
-    {
-      "id": "mach-cmm-lab",
-      "badge": "Metrology Suite",
-      "title": "Zeiss 3D CNC CMM Quality Lab",
-      "description": "Temperature-controlled Clean Room metrology with laser line probes and Renishaw 5-axis scanning heads.",
-      "image": "assets/images/hero_smart_factory.jpg",
-      "specs": [
-        { "key": "Resolution", "value": "0.0001 mm (0.1µ)" },
-        { "key": "Standards", "value": "ISO 10360-2 Certified" },
-        { "key": "Inspection Reports", "value": "Full FAI & EN 10204 3.1" }
-      ],
-      "active": true,
-      "sortOrder": 4
+      "desc": "Sub-micron volumetric laser and probe metrology validating dimensional geometry, roundness, and seat finishes according to ISO 9001:2015."
     }
-  ],
-  "processSection": {
-    "badge": "Quality & Traceability Pipeline",
-    "title": "4-Stage Valve Manufacturing & Testing Benchmark",
-    "subtitle": "Every valve undergoes 100% material authentication, micron CNC machining, and automated pressure hold before dispatch."
-  },
-  "process": [
-    {
-      "step": "01",
-      "title": "Spectro & PMI Ingestion",
-      "description": "100% Positive Material Identification (PMI) and optical emission spectro analysis on forged billets to verify chemical composition."
-    },
-    {
-      "step": "02",
-      "title": "5-Axis CNC Precision",
-      "description": "Single-setup continuous 5-axis milling and micro-honing guaranteeing seat squareness and mirror-finished spherical balls."
-    },
-    {
-      "step": "03",
-      "title": "API 598 Hydro & Gas Testing",
-      "description": "1.5x working pressure hydrostatic shell hold test followed by high-pressure bubble-tight nitrogen seat leakage verification."
-    },
-    {
-      "step": "04",
-      "title": "CMM & EN 10204 3.1 MTC",
-      "description": "Digital coordinate measuring machine dimensional sign-off, laser serial marking, and full material test certificate issuance."
-    }
-  ],
-  "contact": {
-    "plantAddress": "Plot No. 42, GIDC Industrial Estate,\nSurat, Gujarat, India.",
-    "email": "info@jasviindustries.in",
-    "phone": "+91 98765 43210",
-    "certification": "ISO 9001:2015 & API 598 Certified",
-    "tagline": "Premier Indian manufacturer specializing in high-pressure instrumentation valves, manifold blocks, and turnkey fluid control solutions.",
-    "copyrightYear": 2026
-  }
+  ]
 }

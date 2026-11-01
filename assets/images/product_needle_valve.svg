@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="metal-body" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f1f5f9"/>
+      <stop offset="40%" stop-color="#cbd5e1"/>
+      <stop offset="70%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#64748b"/>
+    </linearGradient>
+    <linearGradient id="blue-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1c75bc"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="handle-t" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#000000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Shadow -->
+  <ellipse cx="160" cy="210" rx="90" ry="12" fill="#e2e8f0"/>
+
+  <!-- Valve Body Group -->
+  <g filter="url(#shadow)">
+    <!-- Main Hex Body -->
+    <path d="M 110,130 L 130,110 L 190,110 L 210,130 L 210,170 L 190,190 L 130,190 L 110,170 Z" fill="url(#metal-body)" stroke="#475569" stroke-width="2.5"/>
+    <path d="M 130,110 L 130,190 M 190,110 L 190,190" stroke="#64748b" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+    <!-- Left Process Port (Threaded Connection) -->
+    <rect x="50" y="135" width="60" height="30" rx="3" fill="url(#metal-body)" stroke="#475569" stroke-width="2.5"/>
+    <line x1="62" y1="135" x2="62" y2="165" stroke="#94a3b8" stroke-width="2"/>
+    <line x1="74" y1="135" x2="74" y2="165" stroke="#94a3b8" stroke-width="2"/>
+    <line x1="86" y1="135" x2="86" y2="165" stroke="#94a3b8" stroke-width="2"/>
+    <line x1="98" y1="135" x2="98" y2="165" stroke="#94a3b8" stroke-width="2"/>
+
+    <!-- Right Process Port (Threaded Connection) -->
+    <rect x="210" y="135" width="60" height="30" rx="3" fill="url(#metal-body)" stroke="#475569" stroke-width="2.5"/>
+    <line x1="222" y1="135" x2="222" y2="165" stroke="#94a3b8" stroke-width="2"/>
+    <line x1="234" y1="135" x2="234" y2="165" stroke="#94a3b8" stroke-width="2"/>
+    <line x1="246" y1="135" x2="246" y2="165" stroke="#94a3b8" stroke-width="2"/>
+    <line x1="258" y1="135" x2="258" y2="165" stroke="#94a3b8" stroke-width="2"/>
+
+    <!-- Bonnet Nut & Neck -->
+    <rect x="142" y="80" width="36" height="30" rx="2" fill="url(#metal-body)" stroke="#475569" stroke-width="2"/>
+    <polygon points="135,80 185,80 180,92 140,92" fill="#cbd5e1" stroke="#334155" stroke-width="1.5"/>
+
+    <!-- Dust Cap Ring (Blue Signature) -->
+    <rect x="145" y="74" width="30" height="6" rx="2" fill="url(#blue-accent)"/>
+
+    <!-- Spindle Stem -->
+    <rect x="153" y="45" width="14" height="30" fill="url(#metal-body)" stroke="#334155" stroke-width="1.5"/>
+
+    <!-- Stainless Steel T-Bar Handle -->
+    <rect x="85" y="32" width="150" height="15" rx="7.5" fill="url(#handle-t)" stroke="#0284c7" stroke-width="2"/>
+    <circle cx="95" cy="39.5" r="4" fill="#94a3b8"/>
+    <circle cx="225" cy="39.5" r="4" fill="#94a3b8"/>
+    <circle cx="160" cy="39.5" r="6" fill="#1c75bc" stroke="#ffffff" stroke-width="1.5"/>
+
+    <!-- Valve Direction Flow Arrow -->
+    <path d="M 145,150 L 175,150 M 168,144 L 176,150 L 168,156" fill="none" stroke="#1c75bc" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="dbb-steel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="40%" stop-color="#e2e8f0"/>
+      <stop offset="70%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#475569"/>
+    </linearGradient>
+    <linearGradient id="blue-dbb" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1c75bc"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="yellow-dbb" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <filter id="dbb-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="7" stdDeviation="6" flood-color="#000000" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="160" cy="216" rx="100" ry="12" fill="#e2e8f0"/>
+
+  <g filter="url(#dbb-shadow)">
+    <!-- Monoflange Base Body (ASME B16.5 Flange Silhouette) -->
+    <rect x="40" y="100" width="28" height="90" rx="3" fill="url(#dbb-steel)" stroke="#334155" stroke-width="2"/>
+    <circle cx="54" cy="115" r="4.5" fill="#1e293b"/>
+    <circle cx="54" cy="145" r="4.5" fill="#1e293b"/>
+    <circle cx="54" cy="175" r="4.5" fill="#1e293b"/>
+
+    <!-- Central Monoflange Forged Block -->
+    <rect x="68" y="112" width="170" height="66" rx="4" fill="url(#dbb-steel)" stroke="#334155" stroke-width="2.5"/>
+
+    <!-- Right Process / Transmitter Port -->
+    <rect x="238" y="125" width="35" height="40" rx="3" fill="#cbd5e1" stroke="#334155" stroke-width="2"/>
+    <circle cx="260" cy="145" r="9" fill="#1e293b"/>
+
+    <!-- Primary Isolate Needle Valve (Left Bonnet - Blue Handle) -->
+    <rect x="100" y="65" width="14" height="47" fill="#cbd5e1" stroke="#334155" stroke-width="1.5"/>
+    <rect x="75" y="55" width="64" height="11" rx="4" fill="url(#blue-dbb)" stroke="#0f172a" stroke-width="1"/>
+    <circle cx="107" cy="60.5" r="3" fill="#ffffff"/>
+
+    <!-- Vent / Bleed Needle Valve (Center Lower - Yellow Handle) -->
+    <rect x="145" y="178" width="14" height="30" fill="#cbd5e1" stroke="#334155" stroke-width="1.5"/>
+    <rect x="120" y="200" width="64" height="11" rx="4" fill="url(#yellow-dbb)" stroke="#0f172a" stroke-width="1"/>
+    <circle cx="152" cy="205.5" r="3" fill="#ffffff"/>
+
+    <!-- Secondary Isolate Needle Valve (Right Bonnet - Blue Handle) -->
+    <rect x="190" y="65" width="14" height="47" fill="#cbd5e1" stroke="#334155" stroke-width="1.5"/>
+    <rect x="165" y="55" width="64" height="11" rx="4" fill="url(#blue-dbb)" stroke="#0f172a" stroke-width="1"/>
+    <circle cx="197" cy="60.5" r="3" fill="#ffffff"/>
+  </g>
+</svg>
