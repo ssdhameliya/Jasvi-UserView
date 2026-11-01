@@ -176,23 +176,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     new Swiper('.hero-swiper', {
       loop: true,
-      speed: 800,
+      speed: 600,
       autoplay: {
-        delay: 4200,
+        delay: 2600,
         disableOnInteraction: false,
-        pauseOnMouseEnter: true
+        pauseOnMouseEnter: false
       },
       effect: 'fade',
       fadeEffect: {
         crossFade: true
-      },
-      navigation: {
-        nextEl: '.hero-next',
-        prevEl: '.hero-prev'
-      },
-      pagination: {
-        el: '.hero-pagination',
-        clickable: true
       }
     });
   }
