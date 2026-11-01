@@ -176,9 +176,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     new Swiper('.hero-swiper', {
       loop: true,
-      speed: 600,
+      speed: 250,
       autoplay: {
-        delay: 2600,
+        delay: 2800,
         disableOnInteraction: false,
         pauseOnMouseEnter: false
       },

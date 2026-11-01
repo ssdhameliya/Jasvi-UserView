@@ -1800,24 +1800,27 @@ img, svg {
 
 .hero-slide {
   width: 100%;
-  padding: 15px 0 5px 0;
+  padding: 0;
 }
 
 .hero-slide-grid {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  align-items: center;
-  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  gap: 0;
   width: 100%;
   max-width: 100%;
   margin: 0;
-  padding: 0 0 0 clamp(20px, 3.5vw, 60px);
+  padding: 0;
 }
 
 .hero-left {
   max-width: 760px;
   z-index: 2;
-  padding: 15px 0;
+  padding: 35px clamp(20px, 4vw, 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero-slide-right {
@@ -1828,28 +1831,36 @@ img, svg {
   height: 100%;
   z-index: 2;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 .hero-product-img {
   width: 100%;
-  max-width: 780px;
-  height: 480px;
+  height: 100%;
+  min-height: 500px;
+  max-height: 540px;
   object-fit: cover;
   object-position: center;
-  border-radius: 16px 0 0 16px;
-  box-shadow: -15px 0 35px rgba(0, 0, 0, 0.12);
+  border-radius: 0;
+  box-shadow: none;
   display: block;
 }
 
 @media (max-width: 991px) {
   .hero-slide-grid {
     grid-template-columns: 1fr;
-    padding: 0 clamp(16px, 3vw, 30px);
-    gap: 25px;
+    padding: 0;
+    gap: 0;
+  }
+  .hero-left {
+    padding: 25px clamp(16px, 3vw, 30px);
   }
   .hero-product-img {
+    width: 100%;
     max-width: 100%;
     height: 320px;
-    border-radius: 12px;
+    min-height: 320px;
+    border-radius: 0;
   }
 }
