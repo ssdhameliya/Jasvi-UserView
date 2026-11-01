@@ -176,16 +176,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     new Swiper('.hero-swiper', {
       loop: true,
-      speed: 250,
+      speed: 500,
       autoplay: {
         delay: 2800,
         disableOnInteraction: false,
         pauseOnMouseEnter: false
       },
-      effect: 'fade',
-      fadeEffect: {
-        crossFade: true
-      }
+      effect: 'slide'
     });
   }
 

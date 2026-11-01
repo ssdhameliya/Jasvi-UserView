@@ -996,7 +996,7 @@ img, svg {
   padding: 30px 0;
 }
 
-.swiper-slide {
+.swiper-showcase-container .swiper-slide {
   width: 480px;
   max-width: 90vw;
   background: #ffffff;
@@ -1798,9 +1798,16 @@ img, svg {
   padding-bottom: 0;
 }
 
+.hero-swiper .swiper-slide,
 .hero-slide {
-  width: 100%;
-  padding: 0;
+  width: 100% !important;
+  max-width: 100% !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .hero-slide-grid {
