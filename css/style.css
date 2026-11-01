@@ -40,7 +40,7 @@
   --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-  --container-max: 1240px;
+  --container-max: 1680px;
 }
 
 /* ==========================================================================
@@ -89,7 +89,7 @@ img, svg {
   width: 100%;
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 clamp(20px, 3vw, 50px);
 }
 
 .text-blue {
@@ -97,15 +97,16 @@ img, svg {
 }
 
 /* ==========================================================================
-   Top Contact Ribbon (Hydrevo Solid Blue Bar - Image 1)
+   Top Contact Ribbon (Fluid Full Width - Image 1)
    ========================================================================== */
 .top-ribbon {
   background-color: var(--brand-blue);
   color: #ffffff;
   font-size: 0.88rem;
   font-weight: 500;
-  padding: 8px 0;
+  padding: 8px clamp(20px, 3.5vw, 50px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  width: 100%;
 }
 
 .ribbon-wrapper {
@@ -114,6 +115,7 @@ img, svg {
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
+  width: 100%;
 }
 
 .ribbon-left {
@@ -165,7 +167,7 @@ img, svg {
 }
 
 /* ==========================================================================
-   Main Header & Navigation Bar (Frosted Light Glass - Image 1)
+   Main Header & Navigation Bar (Fluid Full Width - Image 1)
    ========================================================================== */
 .site-header {
   position: sticky;
@@ -176,13 +178,15 @@ img, svg {
   -webkit-backdrop-filter: var(--glass-blur);
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   box-shadow: var(--shadow-sm);
-  padding: 14px 0;
+  padding: 14px clamp(20px, 3.5vw, 50px);
+  width: 100%;
 }
 
 .nav-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .brand {
@@ -1765,4 +1769,92 @@ img, svg {
     grid-template-columns: 1fr;
     gap: 30px;
   }
+}
+
+
+/* ==========================================================================
+   Active Working Multi-Slide Hero Swiper (Hydrevo 1:1 Carousel)
+   ========================================================================== */
+.hero-slider-section {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(135deg, #f8fafc 0%, #e8f2fa 100%);
+  border-bottom: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+.hero-swiper {
+  width: 100%;
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.hero-slide {
+  width: 100%;
+  padding: 45px clamp(20px, 3.5vw, 60px) 25px clamp(20px, 3.5vw, 60px);
+}
+
+.hero-slide-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.hero-slide-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-prev, .hero-next {
+  color: var(--brand-blue);
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 50%;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+  top: 48%;
+  z-index: 10;
+}
+
+.hero-prev:hover, .hero-next:hover {
+  background: var(--brand-blue);
+  color: #ffffff;
+  transform: scale(1.08);
+}
+
+.hero-prev {
+  left: 20px;
+}
+
+.hero-next {
+  right: 20px;
+}
+
+.hero-prev::after, .hero-next::after {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.hero-pagination {
+  bottom: 15px !important;
+}
+
+.hero-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: #cbd5e1;
+  opacity: 1;
+  transition: all 0.25s ease;
+}
+
+.hero-pagination .swiper-pagination-bullet-active {
+  background: var(--brand-blue);
+  width: 32px;
+  border-radius: 6px;
 }

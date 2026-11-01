@@ -167,6 +167,37 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================================
+  // 2B. Swiper Hero Carousel Initialization (Multi-Slide Top Hero)
+  // ==========================================================================
+  function initHeroSwiper() {
+    if (typeof Swiper === 'undefined') return;
+    const heroEl = document.querySelector('.hero-swiper');
+    if (!heroEl) return;
+
+    new Swiper('.hero-swiper', {
+      loop: true,
+      speed: 800,
+      autoplay: {
+        delay: 4200,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true
+      },
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
+      navigation: {
+        nextEl: '.hero-next',
+        prevEl: '.hero-prev'
+      },
+      pagination: {
+        el: '.hero-pagination',
+        clickable: true
+      }
+    });
+  }
+
+  // ==========================================================================
   // 3. Render Valve Specification Inspector
   // ==========================================================================
   function renderValveInspector(valve) {
@@ -581,6 +612,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Run all initialization routines
   initHeroCanvas();
+  initHeroSwiper();
   setupRfqDropzone();
   setupPdfGenerator();
   setupRfqForm();

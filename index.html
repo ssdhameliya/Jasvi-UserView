@@ -99,60 +99,157 @@
   </header>
 
   <!-- ==========================================================================
-       3. Full-Bleed Edge-to-Edge Hero Banner (Zero Side Margins - Image 1)
+       3. Active Working Multi-Slide Hero Swiper (Hydrevo 1:1 Carousel)
        ========================================================================== -->
-  <section class="hero-section-fullbleed">
+  <section class="hero-slider-section">
     <canvas id="hero-canvas"></canvas>
 
-    <div class="hero-fullbleed-wrapper">
-      <div class="hero-left">
-        <!-- Hydrevo Top Dark Badge -->
-        <div class="hero-tag-badge" id="hero-badge-tag">JASVI VALVES</div>
+    <div class="swiper hero-swiper">
+      <div class="swiper-wrapper">
         
-        <!-- Hydrevo Angular Blue Slanted Title Block -->
-        <h1 class="hero-angular-title" id="hero-title">HIGH-PRESSURE PRECISION VALVES</h1>
-
-        <!-- Hydrevo Subtitle Caption -->
-        <p class="hero-tagline-caption" id="hero-subtagline">
-          Mfg. of High-Pressure Needle Valves, Manifold Blocks and Flow Control Systems
-        </p>
-
-        <!-- Technical Specification Highlights -->
-        <ul class="hero-feature-list" id="hero-features">
-          <li class="hero-feature-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            Rated up to 10,000 PSI Working Pressure
-          </li>
-          <li class="hero-feature-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            100% API 598 Hydrostatic Shell & Helium Leak Tested
-          </li>
-          <li class="hero-feature-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            SS316, Duplex 2205, Inconel 625 & Monel 400 Metallurgy
-          </li>
-        </ul>
-
-        <div class="hero-btn-row">
-          <a href="products.html" class="btn-blue-primary">
-            Explore Valve Series
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-          <a href="contact.html" class="btn-black-secondary">
-            Configure Technical RFQ
-          </a>
+        <!-- Slide 1: High-Pressure Needle Valves -->
+        <div class="swiper-slide hero-slide">
+          <div class="hero-slide-grid">
+            <div class="hero-left">
+              <div class="hero-tag-badge">JASVI VALVES</div>
+              <h1 class="hero-angular-title">HIGH-PRESSURE NEEDLE VALVES</h1>
+              <p class="hero-tagline-caption">
+                Mfg. of Forged High-Pressure Needle Valves, Gauge Valves & Severe-Service Flow Systems
+              </p>
+              <ul class="hero-feature-list">
+                <li class="hero-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                  Rated up to 10,000 PSI Working Pressure
+                </li>
+                <li class="hero-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                  100% API 598 Hydrostatic Shell & Helium Bubble-Tight Tested
+                </li>
+                <li class="hero-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                  SS316, Duplex 2205, Inconel 625 & Monel 400 Metallurgy
+                </li>
+              </ul>
+              <div class="hero-btn-row">
+                <a href="product-detail.html?id=v-needle-6k" class="btn-blue-primary">
+                  Explore Needle Series &rarr;
+                </a>
+                <a href="contact.html?product=Needle%20Valve" class="btn-black-secondary">
+                  Configure Technical RFQ
+                </a>
+              </div>
+            </div>
+            <div class="hero-slide-right">
+              <div class="hero-stage-card">
+                <span class="stage-badge">Severe-Service 10,000 PSI</span>
+                <div class="hero-img-wrap">
+                  <img src="assets/images/product_needle_valve.svg" alt="High-Pressure Forged Needle Valve" />
+                </div>
+                <div class="stage-caption">Forged Instrumentation Needle Valve</div>
+                <div class="stage-sub">Non-Rotating Stem • Safety Back-Seating Design</div>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <!-- Slide 2: Instrumentation Manifold Blocks -->
+        <div class="swiper-slide hero-slide">
+          <div class="hero-slide-grid">
+            <div class="hero-left">
+              <div class="hero-tag-badge">JASVI MANIFOLDS</div>
+              <h1 class="hero-angular-title">2, 3 & 5-WAY MANIFOLD BLOCKS</h1>
+              <p class="hero-tagline-caption">
+                Direct-Mount & Remote-Mount Severe-Service Differential Pressure Manifolds
+              </p>
+              <ul class="hero-feature-list">
+                <li class="hero-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                  Direct Transmitter Flange Mount to IEC 61518 Standards
+                </li>
+                <li class="hero-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                  Integrated Isolate, Equalize & Vent Valve Stems
+                </li>
+                <li class="hero-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                  One-Piece Monoblock Design Eliminating Leak Points
+                </li>
+              </ul>
+              <div class="hero-btn-row">
+                <a href="product-detail.html?id=v-manifold-5w" class="btn-blue-primary">
+                  Explore Manifold Series &rarr;
+                </a>
+                <a href="contact.html?product=Manifold%20Block" class="btn-black-secondary">
+                  Configure Technical RFQ
+                </a>
+              </div>
+            </div>
+            <div class="hero-slide-right">
+              <div class="hero-stage-card">
+                <span class="stage-badge">5-Valve Direct Mount</span>
+                <div class="hero-img-wrap">
+                  <img src="assets/images/product_manifold_block.svg" alt="5-Way Instrumentation Manifold Block" />
+                </div>
+                <div class="stage-caption">5-Way Differential Pressure Manifold</div>
+                <div class="stage-sub">6,000 PSI Rating • API 598 Tested Monoblock</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3: Severe-Service Process Ball Valves -->
+        <div class="swiper-slide hero-slide">
+          <div class="hero-slide-grid">
+            <div class="hero-left">
+              <div class="hero-tag-badge">JASVI FLOW CONTROL</div>
+              <h1 class="hero-angular-title">SEVERE-SERVICE BALL VALVES</h1>
+              <p class="hero-tagline-caption">
+                Two-Piece & Three-Piece Forged Trunnion Ball Valves Rated up to Class 2500
+              </p>
+              <ul class="hero-feature-list">
+                <li class="hero-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                  Fire-Safe Certified to API 607 & ISO 10497
+                </li>
+                <li class="hero-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                  Blowout-Proof Stem & Floating / Trunnion Ball Architecture
+                </li>
+                <li class="hero-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                  ASME B16.5 Flanged, Socket Weld & Threaded Connections
+                </li>
+              </ul>
+              <div class="hero-btn-row">
+                <a href="product-detail.html?id=v-ball-trunnion" class="btn-blue-primary">
+                  Explore Ball Valve Series &rarr;
+                </a>
+                <a href="contact.html?product=Ball%20Valve" class="btn-black-secondary">
+                  Configure Technical RFQ
+                </a>
+              </div>
+            </div>
+            <div class="hero-slide-right">
+              <div class="hero-stage-card">
+                <span class="stage-badge">ASME Class 150 - 2500</span>
+                <div class="hero-img-wrap">
+                  <img src="assets/images/product_ball_valve.svg" alt="Severe-Service Process Ball Valve" />
+                </div>
+                <div class="stage-caption">Precision Forged Process Ball Valve</div>
+                <div class="stage-sub">Zero Bubble-Tight Leakage • Severe Chemical Service</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-      <!-- Right Showcase Stage Card -->
-      <div class="hero-stage-card">
-        <span class="stage-badge">Severe-Service 10,000 PSI</span>
-        <div class="hero-img-wrap">
-          <img src="assets/images/product_needle_valve.svg" alt="High-Pressure Forged Needle Valve" />
-        </div>
-        <div class="stage-caption">Forged Instrumentation Needle Valve</div>
-        <div class="stage-sub">Non-Rotating Stem • Safety Back-Seating Design</div>
-      </div>
+      <!-- Navigation Arrows -->
+      <div class="swiper-button-prev hero-prev"></div>
+      <div class="swiper-button-next hero-next"></div>
+
+      <!-- Pagination Bullets -->
+      <div class="swiper-pagination hero-pagination"></div>
     </div>
   </section>
 
