@@ -92,7 +92,7 @@
       "materials": ["SS316/316L", "Duplex 2205", "Inconel 625", "Monel 400"],
       "cv": "0.35 to 1.80",
       "tempRange": "-54°C to 232°C (PTFE) / up to 450°C (Grafoil)",
-      "image": "assets/images/product_needle_valve.svg",
+      "image": "assets/images/hero_valve_needle.jpg",
       "active": true
     },
     {
@@ -108,7 +108,7 @@
       "materials": ["SS316", "Super Duplex 2507", "Hastelloy C-276"],
       "cv": "0.45 to 0.70 per valve line",
       "tempRange": "-50°C to 240°C (PTFE) / 450°C (Graphite)",
-      "image": "assets/images/product_manifold_block.svg",
+      "image": "assets/images/hero_valve_manifold.jpg",
       "active": false
     },
     {
@@ -124,7 +124,7 @@
       "materials": ["ASTM A182 F316", "A105 Forged Carbon", "Duplex F51"],
       "cv": "8.5 to 480.0",
       "tempRange": "-196°C to +350°C",
-      "image": "assets/images/product_ball_valve.svg",
+      "image": "assets/images/hero_valve_ball.jpg",
       "active": false
     },
     {
@@ -156,7 +156,7 @@
       "materials": ["SS316/316L", "Inconel 825", "Duplex 2205"],
       "cv": "0.35 to 1.20",
       "tempRange": "-54°C to 450°C",
-      "image": "assets/images/product_dbb_valve.svg",
+      "image": "assets/images/hero_valve_dbb.jpg",
       "active": false
     },
     {
