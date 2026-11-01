@@ -454,9 +454,9 @@ img, svg {
   background: var(--glass-card);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
-  border: 2px solid rgba(28, 117, 188, 0.25);
+  border: 1.5px solid rgba(28, 117, 188, 0.22);
   border-radius: 12px;
-  padding: 30px;
+  padding: 24px 30px;
   box-shadow: var(--shadow-lg);
   display: flex;
   flex-direction: column;
@@ -464,6 +464,8 @@ img, svg {
   justify-content: center;
   position: relative;
   text-align: center;
+  width: 100%;
+  max-width: 580px;
 }
 
 .stage-badge {
@@ -481,11 +483,18 @@ img, svg {
 
 .hero-img-wrap {
   width: 100%;
-  max-width: 320px;
-  height: 240px;
+  max-width: 480px;
+  height: 280px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.hero-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.12));
 }
 
 .stage-caption {
@@ -505,7 +514,7 @@ img, svg {
    Section 2: "Welcome To Jasvi Industries" (Hydrevo 2-Column - Image 2)
    ========================================================================== */
 .about-section {
-  padding: 80px 0 60px 0;
+  padding: 45px 0 55px 0;
   background: #ffffff;
 }
 
@@ -1786,26 +1795,28 @@ img, svg {
 .hero-swiper {
   width: 100%;
   position: relative;
-  padding-bottom: 40px;
+  padding-bottom: 0;
 }
 
 .hero-slide {
   width: 100%;
-  padding: 45px clamp(20px, 3.5vw, 60px) 25px clamp(20px, 3.5vw, 60px);
+  padding: 30px 0 15px 0;
 }
 
 .hero-slide-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1.1fr 0.9fr;
   align-items: center;
-  gap: 50px;
+  gap: clamp(30px, 4vw, 60px);
   width: 100%;
-  max-width: var(--container-max);
-  margin: 0 auto;
+  max-width: 100%;
+  margin: 0;
+  padding: 0 clamp(20px, 4vw, 70px);
 }
 
 .hero-slide-right {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  width: 100%;
 }
