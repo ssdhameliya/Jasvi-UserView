@@ -2212,3 +2212,454 @@ img, svg {
     animation: none !important;
   }
 }
+
+/* ==========================================================================
+   Next-Gen AI-Era UI Suite (Telemetry, AI Co-Pilot, 3D Hotspots, Magnetic Glow & Quick Dock)
+   ========================================================================== */
+
+/* 1. Cursor-Tracking Glass Spotlight & Magnetic 3D Tilt */
+.hydrevo-card,
+.swiper-showcase-container .swiper-slide,
+.facility-photo-card,
+.trust-badge-card,
+.telemetry-card {
+  --mx: 50%;
+  --my: 50%;
+  --rx: 0deg;
+  --ry: 0deg;
+  position: relative;
+}
+
+.hydrevo-card::before,
+.swiper-showcase-container .swiper-slide::before,
+.facility-photo-card::before,
+.trust-badge-card::before,
+.telemetry-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    420px circle at var(--mx) var(--my),
+    rgba(16, 185, 129, 0.22),
+    transparent 65%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hydrevo-card:hover::before,
+.swiper-showcase-container .swiper-slide:hover::before,
+.facility-photo-card:hover::before,
+.trust-badge-card:hover::before,
+.telemetry-card:hover::before {
+  opacity: 1;
+}
+
+.hydrevo-card:hover,
+.swiper-showcase-container .swiper-slide:hover,
+.facility-photo-card:hover {
+  transform: perspective(1000px) translateY(-9px) rotateX(var(--rx, 2.5deg)) rotateY(var(--ry, -2.5deg)) scale(1.015);
+}
+
+/* 2. Live Animated Industrial Telemetry Bar */
+.ai-telemetry-strip {
+  padding: 28px 0;
+  background: rgba(236, 253, 245, 0.62);
+  backdrop-filter: blur(22px) saturate(180%);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  border-bottom: 1px solid rgba(16, 185, 129, 0.24);
+  position: relative;
+  z-index: 5;
+}
+
+.telemetry-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.telemetry-card {
+  background: rgba(255, 255, 255, 0.74);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(16, 185, 129, 0.32);
+  border-radius: 14px;
+  padding: 18px 22px;
+  box-shadow: 0 10px 26px rgba(5, 150, 105, 0.08), inset 0 1px 0 #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.telemetry-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.telemetry-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--brand-blue-dark);
+  background: rgba(209, 250, 229, 0.85);
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+
+.pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: emeraldPulse 2s infinite;
+}
+
+@keyframes emeraldPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.75);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+.telemetry-value {
+  font-family: var(--font-heading);
+  font-size: clamp(1.65rem, 2.3vw, 2.2rem);
+  font-weight: 800;
+  color: var(--dark-primary);
+  line-height: 1.15;
+  margin-bottom: 4px;
+}
+
+.telemetry-value small {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--brand-blue);
+}
+
+.telemetry-label {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* 3. Interactive "Jasvi AI Valve Spec Co-Pilot" */
+.ai-copilot-panel {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.82) 0%, rgba(209, 250, 229, 0.68) 100%);
+  backdrop-filter: blur(24px) saturate(190%);
+  -webkit-backdrop-filter: blur(24px) saturate(190%);
+  border: 1.5px solid rgba(16, 185, 129, 0.42);
+  border-radius: 18px;
+  padding: 28px 32px;
+  margin-bottom: 38px;
+  box-shadow:
+    0 18px 44px rgba(5, 150, 105, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  position: relative;
+  overflow: hidden;
+}
+
+.ai-copilot-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 22px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(16, 185, 129, 0.22);
+}
+
+.ai-sparkle-badge {
+  display: inline-block;
+  background: linear-gradient(90deg, #059669 0%, #10b981 100%);
+  color: #ffffff;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 6px;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35);
+}
+
+.ai-copilot-heading {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--dark-primary);
+}
+
+.ai-copilot-sub {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  max-width: 520px;
+}
+
+.ai-copilot-controls {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.ai-control-group label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--dark-secondary);
+  margin-bottom: 6px;
+}
+
+.ai-glass-select {
+  width: 100%;
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: 1.5px solid rgba(16, 185, 129, 0.35);
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--dark-primary);
+  font-family: var(--font-body);
+  font-size: 0.93rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ai-glass-select:focus {
+  outline: none;
+  border-color: var(--brand-blue);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.22);
+}
+
+.ai-copilot-result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  background: rgba(240, 253, 244, 0.88);
+  border: 1px solid rgba(16, 185, 129, 0.38);
+  border-radius: 14px;
+  padding: 18px 24px;
+}
+
+.ai-match-pill {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #047857;
+  background: rgba(167, 243, 208, 0.75);
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 4px;
+}
+
+.ai-match-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--dark-primary);
+  margin-bottom: 8px;
+}
+
+.ai-match-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ai-spec-chip {
+  background: #ffffff;
+  border: 1px solid rgba(16, 185, 129, 0.32);
+  color: var(--dark-secondary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+/* 4. Interactive 3D Engineering Hotspot Pins (+) on Valve Renders */
+.inspector-grid-3d {
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+}
+
+.hotspot-stage-box {
+  position: relative;
+  border-radius: 16px;
+  overflow: visible;
+  background: radial-gradient(circle at center, rgba(236, 253, 245, 0.92) 0%, rgba(167, 243, 208, 0.45) 100%);
+  border: 1.5px solid rgba(16, 185, 129, 0.38);
+  padding: 18px;
+  box-shadow: 0 16px 38px rgba(5, 150, 105, 0.16), inset 0 1px 0 #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hotspot-stage-box img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 14px 30px rgba(5, 150, 105, 0.22);
+  animation: card3DFloat 5.5s ease-in-out infinite;
+}
+
+.stage-3d-hint {
+  margin-top: 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--brand-blue-dark);
+  background: rgba(209, 250, 229, 0.8);
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.hotspot-pin {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  margin-left: -15px;
+  margin-top: -15px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 15;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.75), 0 4px 12px rgba(0, 0, 0, 0.25);
+  animation: emeraldPulse 2s infinite;
+  transition: transform 0.25s ease;
+}
+
+.hotspot-pin:hover {
+  transform: scale(1.2);
+  z-index: 30;
+}
+
+.hotspot-plus {
+  font-weight: 800;
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.hotspot-tooltip {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  width: 230px;
+  background: rgba(6, 78, 59, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  color: #ffffff;
+  border: 1px solid rgba(52, 211, 153, 0.55);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease;
+  pointer-events: none;
+  text-align: left;
+}
+
+.hotspot-tooltip strong {
+  display: block;
+  color: #6ee7b7;
+  font-size: 0.82rem;
+  margin-bottom: 3px;
+}
+
+.hotspot-pin:hover .hotspot-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* 5. Floating Glass "AI Quick-Command Dock" */
+.ai-quick-dock {
+  position: fixed;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 995;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(240, 253, 244, 0.84);
+  backdrop-filter: blur(22px) saturate(190%);
+  -webkit-backdrop-filter: blur(22px) saturate(190%);
+  border: 1.5px solid rgba(16, 185, 129, 0.42);
+  box-shadow:
+    0 16px 38px rgba(5, 150, 105, 0.22),
+    inset 0 1px 0 #ffffff;
+}
+
+.ai-dock-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--dark-primary);
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.ai-dock-item:hover {
+  background: rgba(16, 185, 129, 0.16);
+  color: var(--brand-blue-dark);
+  transform: translateY(-2px);
+}
+
+.ai-dock-cta {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.32);
+}
+
+.ai-dock-cta:hover {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  color: #ffffff !important;
+}
+
+@media (max-width: 992px) {
+  .telemetry-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ai-copilot-controls,
+  .inspector-grid-3d {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .telemetry-grid {
+    grid-template-columns: 1fr;
+  }
+  .ai-quick-dock {
+    display: none;
+  }
+}

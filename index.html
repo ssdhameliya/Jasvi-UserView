@@ -264,6 +264,34 @@
   </section>
 
   <!-- ==========================================================================
+       3B. Next-Gen AI-Era Live Industrial Telemetry Bar
+       ========================================================================== -->
+  <section class="ai-telemetry-strip">
+    <div class="container telemetry-grid">
+      <div class="telemetry-card">
+        <div class="telemetry-badge"><span class="pulse-dot"></span> PRESSURE RATING</div>
+        <div class="telemetry-value"><span class="telemetry-counter" data-target="10000">10,000</span> <small>PSI</small></div>
+        <div class="telemetry-label">API 598 Hydrostatic &amp; Burst Validated</div>
+      </div>
+      <div class="telemetry-card">
+        <div class="telemetry-badge"><span class="pulse-dot"></span> 5-AXIS CNC PRECISION</div>
+        <div class="telemetry-value">&plusmn;0.00<span class="telemetry-counter" data-target="5">5</span> <small>mm</small></div>
+        <div class="telemetry-label">Sub-Micron Spindle &amp; Seat Concentricity</div>
+      </div>
+      <div class="telemetry-card">
+        <div class="telemetry-badge"><span class="pulse-dot"></span> ZERO-LEAKAGE ASSURANCE</div>
+        <div class="telemetry-value"><span class="telemetry-counter" data-target="100">100</span><small>%</small></div>
+        <div class="telemetry-label">Helium Mass Spectrometer Bubble-Tight Tested</div>
+      </div>
+      <div class="telemetry-card">
+        <div class="telemetry-badge"><span class="pulse-dot"></span> GLOBAL EXPORT FOOTPRINT</div>
+        <div class="telemetry-value"><span class="telemetry-counter" data-target="45">45</span><small>+ Countries</small></div>
+        <div class="telemetry-label">EN 10204 3.1 &amp; NACE MR0175 Certified</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
        4. Section 2: "Welcome To Jasvi Industries" (Hydrevo 2-Column - Image 2)
        ========================================================================== -->
   <section id="about" class="about-section">
@@ -383,6 +411,66 @@
         <p class="section-subtitle">Precision Engineered High-Pressure Valves & Instrumentation Flow Blocks</p>
       </div>
 
+      <!-- AI Valve Spec Co-Pilot (Interactive Engineering Recommender) -->
+      <div class="ai-copilot-panel" id="ai-valve-copilot">
+        <div class="ai-copilot-header">
+          <div class="ai-copilot-title-wrap">
+            <span class="ai-sparkle-badge">&#10024; JASVI AI ENGINEERING CO-PILOT</span>
+            <h3 class="ai-copilot-heading">Smart Valve &amp; Metallurgy Recommender</h3>
+          </div>
+          <p class="ai-copilot-sub">Select your process fluid parameters and let our deterministic engineering engine configure the optimal valve assembly.</p>
+        </div>
+
+        <div class="ai-copilot-controls">
+          <div class="ai-control-group">
+            <label for="ai-media-select">1. Process Media / Fluid</label>
+            <select id="ai-media-select" class="ai-glass-select">
+              <option value="hydraulic">High-Pressure Hydraulic / Gas (Standard)</option>
+              <option value="sour-gas">Sour Gas (H2S / NACE MR0175 Offshore)</option>
+              <option value="transmitter">Differential Pressure Transmitter Hook-Up</option>
+              <option value="steam">Superheated Steam / Thermal Cycling (450&deg;C)</option>
+              <option value="petrochem">Critical Petrochemical Double Isolation</option>
+              <option value="backflow">Unidirectional Backflow Prevention</option>
+            </select>
+          </div>
+
+          <div class="ai-control-group">
+            <label for="ai-pressure-select">2. Working Pressure</label>
+            <select id="ai-pressure-select" class="ai-glass-select">
+              <option value="10000">Up to 10,000 PSI (690 Bar Severe-Service)</option>
+              <option value="6000">Up to 6,000 PSI (414 Bar Instrumentation)</option>
+              <option value="3000">ASME Class 1500 / 2500 Process Line</option>
+            </select>
+          </div>
+
+          <div class="ai-control-group">
+            <label for="ai-conn-select">3. End Connection Architecture</label>
+            <select id="ai-conn-select" class="ai-glass-select">
+              <option value="npt">NPT Female / Male / Tube OD</option>
+              <option value="iec">IEC 61518 Coplanar Direct-Mount</option>
+              <option value="flanged">ASME B16.5 RF / RTJ Flanged</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="ai-copilot-result" id="ai-copilot-output">
+          <div class="ai-result-left">
+            <span class="ai-match-pill">AI RECOMMENDED MATCH &bull; 99.8% FIT</span>
+            <h4 class="ai-match-title" id="ai-rec-title">Forged High-Pressure Needle Valve (10,000 PSI)</h4>
+            <div class="ai-match-specs">
+              <span class="ai-spec-chip" id="ai-rec-moc">MOC: SS316 / Inconel 625</span>
+              <span class="ai-spec-chip" id="ai-rec-seal">Packing: PTFE / Grafoil Chevron</span>
+              <span class="ai-spec-chip" id="ai-rec-std">Standard: API 598 &amp; ASME B16.34</span>
+            </div>
+          </div>
+          <div class="ai-result-actions">
+            <button type="button" class="btn-blue-primary" id="btn-ai-inspect">
+              Inspect 3D Model &amp; Pre-Fill RFQ &rarr;
+            </button>
+          </div>
+        </div>
+      </div>
+
       <!-- Category Filter Tabs -->
       <div class="category-tabs" id="valve-category-filters">
         <button class="cat-btn active" data-filter="all">All Products</button>
@@ -423,7 +511,35 @@
           </a>
         </div>
 
-        <div class="inspector-grid">
+        <div class="inspector-grid inspector-grid-3d">
+          <div class="inspector-3d-stage">
+            <div class="hotspot-stage-box">
+              <img id="inspect-3d-img" src="assets/images/hero_valve_needle.jpg" alt="3D Interactive Valve Cutaway" />
+              <div class="hotspot-pin" style="top: 22%; left: 52%;">
+                <span class="hotspot-plus">+</span>
+                <div class="hotspot-tooltip">
+                  <strong>Safety Back-Seating Bonnet</strong>
+                  <span>Packing below threads isolates process media from stem threads.</span>
+                </div>
+              </div>
+              <div class="hotspot-pin" style="top: 56%; left: 46%;">
+                <span class="hotspot-plus">+</span>
+                <div class="hotspot-tooltip">
+                  <strong>Non-Rotating Hardened Stem Tip</strong>
+                  <span>Prevents seat galling under 10,000 PSI shutoff torque.</span>
+                </div>
+              </div>
+              <div class="hotspot-pin" style="top: 68%; left: 74%;">
+                <span class="hotspot-plus">+</span>
+                <div class="hotspot-tooltip">
+                  <strong>ASME B16.34 Forged Body</strong>
+                  <span>100% API 598 hydrostatic &amp; helium mass-spec tested.</span>
+                </div>
+              </div>
+              <span class="stage-3d-hint">&#10024; Hover pins (+) to inspect 3D engineering architecture</span>
+            </div>
+          </div>
+
           <div class="inspector-col">
             <h4 class="inspector-col-title">Dimensional & Fluid Parameters</h4>
             <table class="spec-table">
@@ -434,10 +550,8 @@
                 <tr><td>Operating Temperature</td><td id="inspect-temp">-54&deg;C to 232&deg;C (PTFE) / up to 450&deg;C (Grafoil)</td></tr>
               </tbody>
             </table>
-          </div>
 
-          <div class="inspector-col">
-            <h4 class="inspector-col-title">Material Metallurgy (MOC Options)</h4>
+            <h4 class="inspector-col-title" style="margin-top: 20px;">Material Metallurgy (MOC Options)</h4>
             <div class="material-pills" id="inspect-materials">
               <span class="mat-pill">SS316 / 316L</span>
               <span class="mat-pill">Duplex 2205</span>

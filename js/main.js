@@ -205,9 +205,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const tempEl = document.getElementById('inspect-temp');
     const matsEl = document.getElementById('inspect-materials');
     const descEl = document.getElementById('inspect-desc');
+    const stageImgEl = document.getElementById('inspect-3d-img');
 
     if (tagEl) tagEl.textContent = valve.tag || 'High-Pressure Valve Spec';
     if (titleEl) titleEl.textContent = valve.title;
+    if (stageImgEl && valve.image) {
+      stageImgEl.src = valve.image;
+      stageImgEl.alt = valve.title;
+    }
     if (sizesEl) sizesEl.textContent = Array.isArray(valve.sizes) ? valve.sizes.join(', ') : 'Standard Sizes Available';
     if (endsEl) endsEl.textContent = Array.isArray(valve.endConnections) ? valve.endConnections.join(', ') : 'Threaded / Flanged';
     if (cvEl) cvEl.textContent = valve.cv || 'Calculated per Bore Size';
@@ -586,7 +591,184 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================================
-  // 11. Main Hydration Controller
+  // 11. Next-Gen AI-Era UI Modules (3D Magnetic Tilt, AI Co-Pilot, Telemetry & Dock)
+  // ==========================================================================
+  function init3DMagneticTilt() {
+    const cards = document.querySelectorAll(
+      '.hydrevo-card, .swiper-showcase-container .swiper-slide, .facility-photo-card, .trust-badge-card, .telemetry-card'
+    );
+
+    cards.forEach((card) => {
+      if (card.dataset.tiltBound === 'true') return;
+      card.dataset.tiltBound = 'true';
+
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const cx = rect.width / 2;
+        const cy = rect.height / 2;
+        const rx = ((y - cy) / cy) * -4.5;
+        const ry = ((x - cx) / cx) * 4.5;
+
+        card.style.setProperty('--mx', `${x}px`);
+        card.style.setProperty('--my', `${y}px`);
+        card.style.setProperty('--rx', `${rx.toFixed(2)}deg`);
+        card.style.setProperty('--ry', `${ry.toFixed(2)}deg`);
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.setProperty('--rx', '0deg');
+        card.style.setProperty('--ry', '0deg');
+      });
+    });
+  }
+
+  function initAiValveCopilot(valves) {
+    const copilot = document.getElementById('ai-valve-copilot');
+    if (!copilot || !Array.isArray(valves) || valves.length === 0) return;
+
+    const mediaEl = document.getElementById('ai-media-select');
+    const pressEl = document.getElementById('ai-pressure-select');
+    const connEl = document.getElementById('ai-conn-select');
+    const recTitle = document.getElementById('ai-rec-title');
+    const recMoc = document.getElementById('ai-rec-moc');
+    const recSeal = document.getElementById('ai-rec-seal');
+    const recStd = document.getElementById('ai-rec-std');
+    const btnInspect = document.getElementById('btn-ai-inspect');
+
+    let recommendedValve = valves[0];
+
+    function computeAiMatch() {
+      const media = mediaEl ? mediaEl.value : 'hydraulic';
+      const press = pressEl ? pressEl.value : '10000';
+      const conn = connEl ? connEl.value : 'npt';
+
+      let targetId = 'v-needle-6k';
+      let moc = 'MOC: SS316 / 316L Forged';
+      let seal = 'Packing: Virgin PTFE Chevron';
+      let std = 'Standard: API 598 & ASME B16.34';
+
+      if (media === 'transmitter' || conn === 'iec') {
+        targetId = 'v-manifold-5w';
+        moc = 'MOC: SS316 / Super Duplex 2507';
+        seal = 'Packing: PTFE / Graphite (6,000 PSI)';
+        std = 'Standard: IEC 61518 Coplanar & API 598';
+      } else if (media === 'petrochem' || conn === 'flanged') {
+        targetId = press === '3000' ? 'v-ball-trunnion' : 'v-dbb-monoflange';
+        moc = 'MOC: ASTM A182 F316 / Duplex 2205';
+        seal = 'Packing: Fire-Safe API 607 Graphite';
+        std = 'Standard: ASME B16.5 & API 6D';
+      } else if (media === 'backflow') {
+        targetId = 'v-check-piston';
+        moc = 'MOC: SS316 / Alloy 400 (Monel)';
+        seal = 'Seal: Viton / Kalrez O-Ring (6,000 PSI)';
+        std = 'Standard: API 598 Unidirectional';
+      } else if (media === 'sour-gas') {
+        targetId = press === '10000' ? 'v-needle-6k' : 'v-dbb-monoflange';
+        moc = 'MOC: Inconel 625 / Monel 400 (Sour Service)';
+        seal = 'Packing: High-Integrity PTFE / Grafoil';
+        std = 'Standard: NACE MR0175 / ISO 15156';
+      } else if (media === 'steam') {
+        targetId = 'v-gauge-bleed';
+        moc = 'MOC: SS316 / Alloy 20 High-Temp';
+        seal = 'Packing: Flexible Grafoil (up to 450°C)';
+        std = 'Standard: ASME B16.34 Thermal Class';
+      }
+
+      recommendedValve = valves.find(v => v.id === targetId) || valves[0];
+
+      if (recTitle) recTitle.textContent = recommendedValve.title;
+      if (recMoc) recMoc.textContent = moc;
+      if (recSeal) recSeal.textContent = seal;
+      if (recStd) recStd.textContent = std;
+    }
+
+    [mediaEl, pressEl, connEl].forEach(sel => {
+      if (sel) sel.addEventListener('change', computeAiMatch);
+    });
+
+    if (btnInspect) {
+      btnInspect.addEventListener('click', () => {
+        renderValveInspector(recommendedValve);
+        const rfqSelect = document.getElementById('rfq-valve-type');
+        if (rfqSelect && recommendedValve) {
+          for (let i = 0; i < rfqSelect.options.length; i++) {
+            if (rfqSelect.options[i].text.toLowerCase().includes((recommendedValve.tag || '').toLowerCase())) {
+              rfqSelect.selectedIndex = i;
+              break;
+            }
+          }
+        }
+        const inspectorSection = document.getElementById('valves-detail');
+        if (inspectorSection) {
+          inspectorSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      });
+    }
+
+    computeAiMatch();
+  }
+
+  function initTelemetryAndScrollReveal() {
+    const counters = document.querySelectorAll('.telemetry-counter');
+    if (counters.length > 0 && 'IntersectionObserver' in window) {
+      const counterObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          const target = parseInt(el.getAttribute('data-target') || '100', 10);
+          const duration = 1400;
+          const start = performance.now();
+
+          function tick(now) {
+            const progress = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const val = Math.round(target * eased);
+            el.textContent = target >= 1000 ? val.toLocaleString() : String(val);
+            if (progress < 1) {
+              requestAnimationFrame(tick);
+            }
+          }
+          requestAnimationFrame(tick);
+          obs.unobserve(el);
+        });
+      }, { threshold: 0.35 });
+
+      counters.forEach(c => counterObserver.observe(c));
+    }
+  }
+
+  function initAiQuickDock() {
+    if (document.getElementById('jasvi-ai-quick-dock')) return;
+
+    const dock = document.createElement('nav');
+    dock.id = 'jasvi-ai-quick-dock';
+    dock.className = 'ai-quick-dock';
+    dock.setAttribute('aria-label', 'AI Quick Engineering Actions');
+    dock.innerHTML = `
+      <a href="index.html#ai-valve-copilot" class="ai-dock-item" title="Open AI Valve Recommender">
+        <span class="ai-dock-icon">&#10024;</span>
+        <span class="ai-dock-text">AI Spec Co-Pilot</span>
+      </a>
+      <a href="index.html#valves-detail" class="ai-dock-item" title="Inspect 3D Valve Cutaway">
+        <span class="ai-dock-icon">&#9881;</span>
+        <span class="ai-dock-text">3D Inspector</span>
+      </a>
+      <a href="index.html#rfq" class="ai-dock-item" title="Configure Technical RFQ & PDF Datasheet">
+        <span class="ai-dock-icon">&#128196;</span>
+        <span class="ai-dock-text">PDF &amp; RFQ Studio</span>
+      </a>
+      <a href="contact.html" class="ai-dock-item ai-dock-cta" title="Direct Engineering Quotation">
+        <span class="ai-dock-icon">&#9889;</span>
+        <span class="ai-dock-text">Instant Quote</span>
+      </a>
+    `;
+    document.body.appendChild(dock);
+  }
+
+  // ==========================================================================
+  // 12. Main Hydration Controller
   // ==========================================================================
   async function loadShowcaseData() {
     try {
@@ -598,11 +780,14 @@ document.addEventListener('DOMContentLoaded', () => {
         renderHydrevoProductGrid(showcaseData.valveProducts, 'all');
         setupCategoryFilters(showcaseData.valveProducts);
         initProductDetailPage(showcaseData.valveProducts);
+        initAiValveCopilot(showcaseData.valveProducts);
       }
 
       if (showcaseData.workstations) {
         renderWorkstations(showcaseData.workstations);
       }
+
+      init3DMagneticTilt();
     } catch (err) {
       console.warn('Falling back to default valve catalog:', err);
     }
@@ -615,5 +800,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupPdfGenerator();
   setupRfqForm();
   setupContactEnquiryForm();
+  initTelemetryAndScrollReveal();
+  initAiQuickDock();
   loadShowcaseData();
 });
