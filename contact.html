@@ -42,7 +42,7 @@
 
   <!-- GLOBAL STICKY GLASS NAVBAR -->
   <header id="global-navbar" class="sticky top-0 z-50 glass-panel border-b border-slate-200/90">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-[1680px] w-full mx-auto px-4 sm:px-8 lg:px-12">
       <div class="flex flex-col md:flex-row md:items-center md:justify-between py-3 md:py-3.5 gap-3">
         <!-- Brand Logo -->
         <div class="flex items-center justify-between gap-4">
@@ -55,9 +55,9 @@
                 <path d="M27 16H37C38.657 16 40 17.343 40 19V22.5C40 24.157 38.657 25.5 37 25.5H30C28.343 25.5 27 26.843 27 28.5V32C27 33.657 28.343 35 30 35H40" stroke="#38BDF8" stroke-width="3.2" stroke-linecap="round"/>
               </svg>
             </div>
-            <div>
+            <div class="shrink-0 min-w-max">
               <span class="text-lg sm:text-xl font-extrabold tracking-wider text-slate-900 block leading-none">DS INDUSTRIES</span>
-              <p class="text-[10px] sm:text-[11px] tracking-wide text-teal-700 font-semibold mt-1">Jasvi Industries Flow Systems &bull; Precision &amp; Performance</p>
+              <p class="text-[10px] sm:text-[11px] tracking-wide text-teal-700 font-semibold mt-1 whitespace-nowrap">Jasvi Industries Flow Systems &bull; Precision &amp; Performance</p>
             </div>
           </a>
 
@@ -71,7 +71,7 @@
         </div>
 
         <!-- Navigation Links -->
-        <nav class="flex items-center gap-1 sm:gap-1.5 overflow-x-auto py-1 px-1.5 bg-slate-100/90 rounded-2xl border border-slate-200/90">
+        <nav class="flex items-center gap-1 sm:gap-1.5 overflow-x-auto scrollbar-none py-1 px-1.5 bg-slate-100/90 rounded-2xl border border-slate-200/90">
           <a href="index.html" class="nav-link px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap text-slate-700 hover:text-slate-950 transition">Home</a>
           <a href="products.html" class="nav-link px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap text-slate-700 hover:text-slate-950 transition">Products <span class="ml-1 text-[10px] font-mono px-1.5 py-0.5 rounded-md bg-teal-600/15 text-teal-800 font-bold">14</span></a>
           <a href="engineering-lab.html" class="nav-link px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap text-slate-700 hover:text-slate-950 transition">Engineering Lab</a>
@@ -95,7 +95,7 @@
 
   <!-- MAIN CONTENT CONTAINER -->
   <main class="relative z-10 flex-grow">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-12">
+    <div class="max-w-[1680px] w-full mx-auto px-4 sm:px-8 lg:px-12 pt-10 pb-12">
       <!-- Page Header -->
       <div class="mb-8">
         <span class="text-xs font-mono uppercase tracking-widest text-teal-700 font-bold">Direct Engineering Desk</span>
@@ -104,43 +104,25 @@
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-        <!-- Left Column: Ahmedabad Plant Location & Channels -->
+        <!-- Left Column: Direct Communication Channels & Plant Location -->
         <div class="lg:col-span-5 space-y-6">
-          <!-- Facility Map Card -->
-          <div class="glass-panel rounded-3xl p-6 border border-slate-200/90 shadow-sm">
-            <span class="text-[11px] font-mono uppercase tracking-wider text-teal-700 font-bold">Ahmedabad Office &amp; Works</span>
-            <a href="https://www.google.com/maps/search/?api=1&query=H-52+Darshanvilla+Park+Nr+Gopal+Chowk+Nikol+Naroda+Ahmedabad+382345" target="_blank" rel="noopener noreferrer" class="block mt-2 group">
-              <h3 class="text-lg font-bold text-slate-900 group-hover:text-teal-700 transition flex items-start gap-2.5">
-                <svg class="w-5 h-5 text-teal-700 shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                <span>H - 52, Darshanvilla Park, Nr. Gopal Chowk, Nikol - Naroda, Ahmedabad - 382345 (Gujarat, India)</span>
-              </h3>
-              <span class="inline-flex items-center gap-1.5 mt-3 px-4 py-2 rounded-xl bg-teal-50 group-hover:bg-teal-100 text-teal-800 text-xs font-semibold border border-teal-200 transition">
-                Navigate in Google Maps &rarr;
+          <!-- Direct Communication Channels (Top) -->
+          <div class="glass-panel rounded-3xl p-6 sm:p-7 space-y-4 border border-slate-200/90 shadow-sm">
+            <div class="flex items-center justify-between pb-1 border-b border-slate-100">
+              <span class="text-[11px] font-mono uppercase tracking-wider text-teal-700 font-bold">Fast Response Desk</span>
+              <span class="text-xs font-mono text-emerald-600 font-semibold flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Available Mon-Sat
               </span>
-            </a>
-
-            <div class="mt-4 rounded-2xl overflow-hidden border border-slate-200 h-56 bg-slate-100 shadow-inner">
-              <iframe
-                title="DS Industries Ahmedabad Location"
-                src="https://maps.google.com/maps?q=Nikol%20Naroda%20Ahmedabad%20382345&t=&z=14&ie=UTF8&iwloc=&output=embed"
-                class="w-full h-full border-0 filter contrast-105"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-              </iframe>
             </div>
-          </div>
-
-          <!-- Direct Communication Channels -->
-          <div class="glass-panel rounded-3xl p-6 space-y-4 border border-slate-200/90 shadow-sm">
-            <h3 class="text-base font-bold text-slate-900">Direct Communication Channels</h3>
+            <h3 class="text-lg font-bold text-slate-900">Direct Communication Channels</h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-              <a href="tel:+919512690771" class="p-3.5 rounded-2xl bg-white hover:bg-slate-50 border border-slate-200 shadow-sm transition">
+              <a href="tel:+919512690771" class="p-3.5 rounded-2xl bg-white hover:bg-slate-50 border border-slate-200 shadow-sm transition group">
                 <span class="text-slate-500 block">Phone / Sales Desk</span>
-                <span class="font-mono text-sm font-bold text-slate-900 mt-0.5 block">+91 95126 90771</span>
+                <span class="font-mono text-sm font-bold text-slate-900 group-hover:text-teal-700 mt-0.5 block transition">+91 95126 90771</span>
               </a>
-              <a href="mailto:dsindustries89@gmail.com" class="p-3.5 rounded-2xl bg-white hover:bg-slate-50 border border-slate-200 shadow-sm transition">
+              <a href="mailto:dsindustries89@gmail.com" class="p-3.5 rounded-2xl bg-white hover:bg-slate-50 border border-slate-200 shadow-sm transition group">
                 <span class="text-slate-500 block">Official Email</span>
-                <span class="text-sm font-bold text-teal-700 mt-0.5 block truncate">dsindustries89@gmail.com</span>
+                <span class="text-sm font-bold text-teal-700 group-hover:underline mt-0.5 block truncate">dsindustries89@gmail.com</span>
               </a>
             </div>
 
@@ -157,6 +139,33 @@
                   Instagram
                 </a>
               </div>
+            </div>
+          </div>
+
+          <!-- Facility Map Card (Bottom) -->
+          <div class="glass-panel rounded-3xl p-6 sm:p-7 border border-slate-200/90 shadow-sm">
+            <div class="flex items-center justify-between pb-1 border-b border-slate-100">
+              <span class="text-[11px] font-mono uppercase tracking-wider text-teal-700 font-bold">Ahmedabad Office &amp; Works</span>
+              <span class="text-xs font-mono text-slate-500">Facility Location</span>
+            </div>
+            <a href="https://www.google.com/maps/search/?api=1&query=H-52+Darshanvilla+Park+Nr+Gopal+Chowk+Nikol+Naroda+Ahmedabad+382345" target="_blank" rel="noopener noreferrer" class="block mt-3 group">
+              <h3 class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-teal-700 transition flex items-start gap-2.5">
+                <svg class="w-5 h-5 text-teal-700 shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                <span>H - 52, Darshanvilla Park, Nr. Gopal Chowk, Nikol - Naroda, Ahmedabad - 382345 (Gujarat, India)</span>
+              </h3>
+              <span class="inline-flex items-center gap-1.5 mt-3 px-4 py-2 rounded-xl bg-teal-50 group-hover:bg-teal-100 text-teal-800 text-xs font-semibold border border-teal-200 transition">
+                Navigate in Google Maps &rarr;
+              </span>
+            </a>
+
+            <div class="mt-4 rounded-2xl overflow-hidden border border-slate-200 h-64 bg-slate-100 shadow-inner">
+              <iframe
+                title="DS Industries Ahmedabad Location"
+                src="https://maps.google.com/maps?q=Nikol%20Naroda%20Ahmedabad%20382345&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                class="w-full h-full border-0 filter contrast-105"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
             </div>
           </div>
         </div>
@@ -347,7 +356,7 @@
 
   <!-- RICH 4-COLUMN GLASSMORPHISM FOOTER -->
   <footer id="global-footer" class="relative z-10 glass-panel border-t border-slate-200 mt-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-10">
+    <div class="max-w-[1680px] w-full mx-auto px-4 sm:px-8 lg:px-12 pt-14 pb-10">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-200">
         <!-- Column 1 -->
         <div class="space-y-4">

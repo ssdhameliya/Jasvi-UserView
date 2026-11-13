@@ -138,6 +138,15 @@ body {
   animation: floatSlow 5.5s ease-in-out infinite;
 }
 
+/* Scrollbar suppression utility for horizontal nav pills */
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
