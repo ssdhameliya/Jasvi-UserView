@@ -1,914 +1,573 @@
 /**
- * ============================================================================
- * DS INDUSTRIES / Jasvi Engineering - UserView Dynamic Showcase Engine (v4)
- * Grounded in Official 22-Page Engineering Catalog (Ahmedabad Plant)
- * React Bits Spotlight Tilt + MotionSites Spring Easing + Dimensional Matrix
- * ============================================================================
+ * Jasvi Industries - UserView Showcase Main Controller
+ * "Obsidian CAD & Precision Flow Dynamics"
+ * MotionSites.ai x ReactBits.dev High-Precision Physics & Telemetry Engine
  */
 
-document.addEventListener('DOMContentLoaded', () => {
+(function () {
+  'use strict';
+
+  // Global State
   let showcaseData = null;
-  let activeSelectedValve = null;
-  let activeDimensionClass = 'class150';
-  let activeDimensionUnit = 'mm'; // 'mm' or 'in'
-  let swiperInstance = null;
+  let activeCategory = 'all';
+  let activeValveId = 'prod-ball-valve';
+  let activeClass = '150';
+  let activeUnit = 'mm'; // 'mm' or 'in'
+  let rfqCart = JSON.parse(localStorage.getItem('jasvi_rfq_cart') || '[]');
 
-  // ==========================================================================
-  // 1. Ambient Fluid Flow Streamline Canvas (React Bits Inspired)
-  // ==========================================================================
-  function initHeroCanvas() {
-    const canvas = document.getElementById('hero-canvas');
-    if (!canvas) return;
-
-    const ctx = canvas.getContext('2d');
-    let width, height;
-
-    function resizeCanvas() {
-      width = canvas.width = canvas.parentElement.offsetWidth;
-      height = canvas.height = canvas.parentElement.offsetHeight;
+  /* ==========================================================================
+     1. Canvas Flow Dynamics Simulator (60fps GPU Fluid Particle Stream)
+     ========================================================================== */
+  class CanvasFlowSimulator {
+    constructor(canvasId) {
+      this.canvas = document.getElementById(canvasId);
+      if (!this.canvas) return;
+      this.ctx = this.canvas.getContext('2d');
+      this.particles = [];
+      this.particleCount = 110;
+      this.speedMultiplier = 1.0;
+      this.flowHue = 185; // Laser cyan base
+      this.init();
     }
 
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-
-    const particles = [];
-    const streamCount = Math.min(45, Math.floor(window.innerWidth / 30));
-
-    const mouse = {
-      x: -1000,
-      y: -1000,
-      radius: 140
-    };
-
-    window.addEventListener('mousemove', (e) => {
-      const rect = canvas.getBoundingClientRect();
-      mouse.x = e.clientX - rect.left;
-      mouse.y = e.clientY - rect.top;
-    });
-
-    window.addEventListener('mouseleave', () => {
-      mouse.x = -1000;
-      mouse.y = -1000;
-    });
-
-    class StreamParticle {
-      constructor() {
-        this.reset();
+    init() {
+      this.resize();
+      window.addEventListener('resize', () => this.resize());
+      for (let i = 0; i < this.particleCount; i++) {
+        this.particles.push(this.createParticle());
       }
-
-      reset() {
-        this.x = Math.random() * width;
-        this.y = Math.random() * height;
-        this.baseVx = 0.6 + Math.random() * 0.9;
-        this.vx = this.baseVx;
-        this.vy = (Math.random() - 0.5) * 0.45;
-        this.radius = 1.8 + Math.random() * 1.6;
-        this.alpha = 0.2 + Math.random() * 0.4;
-      }
-
-      update() {
-        this.x += this.vx;
-        this.y += this.vy;
-
-        if (this.x > width + 20) this.x = -20;
-        if (this.y < -20) this.y = height + 20;
-        if (this.y > height + 20) this.y = -20;
-
-        const dx = mouse.x - this.x;
-        const dy = mouse.y - this.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-
-        if (dist < mouse.radius) {
-          const force = (mouse.radius - dist) / mouse.radius;
-          this.x -= (dx / dist) * force * 5;
-          this.y -= (dy / dist) * force * 5;
-          this.vx = this.baseVx * (1 + force * 2.2);
-        } else {
-          this.vx += (this.baseVx - this.vx) * 0.05;
-        }
-      }
-
-      draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(2, 132, 199, ${this.alpha})`;
-        ctx.fill();
-      }
+      this.animate();
     }
 
-    for (let i = 0; i < streamCount; i++) {
-      particles.push(new StreamParticle());
+    resize() {
+      this.width = this.canvas.width = this.canvas.offsetWidth;
+      this.height = this.canvas.height = this.canvas.offsetHeight;
     }
 
-    function animateStreams() {
-      ctx.clearRect(0, 0, width, height);
-
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-
-          if (dist < 95) {
-            ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(14, 165, 233, ${0.18 * (1 - dist / 95)})`;
-            ctx.lineWidth = 0.85;
-            ctx.stroke();
-          }
-        }
-      }
-
-      particles.forEach(p => {
-        p.update();
-        p.draw();
-      });
-
-      requestAnimationFrame(animateStreams);
+    createParticle() {
+      return {
+        x: Math.random() * (this.width || 800),
+        y: Math.random() * (this.height || 600),
+        size: Math.random() * 2.2 + 0.8,
+        speedX: (Math.random() * 2.5 + 1.2),
+        speedY: (Math.random() - 0.5) * 0.8,
+        opacity: Math.random() * 0.6 + 0.2,
+        length: Math.random() * 24 + 8
+      };
     }
 
-    animateStreams();
-  }
-
-  // ==========================================================================
-  // 2. Swiper Full-Width 3-Column Workstations
-  // ==========================================================================
-  function initSwiperCoverflow() {
-    if (typeof Swiper === 'undefined') return;
-
-    if (swiperInstance) {
-      swiperInstance.destroy(true, true);
-    }
-
-    swiperInstance = new Swiper('.swiper-showcase-container', {
-      effect: 'slide',
-      grabCursor: true,
-      centeredSlides: false,
-      slidesPerView: 1,
-      spaceBetween: 24,
-      loop: true,
-      speed: 650,
-      autoplay: {
-        delay: 3500,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true
-      },
-      breakpoints: {
-        640: { slidesPerView: 2, spaceBetween: 24 },
-        1024: { slidesPerView: 3, spaceBetween: 28 }
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-      }
-    });
-  }
-
-  // ==========================================================================
-  // 3. Render Valve Specification Inspector
-  // ==========================================================================
-  function renderValveInspector(valve) {
-    if (!valve) return;
-    activeSelectedValve = valve;
-
-    const tagEl = document.getElementById('inspect-tag');
-    const titleEl = document.getElementById('inspect-title');
-    const sizesEl = document.getElementById('inspect-sizes');
-    const endsEl = document.getElementById('inspect-ends');
-    const cvEl = document.getElementById('inspect-cv');
-    const tempEl = document.getElementById('inspect-temp');
-    const matsEl = document.getElementById('inspect-materials');
-    const descEl = document.getElementById('inspect-desc');
-    const stageImgEl = document.getElementById('inspect-3d-img');
-    const ctaDetail = document.getElementById('inspect-btn-detail');
-
-    if (tagEl) tagEl.textContent = valve.tag || 'Industrial Valve Spec';
-    if (titleEl) titleEl.textContent = valve.title;
-    if (stageImgEl && valve.image) {
-      stageImgEl.src = valve.image;
-      stageImgEl.alt = valve.title;
-    }
-    if (sizesEl) sizesEl.textContent = Array.isArray(valve.sizes) ? valve.sizes.slice(0, 6).join(', ') + (valve.sizes.length > 6 ? ` +${valve.sizes.length - 6} more` : '') : 'Standard ASME Sizes';
-    if (endsEl) endsEl.textContent = Array.isArray(valve.endConnections) ? valve.endConnections.join(', ') : 'Flanged RF / RTJ / Butt Weld';
-    if (cvEl) cvEl.textContent = valve.badges ? valve.badges.join(' • ') : 'API 598 Tested';
-    if (tempEl) tempEl.textContent = valve.catalogPages ? `Catalog: ${valve.catalogPages}` : 'ASME B16.34';
-    if (descEl) descEl.textContent = valve.meta || '';
-
-    if (matsEl && Array.isArray(valve.materials)) {
-      matsEl.innerHTML = valve.materials.map((m) => `
-        <span class="mat-pill">${m}</span>
-      `).join('');
-    }
-
-    if (ctaDetail) {
-      ctaDetail.href = `product-detail.html?id=${valve.id}`;
-    }
-
-    document.querySelectorAll('.hydrevo-card').forEach(card => {
-      if (card.getAttribute('data-id') === valve.id) {
-        card.classList.add('selected');
+    setPressure(psi) {
+      this.speedMultiplier = 0.5 + (psi / 2500) * 2.5;
+      if (psi > 1800) {
+        this.flowHue = 35; // Molten amber
+      } else if (psi > 900) {
+        this.flowHue = 160; // Teal
       } else {
-        card.classList.remove('selected');
-      }
-    });
-  }
-
-  // ==========================================================================
-  // 4. Render Product Grid with React Bits Spotlight Tilt
-  // ==========================================================================
-  function renderHydrevoProductGrid(valves, filter = 'all') {
-    const grid = document.getElementById('valve-cards-grid');
-    if (!grid) return;
-
-    const filtered = filter === 'all'
-      ? valves
-      : valves.filter(v => v.category === filter);
-
-    grid.innerHTML = filtered.map((v) => `
-      <a href="product-detail.html?id=${v.id}" class="hydrevo-card" data-id="${v.id}" data-category="${v.category}">
-        <span class="card-watermark">DS</span>
-        <div class="card-img-wrap">
-          <img src="${v.image}" alt="${v.title}" />
-        </div>
-        <div class="card-bottom-ribbon">
-          <span style="display:block; font-size: 0.95rem; font-weight: 800;">${v.ribbonTitle || v.title}</span>
-          <span style="display:block; font-size: 0.76rem; opacity: 0.88; margin-top: 3px;">${v.badges ? v.badges[0] : 'ASME / API'}</span>
-        </div>
-      </a>
-    `).join('');
-
-    // Attach click events to inspector
-    grid.querySelectorAll('.hydrevo-card').forEach(card => {
-      card.addEventListener('click', (e) => {
-        // If clicking on main page without opening subpage directly
-        const valveId = card.getAttribute('data-id');
-        const match = valves.find(item => item.id === valveId);
-        if (match) {
-          renderValveInspector(match);
-        }
-      });
-    });
-
-    init3DMagneticTilt();
-
-    if (!activeSelectedValve && filtered.length > 0) {
-      renderValveInspector(filtered[0]);
-    }
-  }
-
-  // ==========================================================================
-  // 5. Workstations Renderer
-  // ==========================================================================
-  function renderWorkstations(workstations) {
-    const wrapper = document.getElementById('machinery-swiper-wrapper');
-    if (!wrapper || !Array.isArray(workstations)) return;
-
-    wrapper.innerHTML = workstations.map((ws) => `
-      <div class="swiper-slide">
-        <div class="slide-img-wrap">
-          <img src="${ws.image}" alt="${ws.name}" />
-        </div>
-        <div class="slide-info">
-          <span class="slide-badge">${ws.badge}</span>
-          <h3 class="slide-title">${ws.name}</h3>
-          <p class="slide-desc">${ws.desc}</p>
-        </div>
-      </div>
-    `).join('');
-
-    initSwiperCoverflow();
-  }
-
-  // ==========================================================================
-  // 6. Category Filter Button Event Handlers
-  // ==========================================================================
-  function setupCategoryFilters(valves) {
-    const filterContainer = document.getElementById('valve-category-filters');
-    if (!filterContainer) return;
-
-    filterContainer.addEventListener('click', (e) => {
-      const btn = e.target.closest('.cat-btn');
-      if (!btn) return;
-
-      filterContainer.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const filterKey = btn.getAttribute('data-filter') || 'all';
-      renderHydrevoProductGrid(valves, filterKey);
-    });
-  }
-
-  // ==========================================================================
-  // 7. RFQ Dropzone
-  // ==========================================================================
-  function setupRfqDropzone() {
-    const dropzone = document.getElementById('rfq-dropzone');
-    const fileInput = document.getElementById('rfq-file-input');
-    const nameDisplay = document.getElementById('file-name-display');
-
-    if (!dropzone || !fileInput) return;
-
-    dropzone.addEventListener('click', () => fileInput.click());
-
-    fileInput.addEventListener('change', () => {
-      if (fileInput.files && fileInput.files[0]) {
-        nameDisplay.textContent = `Attached: ${fileInput.files[0].name} (${(fileInput.files[0].size / 1024).toFixed(1)} KB)`;
-      }
-    });
-
-    ['dragenter', 'dragover'].forEach(evt => {
-      dropzone.addEventListener(evt, (e) => {
-        e.preventDefault();
-        dropzone.style.borderColor = '#0284c7';
-        dropzone.style.background = 'rgba(224, 242, 254, 0.85)';
-      });
-    });
-
-    ['dragleave', 'drop'].forEach(evt => {
-      dropzone.addEventListener(evt, (e) => {
-        e.preventDefault();
-        dropzone.style.borderColor = 'rgba(2, 132, 199, 0.35)';
-        dropzone.style.background = 'var(--brand-blue-subtle)';
-      });
-    });
-
-    dropzone.addEventListener('drop', (e) => {
-      if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
-        fileInput.files = e.dataTransfer.files;
-        nameDisplay.textContent = `Attached: ${e.dataTransfer.files[0].name} (${(e.dataTransfer.files[0].size / 1024).toFixed(1)} KB)`;
-      }
-    });
-  }
-
-  // ==========================================================================
-  // 8. Client-Side PDF Engineering Datasheet Studio (window.jspdf)
-  // ==========================================================================
-  function setupPdfGenerator() {
-    const pdfBtn = document.getElementById('btn-generate-pdf');
-    if (!pdfBtn) return;
-
-    pdfBtn.addEventListener('click', () => {
-      if (!window.jspdf || !window.jspdf.jsPDF) {
-        alert('PDF compilation library is loading. Please try again in a moment.');
-        return;
-      }
-
-      const { jsPDF } = window.jspdf;
-      const doc = new jsPDF();
-
-      const valve = activeSelectedValve || (showcaseData && showcaseData.valveProducts ? showcaseData.valveProducts[0] : null);
-      if (!valve) return;
-
-      // Header Banner (DS Industries Corporate Blue)
-      doc.setFillColor(2, 132, 199);
-      doc.rect(0, 0, 210, 34, 'F');
-
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(18);
-      doc.setTextColor(255, 255, 255);
-      doc.text('DS INDUSTRIES', 15, 14);
-
-      doc.setFontSize(9);
-      doc.setFont('helvetica', 'normal');
-      doc.text('Committed With Precision & Performance • Industrial Valves Division', 15, 21);
-      doc.text('Office: H-52, Darshanvilla Park, Nikol-Naroda, Ahmedabad - 382345 | Ph: +91 95126 90771', 15, 26);
-      doc.text('Email: dsindustries89@gmail.com • Web: www.dsindustries.com', 15, 31);
-
-      // Document Title
-      doc.setTextColor(15, 23, 42);
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(14);
-      doc.text('TECHNICAL VALVE SPECIFICATION DATA SHEET', 15, 46);
-
-      doc.setDrawColor(2, 132, 199);
-      doc.setLineWidth(0.8);
-      doc.line(15, 49, 195, 49);
-
-      // Model Title
-      doc.setFontSize(11);
-      doc.setTextColor(2, 132, 199);
-      doc.text(`Product Series: ${valve.title}`, 15, 57);
-
-      doc.setFontSize(9);
-      doc.setTextColor(51, 65, 85);
-      doc.setFont('helvetica', 'normal');
-
-      const specs = [
-        ['Classification Category', valve.tag || 'Industrial Valve'],
-        ['Catalog Source Reference', valve.catalogPages || 'Official Catalog'],
-        ['Available Nominal Sizes', Array.isArray(valve.sizes) ? valve.sizes.join(', ') : 'Standard'],
-        ['Standard End Connections', Array.isArray(valve.endConnections) ? valve.endConnections.join(', ') : 'Flanged RF / RTJ / BW'],
-        ['Body Metallurgy (MOC)', Array.isArray(valve.materials) ? valve.materials.join(' / ') : 'WCB / CF8 / CF8M'],
-        ['Engineering Design Standards', valve.standards ? valve.standards.map(s => `${s.item}: ${s.std}`).slice(0, 3).join(' | ') : 'API 6D, ASME B16.34, API 598'],
-        ['Testing & Inspection Standard', 'API 598 100% Hydrostatic Shell & Seat Leakage Tested']
-      ];
-
-      let currentY = 66;
-      specs.forEach(([label, value]) => {
-        doc.setFont('helvetica', 'bold');
-        doc.setTextColor(30, 41, 59);
-        doc.text(label + ':', 15, currentY);
-
-        doc.setFont('helvetica', 'normal');
-        doc.setTextColor(71, 85, 105);
-        doc.text(doc.splitTextToSize(value, 115), 78, currentY);
-
-        doc.setDrawColor(226, 232, 240);
-        doc.line(15, currentY + 3.5, 195, currentY + 3.5);
-        currentY += 9;
-      });
-
-      // Bill of Materials Summary Box
-      if (valve.bom && Array.isArray(valve.bom)) {
-        currentY += 4;
-        doc.setFont('helvetica', 'bold');
-        doc.setFontSize(10);
-        doc.setTextColor(2, 132, 199);
-        doc.text('STANDARD BILL OF MATERIALS (BOM)', 15, currentY);
-        currentY += 5;
-
-        doc.setFillColor(241, 245, 249);
-        doc.rect(15, currentY, 180, 7, 'F');
-        doc.setFontSize(8);
-        doc.setTextColor(15, 23, 42);
-        doc.text('Component Part', 18, currentY + 5);
-        doc.text('Standard WCB', 75, currentY + 5);
-        doc.text('Stainless CF8', 115, currentY + 5);
-        doc.text('Stainless CF8M', 155, currentY + 5);
-        currentY += 7;
-
-        doc.setFont('helvetica', 'normal');
-        valve.bom.slice(0, 6).forEach(b => {
-          doc.text(b.part, 18, currentY + 4.5);
-          doc.text(b.mat1, 75, currentY + 4.5);
-          doc.text(b.mat2, 115, currentY + 4.5);
-          doc.text(b.mat3, 155, currentY + 4.5);
-          doc.setDrawColor(241, 245, 249);
-          doc.line(15, currentY + 6, 195, currentY + 6);
-          currentY += 6;
-        });
-      }
-
-      // Quality Guarantee Box
-      currentY += 6;
-      doc.setFillColor(240, 249, 255);
-      doc.setDrawColor(2, 132, 199);
-      doc.rect(15, currentY, 180, 24, 'FD');
-
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(9.5);
-      doc.setTextColor(3, 105, 161);
-      doc.text('DS Industries Quality & Zero-Leakage Guarantee', 20, currentY + 7);
-
-      doc.setFont('helvetica', 'normal');
-      doc.setFontSize(8);
-      doc.setTextColor(71, 85, 105);
-      doc.text('All valves are 100% shell tested to 1.5x working pressure and seat tested bubble-tight to API 598.', 20, currentY + 13);
-      doc.text('Manufactured under strict ISO 9001:2015 quality assurance at our Nikol-Naroda, Ahmedabad facility.', 20, currentY + 19);
-
-      // Footer
-      doc.setFontSize(7.5);
-      doc.setTextColor(148, 163, 184);
-      doc.text('Generated dynamically from DS Industries / Jasvi Ecosystem • Official Technical Engineering Document', 15, 285);
-
-      doc.save(`DS_Industries_${(valve.tag || 'Valve').replace(/\s+/g, '_')}_Datasheet.pdf`);
-    });
-  }
-
-  // ==========================================================================
-  // 9. Forms Handlers (Integrated with Jasvi ERP)
-  // ==========================================================================
-  function setupRfqForm() {
-    const form = document.getElementById('rfq-form');
-    const feedback = document.getElementById('rfq-feedback-msg');
-    if (!form || !feedback) return;
-
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = document.getElementById('rfq-name').value;
-      const email = document.getElementById('rfq-email').value;
-      const valveType = document.getElementById('rfq-valve-type').value;
-
-      feedback.style.display = 'block';
-      feedback.style.color = '#0284c7';
-      feedback.textContent = `Connecting to Jasvi ERP... Registering technical RFQ for ${name} (${valveType})...`;
-
-      setTimeout(() => {
-        feedback.style.color = '#0369a1';
-        feedback.textContent = `✓ Technical RFQ successfully registered! Our Ahmedabad engineering sales team will send a formal quote to ${email} within 2 hours.`;
-        form.reset();
-        const nameDisplay = document.getElementById('file-name-display');
-        if (nameDisplay) nameDisplay.textContent = '';
-      }, 1100);
-    });
-  }
-
-  function setupContactEnquiryForm() {
-    const contactForm = document.getElementById('contact-enquiry-form');
-    const contactFeedback = document.getElementById('contact-feedback');
-    const productSelect = document.getElementById('contact-product');
-    
-    const params = new URLSearchParams(window.location.search);
-    const prodParam = params.get('product');
-    if (productSelect && prodParam) {
-      for (let i = 0; i < productSelect.options.length; i++) {
-        const optText = productSelect.options[i].text.toLowerCase();
-        const search = prodParam.toLowerCase();
-        if (optText.includes(search)) {
-          productSelect.selectedIndex = i;
-          break;
-        }
+        this.flowHue = 185; // Cyan
       }
     }
 
-    if (!contactForm || !contactFeedback) return;
+    animate() {
+      if (!this.ctx) return;
+      this.ctx.clearRect(0, 0, this.width, this.height);
 
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = document.getElementById('contact-name').value;
-      const email = document.getElementById('contact-email').value;
-      const product = document.getElementById('contact-product').value;
+      this.ctx.lineWidth = 1.2;
+      for (let p of this.particles) {
+        p.x += p.speedX * this.speedMultiplier;
+        p.y += p.speedY * this.speedMultiplier;
 
-      contactFeedback.style.display = 'block';
-      contactFeedback.style.color = '#0284c7';
-      contactFeedback.textContent = `Submitting quotation request for ${name} (${product})...`;
+        if (p.x > this.width + 50) p.x = -50;
+        if (p.y > this.height + 20) p.y = -20;
+        if (p.y < -20) p.y = this.height + 20;
 
-      setTimeout(() => {
-        contactFeedback.style.color = '#0369a1';
-        contactFeedback.textContent = `✓ Quotation request received! Our Ahmedabad plant will dispatch technical details to ${email} shortly.`;
-        contactForm.reset();
-      }, 950);
-    });
-  }
-
-  // ==========================================================================
-  // 10. Dedicated Product Detail Page Hydrator (BOM + Dimensional Matrix)
-  // ==========================================================================
-  function initProductDetailPage(valves) {
-    const detailContainer = document.querySelector('.product-detail-container');
-    if (!detailContainer || !valves || valves.length === 0) return;
-
-    const params = new URLSearchParams(window.location.search);
-    const id = params.get('id') || 'prod-ball-valve';
-    const valve = valves.find(v => v.id === id) || valves[0];
-
-    const titleEl = document.getElementById('detail-page-title');
-    const imgEl = document.getElementById('detail-product-img');
-    const vigLeftEl = document.getElementById('banner-vignette-left');
-    const para1El = document.getElementById('detail-para-1');
-    const para2El = document.getElementById('detail-para-2');
-    const specSurface = document.getElementById('spec-surface');
-    const specMaterial = document.getElementById('spec-material');
-    const specApplication = document.getElementById('spec-application');
-    const specShape = document.getElementById('spec-shape');
-    const specPressure = document.getElementById('spec-pressure');
-    const enquiryBtn = document.getElementById('detail-enquiry-btn');
-
-    if (titleEl) titleEl.textContent = valve.ribbonTitle || valve.title;
-    if (imgEl) {
-      imgEl.src = valve.image;
-      imgEl.alt = valve.title;
-    }
-    if (vigLeftEl) {
-      vigLeftEl.src = valve.image;
-      vigLeftEl.alt = valve.title;
-    }
-    if (para1El) {
-      para1El.innerHTML = `<strong>DS INDUSTRIES</strong> is a leading manufacturer, supplier and exporter of <strong>${valve.ribbonTitle || valve.title}</strong> based in Ahmedabad (Gujarat, India). Engineered strictly in accordance with <strong>${valve.standards ? valve.standards[0].std : 'API & ASME'}</strong> standards, this valve ensures 100% bubble-tight shut-off in severe industrial service conditions. Manufactured with high-integrity ${Array.isArray(valve.materials) ? valve.materials.join(', ') : 'WCB Cast Steel / SS316'} metallurgy to withstand severe pressures and corrosive operating media. Clients can procure these certified precision components from us with full material test certificates (EN 10204 Type 3.1).`;
-    }
-    if (para2El) {
-      para2El.textContent = valve.meta || 'Precision-engineered industrial valve tested 100% to API 598 hydrostatic standards.';
-    }
-    if (specSurface) specSurface.textContent = '125 - 250 AARH Flange Finish / Burnished Double Acme';
-    if (specMaterial) specMaterial.textContent = Array.isArray(valve.materials) ? valve.materials.join(' / ') : 'WCB / CF8 / CF8M';
-    if (specApplication) specApplication.textContent = 'Petrochemical, Power, Refinery & Process Pipelines';
-    if (specShape) specShape.textContent = valve.tag || 'Industrial Valve';
-    if (specPressure) specPressure.textContent = (valve.badges && valve.badges[1]) ? valve.badges[1] : 'ASME Class 150# - 600#';
-    if (enquiryBtn) {
-      enquiryBtn.href = `contact.html?product=${encodeURIComponent(valve.ribbonTitle || valve.title)}`;
-    }
-
-    // Render Standards Chips
-    const stdContainer = document.getElementById('detail-standards-grid');
-    if (stdContainer && valve.standards) {
-      stdContainer.innerHTML = valve.standards.map(s => `
-        <div class="std-chip">
-          <span class="std-chip-label">${s.item}</span>
-          <span class="std-chip-val">${s.std}</span>
-        </div>
-      `).join('');
-    }
-
-    // Render Bill of Materials (BOM) Table
-    const bomTbody = document.getElementById('bom-table-body');
-    const bomWrap = document.getElementById('bom-section-container');
-    if (bomTbody && valve.bom && Array.isArray(valve.bom)) {
-      if (bomWrap) bomWrap.style.display = 'block';
-      bomTbody.innerHTML = valve.bom.map(b => `
-        <tr>
-          <td><strong>${b.part}</strong></td>
-          <td>${b.mat1 || '-'}</td>
-          <td>${b.mat2 || '-'}</td>
-          <td>${b.mat3 || '-'}</td>
-        </tr>
-      `).join('');
-    } else if (bomWrap) {
-      bomWrap.style.display = 'none';
-    }
-
-    // Render Dimensional Matrix Table
-    renderDimensionalMatrix(valve);
-  }
-
-  // ==========================================================================
-  // 10B. Dimensional Matrix Renderer with Interactive Unit Switcher & Class Tabs
-  // ==========================================================================
-  function renderDimensionalMatrix(valve) {
-    const matrixContainer = document.getElementById('dimensional-matrix-container');
-    if (!matrixContainer || !valve || !valve.dimensions) {
-      if (matrixContainer) matrixContainer.style.display = 'none';
-      return;
-    }
-
-    matrixContainer.style.display = 'block';
-
-    const dims = valve.dimensions;
-    const availableClasses = Object.keys(dims);
-    if (!availableClasses.includes(activeDimensionClass)) {
-      activeDimensionClass = availableClasses[0];
-    }
-
-    // Render Class Tabs
-    const tabsContainer = document.getElementById('matrix-class-tabs');
-    if (tabsContainer) {
-      tabsContainer.innerHTML = availableClasses.map(clsKey => {
-        let label = clsKey.toUpperCase();
-        if (clsKey === 'class150') label = 'ASME 150#';
-        if (clsKey === 'class300') label = 'ASME 300#';
-        if (clsKey === 'class600') label = 'ASME 600#';
-        if (clsKey === 'class800') label = 'Class 800#';
-        if (clsKey === 'flanged150') label = 'Flanged 150#';
-        if (clsKey === 'gearOperated') label = 'Gear PN10/16';
-        if (clsKey === 'iso5211Flange') label = 'ISO 5211 Mount';
-        return `
-          <button type="button" class="matrix-class-btn ${clsKey === activeDimensionClass ? 'active' : ''}" data-class="${clsKey}">
-            ${label}
-          </button>
-        `;
-      }).join('');
-
-      tabsContainer.querySelectorAll('.matrix-class-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          activeDimensionClass = btn.getAttribute('data-class');
-          tabsContainer.querySelectorAll('.matrix-class-btn').forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-          renderTableData(dims[activeDimensionClass]);
-        });
-      });
-    }
-
-    // Unit toggle buttons
-    const unitBtns = document.querySelectorAll('.unit-btn');
-    unitBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        activeDimensionUnit = btn.getAttribute('data-unit');
-        unitBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        renderTableData(dims[activeDimensionClass]);
-      });
-    });
-
-    function formatVal(v) {
-      if (typeof v !== 'number') return v;
-      if (activeDimensionUnit === 'in') {
-        return (v / 25.4).toFixed(2);
-      }
-      return v;
-    }
-
-    function renderTableData(rows) {
-      const thead = document.getElementById('matrix-table-head');
-      const tbody = document.getElementById('matrix-table-body');
-      if (!thead || !tbody || !rows || rows.length === 0) return;
-
-      const keys = Object.keys(rows[0]);
-      
-      // Dynamic header mapping
-      thead.innerHTML = `
-        <tr>
-          ${keys.map(k => {
-            let label = k.toUpperCase();
-            if (k === 'size') label = 'Nominal Size';
-            if (k === 'dn') label = 'DN (mm)';
-            if (k === 'ftof') label = `F to F (${activeDimensionUnit})`;
-            if (k === 'flangeDia' || k === 'od' || k === 'dia') label = `Flange Dia (${activeDimensionUnit})`;
-            if (k === 'rfd') label = `RFD (${activeDimensionUnit})`;
-            if (k === 'thk' || k === 'ft') label = `Thickness (${activeDimensionUnit})`;
-            if (k === 'pcd') label = `PCD (${activeDimensionUnit})`;
-            if (k === 'holeDia') label = `Hole Dia (${activeDimensionUnit})`;
-            if (k === 'noh') label = 'No. of Holes';
-            if (k === 'wt') label = 'Weight (Kg)';
-            return `<th>${label}</th>`;
-          }).join('')}
-        </tr>
-      `;
-
-      tbody.innerHTML = rows.map(row => `
-        <tr>
-          ${keys.map(k => {
-            let val = row[k];
-            if (['ftof', 'flangeDia', 'od', 'dia', 'rfd', 'thk', 'ft', 'pcd', 'holeDia', 'l', 'c', 'd', 'a', 'b', 'e', 'f', 'g'].includes(k)) {
-              val = formatVal(val);
-            }
-            return `<td>${val}</td>`;
-          }).join('')}
-        </tr>
-      `).join('');
-    }
-
-    renderTableData(dims[activeDimensionClass]);
-  }
-
-  // ==========================================================================
-  // 11. AI Industrial Valve Selection Co-Pilot
-  // ==========================================================================
-  function initAiValveCopilot(valves) {
-    const copilot = document.getElementById('ai-valve-copilot');
-    if (!copilot || !Array.isArray(valves) || valves.length === 0) return;
-
-    const mediaEl = document.getElementById('ai-media-select');
-    const pressEl = document.getElementById('ai-pressure-select');
-    const funcEl = document.getElementById('ai-conn-select'); // Used as Function
-    const recTitle = document.getElementById('ai-rec-title');
-    const recMoc = document.getElementById('ai-rec-moc');
-    const recSeal = document.getElementById('ai-rec-seal');
-    const recStd = document.getElementById('ai-rec-std');
-    const btnInspect = document.getElementById('btn-ai-inspect');
-
-    let recommendedValve = valves[0];
-
-    function computeAiMatch() {
-      const media = mediaEl ? mediaEl.value : 'steam';
-      const press = pressEl ? pressEl.value : '300';
-      const func = funcEl ? funcEl.value : 'isolation';
-
-      let targetId = 'prod-ball-valve';
-      let moc = 'MOC: ASTM A216 WCB / SS316';
-      let seal = 'Trims: API 607 Fire-Safe Spiral Wound & PTFE';
-      let std = 'Standards: API 6D, ASME B16.34, API 598';
-
-      if (media === 'slurry' || media === 'pulp') {
-        targetId = media === 'pulp' ? 'prod-pulp-valve' : 'prod-knife-gate-valve';
-        moc = 'MOC: Cast Steel / Stainless CF8M with Batten Knife Gate';
-        seal = 'Seat: Renewable Metal-to-Metal / Abrasive Slurry PTFE';
-        std = 'Standard: PN 10 Class & Slurry Directives';
-      } else if (media === 'steam' || func === 'throttling') {
-        targetId = 'prod-globe-valve';
-        moc = 'MOC: ASTM A216 WCB with 13% Cr / Stellite Facing';
-        seal = 'Packing: Die-Formed Flexible Graphite (up to 450°C)';
-        std = 'Standard: API 600, BS 1873, ASME B16.34';
-      } else if (func === 'check') {
-        targetId = press === '600' ? 'prod-dual-plate-check' : 'prod-swing-check';
-        moc = 'MOC: WCB / CF8M with Retainerless Design';
-        seal = 'Sealing: Resilient PTFE / Metal-to-Metal API 594';
-        std = 'Standard: API 594 / API 600 Non-Return Standards';
-      } else if (media === 'water' || func === 'cooling') {
-        targetId = 'prod-butterfly-valve';
-        moc = 'MOC: Cast Carbon WCB / Stainless CF8M';
-        seal = 'Seat: Molded EPDM / Viton (100% Tight Shutoff)';
-        std = 'Standard: BS 5155, API 609, ISO 5211 Actuator Ready';
-      } else if (media === 'filtration') {
-        targetId = press === '600' ? 'prod-basket-strainer' : 'prod-y-strainer';
-        moc = 'MOC: WCB / SS316 with Stainless Mesh Lining';
-        seal = 'Gasket: Spiral Wound SS316 with Quick Davit Lift';
-        std = 'Standard: ASME Class 150# - 1500# Pipeline Filtration';
-      } else if (press === '800' || press === '1500' || press === '2500') {
-        targetId = 'prod-forged-gate';
-        moc = 'MOC: ASTM A105 / F316L / Inconel 625 Forged';
-        seal = 'Packing: API 602 Bolted/Welded Bonnet High-Pressure Seal';
-        std = 'Standard: API 602 & ASME B16.34 (up to 2500#)';
+        this.ctx.strokeStyle = `hsla(${this.flowHue}, 100%, 55%, ${p.opacity})`;
+        this.ctx.beginPath();
+        this.ctx.moveTo(p.x, p.y);
+        this.ctx.lineTo(p.x - p.length * this.speedMultiplier, p.y);
+        this.ctx.stroke();
       }
 
-      recommendedValve = valves.find(v => v.id === targetId) || valves[0];
-
-      if (recTitle) recTitle.textContent = recommendedValve.title;
-      if (recMoc) recMoc.textContent = moc;
-      if (recSeal) recSeal.textContent = seal;
-      if (recStd) recStd.textContent = std;
+      requestAnimationFrame(() => this.animate());
     }
-
-    [mediaEl, pressEl, funcEl].forEach(sel => {
-      if (sel) sel.addEventListener('change', computeAiMatch);
-    });
-
-    if (btnInspect) {
-      btnInspect.addEventListener('click', () => {
-        window.location.href = `product-detail.html?id=${recommendedValve.id}`;
-      });
-    }
-
-    computeAiMatch();
   }
 
-  // ==========================================================================
-  // 12. React Bits Spotlight & 3D Tilt Cursor Listeners
-  // ==========================================================================
-  function init3DMagneticTilt() {
-    const cards = document.querySelectorAll(
-      '.hydrevo-card, .swiper-showcase-container .swiper-slide, .facility-photo-card, .trust-badge-card, .telemetry-card'
-    );
-
-    cards.forEach((card) => {
-      if (card.dataset.tiltBound === 'true') return;
-      card.dataset.tiltBound = 'true';
-
-      card.addEventListener('mousemove', (e) => {
+  /* ==========================================================================
+     2. ReactBits Magnetic Spotlight & 3D Perspective Tilt Physics
+     ========================================================================== */
+  function initSpotlightPhysics() {
+    document.addEventListener('mousemove', (e) => {
+      const cards = document.querySelectorAll('.product-card, .bento-card, .valve-3d-card');
+      cards.forEach((card) => {
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-        const cx = rect.width / 2;
-        const cy = rect.height / 2;
-        const rx = ((y - cy) / cy) * -4.5;
-        const ry = ((x - cx) / cx) * 4.5;
-
         card.style.setProperty('--mx', `${x}px`);
         card.style.setProperty('--my', `${y}px`);
-        card.style.setProperty('--rx', `${rx.toFixed(2)}deg`);
-        card.style.setProperty('--ry', `${ry.toFixed(2)}deg`);
+      });
+    });
+
+    const heroCard = document.querySelector('.valve-3d-card');
+    if (heroCard) {
+      heroCard.addEventListener('mousemove', (e) => {
+        const rect = heroCard.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        const deltaX = (e.clientX - centerX) / (rect.width / 2);
+        const deltaY = (e.clientY - centerY) / (rect.height / 2);
+
+        const rotateX = -deltaY * 10;
+        const rotateY = deltaX * 10;
+
+        heroCard.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
       });
 
-      card.addEventListener('mouseleave', () => {
-        card.style.setProperty('--rx', '0deg');
-        card.style.setProperty('--ry', '0deg');
+      heroCard.addEventListener('mouseleave', () => {
+        heroCard.style.transform = 'perspective(1200px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+      });
+    }
+  }
+
+  /* ==========================================================================
+     3. Telemetry HUD Slider Controller
+     ========================================================================== */
+  function initHudSlider(flowSimulator) {
+    const slider = document.getElementById('hud-pressure-slider');
+    const readout = document.getElementById('hud-pressure-readout');
+    const velMetric = document.getElementById('hud-flow-velocity');
+    const tempMetric = document.getElementById('hud-thermal-rating');
+
+    if (!slider) return;
+
+    slider.addEventListener('input', (e) => {
+      const psi = parseInt(e.target.value, 10);
+      if (readout) readout.textContent = `${psi.toLocaleString()} PSI`;
+      
+      const velocity = (12 + (psi / 2500) * 48).toFixed(1);
+      if (velMetric) velMetric.textContent = `${velocity} m/s`;
+
+      const temp = Math.round(180 + (psi / 2500) * 320);
+      if (tempMetric) tempMetric.textContent = `${temp}°C`;
+
+      if (flowSimulator) {
+        flowSimulator.setPressure(psi);
+      }
+    });
+  }
+
+  /* ==========================================================================
+     4. Data Ingestion & Showcase Hydration (15 Industrial Valve Lines)
+     ========================================================================== */
+  function getProductList() {
+    if (!showcaseData) return [];
+    return showcaseData.valveProducts || showcaseData.products || [];
+  }
+
+  async function loadShowcaseData() {
+    try {
+      const response = await fetch('data/showcase.json');
+      showcaseData = await response.json();
+      renderShowcaseCards();
+      initWorkbench();
+      updateRfqCounter();
+      checkDetailPageRouting();
+    } catch (err) {
+      console.error('Failed to load showcase data:', err);
+    }
+  }
+
+  function renderShowcaseCards() {
+    const grid = document.getElementById('showcase-grid');
+    const products = getProductList();
+    if (!grid || products.length === 0) return;
+
+    const filtered = products.filter(p => {
+      if (activeCategory === 'all') return true;
+      return p.category === activeCategory;
+    });
+
+    grid.innerHTML = filtered.map(valve => {
+      const name = valve.title || valve.name || 'Industrial Valve';
+      const desc = valve.meta ? valve.meta.description : (valve.description || 'High-pressure severe-service precision industrial valve.');
+      const designStd = valve.standards ? (valve.standards.design || 'ASME B16.34') : 'ASME B16.34';
+      const sizeStr = valve.sizes ? `${valve.sizes.min} - ${valve.sizes.max}` : (valve.standards ? valve.standards.size_range : '1/2" - 12"');
+      const bodyMat = valve.bom ? (valve.bom.body || 'ASTM A216 WCB') : 'ASTM A216 WCB';
+      const img = valve.image || 'assets/images/hero_valve_ball.jpg';
+
+      return `
+        <div class="product-card" data-id="${valve.id}">
+          <div>
+            <div class="card-top-header">
+              <span class="category-badge">${valve.category.replace('-', ' ')}</span>
+              <span class="cert-badge">${designStd}</span>
+            </div>
+
+            <div class="card-img-wrap">
+              <img src="${img}" alt="${name}" class="card-valve-img" />
+            </div>
+
+            <div class="card-info">
+              <h3 class="card-valve-title">${name}</h3>
+              <p class="card-valve-desc">${desc}</p>
+              
+              <div class="card-spec-tags">
+                <span class="spec-tag">${sizeStr}</span>
+                <span class="spec-tag">${bodyMat}</span>
+                <span class="spec-tag">${valve.tag || 'Precision Valve'}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-actions-row">
+            <a href="product-detail.html?id=${valve.id}" class="btn-card-matrix">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+              CAD Matrix
+            </a>
+            <button class="btn-card-rfq" onclick="window.JasviApp.addToCart('${valve.id}', '${name.replace(/'/g, "\'")}')" title="Add to RFQ Requisition Basket">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg>
+              RFQ
+            </button>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  function initCategoryFilters() {
+    const chips = document.querySelectorAll('.filter-chip');
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        activeCategory = chip.getAttribute('data-category');
+        renderShowcaseCards();
       });
     });
   }
 
-  // ==========================================================================
-  // 13. Telemetry Counter & Scroll Reveal
-  // ==========================================================================
-  function initTelemetryAndScrollReveal() {
-    const counters = document.querySelectorAll('.telemetry-counter');
-    if (counters.length > 0 && 'IntersectionObserver' in window) {
-      const counterObserver = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-          if (!entry.isIntersecting) return;
-          const el = entry.target;
-          const target = parseInt(el.getAttribute('data-target') || '100', 10);
-          const duration = 1400;
-          const start = performance.now();
+  /* ==========================================================================
+     5. CAD Dimensional Matrix Workbench 2.0
+     ========================================================================== */
+  function initWorkbench() {
+    const products = getProductList();
+    if (products.length === 0) return;
+    const valve = products.find(p => p.id === activeValveId) || products[0];
+    if (!valve) return;
 
-          function tick(now) {
-            const progress = Math.min((now - start) / duration, 1);
-            const eased = 1 - Math.pow(1 - progress, 3);
-            const val = Math.round(target * eased);
-            el.textContent = target >= 1000 ? val.toLocaleString() : String(val);
-            if (progress < 1) {
-              requestAnimationFrame(tick);
-            }
-          }
-          requestAnimationFrame(tick);
-          obs.unobserve(el);
-        });
-      }, { threshold: 0.35 });
+    renderMatrixTable(valve);
+    updateCadSchematic(valve);
 
-      counters.forEach(c => counterObserver.observe(c));
+    const classBtns = document.querySelectorAll('.class-tab-btn');
+    classBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        classBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeClass = btn.getAttribute('data-class');
+        renderMatrixTable(valve);
+      });
+    });
+
+    const unitBtns = document.querySelectorAll('.unit-btn');
+    unitBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        unitBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeUnit = btn.getAttribute('data-unit');
+        renderMatrixTable(valve);
+      });
+    });
+  }
+
+  function renderMatrixTable(valve) {
+    const tbody = document.getElementById('matrix-table-body');
+    if (!tbody || !valve.dimensions) return;
+
+    const classKey = `class_${activeClass}`;
+    const dims = valve.dimensions[classKey] || [];
+
+    if (dims.length === 0) {
+      tbody.innerHTML = `<tr><td colspan="7" style="text-align:center; padding:24px; color:var(--text-muted);">No dimensional matrix for Class ${activeClass}#</td></tr>`;
+      return;
+    }
+
+    const conversionFactor = activeUnit === 'in' ? (1 / 25.4) : 1;
+    const formatVal = (val) => {
+      if (typeof val !== 'number') return val;
+      const converted = val * conversionFactor;
+      return activeUnit === 'in' ? converted.toFixed(2) : converted.toFixed(1);
+    };
+
+    tbody.innerHTML = dims.map((row, idx) => `
+      <tr class="${idx === 0 ? 'selected' : ''}" onclick="window.JasviApp.selectMatrixRow(this, ${JSON.stringify(row).replace(/"/g, '&quot;')})">
+        <td style="font-weight:700; color:var(--laser-cyan);">${row.size_inch} (${row.size_mm} mm)</td>
+        <td>${formatVal(row.L)}</td>
+        <td>${formatVal(row.H)}</td>
+        <td>${formatVal(row.W)}</td>
+        <td>${formatVal(row.D)}</td>
+        <td>${row.holes || 4}</td>
+        <td style="font-weight:700; color:var(--laser-teal);">${row.weight_kg ? (activeUnit === 'in' ? (row.weight_kg * 2.20462).toFixed(1) + ' lbs' : row.weight_kg + ' kg') : '-'}</td>
+      </tr>
+    `).join('');
+
+    if (dims.length > 0) {
+      updateCadStats(dims[0]);
     }
   }
 
-  // ==========================================================================
-  // 14. Main Hydration Controller
-  // ==========================================================================
-  async function loadShowcaseData() {
-    try {
-      const response = await fetch('data/showcase.json');
-      if (!response.ok) throw new Error('Failed to load showcase data');
-      showcaseData = await response.json();
+  function updateCadStats(row) {
+    const elSize = document.getElementById('cad-stat-size');
+    const elL = document.getElementById('cad-stat-l');
+    const elH = document.getElementById('cad-stat-h');
+    const elWt = document.getElementById('cad-stat-wt');
 
-      if (showcaseData.valveProducts) {
-        renderHydrevoProductGrid(showcaseData.valveProducts, 'all');
-        setupCategoryFilters(showcaseData.valveProducts);
-        initProductDetailPage(showcaseData.valveProducts);
-        initAiValveCopilot(showcaseData.valveProducts);
+    const conv = activeUnit === 'in' ? (1 / 25.4) : 1;
+    const unitLabel = activeUnit === 'in' ? 'in' : 'mm';
+
+    if (elSize) elSize.textContent = `${row.size_inch}`;
+    if (elL) elL.textContent = `${(row.L * conv).toFixed(1)} ${unitLabel}`;
+    if (elH) elH.textContent = `${(row.H * conv).toFixed(1)} ${unitLabel}`;
+    if (elWt) elWt.textContent = `${row.weight_kg || 15} kg`;
+  }
+
+  function updateCadSchematic(valve) {
+    const titleEl = document.getElementById('cad-valve-name');
+    const name = valve.title || valve.name || 'Valve';
+    if (titleEl) titleEl.textContent = `${name.toUpperCase()} // ASME B16.34 CAD SCHEMATIC`;
+  }
+
+  /* ==========================================================================
+     6. Product Detail URL Routing
+     ========================================================================== */
+  function checkDetailPageRouting() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get('id');
+    if (!id) return;
+
+    const products = getProductList();
+    const valve = products.find(p => p.id === id);
+    if (!valve) return;
+
+    activeValveId = valve.id;
+    const titleEl = document.getElementById('detail-title');
+    const descEl = document.getElementById('detail-desc');
+    const imgEl = document.getElementById('detail-valve-img');
+
+    if (titleEl) titleEl.textContent = valve.title || valve.name;
+    if (descEl) descEl.textContent = valve.meta ? valve.meta.description : (valve.description || '');
+    if (imgEl && valve.image) imgEl.src = valve.image;
+
+    initWorkbench();
+  }
+
+  /* ==========================================================================
+     7. AI Industrial Valve Selection Copilot 2.0
+     ========================================================================== */
+  function initCopilot() {
+    const input = document.getElementById('copilot-query-input');
+    const sendBtn = document.getElementById('copilot-send-btn');
+    const resultBox = document.getElementById('copilot-result-box');
+    const chips = document.querySelectorAll('.copilot-chip');
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        if (input) {
+          input.value = chip.textContent.trim();
+          executeCopilotSearch(input.value);
+        }
+      });
+    });
+
+    if (sendBtn && input) {
+      sendBtn.addEventListener('click', () => {
+        executeCopilotSearch(input.value);
+      });
+      input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') executeCopilotSearch(input.value);
+      });
+    }
+
+    function executeCopilotSearch(query) {
+      const products = getProductList();
+      if (!query || products.length === 0 || !resultBox) return;
+      const q = query.toLowerCase();
+
+      let matched = products[0];
+      let confidence = 94;
+      let reason = 'Matched standard high-pressure isolation service.';
+
+      if (q.includes('steam') || q.includes('450') || q.includes('thermal')) {
+        matched = products.find(p => p.id === 'prod-globe-valve' || p.id === 'prod-forged-globe') || matched;
+        confidence = 98;
+        reason = 'BS 1873 Cast Steel Globe Valve with Stellite trim for continuous throttling and high-temperature steam lines.';
+      } else if (q.includes('slurry') || q.includes('pulp') || q.includes('fiber')) {
+        matched = products.find(p => p.id === 'prod-knife-gate-valve' || p.id === 'prod-pulp-valve') || matched;
+        confidence = 99;
+        reason = 'MSS SP-81 Bi-directional Knife Edge Gate Valve with sharpened beveled gate for cutting pulp fibers.';
+      } else if (q.includes('crude') || q.includes('sour') || q.includes('nace')) {
+        matched = products.find(p => p.id === 'prod-ball-valve' || p.id === 'prod-3pc-ball') || matched;
+        confidence = 97;
+        reason = 'API 6D Trunnion Mounted Ball Valve with NACE MR0175 compliance and dual seal barrier.';
+      } else if (q.includes('non-return') || q.includes('check') || q.includes('pump')) {
+        matched = products.find(p => p.id === 'prod-dual-plate-check' || p.id === 'prod-swing-check') || matched;
+        confidence = 96;
+        reason = 'Dual Plate Wafer Check Valve with rapid spring-assisted closure preventing water hammer in pump discharge.';
       }
 
-      if (showcaseData.workstations) {
-        renderWorkstations(showcaseData.workstations);
-      }
+      const mName = matched.title || matched.name;
+      const mStd = matched.standards ? (matched.standards.design || 'API 6D') : 'API 6D';
+      const mBody = matched.bom ? (matched.bom.body || 'ASTM A216 WCB') : 'ASTM A216 WCB';
 
-      init3DMagneticTilt();
-    } catch (err) {
-      console.warn('Falling back to default valve catalog:', err);
+      resultBox.style.display = 'block';
+      resultBox.innerHTML = `
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px;">
+          <div>
+            <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--laser-teal); font-weight:700; margin-bottom:4px;">
+              MATCH VERIFIED (${confidence}% CONFIDENCE)
+            </div>
+            <h4 style="font-family:var(--font-heading); font-size:1.15rem; color:var(--text-titanium); font-weight:700;">
+              ${mName}
+            </h4>
+          </div>
+          <a href="product-detail.html?id=${matched.id}" class="btn-card-matrix" style="padding:6px 14px;">
+            Open CAD Lab &rarr;
+          </a>
+        </div>
+        <p style="font-size:0.86rem; color:var(--text-secondary); line-height:1.6; margin-bottom:10px;">
+          ${reason}
+        </p>
+        <div style="display:flex; gap:8px; font-family:var(--font-mono); font-size:0.74rem;">
+          <span class="spec-tag" style="color:var(--laser-cyan);">${mStd}</span>
+          <span class="spec-tag">${mBody}</span>
+          <span class="spec-tag">${matched.category}</span>
+        </div>
+      `;
     }
   }
 
-  // Run initialization routines
-  initHeroCanvas();
-  setupRfqDropzone();
-  setupPdfGenerator();
-  setupRfqForm();
-  setupContactEnquiryForm();
-  initTelemetryAndScrollReveal();
-  loadShowcaseData();
-});
+  /* ==========================================================================
+     8. Slide-Over RFQ Requisition Basket
+     ========================================================================== */
+  function initRfqDrawer() {
+    const trigger = document.getElementById('dock-rfq-btn');
+    const overlay = document.getElementById('rfq-drawer-overlay');
+    const drawer = document.getElementById('rfq-drawer');
+    const closeBtn = document.getElementById('drawer-close-btn');
+
+    if (trigger) {
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        openDrawer();
+      });
+    }
+
+    if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+    if (overlay) overlay.addEventListener('click', closeDrawer);
+
+    function openDrawer() {
+      if (overlay) overlay.classList.add('open');
+      if (drawer) drawer.classList.add('open');
+      renderRfqItems();
+    }
+
+    function closeDrawer() {
+      if (overlay) overlay.classList.remove('open');
+      if (drawer) drawer.classList.remove('open');
+    }
+
+    window.JasviApp.openRfqDrawer = openDrawer;
+  }
+
+  function updateRfqCounter() {
+    const countEls = document.querySelectorAll('.rfq-badge');
+    const count = rfqCart.length;
+    countEls.forEach(el => {
+      el.textContent = count;
+    });
+  }
+
+  function renderRfqItems() {
+    const container = document.getElementById('drawer-items-list');
+    if (!container) return;
+
+    if (rfqCart.length === 0) {
+      container.innerHTML = `
+        <div style="text-align:center; padding:48px 20px; color:var(--text-muted); font-family:var(--font-mono); font-size:0.88rem;">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin:0 auto 12px; opacity:0.6;"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          Requisition basket is empty.<br>Add valves from the catalog to build an engineering RFQ.
+        </div>
+      `;
+      return;
+    }
+
+    container.innerHTML = rfqCart.map((item, idx) => `
+      <div class="drawer-item">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+          <div style="font-family:var(--font-heading); font-size:0.96rem; font-weight:700; color:var(--text-titanium);">
+            ${item.name}
+          </div>
+          <button onclick="window.JasviApp.removeFromCart(${idx})" style="color:var(--text-muted); font-size:1.1rem; line-height:1; cursor:pointer;" title="Remove">
+            &times;
+          </button>
+        </div>
+        <div style="display:flex; gap:8px; font-family:var(--font-mono); font-size:0.75rem; color:var(--text-secondary);">
+          <span>Class: ${item.class || '150#'}</span>
+          <span>&bull;</span>
+          <span>Qty: ${item.qty || 1} units</span>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  /* ==========================================================================
+     9. Public API Namespace (window.JasviApp)
+     ========================================================================== */
+  window.JasviApp = {
+    addToCart(id, name) {
+      rfqCart.push({ id, name, class: activeClass, qty: 1 });
+      localStorage.setItem('jasvi_rfq_cart', JSON.stringify(rfqCart));
+      updateRfqCounter();
+      if (window.JasviApp.openRfqDrawer) window.JasviApp.openRfqDrawer();
+    },
+
+    removeFromCart(index) {
+      rfqCart.splice(index, 1);
+      localStorage.setItem('jasvi_rfq_cart', JSON.stringify(rfqCart));
+      updateRfqCounter();
+      renderRfqItems();
+    },
+
+    selectMatrixRow(trElement, rowData) {
+      const rows = document.querySelectorAll('#matrix-table-body tr');
+      rows.forEach(r => r.classList.remove('selected'));
+      trElement.classList.add('selected');
+      updateCadStats(rowData);
+    },
+
+    dispatchWhatsAppRfq() {
+      if (rfqCart.length === 0) {
+        alert('Please add at least one valve to your RFQ basket.');
+        return;
+      }
+      let msg = "Hello Jasvi Industries Engineering Team,\n\nI would like to request an official technical quote for the following valves:\n";
+      rfqCart.forEach((item, idx) => {
+        msg += `${idx + 1}. ${item.name} (Class ${item.class}#) - Qty: ${item.qty}\n`;
+      });
+      msg += "\nPlease provide pricing, delivery lead time, and EN 10204 3.1 MTC availability.\n\nThank you.";
+      const url = `https://wa.me/919512690771?text=${encodeURIComponent(msg)}`;
+      window.open(url, '_blank');
+    }
+  };
+
+  /* ==========================================================================
+     10. DOM Initialization Lifecycle
+     ========================================================================== */
+  document.addEventListener('DOMContentLoaded', () => {
+    const flowSim = new CanvasFlowSimulator('hero-canvas');
+    initSpotlightPhysics();
+    initHudSlider(flowSim);
+    loadShowcaseData();
+    initCategoryFilters();
+    initCopilot();
+    initRfqDrawer();
+  });
+
+})();

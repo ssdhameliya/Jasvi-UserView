@@ -3,316 +3,256 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Details | Jasvi Industries - Precision Valves & Flow Control</title>
-  
+  <title>CAD Inspection Workbench | Jasvi Industries</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <!-- jsPDF Library for Technical Datasheet Generation -->
+  <!-- jsPDF Library for Offline Client-Side Datasheet Generation -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
 
-  <!-- Top Ribbon -->
-  <div class="top-ribbon">
-    <div class="container ribbon-wrapper">
-      <div class="ribbon-left">
-        <a href="tel:+919512690771" class="ribbon-link">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          +91 95126 90771
-        </a>
-        <a href="mailto:dsindustries89@gmail.com" class="ribbon-link">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          dsindustries89@gmail.com
-        </a>
-        <span class="ribbon-link" style="opacity: 0.9;">
-          &bull; Nikol - Naroda, Ahmedabad - 382345 (Gujarat, India)
-        </span>
-      </div>
+  <!-- Floating Glass Dock -->
+  <div class="dock-container">
+    <div class="floating-dock">
+      <a href="index.html" class="dock-brand">
+        <div class="dock-brand-monogram">JI</div>
+        <span class="dock-brand-name">JASVI</span>
+        <span class="dock-laser-dot"></span>
+      </a>
 
-      <div class="ribbon-right">
-        <div class="ribbon-social">
-          <a href="#" class="social-icon" title="Facebook"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-          <a href="#" class="social-icon" title="YouTube"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#1c75bc"/></svg></a>
-          <a href="#" class="social-icon" title="LinkedIn"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
-        </div>
-      </div>
+      <nav class="dock-nav">
+        <a href="index.html" class="dock-pill">Showcase</a>
+        <a href="products.html" class="dock-pill active">Catalog [15]</a>
+        <a href="index.html#workbench" class="dock-pill">CAD Matrix</a>
+        <a href="about.html" class="dock-pill">Plant Telemetry</a>
+        <a href="gallery.html" class="dock-pill">Vault</a>
+        <a href="contact.html" class="dock-pill">Contact</a>
+      </nav>
+
+      <div class="dock-divider"></div>
+
+      <a href="https://erp.jasviindustries.in/" target="_blank" class="dock-action-btn dock-btn-erp">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        <span>ERP Portal</span>
+      </a>
+
+      <button id="dock-rfq-btn" class="dock-action-btn dock-btn-rfq">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span>RFQ Cart</span>
+        <span class="rfq-badge">0</span>
+      </button>
     </div>
   </div>
 
-  <!-- Header with Dropdown -->
-  <header class="site-header">
-    <div class="container nav-wrapper">
-      <a href="index.html" class="brand">
-        <div class="brand-icon">JI</div>
-        <div>
-          <span class="brand-title">JASVI INDUSTRIES</span>
-          <span class="brand-subtitle">Precision Valves & Flow Control</span>
-        </div>
-      </a>
+  <!-- Detail Hero Header -->
+  <section style="padding: 130px 0 40px; border-bottom: 1px solid var(--border-subtle); background: #06080e;">
+    <div class="container" style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:20px;">
+      <div>
+        <div class="section-tag" style="margin-bottom: 10px;">// CAD ENGINEERING WORKBENCH</div>
+        <h1 class="hero-title" id="detail-title" style="font-size: clamp(2rem, 3.8vw, 3.2rem); margin-bottom: 8px;">
+          TRUNNION MOUNTED BALL VALVE
+        </h1>
+        <p class="hero-description" id="detail-desc" style="font-size: 1rem; max-width: 650px;">
+          Severe-service two-piece &amp; three-piece cast steel flanged ball valves engineered to API 6D specifications.
+        </p>
+      </div>
 
-      <nav>
-        <ul class="nav-menu">
-          <li><a href="index.html" class="nav-link">HOME</a></li>
-          <li><a href="about.html" class="nav-link">ABOUT</a></li>
-          <li class="nav-item-dropdown">
-            <a href="products.html" class="nav-link active">OUR PRODUCTS <span class="arrow-down">&#9662;</span></a>
-            <ul class="dropdown-menu">
-              <li><a href="product-detail.html?id=v-needle-6k">High-Pressure Needle Valves</a></li>
-              <li><a href="product-detail.html?id=v-manifold-5w">Instrumentation Manifold Blocks</a></li>
-              <li><a href="product-detail.html?id=v-ball-trunnion">Severe-Service Ball Valves</a></li>
-              <li><a href="product-detail.html?id=v-check-piston">High-Pressure Check Valves</a></li>
-              <li><a href="product-detail.html?id=v-dbb-monoflange">DBB Monoflange Valves</a></li>
-              <li><a href="product-detail.html?id=v-gauge-bleed">Multi-Port Gauge Valves</a></li>
-            </ul>
-          </li>
-          <li><a href="gallery.html" class="nav-link">GALLERY</a></li>
-          <li><a href="contact.html" class="nav-link">CONTACT</a></li>
-        </ul>
-      </nav>
-
-      <div class="nav-actions">
-        <a href="https://erp.jasviindustries.in/" target="_blank" class="portal-link" title="Open Jasvi Centralized Web ERP">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
-          Client ERP Portal
-        </a>
-        <a href="contact.html" class="btn-enquiry">Enquiry Now</a>
+      <div style="display:flex; gap:12px;">
+        <button id="btn-download-pdf" class="btn-laser-primary" onclick="downloadValvePdf()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span>Download Engineering Datasheet</span>
+        </button>
       </div>
     </div>
-  </header>
+  </section>
 
-  <!-- Subpage Banner -->
-  <section class="subpage-banner">
-    <div class="container subpage-banner-grid">
-      <div class="banner-vignette">
-        <div class="banner-vignette-circle">
-          <img id="banner-vignette-left" src="assets/images/hero_valve_needle.jpg" alt="Needle Valve" />
+  <!-- Detailed CAD Matrix & BOM Workbench -->
+  <section class="section-workbench" style="padding: 60px 0 100px;">
+    <div class="container">
+      <div class="workbench-container" style="margin-bottom: 40px;">
+        <!-- Left: Image & Hotspots -->
+        <div class="cad-viewport">
+          <div class="cad-header">
+            <span class="cad-title">3D VALVE CAD PERSPECTIVE</span>
+            <span class="standard-badge">API 598 RATE A</span>
+          </div>
+
+          <div class="cad-cross-section">
+            <img id="detail-valve-img" src="assets/images/hero_valve_ball.jpg" alt="Valve Preview" style="max-height:85%; max-width:85%; object-fit:contain; filter:drop-shadow(0 14px 24px rgba(0,0,0,0.8));" />
+          </div>
+
+          <div class="cad-telemetry-pills">
+            <div class="cad-stat-box">
+              <div class="stat-key">SHELL TEST</div>
+              <div class="stat-val">425 PSI</div>
+            </div>
+            <div class="cad-stat-box">
+              <div class="stat-key">SEAT TEST</div>
+              <div class="stat-val">310 PSI</div>
+            </div>
+            <div class="cad-stat-box">
+              <div class="stat-key">MAX TEMP</div>
+              <div class="stat-val">450°C</div>
+            </div>
+            <div class="cad-stat-box">
+              <div class="stat-key">FIRE SAFE</div>
+              <div class="stat-val" style="color:var(--molten-amber);">API 607</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Dimensional Table -->
+        <div class="matrix-workbench">
+          <div class="matrix-toolbar">
+            <div class="class-tab-group">
+              <button class="class-tab-btn active" data-class="150">Class 150#</button>
+              <button class="class-tab-btn" data-class="300">Class 300#</button>
+              <button class="class-tab-btn" data-class="600">Class 600#</button>
+            </div>
+            <div class="unit-toggle-wrap">
+              <button class="unit-btn active" data-unit="mm">Metric (mm)</button>
+              <button class="unit-btn" data-unit="in">Imperial (in)</button>
+            </div>
+          </div>
+
+          <div class="matrix-table-wrap">
+            <table class="matrix-table">
+              <thead>
+                <tr>
+                  <th>NPS (Size)</th>
+                  <th>L (F-to-F)</th>
+                  <th>H (Height)</th>
+                  <th>W (Port)</th>
+                  <th>D (Flange OD)</th>
+                  <th>Holes</th>
+                  <th>Weight</th>
+                </tr>
+              </thead>
+              <tbody id="matrix-table-body"></tbody>
+            </table>
+          </div>
         </div>
       </div>
-      <h1 class="subpage-title" id="detail-page-title">Product Details</h1>
-      <div class="banner-vignette">
-        <div class="banner-vignette-circle">
-          <img id="banner-vignette-right" src="assets/images/hero_valve_manifold.jpg" alt="Manifold Block" />
+
+      <!-- Bill of Materials (BOM) Section -->
+      <div class="bento-card" style="padding: 30px;">
+        <h3 class="bento-card-title" style="margin-bottom: 20px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--laser-cyan)" stroke-width="2.2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          ASTM Standard Bill of Materials (BOM) &amp; Metallurgy Trims
+        </h3>
+        <div style="overflow-x:auto;">
+          <table class="matrix-table" style="text-align:left;">
+            <thead>
+              <tr>
+                <th>Component Part</th>
+                <th>Standard Carbon Steel</th>
+                <th>Stainless Steel 316</th>
+                <th>Severe Sour NACE MR0175</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="font-weight:700; color:var(--laser-cyan);">Body / Bonnet</td>
+                <td>ASTM A216 Gr. WCB</td>
+                <td>ASTM A351 Gr. CF8M</td>
+                <td>Duplex 2205 (F51) / Inconel</td>
+              </tr>
+              <tr>
+                <td style="font-weight:700; color:var(--laser-cyan);">Wedge / Ball / Disc</td>
+                <td>ASTM A105 + 13% Cr / SS304</td>
+                <td>ASTM A182 Gr. F316</td>
+                <td>SS316 + Stellite 6 Overlay</td>
+              </tr>
+              <tr>
+                <td style="font-weight:700; color:var(--laser-cyan);">Stem</td>
+                <td>ASTM A276 Type 410</td>
+                <td>ASTM A276 Type 316</td>
+                <td>17-4PH / Monel K500</td>
+              </tr>
+              <tr>
+                <td style="font-weight:700; color:var(--laser-cyan);">Seat Rings</td>
+                <td>ASTM A216 WCB + 13% Cr</td>
+                <td>ASTM A351 CF8M + Stellite</td>
+                <td>Solid Stellite 6 / PEEK</td>
+              </tr>
+              <tr>
+                <td style="font-weight:700; color:var(--laser-cyan);">Gasket / Packing</td>
+                <td colspan="3">Spiral Wound SS316 + Flexible Graphite / Pure PTFE (Zero Fugitive Emission)</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ==========================================================================
-       Dedicated Product Detail Screen (Matching Hydrevo Image 2 1:1)
-       ========================================================================== -->
-  <main class="product-detail-container">
-    <div class="detail-card-wrapper">
-      
-      <!-- Top Row: Photo on studio black (Left) + 2 Narrative paragraphs (Right) -->
-      <div class="detail-top-row">
-        <div class="detail-img-box hotspot-stage-box">
-          <img id="detail-product-img" src="assets/images/hero_valve_manifold.jpg" alt="Hydraulic & Instrument Manifold Block" />
-          <div class="hotspot-pin" style="top: 24%; left: 50%;">
-            <span class="hotspot-plus">+</span>
-            <div class="hotspot-tooltip">
-              <strong>Safety Back-Seating &amp; Gland Lock</strong>
-              <span>Zero stem blowout with isolated packing below threads.</span>
-            </div>
-          </div>
-          <div class="hotspot-pin" style="top: 56%; left: 45%;">
-            <span class="hotspot-plus">+</span>
-            <div class="hotspot-tooltip">
-              <strong>Micro-Lapped Non-Rotating Seat</strong>
-              <span>Helium bubble-tight shutoff rated up to 10,000 PSI.</span>
-            </div>
-          </div>
-          <div class="hotspot-pin" style="top: 68%; left: 74%;">
-            <span class="hotspot-plus">+</span>
-            <div class="hotspot-tooltip">
-              <strong>EN 10204 3.1 Forged Body</strong>
-              <span>CNC machined from SS316, Duplex 2205, or Inconel 625.</span>
-            </div>
-          </div>
-          <span class="stage-3d-hint">&#10024; Hover (+) pins for 3D engineering breakdown</span>
-        </div>
-
-        <div class="detail-narrative">
-          <div style="border-top: 2px solid #cbd5e1; width: 100%; margin-bottom: 8px;"></div>
-          <p id="detail-para-1">
-            <strong>Jasvi Industries</strong> is a leading manufacturer, supplier and exporter of <strong>Hydraulic & Instrumentation Manifold Blocks</strong> in Ahmedabad & Surat (Gujarat, India). We provide precision-engineered mechanical fluid blocks designed to regulate the flow of high-pressure fluid. Made of top-notch SS316, Duplex 2205, and Monel alloys that are highly resistive to corrosion, rust, and severe abrasive chemicals, this block is engineered to last for an extended operational lifecycle. It is easy to maintain, inspect, and integrate effortlessly with hydraulic power systems and differential transmitters. Clients can procure these precision severe-service blocks from us at highly competitive direct-manufacturer rates.
-          </p>
-          <p id="detail-para-2">
-            An instrumentation manifold block is a critical Severe-Service fluid control component used to streamline fluid delivery between process lines and precision instrumentation. It acts as a centralized distribution and isolation hub, allowing for safe calibration, bubble-tight zero-leakage shutoff, and differential pressure regulation according to ASME B16.34 and API 598 standards.
-          </p>
-        </div>
-      </div>
-
-      <!-- Bottom Row: Specifications Table (Left) + "Enquiry Now 👆" Button (Right) -->
-      <div class="detail-bottom-row">
-        <!-- Specifications Table (Blue Header matching Image 2) -->
-        <div class="spec-table-container">
-          <div class="spec-table-blue-header">Specifications</div>
-          <table class="spec-table-detail">
-            <tbody>
-              <tr>
-                <td>Surface Finishing</td>
-                <td id="spec-surface">Grinding Finish / Micro-Lapped</td>
-              </tr>
-              <tr>
-                <td>Material</td>
-                <td id="spec-material">SS316 / Duplex 2205 / Inconel 625 / MS</td>
-              </tr>
-              <tr>
-                <td>Usage/ Application</td>
-                <td id="spec-application">Hydraulic Power Pack & Severe-Service Process</td>
-              </tr>
-              <tr>
-                <td>Shape</td>
-                <td id="spec-shape">Rectangle Monoblock / Forged Barstock</td>
-              </tr>
-              <tr>
-                <td>Working Pressure</td>
-                <td id="spec-pressure">Up to 10,000 PSI / 250 Bar</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Enquiry Button with Hand Pointer (Matching Image 2) -->
-        <div class="detail-cta-box">
-          <a href="contact.html?product=Manifold%20Block" class="btn-enquiry-finger" id="detail-enquiry-btn">
-            Enquiry Now <span class="finger-icon">&#9757;</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Quick Action: Instant Engineering PDF Datasheet Download -->
-      <div style="display: flex; justify-content: flex-end; margin-top: 25px; margin-bottom: 25px;">
-        <button type="button" class="btn-blue-primary" id="btn-generate-pdf" style="padding: 12px 24px; font-size: 0.95rem; border-radius: 999px; display: inline-flex; align-items: center; gap: 8px;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Download Engineering Datasheet (PDF)
-        </button>
-      </div>
-
-      <!-- Applicable Standards Grid -->
-      <div style="margin-top: 35px;">
-        <h3 class="workbench-title">Applicable Manufacturing &amp; Testing Standards</h3>
-        <p style="color: #64748b; font-size: 0.88rem; margin-top: 4px;">Verified against API, ASME, BS, and ISO quality specifications</p>
-        <div class="standards-grid" id="detail-standards-grid">
-          <!-- Dynamically Hydrated -->
-        </div>
-      </div>
-
-      <!-- Bill of Materials (BOM) Section -->
-      <div class="bom-section" id="bom-section-container">
-        <h3 class="workbench-title">Standard Bill of Materials (BOM)</h3>
-        <p style="color: #64748b; font-size: 0.88rem; margin-top: 4px;">Material grades conforming to ASTM &amp; ASME metallurgy specifications</p>
-        <div style="overflow-x: auto;">
-          <table class="bom-table">
-            <thead>
-              <tr>
-                <th>Part / Component</th>
-                <th>Standard (WCB / C.S.)</th>
-                <th>Stainless CF8 (SS 304)</th>
-                <th>Stainless CF8M (SS 316)</th>
-              </tr>
-            </thead>
-            <tbody id="bom-table-body">
-              <!-- Dynamically Hydrated -->
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- Interactive Dimensional Matrix Table Workbench -->
-      <div class="detail-workbench" id="dimensional-matrix-container">
-        <div class="workbench-header">
-          <div class="workbench-title-group">
-            <div class="workbench-icon">&#128207;</div>
-            <div>
-              <div class="workbench-title">Engineering Dimensional Matrix</div>
-              <div class="workbench-subtitle">Face-to-Face (F to F), Flange Dimensions, PCD, Bolt Holes &amp; Weights</div>
-            </div>
-          </div>
-          <div class="matrix-controls-bar">
-            <div class="matrix-class-tabs" id="matrix-class-tabs">
-              <!-- Class tabs dynamically hydrated -->
-            </div>
-            <div class="matrix-unit-toggle">
-              <button type="button" class="unit-btn active" data-unit="mm">mm</button>
-              <button type="button" class="unit-btn" data-unit="in">inch</button>
-            </div>
-          </div>
-        </div>
-        <div class="dimension-matrix-wrap">
-          <table class="dimension-matrix-table">
-            <thead id="matrix-table-head">
-              <!-- Dynamically Hydrated -->
-            </thead>
-            <tbody id="matrix-table-body">
-              <!-- Dynamically Hydrated -->
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-    </div>
-  </main>
-
-  <!-- Footer -->
+  <!-- Technical Footer -->
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h3 class="footer-col-title">JASVI INDUSTRIES</h3>
-        <p style="font-size: 0.92rem; line-height: 1.7; margin-bottom: 16px;">
-          Leading manufacturer, supplier, and exporter of severe-service instrumentation needle valves, manifold blocks, ball valves, check valves, and double block & bleed monoflanges.
-        </p>
-        <p style="font-size: 0.85rem; color: #cbd5e1;">ISO 9001:2015 & API 598 Certified Quality Management</p>
-      </div>
-
-      <div>
-        <h4 class="footer-col-title">Valve Division</h4>
-        <ul class="footer-links">
-          <li><a href="products.html">Needle & Gauge Valves</a></li>
-          <li><a href="products.html">2, 3 & 5-Way Manifolds</a></li>
-          <li><a href="products.html">Severe-Service Ball Valves</a></li>
-          <li><a href="products.html">Check & Non-Return Valves</a></li>
-          <li><a href="products.html">DBB Monoflange Assemblies</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4 class="footer-col-title">Navigation</h4>
-        <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="products.html">Our Products</a></li>
-          <li><a href="gallery.html">Gallery & Facility</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="https://erp.jasviindustries.in/" target="_blank">Client ERP Portal</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4 class="footer-col-title">Manufacturing Plants</h4>
-        <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 10px;">
-          <strong>Plant I:</strong> Surat Industrial Cluster, Gujarat, India<br>
-          <strong>Plant II:</strong> Ahmedabad Engineering Zone, Gujarat, India
-        </p>
-        <p style="font-size: 0.9rem;">
-          <strong>Phone:</strong> +91 95126 90771<br>
-          <strong>Email:</strong> dsindustries89@gmail.com
-        </p>
-      </div>
-    </div>
-
     <div class="container footer-bottom">
-      <p>&copy; 2026 Jasvi Industries. All Rights Reserved. Engineered for Zero Leakage Fluid Dynamics.</p>
+      <div>&copy; 2026 Jasvi Industries (DS Industries). All rights reserved.</div>
+      <div>Obsidian CAD &amp; Precision Flow Dynamics.</div>
     </div>
   </footer>
 
-  <a href="https://wa.me/919512690771" target="_blank" class="floating-whatsapp" title="Chat on WhatsApp">
-    <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.077-2.222-.555-1.956-.807-3.208-2.802-3.306-2.932-.098-.13-.787-1.047-.787-1.995 0-.948.497-1.414.673-1.607.177-.193.385-.242.513-.242.128 0 .257.002.37.008.12.006.28-.046.438.334.164.395.559 1.364.608 1.463.05.099.083.214.017.346-.066.132-.099.214-.197.33-.099.115-.208.257-.297.346-.104.103-.213.216-.092.423.121.207.538.887 1.155 1.436.796.708 1.467.927 1.675 1.03.208.104.33.087.452-.053.123-.14.526-.612.666-.822.14-.21.28-.175.47-.105.19.07 1.202.567 1.409.67.207.104.346.154.396.242.05.088.05.511-.094.916z"/></svg>
-  </a>
+  <!-- RFQ Cart Drawer -->
+  <div class="rfq-drawer-overlay" id="rfq-drawer-overlay"></div>
+  <aside class="rfq-drawer" id="rfq-drawer">
+    <div class="drawer-header">
+      <h3 class="drawer-title">ENGINEERING RFQ BASKET</h3>
+      <button class="drawer-close-btn" id="drawer-close-btn">&times;</button>
+    </div>
+    <div class="drawer-items" id="drawer-items-list"></div>
+    <div class="drawer-footer">
+      <button class="btn-drawer-whatsapp" onclick="window.JasviApp.dispatchWhatsAppRfq()">
+        <span>Submit RFQ via WhatsApp</span>
+      </button>
+    </div>
+  </aside>
 
   <script src="js/main.js"></script>
+  <script>
+    function downloadValvePdf() {
+      if (!window.jspdf) {
+        alert('PDF generator is initializing...');
+        return;
+      }
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+      doc.setFillColor(7, 9, 14);
+      doc.rect(0, 0, 210, 297, 'F');
+      
+      doc.setTextColor(0, 240, 255);
+      doc.setFontSize(18);
+      doc.text("JASVI INDUSTRIES // DS INDUSTRIES", 15, 20);
+      
+      doc.setTextColor(255, 255, 255);
+      doc.setFontSize(13);
+      doc.text("OFFICIAL TECHNICAL VALVE DATASHEET", 15, 30);
+      
+      doc.setFontSize(10);
+      doc.setTextColor(148, 163, 184);
+      doc.text("Ahmedabad Plant: H - 52, Darshanvilla Park, Nikol - Naroda, Ahmedabad - 382345", 15, 38);
+      doc.text("Contact: +91 95126 90771 | Email: dsindustries89@gmail.com", 15, 44);
+      doc.text("Design Standards: API 6D, API 600, API 602, API 598, ASME B16.34", 15, 50);
+      
+      doc.setDrawColor(0, 240, 255);
+      doc.line(15, 55, 195, 55);
+      
+      doc.setTextColor(0, 229, 153);
+      doc.setFontSize(12);
+      doc.text("VALVE SERIES SPECIFICATIONS & METALLURGY", 15, 68);
+      
+      doc.setTextColor(255, 255, 255);
+      doc.setFontSize(10);
+      doc.text("Body / Bonnet: ASTM A216 WCB / ASTM A351 CF8M / Duplex 2205", 15, 78);
+      doc.text("Trim: SS316 + Stellite 6 Overlay (API Trim 8 / 12)", 15, 85);
+      doc.text("Testing: 100% API 598 Hydrostatic Shell (425 PSI) & Seat (310 PSI)", 15, 92);
+      doc.text("Rating: Class 150#, 300#, 600#, 800# ASME B16.34", 15, 99);
+      
+      doc.save("Jasvi_Valve_Engineering_Datasheet.pdf");
+    }
+  </script>
 </body>
 </html>
