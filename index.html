@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jasvi Industries | Severe-Service Precision Valves &amp; Flow Control Systems</title>
+  <title>Jasvi Industries | Heavy-Duty Industrial Process Valves &amp; Severe-Service Flow Systems</title>
   
-  <!-- Preconnect Google Fonts -->
+  <!-- Google Fonts: Swiss Precision Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
   
-  <!-- Architectural Precision & Studio Flow Engineering Styles (Pure Light Mode) -->
+  <!-- Architectural Precision & Studio Flow Engineering Styles (Pure Swiss Light Mode) -->
   <link rel="stylesheet" href="css/style.css">
 
   <!-- Three.js WebGL 3D Engine & OrbitControls via CDN -->
@@ -20,73 +20,101 @@
 <body>
 
   <!-- ==========================================================================
-       1. Floating Light Frosted Glass Dock (ReactBits Dock with Proximity Magnification)
+       1. Architectural Top Header (Zero Dock / Zero Toys)
        ========================================================================== -->
-  <div class="dock-container">
-    <div class="floating-dock">
-      <a href="index.html" class="dock-brand">
-        <div class="dock-brand-monogram">JI</div>
-        <span class="dock-brand-name">JASVI</span>
-        <span class="dock-azure-dot"></span>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="header-brand">
+        <div class="brand-monogram">DS</div>
+        <div class="brand-text">
+          <span class="brand-title">DS INDUSTRIES</span>
+          <span class="brand-subtitle">HEAVY PROCESS VALVES &bull; AHMEDABAD</span>
+        </div>
       </a>
 
-      <nav class="dock-nav">
-        <a href="index.html" class="dock-pill active">Showcase</a>
-        <a href="products.html" class="dock-pill">15 Valve Catalog</a>
-        <a href="#workbench" class="dock-pill">CAD Matrix</a>
-        <a href="#bento-lab" class="dock-pill">Cv Calculator</a>
-        <a href="about.html" class="dock-pill">Plant Infrastructure</a>
-        <a href="gallery.html" class="dock-pill">Vault</a>
-        <a href="contact.html" class="dock-pill">Contact</a>
+      <div class="header-facility-status">
+        <span class="status-pulse-dot"></span>
+        <span class="status-text">AHMEDABAD MFG PLANT // OPERATIONAL</span>
+      </div>
+
+      <nav class="header-nav">
+        <a href="index.html" class="nav-link active">Showcase</a>
+        <a href="#products-showcase" class="nav-link">15 Valve Lines</a>
+        <a href="#sectors" class="nav-link">Sectors</a>
+        <a href="#sizing-lab" class="nav-link">Cv Sizing Lab</a>
+        <a href="#workbench" class="nav-link">CAD Matrix</a>
+        <a href="#testing" class="nav-link">API 598 Testing</a>
+        <a href="about.html" class="nav-link">Plant Infrastructure</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </nav>
 
-      <div class="dock-divider"></div>
-
-      <!-- Distinct Client ERP Gateway Link (Strictly Separated from Showcase) -->
-      <a href="https://erp.jasviindustries.in/" target="_blank" class="dock-action-btn dock-btn-erp" title="Client &amp; Supplier ERP Portal">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-        <span>ERP Portal ↗</span>
-      </a>
-
-      <button id="dock-rfq-btn" class="dock-action-btn dock-btn-rfq" title="Open RFQ Requisition Basket">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-        <span>RFQ Cart</span>
-        <span class="rfq-badge">0</span>
-      </button>
+      <div class="header-actions">
+        <a href="tel:+919512690771" class="header-phone-link" title="Direct Engineering Desk">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+91 95126 90771</span>
+        </a>
+        <a href="#rfq-matrix" class="btn-header-rfq">
+          <span>Engineering RFQ</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
     </div>
-  </div>
+  </header>
 
   <!-- ==========================================================================
-       2. Hero Section: Three.js 3D WebGL Studio Stage
+       2. Hero Studio Stage: DecryptedText & Three.js 3D WebGL Digital Twin
        ========================================================================== -->
   <section class="hero-stage">
     <div class="container hero-grid">
+      <!-- Left Column: High-Gravity Engineering Presentation -->
       <div class="hero-content">
         <div class="hero-tag">
-          <span class="dock-azure-dot"></span>
-          // ARCHITECTURAL FLOW PRECISION
+          <span class="status-pulse-dot azure"></span>
+          <span>ASME B16.34 // API 6D // API 600 // API 607 FIRE SAFE</span>
         </div>
 
         <h1 class="hero-title">
-          <span id="decrypted-hero-title" data-text="JASVI INDUSTRIES // SEVERE SERVICE">JASVI INDUSTRIES // SEVERE SERVICE</span><br>
-          <span class="gradient-text">ENGINEERED FOR EXTREMES</span>
+          <span id="decrypted-hero-title" data-text="HEAVY PROCESS VALVES // AHMEDABAD">HEAVY PROCESS VALVES // AHMEDABAD</span><br>
+          <span class="gradient-text">ENGINEERED FOR SEVERE SERVICE</span>
         </h1>
 
-        <p class="hero-description shiny-text">
-          Precision industrial valves engineered to API 6D, API 600, API 602, and ASME B16.34 specifications. Validated for zero-leakage isolation across superheated steam, sour hydrocarbons, cryogenic fluids, and abrasive slurries.
+        <p class="hero-description">
+          Precision industrial valves engineered for zero-leakage isolation across superheated steam, sour hydrocarbons, cryogenic fluids, and abrasive slurries. Manufactured to ASME Class 150# to 2500# and 100% individual pressure tested per API 598.
         </p>
 
         <div class="hero-standards-bar">
           <span class="standard-badge">API 6D Spec</span>
-          <span class="standard-badge">API 600 Wedge Gate</span>
+          <span class="standard-badge">API 600 Gate</span>
           <span class="standard-badge">API 602 Forged</span>
+          <span class="standard-badge">API 607 Fire Safe</span>
           <span class="standard-badge">API 598 Tested</span>
           <span class="standard-badge">ASME B16.34</span>
-          <span class="standard-badge">ISO 9001:2015</span>
+        </div>
+
+        <div class="hero-metric-tickers">
+          <div class="ticker-item">
+            <span class="ticker-val">28"</span>
+            <span class="ticker-label">Max Bore (DN700)</span>
+          </div>
+          <div class="ticker-divider"></div>
+          <div class="ticker-item">
+            <span class="ticker-val">2,500#</span>
+            <span class="ticker-label">Max ASME Pressure</span>
+          </div>
+          <div class="ticker-divider"></div>
+          <div class="ticker-item">
+            <span class="ticker-val">100%</span>
+            <span class="ticker-label">API 598 Hydro Tested</span>
+          </div>
+          <div class="ticker-divider"></div>
+          <div class="ticker-item">
+            <span class="ticker-val">15</span>
+            <span class="ticker-label">Valve Product Lines</span>
+          </div>
         </div>
 
         <div class="hero-cta-group">
-          <a href="#catalog" class="btn-azure-primary">
+          <a href="#products-showcase" class="btn-azure-primary">
             <span>Explore 15 Valve Lines</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
@@ -97,46 +125,48 @@
         </div>
       </div>
 
-      <!-- Three.js 3D Interactive Stage Container -->
-      <div class="hero-3d-stage-wrap">
-        <div class="stage-control-bar">
-          <button id="btn-explode-toggle" class="btn-explode-toggle">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h6m0 0v6m-6-6L3 21m0 0h6m-6 0v-6"/></svg>
-            <span>3D Exploded View</span>
-          </button>
-          <span class="stage-tip">Drag to rotate 360° &bull; Scroll to zoom</span>
-        </div>
-
-        <div class="threejs-viewport" id="threejs-viewport">
-          <!-- Three.js Canvas Injected Here -->
-        </div>
-
-        <!-- Pipeline Pressure HUD Slider -->
-        <div class="hud-telemetry-container">
-          <div class="hud-header">
-            <div class="hud-title">
-              <span class="dock-azure-dot"></span>
-              PIPELINE PRESSURE RATING
+      <!-- Right Column: Interactive 3D WebGL Digital Twin Studio -->
+      <div class="hero-3d-stage">
+        <div class="stage-frame">
+          <div class="stage-top-bar">
+            <div class="stage-indicator">
+              <span class="live-dot"></span>
+              <span>PARAMETRIC 3D DIGITAL TWIN // ASTM A216 WCB</span>
             </div>
-            <div class="hud-readout" id="hud-pressure-readout">1,500 PSI</div>
+            <div class="stage-meta-tag">60 FPS WEBGL</div>
           </div>
 
-          <div class="hud-slider-track">
-            <input type="range" min="150" max="2500" value="1500" step="50" class="hud-slider" id="hud-pressure-slider" />
+          <div id="canvas-3d-container" class="canvas-3d-container">
+            <!-- Three.js Canvas injected dynamically by main.js -->
           </div>
 
-          <div class="hud-metrics-row">
-            <div class="hud-metric-box">
-              <div class="metric-label">FLOW VELOCITY</div>
-              <div class="metric-value" id="hud-flow-velocity">40.8 m/s</div>
+          <!-- Dynamic Pipeline Pressure & Streamline HUD -->
+          <div class="stage-hud-overlay">
+            <div class="hud-controls-row">
+              <button id="btn-3d-orbit" class="btn-hud-tool active" title="360° Free Orbit Rotation">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                <span>360° Orbit</span>
+              </button>
+              <button id="btn-3d-explode" class="btn-hud-tool" title="Exploded Sub-Assembly View">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+                <span>Explode View</span>
+              </button>
+              <button id="btn-3d-flow" class="btn-hud-tool active" title="Toggle Fluid Flow Velocity Simulation">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+                <span>Flow Streamlines</span>
+              </button>
             </div>
-            <div class="hud-metric-box">
-              <div class="metric-label">THERMAL RATING</div>
-              <div class="metric-value" id="hud-thermal-rating">372°C</div>
-            </div>
-            <div class="hud-metric-box">
-              <div class="metric-label">API 598 RATE</div>
-              <div class="metric-value" style="color:var(--accent-emerald);">RATE A (0 BBL)</div>
+
+            <div class="hud-slider-strip">
+              <div class="hud-slider-label">
+                <span>Pipeline Rating:</span>
+                <strong id="hud-pressure-readout">600 PSI</strong>
+              </div>
+              <input type="range" id="hud-pressure-slider" min="150" max="2500" step="50" value="600" class="hud-range-slider" />
+              <div class="hud-metrics-mini">
+                <span>Velocity: <strong id="hud-flow-velocity">23.5 m/s</strong></span>
+                <span>Temp: <strong id="hud-thermal-rating">256°C</strong></span>
+              </div>
             </div>
           </div>
         </div>
@@ -145,461 +175,474 @@
   </section>
 
   <!-- ==========================================================================
-       3. Precision Engineering Bento Grid (ReactBits BentoGrid Light)
+       3. Mission-Critical Service Sectors (Pantech Reference Elevation)
        ========================================================================== -->
-  <section class="section-bento" id="bento-lab">
+  <section class="section-sectors" id="sectors">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">// ARCHITECTURAL TELEMETRY</span>
-        <h2 class="section-title">PRECISION ENGINEERING BENTO</h2>
-        <p class="section-subtitle">Interactive Cv valve sizing calculator, ASME wall thickness analytics, and hydrostatic test bench telemetry.</p>
+      <div class="section-header-centered">
+        <div class="section-tag">// MISSION-CRITICAL SERVICE SECTORS</div>
+        <h2 class="section-title">ENGINEERED FOR HEAVY PROCESS ENVIRONMENTS</h2>
+        <p class="section-subtitle">
+          From high-pressure boiler feed steam to sour crude oil and abrasive slurry handling, DS Industries valves are field-proven across India's largest industrial process infrastructure.
+        </p>
       </div>
 
-      <div class="bento-grid">
-        <!-- Box 1: Interactive Cv Valve Sizing Calculator -->
-        <div class="bento-card bento-calc">
-          <div>
-            <h3 class="bento-card-title">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-azure)" stroke-width="2.2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-              Interactive Cv Flow Coefficient &amp; Sizing Calculator
-            </h3>
-            <p class="bento-card-desc">
-              Calculate hydraulic flow capacity and receive an instant valve diameter and ASME class recommendation based on exact process conditions.
-            </p>
-
-            <div class="calc-controls-grid">
-              <div class="calc-input-group">
-                <div style="display:flex; justify-content:space-between;">
-                  <span class="calc-label">FLOW RATE (Q):</span>
-                  <span id="calc-val-q" style="font-family:var(--font-mono); font-size:0.8rem; font-weight:700; color:var(--accent-azure);">250 GPM</span>
-                </div>
-                <input type="range" id="calc-flow-rate" min="20" max="2000" value="250" step="10" class="hud-slider" />
-              </div>
-
-              <div class="calc-input-group">
-                <div style="display:flex; justify-content:space-between;">
-                  <span class="calc-label">PRESSURE DROP (&Delta;P):</span>
-                  <span id="calc-val-dp" style="font-family:var(--font-mono); font-size:0.8rem; font-weight:700; color:var(--accent-azure);">15 PSI</span>
-                </div>
-                <input type="range" id="calc-press-drop" min="2" max="150" value="15" step="1" class="hud-slider" />
-              </div>
-
-              <div class="calc-input-group" style="grid-column: span 2;">
-                <div style="display:flex; justify-content:space-between;">
-                  <span class="calc-label">SPECIFIC GRAVITY (SG):</span>
-                  <span id="calc-val-sg" style="font-family:var(--font-mono); font-size:0.8rem; font-weight:700; color:var(--accent-azure);">1.00 (Water)</span>
-                </div>
-                <input type="range" id="calc-sg" min="0.6" max="1.6" value="1.0" step="0.05" class="hud-slider" />
-              </div>
-            </div>
+      <div class="sectors-grid">
+        <div class="sector-card">
+          <div class="sector-icon-wrap azure">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
           </div>
-
-          <div class="calc-result-box">
-            <div>
-              <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-muted);">CALCULATED FLOW COEFFICIENT</div>
-              <div class="calc-cv-value" id="calc-cv-result">65</div>
-            </div>
-            <div style="text-align:right;">
-              <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--accent-emerald); font-weight:700;">ENGINEERING SIZING MATCH</div>
-              <div id="calc-rec-size" style="font-family:var(--font-heading); font-size:1.1rem; font-weight:800; color:var(--text-primary); margin-top:4px;">
-                Recommended: 2" (DN50) Class 150# Ball
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Box 2: API 598 Test Bench Gauges -->
-        <div class="bento-card bento-gauges">
-          <h3 class="bento-card-title">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-            API 598 Hydrostatic Test Rig
-          </h3>
-          <p class="bento-card-desc">100% individual pressure testing before factory dispatch. Zero bubble leakage tolerance.</p>
-          
-          <div class="gauge-row">
-            <div class="gauge-item">
-              <div class="gauge-ring">
-                <svg width="58" height="58">
-                  <circle class="gauge-bg" cx="29" cy="29" r="25"/>
-                  <circle class="gauge-fill" cx="29" cy="29" r="25" style="stroke-dashoffset: 20;"/>
-                </svg>
-              </div>
-              <div class="gauge-pressure">425 PSI</div>
-              <div class="gauge-tag">Hydro Shell</div>
-            </div>
-
-            <div class="gauge-item">
-              <div class="gauge-ring">
-                <svg width="58" height="58">
-                  <circle class="gauge-bg" cx="29" cy="29" r="25"/>
-                  <circle class="gauge-fill" cx="29" cy="29" r="25" style="stroke:var(--accent-azure); stroke-dashoffset: 35;"/>
-                </svg>
-              </div>
-              <div class="gauge-pressure">310 PSI</div>
-              <div class="gauge-tag">Hydro Seat</div>
-            </div>
-
-            <div class="gauge-item">
-              <div class="gauge-ring">
-                <svg width="58" height="58">
-                  <circle class="gauge-bg" cx="29" cy="29" r="25"/>
-                  <circle class="gauge-fill" cx="29" cy="29" r="25" style="stroke:var(--accent-amber); stroke-dashoffset: 15;"/>
-                </svg>
-              </div>
-              <div class="gauge-pressure">80 PSI</div>
-              <div class="gauge-tag">Air Seat</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Box 3: ASME B16.34 Wall Minimums -->
-        <div class="bento-card bento-matrix">
-          <h3 class="bento-card-title">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-azure)" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-            ASME B16.34 Wall Thickness
-          </h3>
-          <p class="bento-card-desc">Reinforced shell casting thickness exceeds statutory minimums for structural longevity.</p>
-          <div style="margin-top: 18px; display: flex; flex-direction: column; gap: 8px;">
-            <div style="display:flex; justify-content:space-between; font-family:var(--font-mono); font-size:0.82rem; padding:8px 12px; background:var(--bg-surface); border-radius:4px;">
-              <span style="color:var(--text-secondary);">Class 150# Shell Min:</span>
-              <span style="color:var(--accent-azure); font-weight:700;">tm + 2.5 mm Extra</span>
-            </div>
-            <div style="display:flex; justify-content:space-between; font-family:var(--font-mono); font-size:0.82rem; padding:8px 12px; background:var(--bg-surface); border-radius:4px;">
-              <span style="color:var(--text-secondary);">Class 300# Shell Min:</span>
-              <span style="color:var(--accent-azure); font-weight:700;">tm + 3.8 mm Extra</span>
-            </div>
-            <div style="display:flex; justify-content:space-between; font-family:var(--font-mono); font-size:0.82rem; padding:8px 12px; background:var(--bg-surface); border-radius:4px;">
-              <span style="color:var(--text-secondary);">Class 600# Shell Min:</span>
-              <span style="color:var(--accent-azure); font-weight:700;">tm + 5.2 mm Extra</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Box 4: Metallurgy Vault -->
-        <div class="bento-card bento-metallurgy">
-          <h3 class="bento-card-title">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-amber)" stroke-width="2.2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-            Metallurgy Vault
-          </h3>
-          <p class="bento-card-desc">Certified ASTM grades with EN 10204 3.1 Mill Test Certificates.</p>
-          <div class="metallurgy-chips">
-            <div class="metal-chip">
-              <span class="metal-code">ASTM A216 WCB</span>
-              <span class="metal-use">Standard Carbon Steel</span>
-            </div>
-            <div class="metal-chip">
-              <span class="metal-code">ASTM A351 CF8M</span>
-              <span class="metal-use">Stainless Steel 316</span>
-            </div>
-            <div class="metal-chip">
-              <span class="metal-code">Duplex 2205 (F51)</span>
-              <span class="metal-use">Seawater Desalination</span>
-            </div>
-            <div class="metal-chip">
-              <span class="metal-code">Inconel 625 / Monel</span>
-              <span class="metal-use">Severe Petrochemical</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Box 5: Ahmedabad Plant Telemetry -->
-        <div class="bento-card bento-plant">
-          <h3 class="bento-card-title">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-azure)" stroke-width="2.2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-            Ahmedabad Manufacturing Infrastructure
-          </h3>
-          <p class="bento-card-desc">
-            Facility: <strong>H - 52, Darshanvilla Park, Nikol - Naroda, Ahmedabad - 382345 (Gujarat, India)</strong>. Multi-axis CNC turning, 5-axis vertical machining centers (VMC), and automated hydrostatic testing cells.
+          <h3 class="sector-title">Oil &amp; Gas Refineries</h3>
+          <p class="sector-desc">
+            API 607 fire-safe bolted ball, flexible wedge gate, and non-slam check valves for crude distillation, hydrocracking, sour gas (NACE MR0175), and fuel storage terminals.
           </p>
-          <div class="plant-telemetry-grid">
-            <div class="plant-spec-card">
-              <div class="plant-spec-val">&plusmn;0.005 mm</div>
-              <div class="plant-spec-lbl">5-Axis VMC Machining Tolerance</div>
-            </div>
-            <div class="plant-spec-card">
-              <div class="plant-spec-val">10,000 PSI</div>
-              <div class="plant-spec-lbl">Hydraulic Proof Testing Rig</div>
-            </div>
-            <div class="plant-spec-card">
-              <div class="plant-spec-val">100% PMI</div>
-              <div class="plant-spec-lbl">XRF Positive Material Identification</div>
-            </div>
+          <div class="sector-badge">API 6D &bull; ASME Class 150# - 1500#</div>
+        </div>
+
+        <div class="sector-card">
+          <div class="sector-icon-wrap cobalt">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
           </div>
+          <h3 class="sector-title">Thermal &amp; Nuclear Power</h3>
+          <p class="sector-desc">
+            High-pressure forged steel gate, globe, and piston check valves (Class 800# - 2500#) with Stellite 6 hardfacing for superheated steam isolation and boiler feed water.
+          </p>
+          <div class="sector-badge">ASME B16.34 &bull; Up to 650&deg;C Service</div>
+        </div>
+
+        <div class="sector-card">
+          <div class="sector-icon-wrap emerald">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          </div>
+          <h3 class="sector-title">Chemical &amp; Petrochemicals</h3>
+          <p class="sector-desc">
+            Corrosion-resistant ASTM A351 CF8, CF8M, and Duplex 2205 valves with live-loaded PTFE packing for aggressive acid handling, caustic chlor-alkali, and volatile solvents.
+          </p>
+          <div class="sector-badge">ASTM A351 CF8M &bull; ISO 15848-1 Tightness</div>
+        </div>
+
+        <div class="sector-card">
+          <div class="sector-icon-wrap amber">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3 class="sector-title">Paper, Pulp &amp; Mining Slurry</h3>
+          <p class="sector-desc">
+            Bi-directional knife gate valves with bevelled stainless shearing blades cutting through viscous paper stock, fly ash slurry, tailings, and dense mineral slurries.
+          </p>
+          <div class="sector-badge">MSS-SP-81 &bull; Bi-Directional Zero Leak</div>
+        </div>
+
+        <div class="sector-card">
+          <div class="sector-icon-wrap cyan">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+          </div>
+          <h3 class="sector-title">Water Transmission &amp; Cryogenics</h3>
+          <p class="sector-desc">
+            High-performance double-offset butterfly valves and dual-plate wafer check valves offering low head loss and compact face-to-face for transmission mains and cryogenic LNG.
+          </p>
+          <div class="sector-badge">BS EN 593 &bull; Low Head Loss &Delta;P</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ==========================================================================
-       4. 15-Valve Industrial Showcase (Light Ceramic Cards)
+       4. The 15-Product Valve Showcase (Spotlight Ceramic Cards)
        ========================================================================== -->
-  <section class="section-showcase" id="catalog">
+  <section class="section-showcase" id="products-showcase">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">// OFFICIAL DS INDUSTRIES CATALOG</span>
-        <h2 class="section-title">15 SEVERE-SERVICE VALVE LINES</h2>
-        <p class="section-subtitle">Ball, Gate, Globe, Check, Butterfly, Knife Edge, and Pipeline Strainer systems.</p>
+      <div class="section-header-centered">
+        <div class="section-tag">// OFFICIAL DS INDUSTRIES CATALOG</div>
+        <h2 class="section-title">PARAMETRIC INDUSTRIAL VALVE PORTFOLIO</h2>
+        <p class="section-subtitle">
+          Engineered and manufactured in Ahmedabad. Filter across 15 severe-service product lines built to ASME B16.34, API 6D, API 600, API 602, and BS standards.
+        </p>
       </div>
 
       <div class="catalog-filter-bar">
         <button class="filter-chip active" data-category="all">All Systems (15)</button>
         <button class="filter-chip" data-category="cast-process">Cast Process Series (3)</button>
-        <button class="filter-chip" data-category="forged-valves">Forged Steel Series (3)</button>
-        <button class="filter-chip" data-category="check-valves">Check Valves (3)</button>
-        <button class="filter-chip" data-category="butterfly">Triple Offset Butterfly (1)</button>
-        <button class="filter-chip" data-category="slurry-pulp">Knife Edge &amp; Pulp (2)</button>
-        <button class="filter-chip" data-category="filtration">Pipeline Strainers (2)</button>
+        <button class="filter-chip" data-category="forged-valves">Forged High-Pressure (3)</button>
+        <button class="filter-chip" data-category="check-valves">Check &amp; Non-Return (3)</button>
+        <button class="filter-chip" data-category="butterfly">Butterfly Valves (1)</button>
+        <button class="filter-chip" data-category="slurry-pulp">Knife Edge &amp; Slurry (2)</button>
+        <button class="filter-chip" data-category="filtration">Strainers &amp; Filters (3)</button>
       </div>
 
       <div class="showcase-grid" id="showcase-grid">
-        <!-- Ingested dynamically from data/showcase.json -->
+        <!-- Injected dynamically by main.js with zero 'undefined' and zero '+ + RFQ' -->
       </div>
     </div>
   </section>
 
   <!-- ==========================================================================
-       5. CAD Dimensional Matrix Workbench 2.0 (Split-Screen Light CAD)
+       5. Hydraulic Cv Flow Coefficient Sizing Lab
+       ========================================================================== */
+  <section class="section-lab" id="sizing-lab">
+    <div class="container">
+      <div class="lab-box">
+        <div class="lab-grid">
+          <div class="calc-sliders">
+            <div>
+              <div class="section-tag">// ISA-75.01 / IEC 60534 SIZING ENGINE</div>
+              <h2 class="section-title" style="font-size: 2.1rem; margin-bottom: 8px;">HYDRAULIC FLOW SIZING LAB</h2>
+              <p class="section-subtitle" style="font-size: 0.95rem; margin-bottom: 22px;">
+                Calculate precise flow coefficient (Cv) requirements based on flow rate, differential pressure drop, and fluid specific gravity to determine optimal valve bore sizing.
+              </p>
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-header">
+                <span>Volumetric Flow Rate (Q):</span>
+                <span class="readout-pill" id="calc-val-q">250 GPM</span>
+              </div>
+              <input type="range" id="calc-flow-rate" min="10" max="2500" step="10" value="250" class="hud-range-slider" />
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-header">
+                <span>Differential Pressure Drop (&Delta;P):</span>
+                <span class="readout-pill" id="calc-val-dp">15 PSI</span>
+              </div>
+              <input type="range" id="calc-press-drop" min="1" max="150" step="1" value="15" class="hud-range-slider" />
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-header">
+                <span>Fluid Specific Gravity (SG):</span>
+                <span class="readout-pill" id="calc-val-sg">1.00</span>
+              </div>
+              <input type="range" id="calc-sg" min="0.6" max="1.6" step="0.05" value="1.0" class="hud-range-slider" />
+            </div>
+          </div>
+
+          <div class="calc-result-box">
+            <span style="font-family:var(--font-mono); font-size:0.76rem; font-weight:700; color:var(--text-muted); letter-spacing:0.06em;">
+              CALCULATED REQUIRED FLOW COEFFICIENT
+            </span>
+            <div class="calc-cv-display" id="calc-cv-result">65</div>
+            <span style="font-family:var(--font-mono); font-size:0.80rem; color:var(--text-secondary);">US GPM @ 1 PSI &Delta;P</span>
+
+            <div class="calc-rec-box" id="calc-rec-size">
+              RECOMMENDED: 3" (DN80) Class 150# Process Ball
+            </div>
+
+            <button id="btn-transfer-rfq" class="btn-azure-primary" style="width:100%; justify-content:center;">
+              <span>Specify in Engineering RFQ &darr;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. Split-Screen CAD Dimensional Matrix Workbench
        ========================================================================== -->
   <section class="section-workbench" id="workbench">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">// ENGINEERING WORKBENCH</span>
-        <h2 class="section-title">CAD DIMENSIONAL MATRIX</h2>
-        <p class="section-subtitle">Select any valve row to inspect dynamic dimensions, bolt circle PCD, and weights.</p>
+      <div class="section-header-centered" style="margin-bottom: 32px;">
+        <div class="section-tag">// ASME B16.5 &amp; ASME B16.34 SPECIFICATIONS</div>
+        <h2 class="section-title">SPLIT-SCREEN CAD DIMENSIONAL MATRIX</h2>
+        <p class="section-subtitle">
+          Direct engineering face-to-face, flange drilling dimensions, bolt hole counts, and assembly weights verified against authentic DS Industries shop blueprints.
+        </p>
       </div>
 
       <div class="workbench-container">
-        <!-- CAD Viewport -->
-        <div class="cad-viewport">
-          <div class="cad-header">
-            <span class="cad-title" id="cad-valve-name">TRUNNION BALL VALVE // ASME B16.34</span>
-            <span class="standard-badge">CAD SCHEMATIC</span>
+        <div class="workbench-toolbar">
+          <div class="workbench-select-group">
+            <label for="workbench-model-select" style="font-family:var(--font-mono); font-size:0.78rem; font-weight:700; color:var(--text-secondary);">
+              SELECT VALVE:
+            </label>
+            <select id="workbench-model-select" class="valve-model-select">
+              <!-- Injected dynamically by main.js -->
+            </select>
           </div>
 
-          <div class="cad-cross-section">
-            <svg class="cad-svg-schematic" viewBox="0 0 360 260">
-              <rect x="50" y="80" width="260" height="100" fill="none" stroke="#0284C7" stroke-width="2" rx="4"/>
-              <circle cx="180" cy="130" r="45" fill="none" stroke="#059669" stroke-width="2.5"/>
-              <line x1="180" y1="30" x2="180" y2="85" stroke="#D97706" stroke-width="4" stroke-linecap="round"/>
-              <rect x="130" y="20" width="100" height="16" fill="none" stroke="#D97706" stroke-width="2" rx="3"/>
-              <!-- Flanges -->
-              <rect x="30" y="55" width="20" height="150" fill="none" stroke="#0284C7" stroke-width="2"/>
-              <rect x="310" y="55" width="20" height="150" fill="none" stroke="#0284C7" stroke-width="2"/>
-              <!-- Dimension markers -->
-              <line x1="30" y1="225" x2="330" y2="225" stroke="#64748B" stroke-width="1.2" stroke-dasharray="3 3"/>
-              <text x="180" y="242" fill="#0284C7" font-family="JetBrains Mono" font-size="11" text-anchor="middle">&larr; FACE TO FACE (L) &rarr;</text>
-            </svg>
-          </div>
-
-          <div class="cad-telemetry-pills">
-            <div class="cad-stat-box">
-              <div class="stat-key">SIZE</div>
-              <div class="stat-val" id="cad-stat-size">2" (50mm)</div>
-            </div>
-            <div class="cad-stat-box">
-              <div class="stat-key">F-TO-F (L)</div>
-              <div class="stat-val" id="cad-stat-l">178 mm</div>
-            </div>
-            <div class="cad-stat-box">
-              <div class="stat-key">HEIGHT (H)</div>
-              <div class="stat-val" id="cad-stat-h">145 mm</div>
-            </div>
-            <div class="cad-stat-box">
-              <div class="stat-key">WEIGHT</div>
-              <div class="stat-val" id="cad-stat-wt">15 kg</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Matrix Table -->
-        <div class="matrix-workbench">
-          <div class="matrix-toolbar">
+          <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
             <div class="class-tab-group">
               <button class="class-tab-btn active" data-class="150">Class 150#</button>
               <button class="class-tab-btn" data-class="300">Class 300#</button>
               <button class="class-tab-btn" data-class="600">Class 600#</button>
+              <button class="class-tab-btn" data-class="800">Class 800#</button>
             </div>
 
-            <div class="unit-toggle-wrap">
+            <div class="unit-toggle-group">
               <button class="unit-btn active" data-unit="mm">Metric (mm)</button>
               <button class="unit-btn" data-unit="in">Imperial (in)</button>
             </div>
           </div>
+        </div>
 
-          <div class="matrix-table-wrap">
-            <table class="matrix-table">
-              <thead>
-                <tr>
-                  <th>NPS (Size)</th>
-                  <th>L (F-to-F)</th>
-                  <th>H (Height)</th>
-                  <th>W (Port)</th>
-                  <th>D (Flange OD)</th>
-                  <th>Holes</th>
-                  <th>Weight</th>
-                </tr>
-              </thead>
-              <tbody id="matrix-table-body">
-                <!-- Hydrated dynamically -->
-              </tbody>
-            </table>
-          </div>
+        <div class="matrix-table-wrap">
+          <table class="matrix-table">
+            <thead>
+              <tr>
+                <th>NOMINAL SIZE (NPS / DN)</th>
+                <th>FACE-TO-FACE (L)</th>
+                <th>HEIGHT OPEN (H)</th>
+                <th>HANDWHEEL DIA (W)</th>
+                <th>FLANGE DIA (D)</th>
+                <th>BOLT HOLES</th>
+                <th>WEIGHT APPROX</th>
+              </tr>
+            </thead>
+            <tbody id="matrix-table-body">
+              <!-- Injected dynamically by main.js -->
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ==========================================================================
-       6. AI Valve Selection Copilot (Light Studio Terminal)
+       7. Quality Assurance & 100% Testing Assurance (API 598)
        ========================================================================== -->
-  <section class="section-copilot">
+  <section class="section-testing" id="testing">
     <div class="container">
-      <div class="copilot-terminal">
-        <div class="terminal-header">
-          <div class="terminal-controls">
-            <span class="term-dot red"></span>
-            <span class="term-dot yellow"></span>
-            <span class="term-dot green"></span>
-          </div>
-          <div class="terminal-title">// JASVI AI VALVE SELECTION COPILOT v2.4</div>
-          <div style="font-family:var(--font-mono); font-size:0.72rem; color:var(--accent-emerald); font-weight:700;">STATUS: ONLINE</div>
-        </div>
-
-        <div class="terminal-body">
-          <div class="prompt-chips-label">RECOMMENDED SERVICE PROMPTS:</div>
-          <div class="prompt-chips">
-            <button class="copilot-chip">450°C Superheated Steam Mainline</button>
-            <button class="copilot-chip">Paper Pulp &amp; Slurry with Fiber Cutting</button>
-            <button class="copilot-chip">Sour Crude Oil NACE MR0175 (1500 PSI)</button>
-            <button class="copilot-chip">Pump Discharge Non-Return Vertical Line</button>
-          </div>
-
-          <div class="copilot-input-wrap">
-            <input type="text" id="copilot-query-input" class="copilot-input" placeholder="Type application media, operating pressure, temperature, or service requirements..." />
-            <button id="copilot-send-btn" class="btn-copilot-send">
-              Analyze Intent &rarr;
-            </button>
-          </div>
-
-          <div id="copilot-result-box" class="copilot-result-box">
-            <!-- Dynamic Result -->
-          </div>
-        </div>
+      <div class="section-header-centered">
+        <div class="section-tag">// QUALITY CONTROL &amp; METROLOGY</div>
+        <h2 class="section-title">100% INDIVIDUAL PRESSURE TESTING ASSURANCE</h2>
+        <p class="section-subtitle">
+          Every valve manufactured at our Ahmedabad facility undergoes hydrostatic shell, high-pressure seat, and low-pressure pneumatic air testing conforming strictly to API 598.
+        </p>
       </div>
-    </div>
-  </section>
 
-  <!-- ==========================================================================
-       7. Client & Supplier ERP Gateway Banner (Strictly Separated from Showcase)
-       ========================================================================== -->
-  <section class="erp-gateway-strip">
-    <div class="container">
-      <div class="erp-gateway-box">
-        <div class="erp-gateway-text">
-          <h3 class="erp-gateway-title">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-azure)" stroke-width="2.2" style="display:inline; vertical-align:middle; margin-right:8px;"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-            Commercial Client &amp; Supplier ERP Gateway
-          </h3>
-          <p class="erp-gateway-sub">
-            Authorized industrial buyers, procurement contractors, and administrative staff can access live purchase orders, delivery status, and GST invoicing via the centralized Web ERP.
+      <div class="testing-grid">
+        <div class="testing-card">
+          <div class="testing-num">01</div>
+          <h3 class="testing-card-title">100% API 598 Hydrostatic Shell Test</h3>
+          <p class="testing-card-desc">
+            Body shell subjected to 1.5x maximum allowable working pressure with zero structural deformation and zero perceptible leakage across holding times exceeding API/BS requirements.
           </p>
         </div>
 
-        <div>
-          <a href="https://erp.jasviindustries.in/" target="_blank" class="btn-azure-primary" style="padding:10px 22px; font-size:0.88rem;">
-            <span>Launch Web ERP Portal</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
-          </a>
+        <div class="testing-card">
+          <div class="testing-num">02</div>
+          <h3 class="testing-card-title">High-Pressure Seat Tightness</h3>
+          <p class="testing-card-desc">
+            Tested at 1.1x design pressure for bidirectional shut-off. Resilient elastomeric and metal-to-metal seats verified for Rate A zero-bubble drop tightness.
+          </p>
+        </div>
+
+        <div class="testing-card">
+          <div class="testing-num">03</div>
+          <h3 class="testing-card-title">Positive Material Identification (PMI)</h3>
+          <p class="testing-card-desc">
+            Handheld XRF spectroscopic alloy verification on every cast heat and forged billet lot, guaranteeing authentic ASTM A216 WCB, CF8M, and Duplex metallurgy.
+          </p>
+        </div>
+
+        <div class="testing-card">
+          <div class="testing-num">04</div>
+          <h3 class="testing-card-title">Fire Safe API 607 / 6FA Compliance</h3>
+          <p class="testing-card-desc">
+            Qualified 30-minute burn testing at 750°C-1000°C followed by forced water quench, verifying secondary graphite seal integrity during catastrophic plant fires.
+          </p>
+        </div>
+
+        <div class="testing-card">
+          <div class="testing-num">05</div>
+          <h3 class="testing-card-title">Fugitive Emissions ISO 15848-1</h3>
+          <p class="testing-card-desc">
+            Helium mass spectrometer sniffer detection across stem gland seals, guaranteeing volatile organic compound (VOC) containment to Class AH/BH standards.
+          </p>
+        </div>
+
+        <div class="testing-card">
+          <div class="testing-num">06</div>
+          <h3 class="testing-card-title">Third-Party Inspection Agencies</h3>
+          <p class="testing-card-desc">
+            Factory witness testing routinely conducted with TUV, DNV, Bureau Veritas, Lloyd's Register, Engineers India Limited (EIL), and PDIL inspection teams.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ==========================================================================
-       8. Technical Footer
+       8. Direct B2B Engineering RFQ Specification Matrix
+       ========================================================================== -->
+  <section class="section-rfq" id="rfq-matrix">
+    <div class="container">
+      <div class="rfq-box">
+        <div class="section-header-centered" style="margin-bottom: 32px;">
+          <div class="section-tag">// DIRECT ENGINEERING PROCUREMENT DESK</div>
+          <h2 class="section-title">ENGINEERING RFQ SPECIFICATION MATRIX</h2>
+          <p class="section-subtitle">
+            Submit your technical operating conditions directly to our Ahmedabad valve engineering team for immediate review, drawing approval, and formal commercial tender pricing.
+          </p>
+        </div>
+
+        <form id="rfq-engineering-form">
+          <div class="rfq-form-grid">
+            <div class="form-group">
+              <label class="form-label" for="rfq-media">Service Fluid Media:</label>
+              <select id="rfq-media" class="form-select">
+                <option value="Superheated Steam">Superheated Steam / Boiler Feed</option>
+                <option value="Crude Oil & Hydrocarbons">Crude Oil &amp; Hydrocarbons</option>
+                <option value="Natural Gas / Sour Gas (NACE)">Natural Gas / Sour Gas (NACE MR0175)</option>
+                <option value="Chemicals & Acid Service">Corrosive Acids &amp; Chemicals</option>
+                <option value="Abrasive Slurry & Pulp">Abrasive Slurry, Fly Ash &amp; Pulp</option>
+                <option value="Treated Water & Condensate">Treated Water &amp; Condensate</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="rfq-valve-type">Valve Family:</label>
+              <select id="rfq-valve-type" class="form-select">
+                <option value="Bolted Side Piece Ball Valve">Bolted Side Piece Ball Valve</option>
+                <option value="Cast Steel Gate Valve">Cast Steel Gate Valve (API 600)</option>
+                <option value="Cast Steel Globe Valve">Cast Steel Globe Valve (BS 1873)</option>
+                <option value="Forged Steel Gate / Globe">Forged High-Pressure (Class 800#)</option>
+                <option value="Dual Plate Wafer Check">Dual Plate Wafer Check Valve</option>
+                <option value="Triple Offset Butterfly">Triple Offset Butterfly Valve</option>
+                <option value="Bi-Directional Knife Gate">Bi-Directional Knife Gate Valve</option>
+                <option value="Y-Type / Basket Strainer">Y-Type / Pot Strainer</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="rfq-rating">Pressure Rating:</label>
+              <select id="rfq-rating" class="form-select">
+                <option value="ASME Class 150#">ASME Class 150#</option>
+                <option value="ASME Class 300#">ASME Class 300#</option>
+                <option value="ASME Class 600#">ASME Class 600#</option>
+                <option value="ASME Class 800#">ASME Class 800#</option>
+                <option value="ASME Class 1500#">ASME Class 1500#</option>
+                <option value="ASME Class 2500#">ASME Class 2500#</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="rfq-size">Nominal Size Bore:</label>
+              <select id="rfq-size" class="form-select">
+                <option value="1/2\" (DN15)">1/2" (DN15)</option>
+                <option value="3/4\" (DN20)">3/4" (DN20)</option>
+                <option value="1\" (DN25)">1" (DN25)</option>
+                <option value="1.5\" (DN40)">1.5" (DN40)</option>
+                <option value="2\" (DN50)" selected>2" (DN50)</option>
+                <option value="3\" (DN80)">3" (DN80)</option>
+                <option value="4\" (DN100)">4" (DN100)</option>
+                <option value="6\" (DN150)">6" (DN150)</option>
+                <option value="8\" (DN200)">8" (DN200)</option>
+                <option value="10\" (DN250)">10" (DN250)</option>
+                <option value="12\" (DN300)">12" (DN300)</option>
+                <option value="16\" (DN400)">16" (DN400)</option>
+                <option value="24\" (DN600)">24" (DN600)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="rfq-moc">Body Metallurgy (MOC):</label>
+              <select id="rfq-moc" class="form-select">
+                <option value="ASTM A216 WCB (Carbon Steel)">ASTM A216 WCB (Carbon Steel)</option>
+                <option value="ASTM A351 CF8 (SS304)">ASTM A351 CF8 (SS304)</option>
+                <option value="ASTM A351 CF8M (SS316)">ASTM A351 CF8M (SS316)</option>
+                <option value="ASTM A105 (Forged Carbon)">ASTM A105 (Forged Carbon)</option>
+                <option value="ASTM A182 F316L (Forged Stainless)">ASTM A182 F316L (Forged Stainless)</option>
+                <option value="Duplex 2205 (ASTM A890 4A)">Duplex 2205 (ASTM A890 4A)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="rfq-qty">Requisition Quantity:</label>
+              <input type="number" id="rfq-qty" class="form-input" min="1" max="10000" value="5" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="rfq-name">Engineer / Buyer Name:</label>
+              <input type="text" id="rfq-name" class="form-input" placeholder="e.g. Rajesh Patel" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="rfq-company">Company / EPC Contractor:</label>
+              <input type="text" id="rfq-company" class="form-input" placeholder="e.g. L&amp;T Hydrocarbon / Reliance" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="rfq-phone">Contact Phone / WhatsApp:</label>
+              <input type="tel" id="rfq-phone" class="form-input" placeholder="+91 98765 43210" required />
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 24px;">
+            <label class="form-label" for="rfq-notes">Project Operating Conditions &amp; Tender Notes:</label>
+            <textarea id="rfq-notes" class="form-textarea" rows="3" placeholder="Enter operating temperature, design pressure, flow velocity, flanged drilling requirements, or third-party inspection specifications..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit-rfq">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            <span>Transmit Engineering Specification to Ahmedabad Sales Desk</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       9. Technical Clean Footer (Zero ERP Links)
        ========================================================================== -->
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
-          <div class="dock-brand-monogram">JI</div>
-          <span style="font-family:var(--font-heading); font-size:1.1rem; font-weight:700; color:var(--text-primary);">JASVI INDUSTRIES</span>
-        </div>
-        <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.6; margin-bottom:18px;">
-          Precision engineered industrial flow control systems. Manufacturing high-pressure severe-service valves in Ahmedabad, Gujarat since 1989.
+        <div class="footer-brand-title">DS INDUSTRIES</div>
+        <p class="footer-brand-desc">
+          Premier Indian flow control and heavy process valve manufacturer. Precision engineering for superheated steam, oil &amp; gas, petrochemical, and severe abrasive slurry service.
         </p>
-        <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--accent-azure); font-weight:700;">
-          FACILITY: H - 52, Darshanvilla Park, Nikol - Naroda, Ahmedabad - 382345
+        <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--accent-azure); font-weight:700;">
+          API 6D &bull; API 600 &bull; API 602 &bull; API 607 &bull; API 598 &bull; ASME B16.34
         </div>
       </div>
 
       <div>
-        <h4 class="footer-col-title">PRODUCT LINES</h4>
-        <ul class="footer-links">
-          <li><a href="products.html?cat=cast-process" class="footer-link">Cast Steel Ball &amp; Gate</a></li>
-          <li><a href="products.html?cat=forged-valves" class="footer-link">Forged Steel Series</a></li>
-          <li><a href="products.html?cat=check-valves" class="footer-link">Dual &amp; Single Plate Check</a></li>
-          <li><a href="products.html?cat=butterfly" class="footer-link">Triple Offset Butterfly</a></li>
-          <li><a href="products.html?cat=slurry-pulp" class="footer-link">Knife Edge &amp; Pulp Valves</a></li>
-          <li><a href="products.html?cat=filtration" class="footer-link">Y &amp; Basket Strainers</a></li>
+        <h4 class="footer-col-title">VALVE PORTFOLIO</h4>
+        <ul class="footer-links-list">
+          <li><a href="#products-showcase" class="footer-link">Cast Steel Ball Valves</a></li>
+          <li><a href="#products-showcase" class="footer-link">Flexible Wedge Gate Valves</a></li>
+          <li><a href="#products-showcase" class="footer-link">Globe Steam Throttling Valves</a></li>
+          <li><a href="#products-showcase" class="footer-link">Dual Plate &amp; Swing Check</a></li>
+          <li><a href="#products-showcase" class="footer-link">Triple Offset Butterfly Valves</a></li>
+          <li><a href="#products-showcase" class="footer-link">Bi-Directional Knife Gate</a></li>
         </ul>
       </div>
 
       <div>
-        <h4 class="footer-col-title">QUALITY STANDARDS</h4>
-        <ul class="footer-links">
-          <li><a href="about.html#testing" class="footer-link">API 598 Hydrostatic Testing</a></li>
-          <li><a href="about.html#quality" class="footer-link">EN 10204 3.1 Traceability</a></li>
-          <li><a href="about.html#standards" class="footer-link">ASME B16.34 Compliance</a></li>
-          <li><a href="about.html#metallurgy" class="footer-link">NACE MR0175 Sour Service</a></li>
-          <li><a href="https://erp.jasviindustries.in/" target="_blank" class="footer-link">Client Web ERP Gateway</a></li>
+        <h4 class="footer-col-title">ENGINEERING LAB</h4>
+        <ul class="footer-links-list">
+          <li><a href="#workbench" class="footer-link">ASME B16.5 CAD Matrix</a></li>
+          <li><a href="#sizing-lab" class="footer-link">Cv Flow Sizing Calculator</a></li>
+          <li><a href="#testing" class="footer-link">API 598 Pressure Testing</a></li>
+          <li><a href="about.html" class="footer-link">Ahmedabad Manufacturing Plant</a></li>
+          <li><a href="contact.html" class="footer-link">Direct Engineering RFQ</a></li>
         </ul>
       </div>
 
       <div>
-        <h4 class="footer-col-title">ENGINEERING RFQ</h4>
-        <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.6; margin-bottom:12px;">
-          Direct technical consultation with our engineering team:
-        </p>
-        <div style="display:flex; flex-direction:column; gap:8px; font-family:var(--font-mono); font-size:0.84rem;">
-          <div>TEL: <a href="tel:+919512690771" style="color:var(--text-primary); font-weight:700;">+91 95126 90771</a></div>
-          <div>EMAIL: <a href="mailto:dsindustries89@gmail.com" style="color:var(--text-primary); font-weight:700;">dsindustries89@gmail.com</a></div>
+        <h4 class="footer-col-title">AHMEDABAD FACILITY</h4>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-azure)" stroke-width="2.2" style="flex-shrink:0; margin-top:2px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>H - 52, Darshanvilla Park, Nr. Gopal Chowk, Nikol - Naroda, Ahmedabad - 382345 (Gujarat, India)</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-azure)" stroke-width="2.2" style="flex-shrink:0; margin-top:2px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+91 95126 90771</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-azure)" stroke-width="2.2" style="flex-shrink:0; margin-top:2px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>dsindustries89@gmail.com</span>
         </div>
       </div>
     </div>
 
     <div class="container footer-bottom">
-      <div>&copy; 2026 Jasvi Industries (DS Industries). All rights reserved.</div>
-      <div>Architectural Precision &amp; Studio Flow Engineering.</div>
+      <div>&copy; 2026 DS Industries (Jasvi Engineering Ecosystem). All Rights Reserved.</div>
+      <div>Precision Flow Systems &bull; Architectural Swiss Light Engineering</div>
     </div>
   </footer>
 
-  <!-- ==========================================================================
-       9. Slide-Over RFQ Requisition Cart Drawer
-       ========================================================================== -->
-  <div class="rfq-drawer-overlay" id="rfq-drawer-overlay"></div>
-  <aside class="rfq-drawer" id="rfq-drawer">
-    <div class="drawer-header">
-      <h3 class="drawer-title">ENGINEERING RFQ BASKET</h3>
-      <button class="drawer-close-btn" id="drawer-close-btn">&times;</button>
-    </div>
-
-    <div class="drawer-items" id="drawer-items-list">
-      <!-- Ingested dynamically from localStorage -->
-    </div>
-
-    <div class="drawer-footer">
-      <button class="btn-drawer-whatsapp" onclick="window.JasviApp.dispatchWhatsAppRfq()">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-        <span>Submit RFQ via WhatsApp</span>
-      </button>
-      <a href="contact.html" class="btn-outline-secondary" style="width:100%; justify-content:center;">
-        Submit Detailed Technical Tender
-      </a>
-    </div>
-  </aside>
-
-  <!-- Application Controller Scripts -->
   <script src="js/main.js"></script>
 </body>
 </html>

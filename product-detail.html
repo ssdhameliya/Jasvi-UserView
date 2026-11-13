@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CAD Inspection Workbench | Jasvi Industries</title>
+  <title>CAD Inspection Workbench &amp; Metallurgy | Jasvi Industries</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
@@ -12,49 +12,55 @@
 </head>
 <body>
 
-  <!-- Floating Light Frosted Glass Dock -->
-  <div class="dock-container">
-    <div class="floating-dock">
-      <a href="index.html" class="dock-brand">
-        <div class="dock-brand-monogram">JI</div>
-        <span class="dock-brand-name">JASVI</span>
-        <span class="dock-azure-dot"></span>
+  <!-- Top Architectural Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="header-brand">
+        <div class="brand-monogram">DS</div>
+        <div class="brand-text">
+          <span class="brand-title">DS INDUSTRIES</span>
+          <span class="brand-subtitle">HEAVY PROCESS VALVES &bull; AHMEDABAD</span>
+        </div>
       </a>
 
-      <nav class="dock-nav">
-        <a href="index.html" class="dock-pill">Showcase</a>
-        <a href="products.html" class="dock-pill active">15 Valve Catalog</a>
-        <a href="index.html#workbench" class="dock-pill">CAD Matrix</a>
-        <a href="index.html#bento-lab" class="dock-pill">Cv Calculator</a>
-        <a href="about.html" class="dock-pill">Plant Infrastructure</a>
-        <a href="gallery.html" class="dock-pill">Vault</a>
-        <a href="contact.html" class="dock-pill">Contact</a>
+      <div class="header-facility-status">
+        <span class="status-pulse-dot"></span>
+        <span class="status-text">AHMEDABAD MFG PLANT // OPERATIONAL</span>
+      </div>
+
+      <nav class="header-nav">
+        <a href="index.html" class="nav-link">Showcase</a>
+        <a href="products.html" class="nav-link active">15 Valve Lines</a>
+        <a href="index.html#sectors" class="nav-link">Sectors</a>
+        <a href="index.html#sizing-lab" class="nav-link">Cv Sizing Lab</a>
+        <a href="index.html#workbench" class="nav-link">CAD Matrix</a>
+        <a href="index.html#testing" class="nav-link">API 598 Testing</a>
+        <a href="about.html" class="nav-link">Plant Infrastructure</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </nav>
 
-      <div class="dock-divider"></div>
-
-      <a href="https://erp.jasviindustries.in/" target="_blank" class="dock-action-btn dock-btn-erp">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-        <span>ERP Portal ↗</span>
-      </a>
-
-      <button id="dock-rfq-btn" class="dock-action-btn dock-btn-rfq">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-        <span>RFQ Cart</span>
-        <span class="rfq-badge">0</span>
-      </button>
+      <div class="header-actions">
+        <a href="tel:+919512690771" class="header-phone-link" title="Direct Engineering Desk">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+91 95126 90771</span>
+        </a>
+        <a href="index.html#rfq-matrix" class="btn-header-rfq">
+          <span>Engineering RFQ</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
     </div>
-  </div>
+  </header>
 
   <!-- Detail Hero Header -->
-  <section style="padding: 130px 0 40px; border-bottom: 1px solid var(--border-subtle); background: var(--bg-surface);">
+  <section style="padding: 120px 0 40px; border-bottom: 1px solid var(--border-subtle); background: var(--bg-surface);">
     <div class="container" style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:20px;">
       <div>
         <div class="section-tag" style="margin-bottom: 10px;">// CAD ENGINEERING WORKBENCH</div>
         <h1 class="hero-title" id="detail-title" style="font-size: clamp(2rem, 3.8vw, 3.2rem); margin-bottom: 8px;">
           CAST STEEL PROCESS VALVE
         </h1>
-        <p class="hero-description" id="detail-desc" style="font-size: 1rem; max-width: 650px;">
+        <p class="hero-description" id="detail-desc" style="font-size: 1rem; max-width: 680px;">
           Severe-service precision industrial valve engineered to API 6D and ASME B16.34 standards.
         </p>
       </div>
@@ -62,84 +68,81 @@
       <div>
         <button id="btn-download-pdf" class="btn-azure-primary" onclick="downloadValvePdf()">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          <span>Download Engineering Datasheet</span>
+          <span>Download Technical Datasheet</span>
         </button>
       </div>
     </div>
   </section>
 
   <!-- Detailed CAD Matrix & BOM Workbench -->
-  <section class="section-workbench" style="padding: 60px 0 100px;">
+  <section class="section-workbench" style="padding: 60px 0 90px;">
     <div class="container">
-      <div class="workbench-container" style="margin-bottom: 40px;">
-        <!-- Left: Image & Specs -->
-        <div class="cad-viewport">
-          <div class="cad-header">
-            <span class="cad-title">VALVE SPECIFICATION VIEW</span>
-            <span class="standard-badge">API 598 RATE A</span>
-          </div>
+      <div class="workbench-container" style="margin-bottom: 40px; padding:24px;">
+        <div style="display:grid; grid-template-columns: 360px 1fr; gap:32px; align-items:start;">
+          <!-- Left: Image & Specs -->
+          <div style="display:flex; flex-direction:column; gap:16px;">
+            <div class="card-img-wrap" style="height:260px; background:#FFFFFF; border:1px solid var(--border-subtle); border-radius:var(--radius-sm);">
+              <img id="detail-valve-img" src="assets/images/hero_valve_ball.jpg" alt="Valve Preview" style="max-height:85%; max-width:85%; object-fit:contain;" />
+            </div>
 
-          <div class="cad-cross-section">
-            <img id="detail-valve-img" src="assets/images/hero_valve_ball.jpg" alt="Valve Preview" style="max-height:85%; max-width:85%; object-fit:contain;" />
-          </div>
-
-          <div class="cad-telemetry-pills">
-            <div class="cad-stat-box">
-              <div class="stat-key">SHELL TEST</div>
-              <div class="stat-val">425 PSI</div>
-            </div>
-            <div class="cad-stat-box">
-              <div class="stat-key">SEAT TEST</div>
-              <div class="stat-val">310 PSI</div>
-            </div>
-            <div class="cad-stat-box">
-              <div class="stat-key">MAX TEMP</div>
-              <div class="stat-val">450°C</div>
-            </div>
-            <div class="cad-stat-box">
-              <div class="stat-key">FIRE SAFE</div>
-              <div class="stat-val" style="color:var(--accent-amber);">API 607</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right: Dimensional Table -->
-        <div class="matrix-workbench">
-          <div class="matrix-toolbar">
-            <div class="class-tab-group">
-              <button class="class-tab-btn active" data-class="150">Class 150#</button>
-              <button class="class-tab-btn" data-class="300">Class 300#</button>
-              <button class="class-tab-btn" data-class="600">Class 600#</button>
-            </div>
-            <div class="unit-toggle-wrap">
-              <button class="unit-btn active" data-unit="mm">Metric (mm)</button>
-              <button class="unit-btn" data-unit="in">Imperial (in)</button>
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px; font-family:var(--font-mono); font-size:0.75rem;">
+              <div style="padding:10px; background:#F8FAFC; border:1px solid var(--border-subtle); border-radius:var(--radius-xs);">
+                <div style="color:var(--text-muted); font-size:0.68rem;">SHELL TEST (API 598)</div>
+                <div style="font-weight:700; color:var(--accent-azure);">425 PSI (1.5x)</div>
+              </div>
+              <div style="padding:10px; background:#F8FAFC; border:1px solid var(--border-subtle); border-radius:var(--radius-xs);">
+                <div style="color:var(--text-muted); font-size:0.68rem;">SEAT TEST (API 598)</div>
+                <div style="font-weight:700; color:var(--accent-emerald);">310 PSI (Rate A)</div>
+              </div>
+              <div style="padding:10px; background:#F8FAFC; border:1px solid var(--border-subtle); border-radius:var(--radius-xs);">
+                <div style="color:var(--text-muted); font-size:0.68rem;">MAX TEMPERATURE</div>
+                <div style="font-weight:700; color:var(--text-primary);">650&deg;C Stellite</div>
+              </div>
+              <div style="padding:10px; background:#F8FAFC; border:1px solid var(--border-subtle); border-radius:var(--radius-xs);">
+                <div style="color:var(--text-muted); font-size:0.68rem;">FIRE SAFE TEST</div>
+                <div style="font-weight:700; color:var(--accent-amber);">API 607 / 6FA</div>
+              </div>
             </div>
           </div>
 
-          <div class="matrix-table-wrap">
-            <table class="matrix-table">
-              <thead>
-                <tr>
-                  <th>NPS (Size)</th>
-                  <th>L (F-to-F)</th>
-                  <th>H (Height)</th>
-                  <th>W (Port)</th>
-                  <th>D (Flange OD)</th>
-                  <th>Holes</th>
-                  <th>Weight</th>
-                </tr>
-              </thead>
-              <tbody id="matrix-table-body"></tbody>
-            </table>
+          <!-- Right: Dimensional Table -->
+          <div>
+            <div class="workbench-toolbar" style="padding:0 0 16px; border-bottom:1px solid var(--border-subtle); margin-bottom:16px;">
+              <div class="class-tab-group">
+                <button class="class-tab-btn active" data-class="150">Class 150#</button>
+                <button class="class-tab-btn" data-class="300">Class 300#</button>
+                <button class="class-tab-btn" data-class="600">Class 600#</button>
+                <button class="class-tab-btn" data-class="800">Class 800#</button>
+              </div>
+              <div class="unit-toggle-group">
+                <button class="unit-btn active" data-unit="mm">Metric (mm)</button>
+                <button class="unit-btn" data-unit="in">Imperial (in)</button>
+              </div>
+            </div>
+
+            <div class="matrix-table-wrap">
+              <table class="matrix-table">
+                <thead>
+                  <tr>
+                    <th>NOMINAL SIZE (NPS / DN)</th>
+                    <th>FACE-TO-FACE (L)</th>
+                    <th>HEIGHT (H)</th>
+                    <th>PORT DIA (W)</th>
+                    <th>FLANGE OD (D)</th>
+                    <th>HOLES</th>
+                    <th>WEIGHT</th>
+                  </tr>
+                </thead>
+                <tbody id="matrix-table-body"></tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- Bill of Materials (BOM) Section -->
-      <div class="bento-card" style="padding: 30px;">
-        <h3 class="bento-card-title" style="margin-bottom: 20px;">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-azure)" stroke-width="2.2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+      <div class="workbench-container" style="padding: 28px;">
+        <h3 class="sector-title" style="margin-bottom: 16px;">
           ASTM Standard Bill of Materials (BOM) &amp; Metallurgy Trims
         </h3>
         <div style="overflow-x:auto;">
@@ -188,28 +191,49 @@
     </div>
   </section>
 
-  <!-- Technical Footer -->
+  <!-- Technical Clean Footer -->
   <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand-title">DS INDUSTRIES</div>
+        <p class="footer-brand-desc">
+          Premier Indian flow control and heavy process valve manufacturer. Precision engineering for superheated steam, oil &amp; gas, petrochemical, and severe abrasive slurry service.
+        </p>
+      </div>
+      <div>
+        <h4 class="footer-col-title">VALVE PORTFOLIO</h4>
+        <ul class="footer-links-list">
+          <li><a href="products.html" class="footer-link">Cast Steel Ball Valves</a></li>
+          <li><a href="products.html" class="footer-link">Flexible Wedge Gate Valves</a></li>
+          <li><a href="products.html" class="footer-link">Globe Steam Throttling Valves</a></li>
+          <li><a href="products.html" class="footer-link">Dual Plate &amp; Swing Check</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">ENGINEERING LAB</h4>
+        <ul class="footer-links-list">
+          <li><a href="index.html#workbench" class="footer-link">ASME B16.5 CAD Matrix</a></li>
+          <li><a href="index.html#sizing-lab" class="footer-link">Cv Flow Sizing Calculator</a></li>
+          <li><a href="index.html#testing" class="footer-link">API 598 Pressure Testing</a></li>
+          <li><a href="about.html" class="footer-link">Ahmedabad Manufacturing Plant</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">AHMEDABAD FACILITY</h4>
+        <div class="footer-contact-item">
+          <span>H - 52, Darshanvilla Park, Nikol - Naroda, Ahmedabad - 382345 (Gujarat, India)</span>
+        </div>
+        <div class="footer-contact-item">
+          <span>Direct: +91 95126 90771 &bull; Email: dsindustries89@gmail.com</span>
+        </div>
+      </div>
+    </div>
+
     <div class="container footer-bottom">
-      <div>&copy; 2026 Jasvi Industries (DS Industries). All rights reserved.</div>
-      <div>Architectural Precision &amp; Studio Flow Engineering.</div>
+      <div>&copy; 2026 DS Industries (Jasvi Engineering Ecosystem). All Rights Reserved.</div>
+      <div>Architectural Swiss Light Engineering &bull; Pure Public Showcase</div>
     </div>
   </footer>
-
-  <!-- RFQ Cart Drawer -->
-  <div class="rfq-drawer-overlay" id="rfq-drawer-overlay"></div>
-  <aside class="rfq-drawer" id="rfq-drawer">
-    <div class="drawer-header">
-      <h3 class="drawer-title">ENGINEERING RFQ BASKET</h3>
-      <button class="drawer-close-btn" id="drawer-close-btn">&times;</button>
-    </div>
-    <div class="drawer-items" id="drawer-items-list"></div>
-    <div class="drawer-footer">
-      <button class="btn-drawer-whatsapp" onclick="window.JasviApp.dispatchWhatsAppRfq()">
-        <span>Submit RFQ via WhatsApp</span>
-      </button>
-    </div>
-  </aside>
 
   <script src="js/main.js"></script>
   <script>
@@ -225,7 +249,7 @@
       
       doc.setTextColor(2, 132, 199);
       doc.setFontSize(18);
-      doc.text("JASVI INDUSTRIES // DS INDUSTRIES", 15, 20);
+      doc.text("DS INDUSTRIES // FLOW SYSTEMS", 15, 20);
       
       doc.setTextColor(15, 23, 42);
       doc.setFontSize(13);
@@ -251,7 +275,7 @@
       doc.text("Testing: 100% API 598 Hydrostatic Shell (425 PSI) & Seat (310 PSI)", 15, 92);
       doc.text("Rating: Class 150#, 300#, 600#, 800# ASME B16.34", 15, 99);
       
-      doc.save("Jasvi_Valve_Engineering_Datasheet.pdf");
+      doc.save("DS_Industries_Valve_Datasheet.pdf");
     }
   </script>
 </body>
