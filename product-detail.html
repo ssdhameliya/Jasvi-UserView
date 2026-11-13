@@ -8,25 +8,25 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <!-- jsPDF Library for Offline Client-Side Datasheet Generation -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
 
-  <!-- Floating Glass Dock -->
+  <!-- Floating Light Frosted Glass Dock -->
   <div class="dock-container">
     <div class="floating-dock">
       <a href="index.html" class="dock-brand">
         <div class="dock-brand-monogram">JI</div>
         <span class="dock-brand-name">JASVI</span>
-        <span class="dock-laser-dot"></span>
+        <span class="dock-azure-dot"></span>
       </a>
 
       <nav class="dock-nav">
         <a href="index.html" class="dock-pill">Showcase</a>
-        <a href="products.html" class="dock-pill active">Catalog [15]</a>
+        <a href="products.html" class="dock-pill active">15 Valve Catalog</a>
         <a href="index.html#workbench" class="dock-pill">CAD Matrix</a>
-        <a href="about.html" class="dock-pill">Plant Telemetry</a>
+        <a href="index.html#bento-lab" class="dock-pill">Cv Calculator</a>
+        <a href="about.html" class="dock-pill">Plant Infrastructure</a>
         <a href="gallery.html" class="dock-pill">Vault</a>
         <a href="contact.html" class="dock-pill">Contact</a>
       </nav>
@@ -35,7 +35,7 @@
 
       <a href="https://erp.jasviindustries.in/" target="_blank" class="dock-action-btn dock-btn-erp">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-        <span>ERP Portal</span>
+        <span>ERP Portal ↗</span>
       </a>
 
       <button id="dock-rfq-btn" class="dock-action-btn dock-btn-rfq">
@@ -47,20 +47,20 @@
   </div>
 
   <!-- Detail Hero Header -->
-  <section style="padding: 130px 0 40px; border-bottom: 1px solid var(--border-subtle); background: #06080e;">
+  <section style="padding: 130px 0 40px; border-bottom: 1px solid var(--border-subtle); background: var(--bg-surface);">
     <div class="container" style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:20px;">
       <div>
         <div class="section-tag" style="margin-bottom: 10px;">// CAD ENGINEERING WORKBENCH</div>
         <h1 class="hero-title" id="detail-title" style="font-size: clamp(2rem, 3.8vw, 3.2rem); margin-bottom: 8px;">
-          TRUNNION MOUNTED BALL VALVE
+          CAST STEEL PROCESS VALVE
         </h1>
         <p class="hero-description" id="detail-desc" style="font-size: 1rem; max-width: 650px;">
-          Severe-service two-piece &amp; three-piece cast steel flanged ball valves engineered to API 6D specifications.
+          Severe-service precision industrial valve engineered to API 6D and ASME B16.34 standards.
         </p>
       </div>
 
-      <div style="display:flex; gap:12px;">
-        <button id="btn-download-pdf" class="btn-laser-primary" onclick="downloadValvePdf()">
+      <div>
+        <button id="btn-download-pdf" class="btn-azure-primary" onclick="downloadValvePdf()">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           <span>Download Engineering Datasheet</span>
         </button>
@@ -72,15 +72,15 @@
   <section class="section-workbench" style="padding: 60px 0 100px;">
     <div class="container">
       <div class="workbench-container" style="margin-bottom: 40px;">
-        <!-- Left: Image & Hotspots -->
+        <!-- Left: Image & Specs -->
         <div class="cad-viewport">
           <div class="cad-header">
-            <span class="cad-title">3D VALVE CAD PERSPECTIVE</span>
+            <span class="cad-title">VALVE SPECIFICATION VIEW</span>
             <span class="standard-badge">API 598 RATE A</span>
           </div>
 
           <div class="cad-cross-section">
-            <img id="detail-valve-img" src="assets/images/hero_valve_ball.jpg" alt="Valve Preview" style="max-height:85%; max-width:85%; object-fit:contain; filter:drop-shadow(0 14px 24px rgba(0,0,0,0.8));" />
+            <img id="detail-valve-img" src="assets/images/hero_valve_ball.jpg" alt="Valve Preview" style="max-height:85%; max-width:85%; object-fit:contain;" />
           </div>
 
           <div class="cad-telemetry-pills">
@@ -98,7 +98,7 @@
             </div>
             <div class="cad-stat-box">
               <div class="stat-key">FIRE SAFE</div>
-              <div class="stat-val" style="color:var(--molten-amber);">API 607</div>
+              <div class="stat-val" style="color:var(--accent-amber);">API 607</div>
             </div>
           </div>
         </div>
@@ -139,7 +139,7 @@
       <!-- Bill of Materials (BOM) Section -->
       <div class="bento-card" style="padding: 30px;">
         <h3 class="bento-card-title" style="margin-bottom: 20px;">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--laser-cyan)" stroke-width="2.2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-azure)" stroke-width="2.2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
           ASTM Standard Bill of Materials (BOM) &amp; Metallurgy Trims
         </h3>
         <div style="overflow-x:auto;">
@@ -154,31 +154,31 @@
             </thead>
             <tbody>
               <tr>
-                <td style="font-weight:700; color:var(--laser-cyan);">Body / Bonnet</td>
+                <td style="font-weight:700; color:var(--accent-azure);">Body / Bonnet</td>
                 <td>ASTM A216 Gr. WCB</td>
                 <td>ASTM A351 Gr. CF8M</td>
                 <td>Duplex 2205 (F51) / Inconel</td>
               </tr>
               <tr>
-                <td style="font-weight:700; color:var(--laser-cyan);">Wedge / Ball / Disc</td>
+                <td style="font-weight:700; color:var(--accent-azure);">Wedge / Ball / Disc</td>
                 <td>ASTM A105 + 13% Cr / SS304</td>
                 <td>ASTM A182 Gr. F316</td>
                 <td>SS316 + Stellite 6 Overlay</td>
               </tr>
               <tr>
-                <td style="font-weight:700; color:var(--laser-cyan);">Stem</td>
+                <td style="font-weight:700; color:var(--accent-azure);">Stem</td>
                 <td>ASTM A276 Type 410</td>
                 <td>ASTM A276 Type 316</td>
                 <td>17-4PH / Monel K500</td>
               </tr>
               <tr>
-                <td style="font-weight:700; color:var(--laser-cyan);">Seat Rings</td>
+                <td style="font-weight:700; color:var(--accent-azure);">Seat Rings</td>
                 <td>ASTM A216 WCB + 13% Cr</td>
                 <td>ASTM A351 CF8M + Stellite</td>
                 <td>Solid Stellite 6 / PEEK</td>
               </tr>
               <tr>
-                <td style="font-weight:700; color:var(--laser-cyan);">Gasket / Packing</td>
+                <td style="font-weight:700; color:var(--accent-azure);">Gasket / Packing</td>
                 <td colspan="3">Spiral Wound SS316 + Flexible Graphite / Pure PTFE (Zero Fugitive Emission)</td>
               </tr>
             </tbody>
@@ -192,7 +192,7 @@
   <footer class="site-footer">
     <div class="container footer-bottom">
       <div>&copy; 2026 Jasvi Industries (DS Industries). All rights reserved.</div>
-      <div>Obsidian CAD &amp; Precision Flow Dynamics.</div>
+      <div>Architectural Precision &amp; Studio Flow Engineering.</div>
     </div>
   </footer>
 
@@ -220,31 +220,31 @@
       }
       const { jsPDF } = window.jspdf;
       const doc = new jsPDF();
-      doc.setFillColor(7, 9, 14);
+      doc.setFillColor(255, 255, 255);
       doc.rect(0, 0, 210, 297, 'F');
       
-      doc.setTextColor(0, 240, 255);
+      doc.setTextColor(2, 132, 199);
       doc.setFontSize(18);
       doc.text("JASVI INDUSTRIES // DS INDUSTRIES", 15, 20);
       
-      doc.setTextColor(255, 255, 255);
+      doc.setTextColor(15, 23, 42);
       doc.setFontSize(13);
       doc.text("OFFICIAL TECHNICAL VALVE DATASHEET", 15, 30);
       
       doc.setFontSize(10);
-      doc.setTextColor(148, 163, 184);
-      doc.text("Ahmedabad Plant: H - 52, Darshanvilla Park, Nikol - Naroda, Ahmedabad - 382345", 15, 38);
+      doc.setTextColor(71, 85, 105);
+      doc.text("Ahmedabad Facility: H - 52, Darshanvilla Park, Nikol - Naroda, Ahmedabad - 382345", 15, 38);
       doc.text("Contact: +91 95126 90771 | Email: dsindustries89@gmail.com", 15, 44);
       doc.text("Design Standards: API 6D, API 600, API 602, API 598, ASME B16.34", 15, 50);
       
-      doc.setDrawColor(0, 240, 255);
+      doc.setDrawColor(2, 132, 199);
       doc.line(15, 55, 195, 55);
       
-      doc.setTextColor(0, 229, 153);
+      doc.setTextColor(5, 150, 105);
       doc.setFontSize(12);
       doc.text("VALVE SERIES SPECIFICATIONS & METALLURGY", 15, 68);
       
-      doc.setTextColor(255, 255, 255);
+      doc.setTextColor(15, 23, 42);
       doc.setFontSize(10);
       doc.text("Body / Bonnet: ASTM A216 WCB / ASTM A351 CF8M / Duplex 2205", 15, 78);
       doc.text("Trim: SS316 + Stellite 6 Overlay (API Trim 8 / 12)", 15, 85);

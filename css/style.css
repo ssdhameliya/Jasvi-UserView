@@ -1,63 +1,67 @@
 /* ==========================================================================
    Jasvi Industries - UserView Showcase
-   Theme: "Obsidian CAD & Precision Flow Dynamics"
-   Aesthetic: MotionSites.ai x ReactBits.dev High-Precision Industrial Luxury
+   Theme: "Architectural Precision & Studio Flow Engineering" (Pure Light Mode)
+   Aesthetic: Swiss Minimalist Precision x MotionSites x ReactBits Craft
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&family=Syne:wght@700;800&display=swap');
 
 :root {
-  /* Obsidian & Carbon Dark Chassis */
-  --bg-deep: #07090e;
-  --bg-surface: #0c1017;
-  --bg-card: rgba(14, 20, 31, 0.78);
-  --bg-card-hover: rgba(22, 31, 48, 0.92);
-  --bg-glass: rgba(12, 17, 26, 0.75);
-  --bg-glass-strong: rgba(10, 14, 22, 0.92);
-  --bg-panel: #111724;
+  /* Pristine Architectural White & Studio Platinum Palette */
+  --bg-canvas: #FFFFFF;
+  --bg-surface: #F8FAFC;
+  --bg-surface-elevated: #FFFFFF;
+  --bg-card: rgba(255, 255, 255, 0.94);
+  --bg-card-hover: #FFFFFF;
+  --bg-glass: rgba(255, 255, 255, 0.85);
+  --bg-glass-strong: rgba(255, 255, 255, 0.96);
+  --bg-panel: #F1F5F9;
+  --bg-stage: radial-gradient(circle at 50% 40%, #FFFFFF 0%, #F1F5F9 75%, #E2E8F0 100%);
 
-  /* Kinetic Laser Accents */
-  --laser-cyan: #00F0FF;
-  --laser-cyan-subtle: rgba(0, 240, 255, 0.12);
-  --laser-cyan-glow: rgba(0, 240, 255, 0.35);
-  
-  --laser-teal: #00E599;
-  --laser-teal-subtle: rgba(0, 229, 153, 0.12);
-  
-  --molten-amber: #FF9F1C;
-  --molten-amber-subtle: rgba(255, 159, 28, 0.14);
-  --molten-amber-glow: rgba(255, 159, 28, 0.4);
+  /* Engineering Accents */
+  --accent-azure: #0284C7;
+  --accent-azure-hover: #0369A1;
+  --accent-azure-subtle: rgba(2, 132, 199, 0.08);
+  --accent-azure-border: rgba(2, 132, 199, 0.22);
+  --accent-azure-glow: rgba(2, 132, 199, 0.25);
 
-  --laser-blue: #3B82F6;
-  --laser-indigo: #6366F1;
+  --accent-cobalt: #1E40AF;
+  --accent-cobalt-subtle: rgba(30, 64, 175, 0.08);
 
-  /* Titanium Typography & Shades */
-  --text-titanium: #F8FAFC;
-  --text-primary: #E2E8F0;
-  --text-secondary: #94A3B8;
+  --accent-amber: #D97706;
+  --accent-amber-subtle: rgba(217, 119, 6, 0.08);
+  --accent-amber-glow: rgba(217, 119, 6, 0.3);
+
+  --accent-emerald: #059669;
+  --accent-emerald-subtle: rgba(5, 150, 105, 0.08);
+
+  /* Deep Slate Typography */
+  --text-primary: #0F172A;
+  --text-secondary: #334155;
   --text-muted: #64748B;
-  --text-dark: #0f172a;
+  --text-subtle: #94A3B8;
+  --text-on-accent: #FFFFFF;
 
-  /* Blueprint Lines & Glass Borders */
-  --border-subtle: rgba(255, 255, 255, 0.07);
-  --border-glass: rgba(0, 240, 255, 0.18);
-  --border-glow: rgba(0, 240, 255, 0.45);
-  --border-amber: rgba(255, 159, 28, 0.35);
+  /* Architectural Borders & Subtle Dividing Lines */
+  --border-subtle: rgba(15, 23, 42, 0.09);
+  --border-medium: rgba(15, 23, 42, 0.16);
+  --border-strong: rgba(15, 23, 42, 0.28);
+  --border-azure: rgba(2, 132, 199, 0.35);
 
-  /* Elevation Shadows & Glows */
-  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.6);
-  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.8);
-  --shadow-glow: 0 0 35px rgba(0, 240, 255, 0.18);
-  --shadow-amber-glow: 0 0 35px rgba(255, 159, 28, 0.22);
+  /* Tactile Physical Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 4px 14px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 16px 36px -4px rgba(0, 0, 0, 0.09), 0 4px 10px -2px rgba(0, 0, 0, 0.04);
+  --shadow-float: 0 20px 48px -10px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  --shadow-azure: 0 10px 28px rgba(2, 132, 199, 0.25);
 
-  /* Fonts */
+  /* Typography */
   --font-display: 'Cabinet Grotesk', 'Syne', sans-serif;
   --font-heading: 'Space Grotesk', -apple-system, sans-serif;
   --font-body: 'Outfit', -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
-  /* Layout & Geometry */
+  /* Geometry & Physics */
   --container-max: 1560px;
   --radius-xs: 4px;
   --radius-sm: 8px;
@@ -65,7 +69,6 @@
   --radius-lg: 22px;
   --radius-pill: 9999px;
 
-  /* Spring Physics Easings */
   --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -82,7 +85,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  background-color: var(--bg-deep);
+  background-color: var(--bg-canvas);
   color: var(--text-primary);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
@@ -90,7 +93,7 @@ html {
 }
 
 body {
-  background-color: var(--bg-deep);
+  background-color: var(--bg-canvas);
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
@@ -98,15 +101,14 @@ body {
   min-height: 100vh;
 }
 
-/* CAD Blueprint Grid Background */
+/* Clean Drafting Micro-Dot Blueprint Matrix */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-  background-size: 48px 48px;
+    radial-gradient(rgba(15, 23, 42, 0.08) 1px, transparent 1px);
+  background-size: 30px 30px;
   pointer-events: none;
   z-index: 0;
 }
@@ -134,13 +136,13 @@ button {
   width: 100%;
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: 0 28px;
+  padding: 0 32px;
   position: relative;
   z-index: 1;
 }
 
 /* ==========================================================================
-   1. Floating Minimalist Frosted Glass Dock (ReactBits Dock Pattern)
+   1. Floating Light Frosted Glass Dock (ReactBits Dock Pattern)
    ========================================================================== */
 .dock-container {
   position: fixed;
@@ -158,20 +160,20 @@ button {
   pointer-events: auto;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   background: var(--bg-glass-strong);
-  backdrop-filter: blur(28px) saturate(170%);
-  -webkit-backdrop-filter: blur(28px) saturate(170%);
-  border: 1px solid var(--border-glass);
-  padding: 7px 14px;
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid var(--border-medium);
+  padding: 6px 14px;
   border-radius: var(--radius-pill);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.65), 0 0 24px rgba(0, 240, 255, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: var(--shadow-lg), inset 0 1px 0 rgba(255, 255, 255, 0.95);
   transition: all 0.35s var(--ease-spring);
 }
 
 .floating-dock:hover {
-  border-color: var(--border-glow);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 36px rgba(0, 240, 255, 0.22);
+  border-color: var(--accent-azure-border);
+  box-shadow: 0 20px 48px -6px rgba(0, 0, 0, 0.12), var(--shadow-azure-glow);
 }
 
 .dock-brand {
@@ -180,51 +182,51 @@ button {
   gap: 10px;
   padding: 6px 14px;
   border-radius: var(--radius-pill);
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   transition: all 0.3s var(--ease-spring);
 }
 
 .dock-brand:hover {
-  background: rgba(0, 240, 255, 0.08);
-  border-color: var(--laser-cyan);
+  background: var(--accent-azure-subtle);
+  border-color: var(--accent-azure);
 }
 
 .dock-brand-monogram {
   width: 28px;
   height: 28px;
   border-radius: 8px;
-  background: linear-gradient(135deg, var(--laser-cyan) 0%, #0077b6 100%);
+  background: linear-gradient(135deg, var(--accent-azure) 0%, var(--accent-cobalt) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-display);
   font-weight: 900;
   font-size: 0.85rem;
-  color: #07090e;
-  box-shadow: 0 0 14px rgba(0, 240, 255, 0.5);
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.35);
 }
 
 .dock-brand-name {
   font-family: var(--font-heading);
-  font-weight: 700;
+  font-weight: 800;
   font-size: 0.92rem;
-  letter-spacing: 0.06em;
-  color: var(--text-titanium);
+  letter-spacing: 0.08em;
+  color: var(--text-primary);
 }
 
-.dock-laser-dot {
+.dock-azure-dot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--laser-teal);
-  box-shadow: 0 0 10px var(--laser-teal);
-  animation: pulse-laser 2s infinite;
+  background: var(--accent-azure);
+  box-shadow: 0 0 8px var(--accent-azure);
+  animation: pulse-azure 2s infinite;
 }
 
-@keyframes pulse-laser {
+@keyframes pulse-azure {
   0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.4); opacity: 0.6; }
+  50% { transform: scale(1.4); opacity: 0.5; }
 }
 
 .dock-nav {
@@ -239,16 +241,16 @@ button {
   font-family: var(--font-heading);
   font-size: 0.84rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
   color: var(--text-secondary);
   position: relative;
-  transition: all 0.25s var(--ease-spring);
+  transition: transform 0.2s var(--ease-spring), color 0.2s ease, background 0.2s ease;
 }
 
 .dock-pill:hover,
 .dock-pill.active {
-  color: var(--laser-cyan);
-  background: rgba(0, 240, 255, 0.08);
+  color: var(--accent-azure);
+  background: var(--accent-azure-subtle);
 }
 
 .dock-pill.active::after {
@@ -259,15 +261,14 @@ button {
   transform: translateX(-50%);
   width: 14px;
   height: 2px;
-  background: var(--laser-cyan);
+  background: var(--accent-azure);
   border-radius: 2px;
-  box-shadow: 0 0 6px var(--laser-cyan);
 }
 
 .dock-divider {
   width: 1px;
   height: 22px;
-  background: var(--border-subtle);
+  background: var(--border-medium);
   margin: 0 4px;
 }
 
@@ -284,67 +285,57 @@ button {
 }
 
 .dock-btn-erp {
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--text-primary);
+  background: var(--bg-surface);
+  color: var(--text-secondary);
   border: 1px solid var(--border-subtle);
 }
 
 .dock-btn-erp:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--text-titanium);
-  border-color: rgba(255, 255, 255, 0.2);
+  background: #FFFFFF;
+  color: var(--accent-azure);
+  border-color: var(--accent-azure-border);
+  box-shadow: var(--shadow-sm);
 }
 
 .dock-btn-rfq {
-  background: linear-gradient(135deg, var(--laser-cyan) 0%, #0099cc 100%);
-  color: #07090e;
+  background: linear-gradient(135deg, var(--accent-azure) 0%, var(--accent-cobalt) 100%);
+  color: #FFFFFF;
   font-weight: 700;
-  box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
-  position: relative;
+  box-shadow: var(--shadow-azure);
 }
 
 .dock-btn-rfq:hover {
   transform: translateY(-1px);
-  box-shadow: 0 0 28px rgba(0, 240, 255, 0.65);
+  box-shadow: 0 12px 32px rgba(2, 132, 199, 0.4);
 }
 
 .rfq-badge {
-  background: #07090e;
-  color: var(--laser-cyan);
+  background: #FFFFFF;
+  color: var(--accent-azure);
   font-family: var(--font-mono);
   font-size: 0.72rem;
   font-weight: 800;
   padding: 2px 7px;
   border-radius: var(--radius-pill);
-  border: 1px solid var(--laser-cyan);
 }
 
 /* ==========================================================================
-   2. Kinetic Hero Stage with 3D Flow Dynamics & Interactive HUD
+   2. Hero Section: Three.js 3D WebGL Studio Stage
    ========================================================================== */
 .hero-stage {
-  min-height: 100vh;
+  min-height: 94vh;
   position: relative;
   display: flex;
   align-items: center;
-  padding: 120px 0 60px;
-  overflow: hidden;
-}
-
-#hero-canvas {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.75;
+  padding: 130px 0 60px;
+  background: var(--bg-stage);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .hero-grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 48px;
+  gap: 56px;
   align-items: center;
   position: relative;
   z-index: 1;
@@ -361,16 +352,15 @@ button {
   align-items: center;
   gap: 10px;
   padding: 6px 14px;
-  background: rgba(0, 240, 255, 0.06);
-  border: 1px solid var(--border-glass);
+  background: var(--accent-azure-subtle);
+  border: 1px solid var(--accent-azure-border);
   border-radius: var(--radius-pill);
   font-family: var(--font-mono);
   font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--laser-cyan);
-  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: var(--accent-azure);
+  letter-spacing: 0.1em;
   width: fit-content;
-  backdrop-filter: blur(12px);
 }
 
 .hero-title {
@@ -379,14 +369,35 @@ button {
   font-weight: 900;
   line-height: 1.05;
   letter-spacing: -0.02em;
-  color: var(--text-titanium);
+  color: var(--text-primary);
   text-transform: uppercase;
 }
 
 .hero-title .gradient-text {
-  background: linear-gradient(135deg, var(--text-titanium) 0%, var(--laser-cyan) 70%, var(--laser-teal) 100%);
+  background: linear-gradient(135deg, var(--accent-cobalt) 0%, var(--accent-azure) 70%, #06b6d4 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* ShinyText Shimmer Effect */
+.shiny-text {
+  color: var(--text-secondary);
+  background: linear-gradient(
+    120deg,
+    rgba(15, 23, 42, 0.9) 30%,
+    var(--accent-azure) 50%,
+    rgba(15, 23, 42, 0.9) 70%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: inline-block;
+  animation: shine-sweep 5s linear infinite;
+}
+
+@keyframes shine-sweep {
+  0% { background-position: 100%; }
+  100% { background-position: -100%; }
 }
 
 .hero-description {
@@ -400,7 +411,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin: 6px 0;
+  margin: 4px 0;
 }
 
 .standard-badge {
@@ -408,21 +419,22 @@ button {
   align-items: center;
   gap: 6px;
   padding: 5px 12px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--border-subtle);
+  background: #FFFFFF;
+  border: 1px solid var(--border-medium);
   border-radius: var(--radius-xs);
   font-family: var(--font-mono);
   font-size: 0.76rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text-primary);
+  box-shadow: var(--shadow-sm);
 }
 
 .standard-badge::before {
   content: '';
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
-  background: var(--laser-cyan);
+  background: var(--accent-azure);
 }
 
 .hero-cta-group {
@@ -432,181 +444,126 @@ button {
   margin-top: 10px;
 }
 
-.btn-laser-primary {
+.btn-azure-primary {
   display: inline-flex;
   align-items: center;
   gap: 12px;
   padding: 14px 28px;
   border-radius: var(--radius-pill);
-  background: linear-gradient(135deg, var(--laser-cyan) 0%, #0099cc 100%);
-  color: #07090e;
+  background: linear-gradient(135deg, var(--accent-azure) 0%, var(--accent-cobalt) 100%);
+  color: #FFFFFF;
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 0.96rem;
-  letter-spacing: 0.03em;
-  box-shadow: 0 10px 30px rgba(0, 240, 255, 0.35);
+  box-shadow: var(--shadow-azure);
   transition: all 0.3s var(--ease-spring);
 }
 
-.btn-laser-primary:hover {
+.btn-azure-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 42px rgba(0, 240, 255, 0.6);
+  box-shadow: 0 16px 40px rgba(2, 132, 199, 0.45);
 }
 
-.btn-ghost-secondary {
+.btn-outline-secondary {
   display: inline-flex;
   align-items: center;
   gap: 10px;
   padding: 14px 26px;
   border-radius: var(--radius-pill);
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--text-titanium);
-  border: 1px solid var(--border-subtle);
+  background: #FFFFFF;
+  color: var(--text-primary);
+  border: 1px solid var(--border-medium);
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: 0.96rem;
+  box-shadow: var(--shadow-sm);
   transition: all 0.3s var(--ease-spring);
 }
 
-.btn-ghost-secondary:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: var(--border-glass);
-  color: var(--laser-cyan);
+.btn-outline-secondary:hover {
+  border-color: var(--accent-azure);
+  color: var(--accent-azure);
+  transform: translateY(-2px);
 }
 
-/* 3D Interactive Valve Stage & Spotlight Tilt */
-.hero-stage-view {
-  perspective: 1200px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.valve-3d-card {
+/* Three.js 3D Interactive Stage Container */
+.hero-3d-stage-wrap {
   width: 100%;
-  max-width: 580px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-glass);
+  background: #FFFFFF;
+  border: 1px solid var(--border-medium);
   border-radius: var(--radius-lg);
-  padding: 30px;
+  padding: 24px;
+  box-shadow: var(--shadow-lg), var(--shadow-float);
   position: relative;
-  box-shadow: var(--shadow-lg), var(--shadow-glow);
-  transform-style: preserve-3d;
-  transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.3s ease;
-  backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.valve-3d-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: radial-gradient(600px circle at var(--mx, 50%) var(--my, 50%), rgba(0, 240, 255, 0.12), transparent 40%);
-  pointer-events: none;
-}
-
-.valve-image-container {
-  position: relative;
+.threejs-viewport {
   width: 100%;
-  height: 360px;
+  height: 380px;
+  border-radius: var(--radius-md);
+  background: radial-gradient(circle at 50% 50%, #FFFFFF 0%, #F8FAFC 60%, #E2E8F0 100%);
+  position: relative;
+  overflow: hidden;
+  cursor: grab;
+}
+
+.threejs-viewport:active {
+  cursor: grabbing;
+}
+
+#threejs-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* 3D Exploded View Toggle Bar */
+.stage-control-bar {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
 }
 
-.valve-hero-img {
-  max-height: 100%;
-  object-fit: contain;
-  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.8));
-  transition: transform 0.5s var(--ease-spring);
-}
-
-/* Interactive 3D Hotspot Inspection Pins */
-.hotspot-pin {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: rgba(0, 240, 255, 0.25);
-  border: 2px solid var(--laser-cyan);
-  display: flex;
+.btn-explode-toggle {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 10;
-  transition: all 0.3s var(--ease-spring);
-}
-
-.hotspot-pin::after {
-  content: '';
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--laser-cyan);
-  box-shadow: 0 0 8px var(--laser-cyan);
-}
-
-.hotspot-pin:hover {
-  transform: scale(1.3);
-  box-shadow: 0 0 20px var(--laser-cyan);
-}
-
-.hotspot-tooltip {
-  position: absolute;
-  bottom: 28px;
-  left: 50%;
-  transform: translateX(-50%) translateY(10px);
-  background: var(--bg-glass-strong);
-  backdrop-filter: blur(20px);
-  border: 1px solid var(--laser-cyan);
-  border-radius: var(--radius-sm);
-  padding: 8px 14px;
-  min-width: 170px;
-  pointer-events: none;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.25s var(--ease-spring);
-  box-shadow: var(--shadow-md), 0 0 20px rgba(0, 240, 255, 0.3);
-  z-index: 20;
-}
-
-.hotspot-pin:hover .hotspot-tooltip {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(-50%) translateY(0);
-}
-
-.tooltip-title {
-  font-family: var(--font-heading);
-  font-size: 0.82rem;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  background: var(--accent-azure-subtle);
+  border: 1px solid var(--accent-azure-border);
+  color: var(--accent-azure);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
   font-weight: 700;
-  color: var(--laser-cyan);
-  margin-bottom: 2px;
+  transition: all 0.25s ease;
 }
 
-.tooltip-spec {
+.btn-explode-toggle:hover,
+.btn-explode-toggle.active {
+  background: var(--accent-azure);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-azure);
+}
+
+.stage-tip {
   font-family: var(--font-mono);
   font-size: 0.74rem;
-  color: var(--text-secondary);
+  color: var(--text-muted);
 }
 
-/* Pin Positions */
-.pin-stem { top: 18%; left: 48%; }
-.pin-bonnet { top: 38%; left: 52%; }
-.pin-body { top: 62%; left: 50%; }
-.pin-seat { top: 78%; left: 38%; }
-
-/* Live Valve Pressure & Flow Telemetry HUD Slider */
+/* Pipeline Pressure HUD Slider */
 .hud-telemetry-container {
-  margin-top: 24px;
   padding: 16px 20px;
-  background: rgba(7, 9, 14, 0.7);
+  background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .hud-header {
@@ -618,8 +575,8 @@ button {
 .hud-title {
   font-family: var(--font-mono);
   font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--laser-cyan);
+  font-weight: 700;
+  color: var(--accent-azure);
   letter-spacing: 0.08em;
   display: flex;
   align-items: center;
@@ -629,12 +586,8 @@ button {
 .hud-readout {
   font-family: var(--font-mono);
   font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--text-titanium);
-}
-
-.hud-slider-track {
-  width: 100%;
+  font-weight: 800;
+  color: var(--text-primary);
 }
 
 .hud-slider {
@@ -642,7 +595,7 @@ button {
   -webkit-appearance: none;
   height: 6px;
   border-radius: 3px;
-  background: linear-gradient(to right, var(--laser-cyan) 0%, var(--laser-teal) 45%, var(--molten-amber) 100%);
+  background: linear-gradient(to right, var(--accent-azure) 0%, #06b6d4 50%, var(--accent-amber) 100%);
   outline: none;
   cursor: pointer;
 }
@@ -652,9 +605,9 @@ button {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: #ffffff;
-  border: 2px solid var(--laser-cyan);
-  box-shadow: 0 0 12px var(--laser-cyan);
+  background: #FFFFFF;
+  border: 3px solid var(--accent-azure);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: transform 0.2s ease;
 }
@@ -671,11 +624,12 @@ button {
 }
 
 .hud-metric-box {
-  background: rgba(255, 255, 255, 0.03);
+  background: #FFFFFF;
   padding: 8px 10px;
   border-radius: var(--radius-xs);
   border: 1px solid var(--border-subtle);
   text-align: center;
+  box-shadow: var(--shadow-sm);
 }
 
 .metric-label {
@@ -688,15 +642,16 @@ button {
   font-family: var(--font-mono);
   font-size: 0.88rem;
   font-weight: 700;
-  color: var(--laser-cyan);
+  color: var(--accent-azure);
 }
 
 /* ==========================================================================
-   3. The Precision Engineering Bento Grid (ReactBits BentoGrid Pattern)
+   3. Precision Engineering Bento Grid (ReactBits BentoGrid Light)
    ========================================================================== */
 .section-bento {
   padding: 100px 0;
-  position: relative;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .section-header {
@@ -712,13 +667,13 @@ button {
 .section-tag {
   font-family: var(--font-mono);
   font-size: 0.78rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.15em;
-  color: var(--laser-cyan);
+  color: var(--accent-azure);
   text-transform: uppercase;
-  padding: 4px 12px;
-  background: rgba(0, 240, 255, 0.06);
-  border: 1px solid var(--border-glass);
+  padding: 4px 14px;
+  background: var(--accent-azure-subtle);
+  border: 1px solid var(--accent-azure-border);
   border-radius: var(--radius-pill);
 }
 
@@ -727,7 +682,7 @@ button {
   font-size: clamp(2rem, 3.8vw, 3.2rem);
   font-weight: 900;
   line-height: 1.1;
-  color: var(--text-titanium);
+  color: var(--text-primary);
   text-transform: uppercase;
 }
 
@@ -744,36 +699,26 @@ button {
 
 .bento-card {
   background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
+  border: 1px solid var(--border-medium);
   border-radius: var(--radius-lg);
   padding: 32px;
   position: relative;
   overflow: hidden;
   box-shadow: var(--shadow-sm);
-  backdrop-filter: blur(16px);
   transition: all 0.35s var(--ease-spring);
 }
 
 .bento-card:hover {
-  border-color: var(--border-glass);
-  box-shadow: var(--shadow-md), var(--shadow-glow);
+  border-color: var(--accent-azure);
+  box-shadow: var(--shadow-lg), 0 0 24px rgba(2, 132, 199, 0.12);
   transform: translateY(-3px);
-}
-
-.bento-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: radial-gradient(400px circle at var(--mx, 50%) var(--my, 50%), rgba(0, 240, 255, 0.08), transparent 40%);
-  pointer-events: none;
 }
 
 .bento-card-title {
   font-family: var(--font-heading);
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--text-titanium);
+  color: var(--text-primary);
   margin-bottom: 8px;
   display: flex;
   align-items: center;
@@ -787,7 +732,7 @@ button {
 }
 
 /* Bento Box Spans */
-.bento-sim {
+.bento-calc {
   grid-column: span 7;
   grid-row: span 2;
   display: flex;
@@ -795,11 +740,11 @@ button {
   justify-content: space-between;
 }
 
-.bento-matrix {
+.bento-gauges {
   grid-column: span 5;
 }
 
-.bento-gauges {
+.bento-matrix {
   grid-column: span 5;
 }
 
@@ -811,49 +756,46 @@ button {
   grid-column: span 8;
 }
 
-/* Bento Simulation Internal Controls */
-.media-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 18px 0;
+/* Interactive Cv Flow Calculator Elements */
+.calc-controls-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 20px 0;
 }
 
-.media-pill {
-  padding: 6px 14px;
-  border-radius: var(--radius-pill);
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--border-subtle);
+.calc-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.calc-label {
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 0.74rem;
+  font-weight: 700;
   color: var(--text-secondary);
-  cursor: pointer;
-  transition: all 0.25s ease;
 }
 
-.media-pill:hover,
-.media-pill.active {
-  background: rgba(0, 240, 255, 0.12);
-  border-color: var(--laser-cyan);
-  color: var(--laser-cyan);
-}
-
-.sim-display {
+.calc-slider {
   width: 100%;
-  height: 220px;
-  background: #05070a;
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.sim-schematic {
-  width: 85%;
-  height: 85%;
+.calc-result-box {
+  background: var(--bg-surface);
+  border: 1px solid var(--accent-azure-border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calc-cv-value {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--accent-azure);
 }
 
 /* API 598 Test Gauges */
@@ -865,7 +807,7 @@ button {
 }
 
 .gauge-item {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--bg-surface);
   padding: 14px 10px;
   border-radius: var(--radius-sm);
   border: 1px solid var(--border-subtle);
@@ -884,32 +826,32 @@ button {
 }
 
 .gauge-bg {
-  stroke: rgba(255, 255, 255, 0.08);
+  stroke: rgba(15, 23, 42, 0.08);
   stroke-width: 5;
   fill: none;
 }
 
 .gauge-fill {
-  stroke: var(--laser-cyan);
+  stroke: var(--accent-azure);
   stroke-width: 5;
   stroke-linecap: round;
   fill: none;
   stroke-dasharray: 157;
   stroke-dashoffset: 20;
-  transition: stroke-dashoffset 1s ease;
 }
 
 .gauge-pressure {
   font-family: var(--font-mono);
   font-size: 0.96rem;
-  font-weight: 700;
-  color: var(--text-titanium);
+  font-weight: 800;
+  color: var(--text-primary);
 }
 
 .gauge-tag {
   font-family: var(--font-mono);
   font-size: 0.68rem;
-  color: var(--laser-teal);
+  color: var(--accent-emerald);
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -926,7 +868,7 @@ button {
   justify-content: space-between;
   align-items: center;
   padding: 8px 12px;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-xs);
   font-family: var(--font-mono);
@@ -935,7 +877,7 @@ button {
 
 .metal-code {
   font-weight: 700;
-  color: var(--laser-cyan);
+  color: var(--accent-azure);
 }
 
 .metal-use {
@@ -952,7 +894,7 @@ button {
 }
 
 .plant-spec-card {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--bg-surface);
   padding: 16px;
   border-radius: var(--radius-sm);
   border: 1px solid var(--border-subtle);
@@ -962,7 +904,7 @@ button {
   font-family: var(--font-display);
   font-size: 1.4rem;
   font-weight: 800;
-  color: var(--text-titanium);
+  color: var(--text-primary);
 }
 
 .plant-spec-lbl {
@@ -972,10 +914,10 @@ button {
 }
 
 /* ==========================================================================
-   4. 15-Valve Industrial Showcase (ReactBits Tilted Spotlight Cards)
+   4. 15-Valve Industrial Showcase (Light Ceramic Cards)
    ========================================================================== */
 .section-showcase {
-  padding: 80px 0 120px;
+  padding: 100px 0;
   position: relative;
 }
 
@@ -990,32 +932,33 @@ button {
 .filter-chip {
   padding: 10px 20px;
   border-radius: var(--radius-pill);
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
+  background: #FFFFFF;
+  border: 1px solid var(--border-medium);
   font-family: var(--font-heading);
   font-size: 0.86rem;
   font-weight: 600;
   color: var(--text-secondary);
+  box-shadow: var(--shadow-sm);
   transition: all 0.25s var(--ease-spring);
 }
 
 .filter-chip:hover,
 .filter-chip.active {
-  background: rgba(0, 240, 255, 0.1);
-  border-color: var(--laser-cyan);
-  color: var(--laser-cyan);
-  box-shadow: 0 0 16px rgba(0, 240, 255, 0.2);
+  background: var(--accent-azure);
+  color: #FFFFFF;
+  border-color: var(--accent-azure);
+  box-shadow: var(--shadow-azure);
 }
 
 .showcase-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
   gap: 28px;
 }
 
 .product-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
+  background: #FFFFFF;
+  border: 1px solid var(--border-medium);
   border-radius: var(--radius-md);
   padding: 24px;
   position: relative;
@@ -1024,23 +967,13 @@ button {
   flex-direction: column;
   justify-content: space-between;
   box-shadow: var(--shadow-sm);
-  backdrop-filter: blur(16px);
   transition: transform 0.3s var(--ease-spring), border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product-card:hover {
   transform: translateY(-5px);
-  border-color: var(--border-glass);
-  box-shadow: var(--shadow-md), var(--shadow-glow);
-}
-
-.product-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: radial-gradient(450px circle at var(--mx, 50%) var(--my, 50%), rgba(0, 240, 255, 0.12), transparent 40%);
-  pointer-events: none;
+  border-color: var(--accent-azure-border);
+  box-shadow: var(--shadow-lg), 0 0 24px rgba(2, 132, 199, 0.15);
 }
 
 .card-top-header {
@@ -1053,8 +986,8 @@ button {
 .category-badge {
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  font-weight: 600;
-  color: var(--laser-teal);
+  font-weight: 700;
+  color: var(--accent-azure);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -1063,9 +996,9 @@ button {
   font-family: var(--font-mono);
   font-size: 0.72rem;
   font-weight: 700;
-  color: var(--laser-cyan);
-  background: rgba(0, 240, 255, 0.08);
-  border: 1px solid var(--border-glass);
+  color: var(--accent-cobalt);
+  background: var(--accent-cobalt-subtle);
+  border: 1px solid rgba(30, 64, 175, 0.15);
   padding: 2px 8px;
   border-radius: var(--radius-xs);
 }
@@ -1077,24 +1010,14 @@ button {
   align-items: center;
   justify-content: center;
   margin-bottom: 16px;
-  position: relative;
-}
-
-.card-img-wrap::before {
-  content: '';
-  position: absolute;
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(0, 240, 255, 0.08) 0%, transparent 70%);
-  pointer-events: none;
+  background: radial-gradient(circle at 50% 50%, #FFFFFF 0%, #F8FAFC 80%);
+  border-radius: var(--radius-sm);
 }
 
 .card-valve-img {
   max-height: 90%;
   max-width: 90%;
   object-fit: contain;
-  filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.7));
   transition: transform 0.4s var(--ease-spring);
 }
 
@@ -1112,7 +1035,7 @@ button {
   font-family: var(--font-heading);
   font-size: 1.18rem;
   font-weight: 700;
-  color: var(--text-titanium);
+  color: var(--text-primary);
   line-height: 1.25;
 }
 
@@ -1137,10 +1060,10 @@ button {
   font-family: var(--font-mono);
   font-size: 0.72rem;
   padding: 3px 8px;
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-xs);
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 .card-actions-row {
@@ -1155,50 +1078,53 @@ button {
   align-items: center;
   justify-content: center;
   gap: 6px;
-  padding: 9px 12px;
-  background: rgba(0, 240, 255, 0.08);
-  border: 1px solid var(--border-glass);
+  padding: 10px 14px;
+  background: var(--accent-azure-subtle);
+  border: 1px solid var(--accent-azure-border);
   border-radius: var(--radius-sm);
   font-family: var(--font-heading);
   font-size: 0.82rem;
-  font-weight: 600;
-  color: var(--laser-cyan);
+  font-weight: 700;
+  color: var(--accent-azure);
   transition: all 0.25s ease;
 }
 
 .btn-card-matrix:hover {
-  background: var(--laser-cyan);
-  color: #07090e;
-  box-shadow: 0 0 14px rgba(0, 240, 255, 0.4);
+  background: var(--accent-azure);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-azure);
 }
 
 .btn-card-rfq {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 9px 14px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--border-subtle);
+  padding: 10px 16px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
   border-radius: var(--radius-sm);
-  color: var(--text-titanium);
+  color: var(--text-primary);
   font-family: var(--font-heading);
   font-size: 0.82rem;
-  font-weight: 600;
+  font-weight: 700;
   transition: all 0.25s ease;
 }
 
 .btn-card-rfq:hover {
-  background: rgba(0, 229, 153, 0.15);
-  border-color: var(--laser-teal);
-  color: var(--laser-teal);
+  background: #FFFFFF;
+  border-color: var(--accent-azure);
+  color: var(--accent-azure);
+  box-shadow: var(--shadow-sm);
 }
 
 /* ==========================================================================
-   5. CAD Dimensional Matrix Workbench 2.0 (Split-Screen Interactive CAD)
+   5. CAD Dimensional Matrix Workbench 2.0 (Split-Screen Light CAD)
    ========================================================================== */
 .section-workbench {
   padding: 100px 0;
-  background: linear-gradient(180deg, var(--bg-deep) 0%, #090d15 100%);
+  background: #FFFFFF;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
   position: relative;
 }
 
@@ -1207,24 +1133,21 @@ button {
   grid-template-columns: 44% 56%;
   gap: 28px;
   background: var(--bg-surface);
-  border: 1px solid var(--border-glass);
+  border: 1px solid var(--border-medium);
   border-radius: var(--radius-lg);
   padding: 32px;
-  box-shadow: var(--shadow-lg), var(--shadow-glow);
+  box-shadow: var(--shadow-lg), var(--shadow-float);
   position: relative;
-  overflow: hidden;
 }
 
-/* CAD Schematic Left Viewport */
 .cad-viewport {
-  background: #05070a;
+  background: #FFFFFF;
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   padding: 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: relative;
 }
 
 .cad-header {
@@ -1239,7 +1162,7 @@ button {
   font-family: var(--font-mono);
   font-size: 0.88rem;
   font-weight: 700;
-  color: var(--laser-cyan);
+  color: var(--accent-azure);
   letter-spacing: 0.06em;
 }
 
@@ -1249,7 +1172,6 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
 
 .cad-svg-schematic {
@@ -1266,7 +1188,7 @@ button {
 }
 
 .cad-stat-box {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--bg-surface);
   padding: 8px 6px;
   border-radius: var(--radius-xs);
   text-align: center;
@@ -1281,8 +1203,8 @@ button {
 .stat-val {
   font-family: var(--font-mono);
   font-size: 0.88rem;
-  font-weight: 700;
-  color: var(--laser-cyan);
+  font-weight: 800;
+  color: var(--accent-azure);
 }
 
 /* Matrix Table Right Workbench */
@@ -1308,31 +1230,33 @@ button {
 .class-tab-btn {
   padding: 6px 14px;
   border-radius: var(--radius-pill);
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--border-subtle);
+  background: #FFFFFF;
+  border: 1px solid var(--border-medium);
   font-family: var(--font-mono);
   font-size: 0.78rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text-secondary);
+  box-shadow: var(--shadow-sm);
   transition: all 0.2s ease;
 }
 
 .class-tab-btn:hover,
 .class-tab-btn.active {
-  background: var(--laser-cyan);
-  color: #07090e;
-  border-color: var(--laser-cyan);
-  box-shadow: 0 0 12px rgba(0, 240, 255, 0.4);
+  background: var(--accent-azure);
+  color: #FFFFFF;
+  border-color: var(--accent-azure);
+  box-shadow: var(--shadow-azure);
 }
 
 .unit-toggle-wrap {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.03);
+  background: #FFFFFF;
   padding: 4px 8px;
   border-radius: var(--radius-pill);
-  border: 1px solid var(--border-subtle);
+  border: 1px solid var(--border-medium);
+  box-shadow: var(--shadow-sm);
 }
 
 .unit-btn {
@@ -1345,17 +1269,17 @@ button {
 }
 
 .unit-btn.active {
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--laser-cyan);
+  background: var(--accent-azure);
+  color: #FFFFFF;
 }
 
-/* Table Container */
 .matrix-table-wrap {
   overflow-x: auto;
   max-height: 420px;
-  border: 1px solid var(--border-subtle);
+  border: 1px solid var(--border-medium);
   border-radius: var(--radius-md);
-  background: #080c14;
+  background: #FFFFFF;
+  box-shadow: var(--shadow-sm);
 }
 
 .matrix-table {
@@ -1367,12 +1291,11 @@ button {
 }
 
 .matrix-table th {
-  background: #0f1522;
-  color: var(--laser-cyan);
+  background: var(--bg-surface);
+  color: var(--text-primary);
   padding: 12px 14px;
   font-weight: 700;
-  letter-spacing: 0.05em;
-  border-bottom: 1px solid var(--border-glass);
+  border-bottom: 1px solid var(--border-medium);
   position: sticky;
   top: 0;
   z-index: 2;
@@ -1386,46 +1309,47 @@ button {
 
 .matrix-table td {
   padding: 11px 14px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid var(--border-subtle);
   color: var(--text-primary);
   transition: background 0.15s ease;
 }
 
 .matrix-table tr:hover {
-  background: rgba(0, 240, 255, 0.06);
+  background: var(--accent-azure-subtle);
   cursor: pointer;
 }
 
 .matrix-table tr.selected {
-  background: rgba(0, 240, 255, 0.14);
-  border-left: 3px solid var(--laser-cyan);
+  background: rgba(2, 132, 199, 0.12);
+  border-left: 3px solid var(--accent-azure);
 }
 
 /* ==========================================================================
-   6. AI Valve Selection Copilot 2.0 (Terminal Dock)
+   6. AI Valve Selection Copilot (Light Studio Terminal)
    ========================================================================== */
 .section-copilot {
   padding: 80px 0 100px;
-  position: relative;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .copilot-terminal {
   max-width: 980px;
   margin: 0 auto;
-  background: var(--bg-surface);
-  border: 1px solid var(--border-glass);
+  background: #FFFFFF;
+  border: 1px solid var(--border-medium);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-lg), var(--shadow-glow);
+  box-shadow: var(--shadow-lg), var(--shadow-float);
 }
 
 .terminal-header {
-  background: #0a0e17;
+  background: var(--bg-surface);
   padding: 14px 22px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-medium);
 }
 
 .terminal-controls {
@@ -1447,7 +1371,7 @@ button {
   font-family: var(--font-mono);
   font-size: 0.8rem;
   font-weight: 700;
-  color: var(--laser-cyan);
+  color: var(--accent-azure);
   letter-spacing: 0.08em;
 }
 
@@ -1461,6 +1385,7 @@ button {
 .prompt-chips-label {
   font-family: var(--font-mono);
   font-size: 0.74rem;
+  font-weight: 700;
   color: var(--text-muted);
   text-transform: uppercase;
 }
@@ -1474,62 +1399,65 @@ button {
 .copilot-chip {
   padding: 8px 14px;
   border-radius: var(--radius-pill);
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
   font-family: var(--font-mono);
   font-size: 0.78rem;
+  font-weight: 600;
   color: var(--text-secondary);
   transition: all 0.25s ease;
 }
 
 .copilot-chip:hover {
-  background: rgba(0, 240, 255, 0.1);
-  border-color: var(--laser-cyan);
-  color: var(--laser-cyan);
+  background: var(--accent-azure-subtle);
+  border-color: var(--accent-azure);
+  color: var(--accent-azure);
 }
 
 .copilot-input-wrap {
   display: flex;
   gap: 12px;
-  position: relative;
 }
 
 .copilot-input {
   flex: 1;
-  background: #07090e;
-  border: 1px solid var(--border-glass);
+  background: #FFFFFF;
+  border: 1px solid var(--border-medium);
   border-radius: var(--radius-pill);
   padding: 14px 24px;
   font-family: var(--font-mono);
   font-size: 0.92rem;
-  color: var(--text-titanium);
+  color: var(--text-primary);
   outline: none;
+  box-shadow: var(--shadow-sm);
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .copilot-input:focus {
-  border-color: var(--laser-cyan);
-  box-shadow: 0 0 16px rgba(0, 240, 255, 0.3);
+  border-color: var(--accent-azure);
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
 }
 
 .btn-copilot-send {
   padding: 14px 28px;
   border-radius: var(--radius-pill);
-  background: linear-gradient(135deg, var(--laser-cyan) 0%, #0099cc 100%);
-  color: #07090e;
+  background: linear-gradient(135deg, var(--accent-azure) 0%, var(--accent-cobalt) 100%);
+  color: #FFFFFF;
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 0.92rem;
+  box-shadow: var(--shadow-azure);
   transition: all 0.25s ease;
 }
 
 .btn-copilot-send:hover {
-  box-shadow: 0 0 20px rgba(0, 240, 255, 0.5);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(2, 132, 199, 0.4);
 }
 
 .copilot-result-box {
-  background: #06090f;
-  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+  border: 1px solid var(--accent-azure-border);
   border-radius: var(--radius-md);
   padding: 20px;
   display: none;
@@ -1542,12 +1470,12 @@ button {
 }
 
 /* ==========================================================================
-   7. Slide-Over RFQ Cart Requisition Drawer
+   7. Slide-Over RFQ Requisition Cart Drawer (Light Mode)
    ========================================================================== */
 .rfq-drawer-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(15, 23, 42, 0.4);
   backdrop-filter: blur(8px);
   z-index: 2000;
   opacity: 0;
@@ -1565,11 +1493,11 @@ button {
   top: 0;
   right: 0;
   width: 100%;
-  max-width: 460px;
+  max-width: 480px;
   height: 100vh;
-  background: var(--bg-surface);
-  border-left: 1px solid var(--border-glass);
-  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.8);
+  background: #FFFFFF;
+  border-left: 1px solid var(--border-medium);
+  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.15);
   z-index: 2001;
   transform: translateX(100%);
   transition: transform 0.4s var(--ease-spring);
@@ -1594,7 +1522,7 @@ button {
   font-family: var(--font-heading);
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--text-titanium);
+  color: var(--text-primary);
 }
 
 .drawer-close-btn {
@@ -1605,7 +1533,7 @@ button {
 }
 
 .drawer-close-btn:hover {
-  color: var(--laser-cyan);
+  color: var(--accent-azure);
 }
 
 .drawer-items {
@@ -1618,7 +1546,7 @@ button {
 }
 
 .drawer-item {
-  background: var(--bg-card);
+  background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   padding: 16px;
@@ -1630,7 +1558,7 @@ button {
 .drawer-footer {
   padding: 24px;
   border-top: 1px solid var(--border-subtle);
-  background: #090d16;
+  background: var(--bg-surface);
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -1641,69 +1569,66 @@ button {
   padding: 14px;
   border-radius: var(--radius-pill);
   background: #25D366;
-  color: #07090e;
+  color: #FFFFFF;
   font-family: var(--font-heading);
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  box-shadow: 0 0 20px rgba(37, 211, 102, 0.35);
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
   transition: all 0.25s ease;
 }
 
 .btn-drawer-whatsapp:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 30px rgba(37, 211, 102, 0.55);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5);
 }
 
 /* ==========================================================================
-   8. Standards Ticker Marquee & Technical Footer
+   8. Client & Supplier ERP Gateway Banner
    ========================================================================== */
-.section-marquee {
-  padding: 30px 0;
-  background: #05070a;
+.erp-gateway-strip {
+  padding: 40px 0;
+  background: var(--bg-surface);
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
-  overflow: hidden;
-  position: relative;
 }
 
-.marquee-track {
+.erp-gateway-box {
+  background: #FFFFFF;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 24px 32px;
   display: flex;
-  gap: 48px;
-  width: max-content;
-  animation: marquee 25s linear infinite;
-}
-
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-.marquee-item {
-  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 12px;
-  font-family: var(--font-mono);
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: var(--text-secondary);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  box-shadow: var(--shadow-sm);
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.marquee-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--laser-cyan);
+.erp-gateway-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.erp-gateway-title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.erp-gateway-sub {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
 }
 
 /* Technical Footer */
 .site-footer {
-  background: #040608;
-  border-top: 1px solid var(--border-subtle);
+  background: #FFFFFF;
   padding: 80px 0 40px;
   position: relative;
 }
@@ -1719,7 +1644,7 @@ button {
   font-family: var(--font-heading);
   font-size: 0.96rem;
   font-weight: 700;
-  color: var(--text-titanium);
+  color: var(--text-primary);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 18px;
@@ -1739,7 +1664,7 @@ button {
 }
 
 .footer-link:hover {
-  color: var(--laser-cyan);
+  color: var(--accent-azure);
 }
 
 .footer-bottom {
@@ -1748,7 +1673,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   color: var(--text-muted);
 }
 
@@ -1757,11 +1682,9 @@ button {
    ========================================================================== */
 @media (max-width: 1200px) {
   .hero-grid { grid-template-columns: 1fr; }
-  .bento-sim { grid-column: span 12; }
-  .bento-matrix { grid-column: span 6; }
-  .bento-gauges { grid-column: span 6; }
-  .bento-metallurgy { grid-column: span 12; }
-  .bento-plant { grid-column: span 12; }
+  .bento-calc { grid-column: span 12; }
+  .bento-gauges, .bento-matrix { grid-column: span 6; }
+  .bento-metallurgy, .bento-plant { grid-column: span 12; }
   .workbench-container { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
@@ -1769,7 +1692,7 @@ button {
 @media (max-width: 768px) {
   .dock-nav { display: none; }
   .hero-title { font-size: 2.4rem; }
-  .bento-matrix, .bento-gauges { grid-column: span 12; }
+  .bento-gauges, .bento-matrix { grid-column: span 12; }
   .plant-telemetry-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
 }

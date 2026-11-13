@@ -1,13 +1,13 @@
 /**
  * Jasvi Industries - UserView Showcase Main Controller
- * "Obsidian CAD & Precision Flow Dynamics"
- * MotionSites.ai x ReactBits.dev High-Precision Physics & Telemetry Engine
+ * "Architectural Precision & Studio Flow Engineering" (Pure Light Mode)
+ * Three.js WebGL 3D Studio x ReactBits Physics x Cv Hydraulic Calculator
  */
 
 (function () {
   'use strict';
 
-  // Global State
+  // Global Application State
   let showcaseData = null;
   let activeCategory = 'all';
   let activeValveId = 'prod-ball-valve';
@@ -16,121 +16,346 @@
   let rfqCart = JSON.parse(localStorage.getItem('jasvi_rfq_cart') || '[]');
 
   /* ==========================================================================
-     1. Canvas Flow Dynamics Simulator (60fps GPU Fluid Particle Stream)
+     1. Three.js Interactive 3D WebGL Valve CAD Stage (Studio Light Rendering)
      ========================================================================== */
-  class CanvasFlowSimulator {
-    constructor(canvasId) {
-      this.canvas = document.getElementById(canvasId);
-      if (!this.canvas) return;
-      this.ctx = this.canvas.getContext('2d');
-      this.particles = [];
-      this.particleCount = 110;
-      this.speedMultiplier = 1.0;
-      this.flowHue = 185; // Laser cyan base
+  class ThreeJsValveStage {
+    constructor(containerId) {
+      this.container = document.getElementById(containerId);
+      if (!this.container || typeof THREE === 'undefined') return;
+
+      this.scene = null;
+      this.camera = null;
+      this.renderer = null;
+      this.controls = null;
+      this.isExploded = false;
+
+      // Component Groups for Exploded View Kinematics
+      this.groupBody = new THREE.Group();
+      this.groupBonnet = new THREE.Group();
+      this.groupStem = new THREE.Group();
+      this.groupSeats = new THREE.Group();
+      this.groupWedge = new THREE.Group();
+
       this.init();
     }
 
     init() {
-      this.resize();
-      window.addEventListener('resize', () => this.resize());
-      for (let i = 0; i < this.particleCount; i++) {
-        this.particles.push(this.createParticle());
+      const width = this.container.clientWidth;
+      const height = this.container.clientHeight;
+
+      // 1. Scene
+      this.scene = new THREE.Scene();
+
+      // 2. Camera
+      this.camera = new THREE.PerspectiveCamera(40, width / height, 0.1, 1000);
+      this.camera.position.set(3.5, 2.5, 4.5);
+
+      // 3. Renderer with Physical Studio Lighting
+      this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+      this.renderer.setSize(width, height);
+      this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      this.renderer.shadowMap.enabled = true;
+      this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+      this.container.appendChild(this.renderer.domElement);
+
+      // 4. Orbit Controls (360° Drag & Scroll Zoom)
+      if (typeof THREE.OrbitControls !== 'undefined') {
+        this.controls = new THREE.OrbitControls(this.camera, this.renderer.domElement);
+        this.controls.enableDamping = true;
+        this.controls.dampingFactor = 0.05;
+        this.controls.maxDistance = 8;
+        this.controls.minDistance = 2;
+        this.controls.target.set(0, 0.4, 0);
       }
+
+      // 5. Studio Three-Point Lighting
+      const ambientLight = new THREE.AmbientLight(0xFFFFFF, 1.4);
+      this.scene.add(ambientLight);
+
+      const keyLight = new THREE.DirectionalLight(0xFFFFFF, 1.6);
+      keyLight.position.set(5, 8, 5);
+      keyLight.castShadow = true;
+      this.scene.add(keyLight);
+
+      const fillLight = new THREE.DirectionalLight(0x0284C7, 0.9);
+      fillLight.position.set(-5, 3, -5);
+      this.scene.add(fillLight);
+
+      const rimLight = new THREE.DirectionalLight(0xFFFFFF, 1.1);
+      rimLight.position.set(0, -4, 4);
+      this.scene.add(rimLight);
+
+      // 6. Build Procedural Industrial Valve Geometry
+      this.buildValveMesh();
+
+      // 7. Resize Listener
+      window.addEventListener('resize', () => this.onResize());
+
+      // 8. Animation Loop
       this.animate();
     }
 
-    resize() {
-      this.width = this.canvas.width = this.canvas.offsetWidth;
-      this.height = this.canvas.height = this.canvas.offsetHeight;
+    buildValveMesh() {
+      // Materials
+      const castBodyMat = new THREE.MeshStandardMaterial({
+        color: 0x1E40AF, // Cobalt industrial powder coat
+        metalness: 0.7,
+        roughness: 0.35
+      });
+
+      const machinedFlangeMat = new THREE.MeshStandardMaterial({
+        color: 0xE2E8F0, // Mirror machined steel
+        metalness: 0.9,
+        roughness: 0.15
+      });
+
+      const chromeStemMat = new THREE.MeshStandardMaterial({
+        color: 0xFFFFFF, // Chrome trim
+        metalness: 0.95,
+        roughness: 0.08
+      });
+
+      const stelliteSeatMat = new THREE.MeshStandardMaterial({
+        color: 0xD97706, // Stellite gold hard-face
+        metalness: 0.85,
+        roughness: 0.2
+      });
+
+      const handwheelMat = new THREE.MeshStandardMaterial({
+        color: 0x0284C7, // Azure
+        metalness: 0.5,
+        roughness: 0.4
+      });
+
+      // A. Valve Body Group
+      // Central spherical/cylindrical body
+      const bodySphere = new THREE.Mesh(new THREE.SphereGeometry(0.85, 32, 24), castBodyMat);
+      bodySphere.scale.set(1.1, 0.9, 0.9);
+      this.groupBody.add(bodySphere);
+
+      // Horizontal flow tube
+      const flowTube = new THREE.Mesh(new THREE.CylinderGeometry(0.55, 0.55, 2.2, 32), castBodyMat);
+      flowTube.rotation.z = Math.PI / 2;
+      this.groupBody.add(flowTube);
+
+      // Left Flange
+      const leftFlange = new THREE.Mesh(new THREE.CylinderGeometry(0.95, 0.95, 0.18, 32), machinedFlangeMat);
+      leftFlange.rotation.z = Math.PI / 2;
+      leftFlange.position.x = -1.1;
+      this.groupBody.add(leftFlange);
+
+      // Right Flange
+      const rightFlange = new THREE.Mesh(new THREE.CylinderGeometry(0.95, 0.95, 0.18, 32), machinedFlangeMat);
+      rightFlange.rotation.z = Math.PI / 2;
+      rightFlange.position.x = 1.1;
+      this.groupBody.add(rightFlange);
+
+      // B. Bonnet Group (Moves +Y in exploded view)
+      const bonnetNeck = new THREE.Mesh(new THREE.CylinderGeometry(0.5, 0.65, 0.7, 32), castBodyMat);
+      bonnetNeck.position.y = 0.8;
+      this.groupBonnet.add(bonnetNeck);
+
+      const bonnetFlange = new THREE.Mesh(new THREE.CylinderGeometry(0.75, 0.75, 0.14, 32), machinedFlangeMat);
+      bonnetFlange.position.y = 1.15;
+      this.groupBonnet.add(bonnetFlange);
+
+      // C. Stem & Handwheel Group (Moves +Y in exploded view)
+      const stemRod = new THREE.Mesh(new THREE.CylinderGeometry(0.1, 0.1, 1.4, 24), chromeStemMat);
+      stemRod.position.y = 1.5;
+      this.groupStem.add(stemRod);
+
+      const yokeBracket = new THREE.Mesh(new THREE.BoxGeometry(0.65, 0.4, 0.25), machinedFlangeMat);
+      yokeBracket.position.y = 1.6;
+      this.groupStem.add(yokeBracket);
+
+      const handwheelRim = new THREE.Mesh(new THREE.TorusGeometry(0.85, 0.08, 16, 48), handwheelMat);
+      handwheelRim.rotation.x = Math.PI / 2;
+      handwheelRim.position.y = 2.2;
+      this.groupStem.add(handwheelRim);
+
+      // D. Internal Wedge / Ball
+      const wedgeDisc = new THREE.Mesh(new THREE.CylinderGeometry(0.48, 0.48, 0.22, 32), machinedFlangeMat);
+      wedgeDisc.position.y = 0;
+      this.groupWedge.add(wedgeDisc);
+
+      // E. Internal Stellite Seats
+      const leftSeat = new THREE.Mesh(new THREE.RingGeometry(0.35, 0.52, 32), stelliteSeatMat);
+      leftSeat.rotation.y = Math.PI / 2;
+      leftSeat.position.x = -0.4;
+      this.groupSeats.add(leftSeat);
+
+      const rightSeat = new THREE.Mesh(new THREE.RingGeometry(0.35, 0.52, 32), stelliteSeatMat);
+      rightSeat.rotation.y = Math.PI / 2;
+      rightSeat.position.x = 0.4;
+      this.groupSeats.add(rightSeat);
+
+      // Add all sub-groups to scene
+      this.scene.add(this.groupBody);
+      this.scene.add(this.groupBonnet);
+      this.scene.add(this.groupStem);
+      this.scene.add(this.groupWedge);
+      this.scene.add(this.groupSeats);
     }
 
-    createParticle() {
-      return {
-        x: Math.random() * (this.width || 800),
-        y: Math.random() * (this.height || 600),
-        size: Math.random() * 2.2 + 0.8,
-        speedX: (Math.random() * 2.5 + 1.2),
-        speedY: (Math.random() - 0.5) * 0.8,
-        opacity: Math.random() * 0.6 + 0.2,
-        length: Math.random() * 24 + 8
-      };
-    }
-
-    setPressure(psi) {
-      this.speedMultiplier = 0.5 + (psi / 2500) * 2.5;
-      if (psi > 1800) {
-        this.flowHue = 35; // Molten amber
-      } else if (psi > 900) {
-        this.flowHue = 160; // Teal
-      } else {
-        this.flowHue = 185; // Cyan
+    toggleExplode() {
+      this.isExploded = !this.isExploded;
+      const btn = document.getElementById('btn-explode-toggle');
+      if (btn) {
+        btn.classList.toggle('active', this.isExploded);
+        btn.innerHTML = this.isExploded ? 
+          '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 14h6m-6 0v6m16-6h-6m6 0v6M10 4H4m0 0v6m10-6h6m0 0v6"/></svg> Assembled View' : 
+          '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h6m0 0v6m-6-6L3 21m0 0h6m-6 0v-6"/></svg> 3D Exploded View';
       }
+    }
+
+    onResize() {
+      if (!this.container || !this.renderer || !this.camera) return;
+      const width = this.container.clientWidth;
+      const height = this.container.clientHeight;
+      this.camera.aspect = width / height;
+      this.camera.updateProjectionMatrix();
+      this.renderer.setSize(width, height);
     }
 
     animate() {
-      if (!this.ctx) return;
-      this.ctx.clearRect(0, 0, this.width, this.height);
+      requestAnimationFrame(() => this.animate());
 
-      this.ctx.lineWidth = 1.2;
-      for (let p of this.particles) {
-        p.x += p.speedX * this.speedMultiplier;
-        p.y += p.speedY * this.speedMultiplier;
+      // Exploded Kinematics Smooth Spring Interpolation
+      const targetBonnetY = this.isExploded ? 0.7 : 0;
+      const targetStemY = this.isExploded ? 1.4 : 0;
+      const targetWedgeY = this.isExploded ? 0.4 : 0;
+      const targetSeatsX = this.isExploded ? 0.6 : 0;
 
-        if (p.x > this.width + 50) p.x = -50;
-        if (p.y > this.height + 20) p.y = -20;
-        if (p.y < -20) p.y = this.height + 20;
+      this.groupBonnet.position.y += (targetBonnetY - this.groupBonnet.position.y) * 0.1;
+      this.groupStem.position.y += (targetStemY - this.groupStem.position.y) * 0.1;
+      this.groupWedge.position.y += (targetWedgeY - this.groupWedge.position.y) * 0.1;
 
-        this.ctx.strokeStyle = `hsla(${this.flowHue}, 100%, 55%, ${p.opacity})`;
-        this.ctx.beginPath();
-        this.ctx.moveTo(p.x, p.y);
-        this.ctx.lineTo(p.x - p.length * this.speedMultiplier, p.y);
-        this.ctx.stroke();
+      // Gentle ambient turntable drift when not dragging
+      if (this.controls && !this.controls.state) {
+        this.scene.rotation.y += 0.003;
       }
 
-      requestAnimationFrame(() => this.animate());
+      if (this.controls) this.controls.update();
+      this.renderer.render(this.scene, this.camera);
     }
   }
 
   /* ==========================================================================
-     2. ReactBits Magnetic Spotlight & 3D Perspective Tilt Physics
+     2. ReactBits DecryptedText Typography Engine
      ========================================================================== */
-  function initSpotlightPhysics() {
-    document.addEventListener('mousemove', (e) => {
-      const cards = document.querySelectorAll('.product-card, .bento-card, .valve-3d-card');
-      cards.forEach((card) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        card.style.setProperty('--mx', `${x}px`);
-        card.style.setProperty('--my', `${y}px`);
+  function initDecryptedText() {
+    const el = document.getElementById('decrypted-hero-title');
+    if (!el) return;
+
+    const originalText = el.getAttribute('data-text') || el.textContent;
+    const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_//ΔΩ*#';
+    let iteration = 0;
+
+    const interval = setInterval(() => {
+      el.textContent = originalText
+        .split('')
+        .map((letter, index) => {
+          if (index < iteration) {
+            return originalText[index];
+          }
+          if (letter === ' ') return ' ';
+          return chars[Math.floor(Math.random() * chars.length)];
+        })
+        .join('');
+
+      if (iteration >= originalText.length) {
+        clearInterval(interval);
+      }
+      iteration += 1 / 2;
+    }, 30);
+  }
+
+  /* ==========================================================================
+     3. ReactBits Floating Dock with Gaussian Proximity Magnification
+     ========================================================================== */
+  function initDockProximityMagnification() {
+    const dock = document.querySelector('.floating-dock');
+    const pills = document.querySelectorAll('.dock-pill, .dock-action-btn');
+    if (!dock || pills.length === 0) return;
+
+    dock.addEventListener('mousemove', (e) => {
+      const mouseX = e.clientX;
+
+      pills.forEach((pill) => {
+        const rect = pill.getBoundingClientRect();
+        const pillCenter = rect.left + rect.width / 2;
+        const dist = Math.abs(mouseX - pillCenter);
+
+        // Gaussian Proximity Curve: Scale = 1.0 + 0.28 * exp(-dist^2 / (2 * 45^2))
+        const sigma = 45;
+        const scale = 1.0 + 0.25 * Math.exp(-Math.pow(dist, 2) / (2 * Math.pow(sigma, 2)));
+        pill.style.transform = `scale(${scale.toFixed(3)})`;
       });
     });
 
-    const heroCard = document.querySelector('.valve-3d-card');
-    if (heroCard) {
-      heroCard.addEventListener('mousemove', (e) => {
-        const rect = heroCard.getBoundingClientRect();
-        const centerX = rect.left + rect.width / 2;
-        const centerY = rect.top + rect.height / 2;
-        const deltaX = (e.clientX - centerX) / (rect.width / 2);
-        const deltaY = (e.clientY - centerY) / (rect.height / 2);
-
-        const rotateX = -deltaY * 10;
-        const rotateY = deltaX * 10;
-
-        heroCard.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+    dock.addEventListener('mouseleave', () => {
+      pills.forEach((pill) => {
+        pill.style.transform = 'scale(1.0)';
       });
-
-      heroCard.addEventListener('mouseleave', () => {
-        heroCard.style.transform = 'perspective(1200px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
-      });
-    }
+    });
   }
 
   /* ==========================================================================
-     3. Telemetry HUD Slider Controller
+     4. Interactive Cv Flow Coefficient & Sizing Calculator
      ========================================================================== */
-  function initHudSlider(flowSimulator) {
+  function initCvCalculator() {
+    const sliderQ = document.getElementById('calc-flow-rate');
+    const sliderDP = document.getElementById('calc-press-drop');
+    const sliderSG = document.getElementById('calc-sg');
+
+    const readoutQ = document.getElementById('calc-val-q');
+    const readoutDP = document.getElementById('calc-val-dp');
+    const readoutSG = document.getElementById('calc-val-sg');
+    const readoutCv = document.getElementById('calc-cv-result');
+    const readoutSize = document.getElementById('calc-rec-size');
+
+    if (!sliderQ || !sliderDP || !sliderSG) return;
+
+    function recalculate() {
+      const Q = parseFloat(sliderQ.value); // GPM
+      const dP = parseFloat(sliderDP.value); // PSI
+      const SG = parseFloat(sliderSG.value); // Specific Gravity
+
+      if (readoutQ) readoutQ.textContent = `${Q} GPM`;
+      if (readoutDP) readoutDP.textContent = `${dP} PSI`;
+      if (readoutSG) readoutSG.textContent = `${SG.toFixed(2)}`;
+
+      // Liquid Cv Formula: Cv = Q * sqrt(SG / dP)
+      const cv = Q * Math.sqrt(SG / dP);
+      if (readoutCv) readoutCv.textContent = Math.round(cv).toLocaleString();
+
+      // Recommend Valve Size based on standard industrial sizing limits
+      let recommended = '2" (DN50) Class 150# Ball';
+      if (cv > 850) {
+        recommended = '8" (DN200) Class 300# Gate / Trunnion';
+      } else if (cv > 420) {
+        recommended = '6" (DN150) Class 150# Ball / Check';
+      } else if (cv > 200) {
+        recommended = '4" (DN100) Class 300# Ball / Globe';
+      } else if (cv > 75) {
+        recommended = '3" (DN80) Class 150# Process Ball';
+      } else if (cv <= 30) {
+        recommended = '1" (DN25) Class 800# Forged Globe';
+      }
+
+      if (readoutSize) readoutSize.textContent = `Recommended: ${recommended}`;
+    }
+
+    sliderQ.addEventListener('input', recalculate);
+    sliderDP.addEventListener('input', recalculate);
+    sliderSG.addEventListener('input', recalculate);
+    recalculate();
+  }
+
+  /* ==========================================================================
+     5. Pipeline Pressure HUD Slider Controller
+     ========================================================================== */
+  function initHudSlider() {
     const slider = document.getElementById('hud-pressure-slider');
     const readout = document.getElementById('hud-pressure-readout');
     const velMetric = document.getElementById('hud-flow-velocity');
@@ -147,15 +372,11 @@
 
       const temp = Math.round(180 + (psi / 2500) * 320);
       if (tempMetric) tempMetric.textContent = `${temp}°C`;
-
-      if (flowSimulator) {
-        flowSimulator.setPressure(psi);
-      }
     });
   }
 
   /* ==========================================================================
-     4. Data Ingestion & Showcase Hydration (15 Industrial Valve Lines)
+     6. Data Ingestion & 15-Valve Catalog Hydration
      ========================================================================== */
   function getProductList() {
     if (!showcaseData) return [];
@@ -224,7 +445,7 @@
             </a>
             <button class="btn-card-rfq" onclick="window.JasviApp.addToCart('${valve.id}', '${name.replace(/'/g, "\'")}')" title="Add to RFQ Requisition Basket">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg>
-              RFQ
+              + RFQ
             </button>
           </div>
         </div>
@@ -245,7 +466,7 @@
   }
 
   /* ==========================================================================
-     5. CAD Dimensional Matrix Workbench 2.0
+     7. CAD Dimensional Matrix Workbench 2.0
      ========================================================================== */
   function initWorkbench() {
     const products = getProductList();
@@ -298,13 +519,13 @@
 
     tbody.innerHTML = dims.map((row, idx) => `
       <tr class="${idx === 0 ? 'selected' : ''}" onclick="window.JasviApp.selectMatrixRow(this, ${JSON.stringify(row).replace(/"/g, '&quot;')})">
-        <td style="font-weight:700; color:var(--laser-cyan);">${row.size_inch} (${row.size_mm} mm)</td>
+        <td style="font-weight:700; color:var(--accent-azure);">${row.size_inch} (${row.size_mm} mm)</td>
         <td>${formatVal(row.L)}</td>
         <td>${formatVal(row.H)}</td>
         <td>${formatVal(row.W)}</td>
         <td>${formatVal(row.D)}</td>
         <td>${row.holes || 4}</td>
-        <td style="font-weight:700; color:var(--laser-teal);">${row.weight_kg ? (activeUnit === 'in' ? (row.weight_kg * 2.20462).toFixed(1) + ' lbs' : row.weight_kg + ' kg') : '-'}</td>
+        <td style="font-weight:700; color:var(--accent-emerald);">${row.weight_kg ? (activeUnit === 'in' ? (row.weight_kg * 2.20462).toFixed(1) + ' lbs' : row.weight_kg + ' kg') : '-'}</td>
       </tr>
     `).join('');
 
@@ -335,7 +556,7 @@
   }
 
   /* ==========================================================================
-     6. Product Detail URL Routing
+     8. Product Detail URL Routing
      ========================================================================== */
   function checkDetailPageRouting() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -359,7 +580,7 @@
   }
 
   /* ==========================================================================
-     7. AI Industrial Valve Selection Copilot 2.0
+     9. AI Industrial Valve Selection Copilot
      ========================================================================== */
   function initCopilot() {
     const input = document.getElementById('copilot-query-input');
@@ -420,10 +641,10 @@
       resultBox.innerHTML = `
         <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px;">
           <div>
-            <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--laser-teal); font-weight:700; margin-bottom:4px;">
+            <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--accent-emerald); font-weight:700; margin-bottom:4px;">
               MATCH VERIFIED (${confidence}% CONFIDENCE)
             </div>
-            <h4 style="font-family:var(--font-heading); font-size:1.15rem; color:var(--text-titanium); font-weight:700;">
+            <h4 style="font-family:var(--font-heading); font-size:1.15rem; color:var(--text-primary); font-weight:700;">
               ${mName}
             </h4>
           </div>
@@ -435,7 +656,7 @@
           ${reason}
         </p>
         <div style="display:flex; gap:8px; font-family:var(--font-mono); font-size:0.74rem;">
-          <span class="spec-tag" style="color:var(--laser-cyan);">${mStd}</span>
+          <span class="spec-tag" style="color:var(--accent-azure);">${mStd}</span>
           <span class="spec-tag">${mBody}</span>
           <span class="spec-tag">${matched.category}</span>
         </div>
@@ -444,7 +665,7 @@
   }
 
   /* ==========================================================================
-     8. Slide-Over RFQ Requisition Basket
+     10. Slide-Over RFQ Requisition Basket
      ========================================================================== */
   function initRfqDrawer() {
     const trigger = document.getElementById('dock-rfq-btn');
@@ -501,7 +722,7 @@
     container.innerHTML = rfqCart.map((item, idx) => `
       <div class="drawer-item">
         <div style="display:flex; justify-content:space-between; align-items:flex-start;">
-          <div style="font-family:var(--font-heading); font-size:0.96rem; font-weight:700; color:var(--text-titanium);">
+          <div style="font-family:var(--font-heading); font-size:0.96rem; font-weight:700; color:var(--text-primary);">
             ${item.name}
           </div>
           <button onclick="window.JasviApp.removeFromCart(${idx})" style="color:var(--text-muted); font-size:1.1rem; line-height:1; cursor:pointer;" title="Remove">
@@ -518,7 +739,7 @@
   }
 
   /* ==========================================================================
-     9. Public API Namespace (window.JasviApp)
+     11. Public API Namespace (window.JasviApp)
      ========================================================================== */
   window.JasviApp = {
     addToCart(id, name) {
@@ -558,12 +779,21 @@
   };
 
   /* ==========================================================================
-     10. DOM Initialization Lifecycle
+     12. DOM Initialization Lifecycle
      ========================================================================== */
   document.addEventListener('DOMContentLoaded', () => {
-    const flowSim = new CanvasFlowSimulator('hero-canvas');
-    initSpotlightPhysics();
-    initHudSlider(flowSim);
+    const valveStage = new ThreeJsValveStage('threejs-viewport');
+    
+    // Toggle Explode View
+    const explodeBtn = document.getElementById('btn-explode-toggle');
+    if (explodeBtn && valveStage) {
+      explodeBtn.addEventListener('click', () => valveStage.toggleExplode());
+    }
+
+    initDecryptedText();
+    initDockProximityMagnification();
+    initCvCalculator();
+    initHudSlider();
     loadShowcaseData();
     initCategoryFilters();
     initCopilot();
