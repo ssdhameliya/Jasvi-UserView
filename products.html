@@ -1,133 +1,457 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Parametric Valve Catalog (15 Lines) | Jasvi Industries</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products Catalog (14 Certified Lines) | DS Industries</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          },
+          colors: {
+            ds: {
+              bg: '#F4F7FB',
+              surface: '#FFFFFF',
+              teal: '#007A8C',
+              cyan: '#0284C7',
+              slate: '#0F172A'
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
+<body class="min-h-screen flex flex-col selection:bg-sky-500/20 selection:text-sky-900">
 
-  <!-- Top Architectural Header -->
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="index.html" class="header-brand">
-        <div class="brand-monogram">DS</div>
-        <div class="brand-text">
-          <span class="brand-title">DS INDUSTRIES</span>
-          <span class="brand-subtitle">HEAVY PROCESS VALVES &bull; AHMEDABAD</span>
+  <!-- Subtle Architectural Ambient Glows -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+    <div class="absolute -top-32 -left-24 w-96 h-96 rounded-full bg-sky-400/10 blur-[120px]"></div>
+    <div class="absolute top-1/3 -right-28 w-[28rem] h-[28rem] rounded-full bg-teal-500/8 blur-[130px]"></div>
+    <div class="absolute bottom-0 left-1/3 w-96 h-96 rounded-full bg-slate-300/25 blur-[130px]"></div>
+  </div>
+
+  <!-- GLOBAL STICKY GLASS NAVBAR -->
+  <header id="global-navbar" class="sticky top-0 z-50 glass-panel border-b border-slate-200/90">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between py-3 md:py-3.5 gap-3">
+        <!-- Top Row: Brand Logo + Mobile Actions -->
+        <div class="flex items-center justify-between gap-4">
+          <a href="index.html" class="flex items-center gap-3 group shrink-0">
+            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700 flex items-center justify-center shadow-md group-hover:border-teal-600 transition">
+              <svg viewBox="0 0 48 48" class="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M26 5C14.954 5 6 13.954 6 25C6 36.046 14.954 45 26 45" stroke="#CBD5E1" stroke-width="2.5" stroke-linecap="round"/>
+                <rect x="11" y="13" width="5" height="22" rx="1.2" fill="#008B9B"/>
+                <rect x="18" y="17" width="5" height="18" rx="1.2" fill="#38BDF8"/>
+                <path d="M27 16H37C38.657 16 40 17.343 40 19V22.5C40 24.157 38.657 25.5 37 25.5H30C28.343 25.5 27 26.843 27 28.5V32C27 33.657 28.343 35 30 35H40" stroke="#38BDF8" stroke-width="3.2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <span class="text-lg sm:text-xl font-extrabold tracking-wider text-slate-900 block leading-none">DS INDUSTRIES</span>
+              <p class="text-[10px] sm:text-[11px] tracking-wide text-teal-700 font-semibold mt-1">Committed With Precision &amp; Performance</p>
+            </div>
+          </a>
+
+          <!-- Mobile Right Actions -->
+          <div class="flex md:hidden items-center gap-2">
+            <div class="flex items-center gap-1" id="mobile-social-icons"></div>
+            <a href="contact.html" class="relative flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-teal-700 text-white text-xs font-semibold shadow-sm transition">
+              <span>Contact Us</span>
+            </a>
+          </div>
         </div>
-      </a>
 
-      <div class="header-facility-status">
-        <span class="status-pulse-dot"></span>
-        <span class="status-text">AHMEDABAD MFG PLANT // OPERATIONAL</span>
-      </div>
+        <!-- Always-Visible Horizontal Menu Bar -->
+        <nav class="flex items-center gap-1 sm:gap-1.5 overflow-x-auto py-1 px-1.5 bg-slate-100/90 rounded-2xl border border-slate-200/90">
+          <a href="index.html" class="nav-link px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap text-slate-700 hover:text-slate-950 transition">Home</a>
+          <a href="products.html" class="nav-link px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap bg-slate-900 text-white shadow-sm transition">Products <span class="ml-1 text-[10px] font-mono px-1.5 py-0.5 rounded-md bg-teal-600/15 text-teal-800 font-bold">14</span></a>
+          <a href="engineering-lab.html" class="nav-link px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap text-slate-700 hover:text-slate-950 transition">Engineering Lab</a>
+          <a href="about.html" class="nav-link px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap text-slate-700 hover:text-slate-950 transition">About Us</a>
+          <a href="contact.html" class="nav-link px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap text-slate-700 hover:text-slate-950 transition">Contact &amp; Feedback</a>
+        </nav>
 
-      <nav class="header-nav">
-        <a href="index.html" class="nav-link">Showcase</a>
-        <a href="products.html" class="nav-link active">15 Valve Lines</a>
-        <a href="index.html#sectors" class="nav-link">Sectors</a>
-        <a href="index.html#sizing-lab" class="nav-link">Cv Sizing Lab</a>
-        <a href="index.html#workbench" class="nav-link">CAD Matrix</a>
-        <a href="index.html#testing" class="nav-link">API 598 Testing</a>
-        <a href="about.html" class="nav-link">Plant Infrastructure</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </nav>
-
-      <div class="header-actions">
-        <a href="tel:+919512690771" class="header-phone-link" title="Direct Engineering Desk">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <span>+91 95126 90771</span>
-        </a>
-        <a href="index.html#rfq-matrix" class="btn-header-rfq">
-          <span>Engineering RFQ</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
+        <!-- Desktop Right Social Icons + Direct Contact Us Button -->
+        <div class="hidden md:flex items-center gap-2.5 shrink-0">
+          <div class="flex items-center gap-1.5 pr-2 border-r border-slate-200" id="header-social-icons"></div>
+          <a href="contact.html" class="relative flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-teal-700 text-white text-xs sm:text-sm font-semibold shadow-md transition">
+            <svg class="w-4 h-4 shrink-0 text-teal-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <span>Contact Us</span>
+          </a>
+        </div>
       </div>
     </div>
   </header>
 
-  <!-- Page Header -->
-  <section style="padding: 120px 0 40px; border-bottom: 1px solid var(--border-subtle); background: var(--bg-surface);">
-    <div class="container">
-      <div class="section-tag" style="margin-bottom: 12px;">// OFFICIAL DS INDUSTRIES CATALOG</div>
-      <h1 class="hero-title" style="font-size: clamp(2.2rem, 4vw, 3.4rem); margin-bottom: 14px;">
-        15 INDUSTRIAL VALVE <span class="gradient-text">PRODUCT LINES</span>
-      </h1>
-      <p class="hero-description" style="font-size: 1.05rem; max-width: 720px;">
-        Manufactured at our Ahmedabad facility to API 6D, API 600, API 602, and ASME B16.34 specifications. Designed for zero-leakage severe service across petroleum, power, and chemical processing.
-      </p>
-    </div>
-  </section>
-
-  <!-- Catalog Section -->
-  <section class="section-showcase" style="padding: 60px 0 90px;">
-    <div class="container">
-      <div class="catalog-filter-bar">
-        <button class="filter-chip active" data-category="all">All Systems (15)</button>
-        <button class="filter-chip" data-category="cast-process">Cast Process Series (3)</button>
-        <button class="filter-chip" data-category="forged-valves">Forged High-Pressure (3)</button>
-        <button class="filter-chip" data-category="check-valves">Check Valves (3)</button>
-        <button class="filter-chip" data-category="butterfly">Triple Offset Butterfly (1)</button>
-        <button class="filter-chip" data-category="slurry-pulp">Knife Edge &amp; Pulp (2)</button>
-        <button class="filter-chip" data-category="filtration">Strainers &amp; Filters (3)</button>
-      </div>
-
-      <div class="showcase-grid" id="showcase-grid">
-        <!-- Ingested dynamically from data/showcase.json -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Technical Clean Footer -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <div class="footer-brand-title">DS INDUSTRIES</div>
-        <p class="footer-brand-desc">
-          Premier Indian flow control and heavy process valve manufacturer. Precision engineering for superheated steam, oil &amp; gas, petrochemical, and severe abrasive slurry service.
-        </p>
-      </div>
-      <div>
-        <h4 class="footer-col-title">VALVE PORTFOLIO</h4>
-        <ul class="footer-links-list">
-          <li><a href="products.html" class="footer-link">Cast Steel Ball Valves</a></li>
-          <li><a href="products.html" class="footer-link">Flexible Wedge Gate Valves</a></li>
-          <li><a href="products.html" class="footer-link">Globe Steam Throttling Valves</a></li>
-          <li><a href="products.html" class="footer-link">Dual Plate &amp; Swing Check</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="footer-col-title">ENGINEERING LAB</h4>
-        <ul class="footer-links-list">
-          <li><a href="index.html#workbench" class="footer-link">ASME B16.5 CAD Matrix</a></li>
-          <li><a href="index.html#sizing-lab" class="footer-link">Cv Flow Sizing Calculator</a></li>
-          <li><a href="index.html#testing" class="footer-link">API 598 Pressure Testing</a></li>
-          <li><a href="about.html" class="footer-link">Ahmedabad Manufacturing Plant</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="footer-col-title">AHMEDABAD FACILITY</h4>
-        <div class="footer-contact-item">
-          <span>H - 52, Darshanvilla Park, Nikol - Naroda, Ahmedabad - 382345 (Gujarat, India)</span>
+  <!-- MAIN VIEWPORT -->
+  <main class="relative z-10 flex-grow">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-12">
+      <!-- Page Title & Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest text-teal-700 font-bold">Complete Engineering Catalog</span>
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-1">Industrial Valves &amp; Filtration Equipment</h1>
+          <p class="text-sm text-slate-600 mt-1">Showing <strong id="product-count" class="text-teal-700 font-mono">14</strong> certified product lines manufactured to API 6D, API 600, API 602, API 598 &amp; ASME B16.34.</p>
         </div>
-        <div class="footer-contact-item">
-          <span>Direct: +91 95126 90771 &bull; Email: dsindustries89@gmail.com</span>
+        <button onclick="resetFilters()" class="self-start md:self-auto px-4 py-2 rounded-xl bg-white hover:bg-slate-100 text-xs font-mono text-slate-700 hover:text-slate-900 border border-slate-300 shadow-sm transition">
+          Reset All Filters
+        </button>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-3 mb-6" id="category-tabs-container">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <!-- Advanced Filter Attributes Bar -->
+      <div class="glass-panel rounded-2xl p-4 sm:p-5 mb-8 border border-slate-200/90 shadow-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
+          <div>
+            <label class="block text-[11px] font-mono text-slate-500 mb-1">Keyword / Standard / Alloy</label>
+            <input type="text" id="cat-search-input" oninput="applyFilters()"
+              placeholder="e.g., API 607, CF8M, Wafer, Inconel..." class="w-full px-3.5 py-2 rounded-xl glass-input text-sm" />
+          </div>
+          <div>
+            <label class="block text-[11px] font-mono text-slate-500 mb-1">Pressure Rating</label>
+            <select id="filter-class" onchange="applyFilters()" class="w-full px-3.5 py-2 rounded-xl glass-input text-sm">
+              <option value="all">All Classes (150# – 2500#)</option>
+              <option value="150#">ASME Class 150#</option>
+              <option value="300#">ASME Class 300#</option>
+              <option value="600#">ASME Class 600#</option>
+              <option value="800#">Class 800# (Forged)</option>
+              <option value="1500#">Class 1500#</option>
+              <option value="2500#">Class 2500#</option>
+              <option value="PN">PN 10 / PN 16 / PN 25</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-[11px] font-mono text-slate-500 mb-1">Body Material</label>
+            <select id="filter-material" onchange="applyFilters()" class="w-full px-3.5 py-2 rounded-xl glass-input text-sm">
+              <option value="all">All Materials</option>
+              <option value="WCB">Cast Carbon Steel (WCB)</option>
+              <option value="CF8">SS 304 (CF8)</option>
+              <option value="CF8M">SS 316 (CF8M)</option>
+              <option value="Forged Steel">Forged Steel (A105 / F316L)</option>
+              <option value="Exotic Alloys">Exotic (Duplex / Inconel / Monel)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-[11px] font-mono text-slate-500 mb-1">End Connection</label>
+            <select id="filter-end" onchange="applyFilters()" class="w-full px-3.5 py-2 rounded-xl glass-input text-sm">
+              <option value="all">All End Connections</option>
+              <option value="Flanged">Flanged (RF / FF / RTJ)</option>
+              <option value="Butt Weld">Butt Weld (BW)</option>
+              <option value="Socket Weld">Socket Weld (SW)</option>
+              <option value="Screwed">Screwed / Threaded (NPT)</option>
+              <option value="Wafer">Wafer / Lugged</option>
+            </select>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="container footer-bottom">
-      <div>&copy; 2026 DS Industries (Jasvi Engineering Ecosystem). All Rights Reserved.</div>
-      <div>Architectural Swiss Light Engineering &bull; Pure Public Showcase</div>
+      <!-- Product Cards Grid -->
+      <div id="products-grid-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </main>
+
+  <!-- FLOATING QUICK-ACTION DOCK -->
+  <div id="floating-dock" class="fixed bottom-5 right-5 z-40 flex flex-col gap-2.5 no-print">
+    <button onclick="openFeedbackModal()" title="Share Quick Feedback" class="group flex items-center gap-2 p-3 rounded-2xl glass-panel border border-teal-300 hover:border-teal-500 text-teal-700 shadow-xl transition">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+      </svg>
+      <span class="hidden sm:inline text-xs font-semibold text-slate-700 group-hover:text-slate-900 pr-1">Feedback</span>
+    </button>
+
+    <a id="floating-whatsapp-btn" href="#" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp" class="group flex items-center gap-2 p-3 rounded-2xl bg-emerald-600 hover:bg-emerald-500 border border-emerald-400 text-white shadow-xl transition">
+      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+      </svg>
+      <span class="hidden sm:inline text-xs font-semibold pr-1">WhatsApp</span>
+    </a>
+  </div>
+
+  <!-- QUICK FEEDBACK MODAL -->
+  <div id="feedback-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-900/60 backdrop-blur-md no-print">
+    <div class="glass-panel rounded-3xl max-w-md w-full p-6 sm:p-7 border border-slate-300 relative shadow-2xl">
+      <button onclick="closeFeedbackModal()" class="absolute top-4 right-4 p-2 rounded-xl bg-slate-100 text-slate-500 hover:text-slate-900 transition">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-800 text-xs font-semibold mb-3">
+        Customer Experience
+      </div>
+      <h3 class="text-xl font-bold text-slate-900">Share Your Feedback</h3>
+      <p class="text-xs text-slate-500 mt-1 mb-5">Rate our technical catalog, valve quality, or engineering support.</p>
+
+      <form onsubmit="handleQuickFeedbackSubmit(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-medium text-slate-700 mb-1.5">Your Rating</label>
+          <div class="flex items-center gap-2">
+            <button type="button" onclick="setModalRating(1)" class="modal-star p-2 rounded-xl bg-slate-100 text-slate-500 border border-slate-300 text-sm font-bold">&#9733; 1</button>
+            <button type="button" onclick="setModalRating(2)" class="modal-star p-2 rounded-xl bg-slate-100 text-slate-500 border border-slate-300 text-sm font-bold">&#9733; 2</button>
+            <button type="button" onclick="setModalRating(3)" class="modal-star p-2 rounded-xl bg-slate-100 text-slate-500 border border-slate-300 text-sm font-bold">&#9733; 3</button>
+            <button type="button" onclick="setModalRating(4)" class="modal-star p-2 rounded-xl bg-slate-100 text-slate-500 border border-slate-300 text-sm font-bold">&#9733; 4</button>
+            <button type="button" onclick="setModalRating(5)" class="modal-star p-2 rounded-xl bg-amber-500/20 text-amber-500 border border-amber-400 text-sm font-bold">&#9733; 5</button>
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-slate-700 mb-1">Your Name / Organization</label>
+          <input type="text" id="modal-fb-name" required placeholder="e.g., Rajesh Patel — Petrochem Engg." class="w-full px-3.5 py-2.5 rounded-xl glass-input text-sm" />
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-slate-700 mb-1">Feedback / Comments</label>
+          <textarea id="modal-fb-msg" rows="3" required placeholder="Tell us about your valve requirements or experience..." class="w-full px-3.5 py-2.5 rounded-xl glass-input text-sm"></textarea>
+        </div>
+        <button type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-teal-700 to-cyan-600 hover:from-teal-600 hover:to-cyan-500 text-white font-semibold text-sm shadow-md transition">
+          Submit Feedback
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast-container" class="fixed top-24 right-5 z-50 flex flex-col gap-2 pointer-events-none no-print"></div>
+
+  <!-- RICH 4-COLUMN GLASSMORPHISM FOOTER -->
+  <footer id="global-footer" class="relative z-10 glass-panel border-t border-slate-200 mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-200">
+        <!-- Column 1: DS INDUSTRIES -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-lg bg-teal-600/10 border border-teal-300 flex items-center justify-center text-teal-800 font-extrabold text-sm">DS</div>
+            <h3 class="text-base font-extrabold tracking-widest text-slate-900 uppercase">DS INDUSTRIES</h3>
+          </div>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Premier Indian flow control and heavy process valve manufacturer. Precision engineering for superheated steam, oil &amp; gas, petrochemical, and severe abrasive slurry service.
+          </p>
+          <div class="pt-1">
+            <span class="block text-[11px] font-mono uppercase tracking-wider text-slate-500 mb-2.5">Connect With Us</span>
+            <div class="flex items-center gap-2.5" id="footer-social-icons"></div>
+          </div>
+        </div>
+
+        <!-- Column 2: VALVE PORTFOLIO -->
+        <div>
+          <h4 class="text-xs font-extrabold tracking-widest text-slate-900 uppercase mb-4">VALVE PORTFOLIO</h4>
+          <ul class="space-y-2.5 text-sm text-slate-600">
+            <li><a href="product-detail.html?slug=ball-valves" class="hover:text-teal-700 transition flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-600"></span>Cast Steel Ball Valves</a></li>
+            <li><a href="product-detail.html?slug=gate-valves" class="hover:text-teal-700 transition flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-600"></span>Flexible Wedge Gate Valves</a></li>
+            <li><a href="product-detail.html?slug=globe-valves" class="hover:text-teal-700 transition flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-600"></span>Globe Steam Throttling Valves</a></li>
+            <li><a href="products.html?category=check" class="hover:text-teal-700 transition flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-600"></span>Dual Plate &amp; Swing Check</a></li>
+            <li><a href="products.html?category=slurry" class="hover:text-teal-700 transition flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-600"></span>Knife Edge &amp; Pulp Valves</a></li>
+            <li><a href="products.html?category=forged" class="hover:text-teal-700 transition flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-600"></span>Forged Valves &amp; Strainers</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: ENGINEERING LAB -->
+        <div>
+          <h4 class="text-xs font-extrabold tracking-widest text-slate-900 uppercase mb-4">ENGINEERING LAB</h4>
+          <ul class="space-y-2.5 text-sm text-slate-600">
+            <li><a href="engineering-lab.html#cad-matrix" class="hover:text-teal-700 transition flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-600"></span>ASME B16.5 CAD Matrix</a></li>
+            <li><a href="engineering-lab.html#sizing-lab" class="hover:text-teal-700 transition flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-600"></span>Cv Flow Sizing Calculator</a></li>
+            <li><a href="engineering-lab.html#testing" class="hover:text-teal-700 transition flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-600"></span>API 598 Pressure Testing</a></li>
+            <li><a href="about.html" class="hover:text-teal-700 transition flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-600"></span>Ahmedabad Manufacturing Plant</a></li>
+            <li><a href="contact.html?tab=feedback" class="hover:text-teal-700 transition flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-600"></span>Client Feedback Portal</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: AHMEDABAD FACILITY -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-extrabold tracking-widest text-slate-900 uppercase mb-4">AHMEDABAD FACILITY</h4>
+          <a id="footer-map-link" href="#" target="_blank" rel="noopener noreferrer" class="block text-sm text-slate-700 hover:text-teal-700 transition leading-relaxed group">
+            <span class="inline-flex items-start gap-2">
+              <svg class="w-4 h-4 text-teal-700 shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span id="footer-address-text"></span>
+            </span>
+            <span class="block text-xs text-teal-700 font-semibold mt-1 ml-6 group-hover:underline">Open in Google Maps &rarr;</span>
+          </a>
+
+          <div class="pt-1 text-sm text-slate-600 space-y-1.5">
+            <p>
+              <span class="text-slate-500">Direct:</span>
+              <a id="footer-phone-link" href="#" class="text-slate-900 hover:text-teal-700 font-mono font-semibold transition"></a>
+            </p>
+            <p>
+              <span class="text-slate-500">Email:</span>
+              <a id="footer-email-link" href="#" class="text-slate-900 hover:text-teal-700 transition"></a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright Strip -->
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-500">
+        <p>&copy; 2026 DS Industries. All Rights Reserved.</p>
+        <p class="text-slate-600">Industrial &amp; High Pressure Valve Solutions &bull; <a href="index.html" class="text-teal-700 hover:underline">www.dsindustries.com</a></p>
+      </div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/catalog-data.js"></script>
+  <script>
+    let activeCategory = 'all';
+
+    function renderCategoryTabs() {
+      const container = document.getElementById('category-tabs-container');
+      if (!container) return;
+      container.innerHTML = CATALOG_DATA.categories.map(cat => `
+        <button onclick="setCategoryFilter('${cat.id}')"
+          class="cat-tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition border ${
+            activeCategory === cat.id
+              ? 'bg-gradient-to-r from-teal-700 to-cyan-600 text-white border-teal-500 shadow-md'
+              : 'glass-panel text-slate-700 hover:text-slate-950 border-slate-300'
+          }">
+          ${cat.name}
+        </button>
+      `).join('');
+    }
+
+    function setCategoryFilter(catId) {
+      activeCategory = catId;
+      renderCategoryTabs();
+      applyFilters();
+    }
+
+    function applyFilters() {
+      const q = (document.getElementById('cat-search-input')?.value || '').trim().toLowerCase();
+      const pClass = document.getElementById('filter-class')?.value || 'all';
+      const mat = document.getElementById('filter-material')?.value || 'all';
+      const end = document.getElementById('filter-end')?.value || 'all';
+
+      const filtered = CATALOG_DATA.products.filter(p => {
+        const matchCat = activeCategory === 'all' || p.category === activeCategory;
+        const matchClass = pClass === 'all' || p.pressureClasses.some(c => c.toLowerCase().includes(pClass.toLowerCase()));
+        const matchMat = mat === 'all' || p.materials.some(m => m.toLowerCase().includes(mat.toLowerCase()));
+        const matchEnd = end === 'all' || p.endConnections.some(e => e.toLowerCase().includes(end.toLowerCase()));
+        const matchSearch = !q ||
+          p.name.toLowerCase().includes(q) ||
+          p.subtitle.toLowerCase().includes(q) ||
+          p.standardsBadge.toLowerCase().includes(q) ||
+          p.materials.join(' ').toLowerCase().includes(q) ||
+          p.summary.toLowerCase().includes(q);
+
+        return matchCat && matchClass && matchMat && matchEnd && matchSearch;
+      });
+
+      const countEl = document.getElementById('product-count');
+      if (countEl) countEl.textContent = filtered.length;
+
+      const grid = document.getElementById('products-grid-container');
+      if (!grid) return;
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full glass-panel rounded-3xl p-12 text-center">
+            <h3 class="text-xl font-bold text-slate-800">No Matching Valves Found</h3>
+            <p class="text-sm text-slate-500 mt-2">Try clearing one or more filters or search by a broader standard.</p>
+            <button onclick="resetFilters()" class="mt-5 px-5 py-2.5 rounded-xl bg-teal-700 text-white text-sm font-semibold hover:bg-teal-600 shadow-sm transition">
+              Reset Filters
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(p => `
+        <article class="glass-card rounded-3xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-[11px] font-mono px-2.5 py-1 rounded-lg bg-teal-50 text-teal-800 font-semibold border border-teal-200">${p.standardsBadge}</span>
+              <span class="text-xs font-mono text-slate-500 font-semibold">#${p.id < 10 ? '0' + p.id : p.id}</span>
+            </div>
+
+            <a href="product-detail.html?slug=${p.slug}" class="block bg-slate-50 rounded-2xl p-4 mb-4 border border-slate-200 hover:border-teal-400 transition">
+              ${getValveSchematicSVG(p.schematic, 'w-full h-32')}
+            </a>
+
+            <a href="product-detail.html?slug=${p.slug}" class="block">
+              <h3 class="text-xl font-bold text-slate-900 hover:text-teal-700 transition">${p.name}</h3>
+              <p class="text-xs text-teal-700 font-semibold mt-0.5">${p.subtitle}</p>
+            </a>
+
+            <p class="text-xs text-slate-600 mt-3 leading-relaxed">${p.summary}</p>
+
+            <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-slate-100 text-xs">
+              <div>
+                <span class="text-[10px] text-slate-400 uppercase block">Size Range</span>
+                <span class="font-mono text-slate-800 font-semibold">${p.sizeRange}</span>
+              </div>
+              <div>
+                <span class="text-[10px] text-slate-400 uppercase block">Pressure Class</span>
+                <span class="font-mono text-teal-700 font-semibold">${p.pressureClasses.join(' / ')}</span>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5 mt-3">
+              ${p.materials.map(m => `<span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200 font-medium">${m}</span>`).join('')}
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-2.5 mt-6 pt-4 border-t border-slate-100">
+            <a href="product-detail.html?slug=${p.slug}" class="py-2.5 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-semibold text-center border border-slate-200 transition">
+              Specs &amp; Dimensions
+            </a>
+            <a href="${buildWhatsAppQuoteUrl(p)}" target="_blank" rel="noopener noreferrer" class="py-2.5 px-3 rounded-xl bg-gradient-to-r from-teal-700 to-cyan-600 hover:from-teal-600 hover:to-cyan-500 text-white text-xs font-semibold text-center shadow-sm transition">
+              Contact Us
+            </a>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function resetFilters() {
+      activeCategory = 'all';
+      const searchInp = document.getElementById('cat-search-input');
+      if (searchInp) searchInp.value = '';
+      const fClass = document.getElementById('filter-class');
+      if (fClass) fClass.value = 'all';
+      const fMat = document.getElementById('filter-material');
+      if (fMat) fMat.value = 'all';
+      const fEnd = document.getElementById('filter-end');
+      if (fEnd) fEnd.value = 'all';
+
+      renderCategoryTabs();
+      applyFilters();
+    }
+
+    function initUrlParams() {
+      const params = new URLSearchParams(window.location.search);
+      const catParam = params.get('category');
+      const classParam = params.get('class');
+      const matParam = params.get('material');
+
+      if (catParam && CATALOG_DATA.categories.some(c => c.id === catParam)) {
+        activeCategory = catParam;
+      }
+      if (classParam) {
+        const sel = document.getElementById('filter-class');
+        if (sel) sel.value = classParam;
+      }
+      if (matParam) {
+        const sel = document.getElementById('filter-material');
+        if (sel) sel.value = matParam;
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initializeSharedPageElements();
+      initUrlParams();
+      renderCategoryTabs();
+      applyFilters();
+    });
+  </script>
 </body>
 </html>

@@ -1,162 +1,526 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Engineering Consultation &amp; Plant Contact | Jasvi Industries</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us, Plant Location &amp; Feedback | DS Industries</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          },
+          colors: {
+            ds: {
+              bg: '#F4F7FB',
+              surface: '#FFFFFF',
+              teal: '#007A8C',
+              cyan: '#0284C7',
+              slate: '#0F172A'
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
+<body class="min-h-screen flex flex-col selection:bg-sky-500/20 selection:text-sky-900">
 
-  <!-- Top Architectural Header -->
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="index.html" class="header-brand">
-        <div class="brand-monogram">DS</div>
-        <div class="brand-text">
-          <span class="brand-title">DS INDUSTRIES</span>
-          <span class="brand-subtitle">HEAVY PROCESS VALVES &bull; AHMEDABAD</span>
-        </div>
-      </a>
+  <!-- Ambient Glows -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+    <div class="absolute -top-32 -left-24 w-96 h-96 rounded-full bg-sky-400/10 blur-[120px]"></div>
+    <div class="absolute top-1/3 -right-28 w-[28rem] h-[28rem] rounded-full bg-teal-500/8 blur-[130px]"></div>
+    <div class="absolute bottom-0 left-1/3 w-96 h-96 rounded-full bg-slate-300/25 blur-[130px]"></div>
+  </div>
 
-      <div class="header-facility-status">
-        <span class="status-pulse-dot"></span>
-        <span class="status-text">AHMEDABAD MFG PLANT // OPERATIONAL</span>
-      </div>
-
-      <nav class="header-nav">
-        <a href="index.html" class="nav-link">Showcase</a>
-        <a href="products.html" class="nav-link">15 Valve Lines</a>
-        <a href="index.html#sectors" class="nav-link">Sectors</a>
-        <a href="index.html#sizing-lab" class="nav-link">Cv Sizing Lab</a>
-        <a href="index.html#workbench" class="nav-link">CAD Matrix</a>
-        <a href="index.html#testing" class="nav-link">API 598 Testing</a>
-        <a href="about.html" class="nav-link">Plant Infrastructure</a>
-        <a href="contact.html" class="nav-link active">Contact</a>
-      </nav>
-
-      <div class="header-actions">
-        <a href="tel:+919512690771" class="header-phone-link" title="Direct Engineering Desk">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <span>+91 95126 90771</span>
-        </a>
-        <a href="index.html#rfq-matrix" class="btn-header-rfq">
-          <span>Engineering RFQ</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Header -->
-  <section style="padding: 120px 0 40px; border-bottom: 1px solid var(--border-subtle); background: var(--bg-surface);">
-    <div class="container">
-      <div class="section-tag" style="margin-bottom: 12px;">// DIRECT TECHNICAL CONSULTATION</div>
-      <h1 class="hero-title" style="font-size: clamp(2.2rem, 4vw, 3.4rem); margin-bottom: 14px;">
-        CONTACT AHMEDABAD <span class="gradient-text">HEADQUARTERS</span>
-      </h1>
-      <p class="hero-description" style="font-size: 1.05rem; max-width: 720px;">
-        Collaborate with our application engineering specialists for severe-service project sizing, ASME/API compliance, and factory witness testing scheduling.
-      </p>
-    </div>
-  </section>
-
-  <!-- Contact Grid -->
-  <section style="padding: 70px 0 90px;">
-    <div class="container">
-      <div class="lab-grid" style="grid-template-columns: 1fr 1fr; align-items: start;">
-        <div class="bento-card" style="padding:36px; background:#FFFFFF; border:1px solid var(--border-subtle); border-radius:var(--radius-md);">
-          <div class="section-tag">// FACTORY DISPATCH COORDINATES</div>
-          <h3 style="font-family:var(--font-heading); font-size:1.4rem; font-weight:700; margin: 10px 0 18px; color:var(--text-primary);">
-            Ahmedabad Manufacturing Plant
-          </h3>
-          <p style="font-size:0.95rem; color:var(--text-secondary); line-height:1.7; margin-bottom:24px;">
-            <strong>DS INDUSTRIES</strong><br>
-            H - 52, Darshanvilla Park, Nr. Gopal Chowk,<br>
-            Nikol - Naroda, Ahmedabad - 382345<br>
-            Gujarat, India
-          </p>
-
-          <div style="display:flex; flex-direction:column; gap:14px; font-family:var(--font-mono); font-size:0.88rem;">
-            <div style="display:flex; align-items:center; gap:10px;">
-              <span style="color:var(--accent-azure); font-weight:700;">PHONE:</span>
-              <a href="tel:+919512690771" style="color:var(--text-primary); font-weight:700;">+91 95126 90771</a>
+  <!-- GLOBAL STICKY GLASS NAVBAR -->
+  <header id="global-navbar" class="sticky top-0 z-50 glass-panel border-b border-slate-200/90">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between py-3 md:py-3.5 gap-3">
+        <!-- Brand Logo -->
+        <div class="flex items-center justify-between gap-4">
+          <a href="index.html" class="flex items-center gap-3 group shrink-0">
+            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700 flex items-center justify-center shadow-md group-hover:border-teal-600 transition">
+              <svg viewBox="0 0 48 48" class="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M26 5C14.954 5 6 13.954 6 25C6 36.046 14.954 45 26 45" stroke="#CBD5E1" stroke-width="2.5" stroke-linecap="round"/>
+                <rect x="11" y="13" width="5" height="22" rx="1.2" fill="#008B9B"/>
+                <rect x="18" y="17" width="5" height="18" rx="1.2" fill="#38BDF8"/>
+                <path d="M27 16H37C38.657 16 40 17.343 40 19V22.5C40 24.157 38.657 25.5 37 25.5H30C28.343 25.5 27 26.843 27 28.5V32C27 33.657 28.343 35 30 35H40" stroke="#38BDF8" stroke-width="3.2" stroke-linecap="round"/>
+              </svg>
             </div>
-            <div style="display:flex; align-items:center; gap:10px;">
-              <span style="color:var(--accent-azure); font-weight:700;">EMAIL:</span>
-              <a href="mailto:dsindustries89@gmail.com" style="color:var(--text-primary); font-weight:700;">dsindustries89@gmail.com</a>
+            <div>
+              <span class="text-lg sm:text-xl font-extrabold tracking-wider text-slate-900 block leading-none">DS INDUSTRIES</span>
+              <p class="text-[10px] sm:text-[11px] tracking-wide text-teal-700 font-semibold mt-1">Committed With Precision &amp; Performance</p>
             </div>
-            <div style="display:flex; align-items:center; gap:10px;">
-              <span style="color:var(--accent-azure); font-weight:700;">HOURS:</span>
-              <span>Mon - Sat: 9:00 AM - 7:00 PM IST</span>
-            </div>
+          </a>
+
+          <!-- Mobile Right Actions -->
+          <div class="flex md:hidden items-center gap-2">
+            <div class="flex items-center gap-1" id="mobile-social-icons"></div>
+            <a href="contact.html" class="relative flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-teal-700 text-white text-xs font-semibold shadow-sm transition">
+              <span>Contact Us</span>
+            </a>
           </div>
         </div>
 
-        <div class="bento-card" style="padding:36px; background:#FFFFFF; border:1px solid var(--border-subtle); border-radius:var(--radius-md);">
-          <div class="section-tag">// DIRECT INQUIRY DISPATCH</div>
-          <h3 style="font-family:var(--font-heading); font-size:1.4rem; font-weight:700; margin: 10px 0 18px; color:var(--text-primary);">
-            Instant WhatsApp Specification
-          </h3>
-          <p style="font-size:0.95rem; color:var(--text-secondary); line-height:1.7; margin-bottom:24px;">
-            Need an urgent quotation or technical drawing verification? Connect directly with our Senior Engineering Desk on WhatsApp.
-          </p>
-          <a href="https://wa.me/919512690771?text=Hello%20DS%20Industries,%20I%20would%20like%20to%20request%20an%20engineering%20quotation." target="_blank" class="btn-azure-primary" style="width:100%; justify-content:center;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-            <span>Launch WhatsApp Engineering Desk</span>
+        <!-- Navigation Links -->
+        <nav class="flex items-center gap-1 sm:gap-1.5 overflow-x-auto py-1 px-1.5 bg-slate-100/90 rounded-2xl border border-slate-200/90">
+          <a href="index.html" class="nav-link px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap text-slate-700 hover:text-slate-950 transition">Home</a>
+          <a href="products.html" class="nav-link px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap text-slate-700 hover:text-slate-950 transition">Products <span class="ml-1 text-[10px] font-mono px-1.5 py-0.5 rounded-md bg-teal-600/15 text-teal-800 font-bold">14</span></a>
+          <a href="engineering-lab.html" class="nav-link px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap text-slate-700 hover:text-slate-950 transition">Engineering Lab</a>
+          <a href="about.html" class="nav-link px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap text-slate-700 hover:text-slate-950 transition">About Us</a>
+          <a href="contact.html" class="nav-link px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap bg-slate-900 text-white shadow-sm transition">Contact &amp; Feedback</a>
+        </nav>
+
+        <!-- Desktop Contact Us -->
+        <div class="hidden md:flex items-center gap-2.5 shrink-0">
+          <div class="flex items-center gap-1.5 pr-2 border-r border-slate-200" id="header-social-icons"></div>
+          <a href="contact.html" class="relative flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-teal-700 text-white text-xs sm:text-sm font-semibold shadow-md transition">
+            <svg class="w-4 h-4 shrink-0 text-teal-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <span>Contact Us</span>
           </a>
         </div>
       </div>
     </div>
-  </section>
+  </header>
 
-  <!-- Technical Clean Footer -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <div class="footer-brand-title">DS INDUSTRIES</div>
-        <p class="footer-brand-desc">
-          Premier Indian flow control and heavy process valve manufacturer. Precision engineering for superheated steam, oil &amp; gas, petrochemical, and severe abrasive slurry service.
-        </p>
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="relative z-10 flex-grow">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-12">
+      <!-- Page Header -->
+      <div class="mb-8">
+        <span class="text-xs font-mono uppercase tracking-widest text-teal-700 font-bold">Direct Engineering Desk</span>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-1">Contact Us, Location &amp; Feedback</h1>
+        <p class="text-sm text-slate-600 mt-1">Share your contact and technical requirements below so our engineering sales team can assist you directly, or connect with us via WhatsApp, phone, and email.</p>
       </div>
-      <div>
-        <h4 class="footer-col-title">VALVE PORTFOLIO</h4>
-        <ul class="footer-links-list">
-          <li><a href="products.html" class="footer-link">Cast Steel Ball Valves</a></li>
-          <li><a href="products.html" class="footer-link">Flexible Wedge Gate Valves</a></li>
-          <li><a href="products.html" class="footer-link">Globe Steam Throttling Valves</a></li>
-          <li><a href="products.html" class="footer-link">Dual Plate &amp; Swing Check</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="footer-col-title">ENGINEERING LAB</h4>
-        <ul class="footer-links-list">
-          <li><a href="index.html#workbench" class="footer-link">ASME B16.5 CAD Matrix</a></li>
-          <li><a href="index.html#sizing-lab" class="footer-link">Cv Flow Sizing Calculator</a></li>
-          <li><a href="index.html#testing" class="footer-link">API 598 Pressure Testing</a></li>
-          <li><a href="about.html" class="footer-link">Ahmedabad Manufacturing Plant</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="footer-col-title">AHMEDABAD FACILITY</h4>
-        <div class="footer-contact-item">
-          <span>H - 52, Darshanvilla Park, Nikol - Naroda, Ahmedabad - 382345 (Gujarat, India)</span>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- Left Column: Ahmedabad Plant Location & Channels -->
+        <div class="lg:col-span-5 space-y-6">
+          <!-- Facility Map Card -->
+          <div class="glass-panel rounded-3xl p-6 border border-slate-200/90 shadow-sm">
+            <span class="text-[11px] font-mono uppercase tracking-wider text-teal-700 font-bold">Ahmedabad Office &amp; Works</span>
+            <a href="https://www.google.com/maps/search/?api=1&query=H-52+Darshanvilla+Park+Nr+Gopal+Chowk+Nikol+Naroda+Ahmedabad+382345" target="_blank" rel="noopener noreferrer" class="block mt-2 group">
+              <h3 class="text-lg font-bold text-slate-900 group-hover:text-teal-700 transition flex items-start gap-2.5">
+                <svg class="w-5 h-5 text-teal-700 shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                <span>H - 52, Darshanvilla Park, Nr. Gopal Chowk, Nikol - Naroda, Ahmedabad - 382345 (Gujarat, India)</span>
+              </h3>
+              <span class="inline-flex items-center gap-1.5 mt-3 px-4 py-2 rounded-xl bg-teal-50 group-hover:bg-teal-100 text-teal-800 text-xs font-semibold border border-teal-200 transition">
+                Navigate in Google Maps &rarr;
+              </span>
+            </a>
+
+            <div class="mt-4 rounded-2xl overflow-hidden border border-slate-200 h-56 bg-slate-100 shadow-inner">
+              <iframe
+                title="DS Industries Ahmedabad Location"
+                src="https://maps.google.com/maps?q=Nikol%20Naroda%20Ahmedabad%20382345&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                class="w-full h-full border-0 filter contrast-105"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Direct Communication Channels -->
+          <div class="glass-panel rounded-3xl p-6 space-y-4 border border-slate-200/90 shadow-sm">
+            <h3 class="text-base font-bold text-slate-900">Direct Communication Channels</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+              <a href="tel:+919512690771" class="p-3.5 rounded-2xl bg-white hover:bg-slate-50 border border-slate-200 shadow-sm transition">
+                <span class="text-slate-500 block">Phone / Sales Desk</span>
+                <span class="font-mono text-sm font-bold text-slate-900 mt-0.5 block">+91 95126 90771</span>
+              </a>
+              <a href="mailto:dsindustries89@gmail.com" class="p-3.5 rounded-2xl bg-white hover:bg-slate-50 border border-slate-200 shadow-sm transition">
+                <span class="text-slate-500 block">Official Email</span>
+                <span class="text-sm font-bold text-teal-700 mt-0.5 block truncate">dsindustries89@gmail.com</span>
+              </a>
+            </div>
+
+            <div class="pt-2 border-t border-slate-200">
+              <span class="text-xs text-slate-600 block mb-2.5 font-medium">Instant Social Connect (WhatsApp, LinkedIn, Instagram)</span>
+              <div class="grid grid-cols-3 gap-2.5">
+                <a href="https://wa.me/919512690771?text=Hello%20DS%20Industries%2C%20I%20would%20like%20to%20inquire%20about%20industrial%20valves." target="_blank" rel="noopener noreferrer" class="py-2.5 px-3 rounded-xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 text-emerald-800 text-xs font-semibold text-center transition">
+                  WhatsApp
+                </a>
+                <a href="https://www.linkedin.com/company/ds-industries-india" target="_blank" rel="noopener noreferrer" class="py-2.5 px-3 rounded-xl bg-sky-50 hover:bg-sky-100 border border-sky-300 text-sky-800 text-xs font-semibold text-center transition">
+                  LinkedIn
+                </a>
+                <a href="https://www.instagram.com/dsindustries.valves" target="_blank" rel="noopener noreferrer" class="py-2.5 px-3 rounded-xl bg-pink-50 hover:bg-pink-100 border border-pink-300 text-pink-800 text-xs font-semibold text-center transition">
+                  Instagram
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="footer-contact-item">
-          <span>Direct: +91 95126 90771 &bull; Email: dsindustries89@gmail.com</span>
+
+        <!-- Right Column: Interactive Form Desk -->
+        <div class="lg:col-span-7">
+          <div class="glass-panel rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm">
+            <!-- Tabs -->
+            <div class="flex items-center gap-2 p-1.5 rounded-2xl bg-slate-100 border border-slate-200 mb-6">
+              <button id="tab-btn-contact" onclick="switchTab('contact')" class="flex-1 py-2.5 px-4 rounded-xl text-xs sm:text-sm font-semibold transition bg-gradient-to-r from-teal-700 to-cyan-600 text-white shadow-md">
+                Contact Us (RFQ Details Form)
+              </button>
+              <button id="tab-btn-feedback" onclick="switchTab('feedback')" class="flex-1 py-2.5 px-4 rounded-xl text-xs sm:text-sm font-semibold transition text-slate-600 hover:text-slate-900">
+                Customer Feedback
+              </button>
+            </div>
+
+            <!-- Contact / RFQ Form -->
+            <div id="contact-tab-content">
+              <form onsubmit="handleContactSubmit(event)" class="space-y-4">
+                <div>
+                  <h3 class="text-lg font-bold text-slate-900">Send Us Your Contact &amp; Requirement Details</h3>
+                  <p class="text-xs text-slate-500 mt-0.5">Provide your requirements below and our engineering sales team will connect with you directly.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-medium text-slate-700 mb-1">Full Name *</label>
+                    <input type="text" id="contact-name" required placeholder="Enter your full name" class="w-full px-3.5 py-2.5 rounded-xl glass-input text-sm" />
+                  </div>
+                  <div>
+                    <label class="block text-xs font-medium text-slate-700 mb-1">Company / Organization *</label>
+                    <input type="text" id="contact-company" required placeholder="e.g., Process Plant / EPC / Industries" class="w-full px-3.5 py-2.5 rounded-xl glass-input text-sm" />
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-medium text-slate-700 mb-1">Email Address *</label>
+                    <input type="email" id="contact-email" required placeholder="you@company.com" class="w-full px-3.5 py-2.5 rounded-xl glass-input text-sm" />
+                  </div>
+                  <div>
+                    <label class="block text-xs font-medium text-slate-700 mb-1">Phone / WhatsApp Number *</label>
+                    <input type="tel" id="contact-phone" required placeholder="+91 98XXX XXXXX" class="w-full px-3.5 py-2.5 rounded-xl glass-input text-sm" />
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-medium text-slate-700 mb-1">Product / Valve Line of Interest</label>
+                    <select id="contact-product" class="w-full px-3.5 py-2.5 rounded-xl glass-input text-sm">
+                      <option value="General Valve / Filtration Inquiry">General Valve / Filtration Inquiry</option>
+                      <!-- Options populated via JS -->
+                    </select>
+                  </div>
+                  <div>
+                    <label class="block text-xs font-medium text-slate-700 mb-1">City / Project Location</label>
+                    <input type="text" id="contact-location" placeholder="e.g., Ahmedabad, Mumbai, Vadodara..." class="w-full px-3.5 py-2.5 rounded-xl glass-input text-sm" />
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-medium text-slate-700 mb-1">Your Message / Technical Specifications *</label>
+                  <textarea id="contact-message" rows="4" required placeholder="Share required valve sizes, ASME class (150#–2500#), material grade (WCB/CF8/CF8M), quantity, or questions..." class="w-full px-3.5 py-2.5 rounded-xl glass-input text-sm"></textarea>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-3 pt-1">
+                  <button type="submit" class="flex-1 py-3 px-5 rounded-xl bg-gradient-to-r from-teal-700 to-cyan-600 hover:from-teal-600 hover:to-cyan-500 text-white font-semibold text-sm shadow-md transition">
+                    Submit Contact Details
+                  </button>
+                  <button type="button" onclick="sendFormOnWhatsApp()" class="py-3 px-5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm text-center border border-emerald-400 shadow-sm transition">
+                    Send Details on WhatsApp
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Customer Feedback Form -->
+            <div id="feedback-tab-content" class="hidden">
+              <form onsubmit="handleFeedbackFormSubmit(event)" class="space-y-4">
+                <div>
+                  <h3 class="text-lg font-bold text-slate-900">We Value Your Engineering Feedback</h3>
+                  <p class="text-xs text-slate-500 mt-0.5">Let us know how we can improve our products, datasheets, or dispatch support.</p>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-medium text-slate-700 mb-1.5">Overall Experience Rating</label>
+                  <div class="flex flex-wrap gap-2" id="feedback-stars-container">
+                    <button type="button" onclick="setFeedbackRating(1)" class="fb-star-btn px-3.5 py-2 rounded-xl text-xs font-mono font-bold border transition bg-white text-slate-700 border-slate-300">&#9733; (1/5)</button>
+                    <button type="button" onclick="setFeedbackRating(2)" class="fb-star-btn px-3.5 py-2 rounded-xl text-xs font-mono font-bold border transition bg-white text-slate-700 border-slate-300">&#9733;&#9733; (2/5)</button>
+                    <button type="button" onclick="setFeedbackRating(3)" class="fb-star-btn px-3.5 py-2 rounded-xl text-xs font-mono font-bold border transition bg-white text-slate-700 border-slate-300">&#9733;&#9733;&#9733; (3/5)</button>
+                    <button type="button" onclick="setFeedbackRating(4)" class="fb-star-btn px-3.5 py-2 rounded-xl text-xs font-mono font-bold border transition bg-white text-slate-700 border-slate-300">&#9733;&#9733;&#9733;&#9733; (4/5)</button>
+                    <button type="button" onclick="setFeedbackRating(5)" class="fb-star-btn px-3.5 py-2 rounded-xl text-xs font-mono font-bold border transition bg-amber-500/20 text-amber-600 border-amber-400">&#9733;&#9733;&#9733;&#9733;&#9733; (5/5)</button>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-medium text-slate-700 mb-1">Your Name *</label>
+                    <input type="text" id="fb-author-name" required placeholder="Your full name" class="w-full px-3.5 py-2.5 rounded-xl glass-input text-sm" />
+                  </div>
+                  <div>
+                    <label class="block text-xs font-medium text-slate-700 mb-1">Industry Sector</label>
+                    <select class="w-full px-3.5 py-2.5 rounded-xl glass-input text-sm">
+                      <option>Oil &amp; Gas / Petrochemical</option>
+                      <option>Power &amp; Energy</option>
+                      <option>Chemical &amp; Pharmaceutical</option>
+                      <option>Pulp, Paper &amp; Sugar</option>
+                      <option>Water &amp; Infrastructure</option>
+                      <option>EPC / Valve Trader</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-medium text-slate-700 mb-1">Your Feedback / Suggestion *</label>
+                  <textarea rows="4" required placeholder="Share your experience with DS Industries..." class="w-full px-3.5 py-2.5 rounded-xl glass-input text-sm"></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-teal-700 to-cyan-600 hover:from-teal-600 hover:to-cyan-500 text-white font-semibold text-sm shadow-md transition">
+                  Submit Feedback
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+  </main>
 
-    <div class="container footer-bottom">
-      <div>&copy; 2026 DS Industries (Jasvi Engineering Ecosystem). All Rights Reserved.</div>
-      <div>Architectural Swiss Light Engineering &bull; Pure Public Showcase</div>
+  <!-- FLOATING QUICK-ACTION DOCK -->
+  <div id="floating-dock" class="fixed bottom-5 right-5 z-40 flex flex-col gap-2.5 no-print">
+    <button onclick="openFeedbackModal()" title="Share Quick Feedback" class="group flex items-center gap-2 p-3 rounded-2xl glass-panel border border-teal-300 hover:border-teal-500 text-teal-700 shadow-xl transition">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+      </svg>
+      <span class="hidden sm:inline text-xs font-semibold text-slate-700 group-hover:text-slate-900 pr-1">Feedback</span>
+    </button>
+
+    <a id="floating-whatsapp-btn" href="#" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp" class="group flex items-center gap-2 p-3 rounded-2xl bg-emerald-600 hover:bg-emerald-500 border border-emerald-400 text-white shadow-xl transition">
+      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+      </svg>
+      <span class="hidden sm:inline text-xs font-semibold pr-1">WhatsApp</span>
+    </a>
+  </div>
+
+  <!-- QUICK FEEDBACK MODAL -->
+  <div id="feedback-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-900/60 backdrop-blur-md no-print">
+    <div class="glass-panel rounded-3xl max-w-md w-full p-6 sm:p-7 border border-slate-300 relative shadow-2xl">
+      <button onclick="closeFeedbackModal()" class="absolute top-4 right-4 p-2 rounded-xl bg-slate-100 text-slate-500 hover:text-slate-900 transition">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-800 text-xs font-semibold mb-3">
+        Customer Experience
+      </div>
+      <h3 class="text-xl font-bold text-slate-900">Share Your Feedback</h3>
+      <p class="text-xs text-slate-500 mt-1 mb-5">Rate our technical catalog, valve quality, or engineering support.</p>
+
+      <form onsubmit="handleQuickFeedbackSubmit(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-medium text-slate-700 mb-1.5">Your Rating</label>
+          <div class="flex items-center gap-2">
+            <button type="button" onclick="setModalRating(1)" class="modal-star p-2 rounded-xl bg-slate-100 text-slate-500 border border-slate-300 text-sm font-bold">&#9733; 1</button>
+            <button type="button" onclick="setModalRating(2)" class="modal-star p-2 rounded-xl bg-slate-100 text-slate-500 border border-slate-300 text-sm font-bold">&#9733; 2</button>
+            <button type="button" onclick="setModalRating(3)" class="modal-star p-2 rounded-xl bg-slate-100 text-slate-500 border border-slate-300 text-sm font-bold">&#9733; 3</button>
+            <button type="button" onclick="setModalRating(4)" class="modal-star p-2 rounded-xl bg-slate-100 text-slate-500 border border-slate-300 text-sm font-bold">&#9733; 4</button>
+            <button type="button" onclick="setModalRating(5)" class="modal-star p-2 rounded-xl bg-amber-500/20 text-amber-500 border border-amber-400 text-sm font-bold">&#9733; 5</button>
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-slate-700 mb-1">Your Name / Organization</label>
+          <input type="text" id="modal-fb-name" required placeholder="e.g., Rajesh Patel — Petrochem Engg." class="w-full px-3.5 py-2.5 rounded-xl glass-input text-sm" />
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-slate-700 mb-1">Feedback / Comments</label>
+          <textarea id="modal-fb-msg" rows="3" required placeholder="Tell us about your valve requirements or experience..." class="w-full px-3.5 py-2.5 rounded-xl glass-input text-sm"></textarea>
+        </div>
+        <button type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-teal-700 to-cyan-600 hover:from-teal-600 hover:to-cyan-500 text-white font-semibold text-sm shadow-md transition">
+          Submit Feedback
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast-container" class="fixed top-24 right-5 z-50 flex flex-col gap-2 pointer-events-none no-print"></div>
+
+  <!-- RICH 4-COLUMN GLASSMORPHISM FOOTER -->
+  <footer id="global-footer" class="relative z-10 glass-panel border-t border-slate-200 mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-200">
+        <!-- Column 1 -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-lg bg-teal-600/10 border border-teal-300 flex items-center justify-center text-teal-800 font-extrabold text-sm">DS</div>
+            <h3 class="text-base font-extrabold tracking-widest text-slate-900 uppercase">DS INDUSTRIES</h3>
+          </div>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Premier Indian flow control and heavy process valve manufacturer. Precision engineering for superheated steam, oil &amp; gas, petrochemical, and severe abrasive slurry service.
+          </p>
+          <div class="pt-1">
+            <span class="block text-[11px] font-mono uppercase tracking-wider text-slate-500 mb-2.5">Connect With Us</span>
+            <div class="flex items-center gap-2.5" id="footer-social-icons"></div>
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div>
+          <h4 class="text-xs font-extrabold tracking-widest text-slate-900 uppercase mb-4">VALVE PORTFOLIO</h4>
+          <ul class="space-y-2.5 text-sm text-slate-600">
+            <li><a href="product-detail.html?slug=ball-valves" class="hover:text-teal-700 transition flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-600"></span>Cast Steel Ball Valves</a></li>
+            <li><a href="product-detail.html?slug=gate-valves" class="hover:text-teal-700 transition flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-600"></span>Flexible Wedge Gate Valves</a></li>
+            <li><a href="product-detail.html?slug=globe-valves" class="hover:text-teal-700 transition flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-600"></span>Globe Steam Throttling Valves</a></li>
+            <li><a href="products.html?category=check" class="hover:text-teal-700 transition flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-600"></span>Dual Plate &amp; Swing Check</a></li>
+            <li><a href="products.html?category=slurry" class="hover:text-teal-700 transition flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-600"></span>Knife Edge &amp; Pulp Valves</a></li>
+            <li><a href="products.html?category=forged" class="hover:text-teal-700 transition flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-600"></span>Forged Valves &amp; Strainers</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div>
+          <h4 class="text-xs font-extrabold tracking-widest text-slate-900 uppercase mb-4">ENGINEERING LAB</h4>
+          <ul class="space-y-2.5 text-sm text-slate-600">
+            <li><a href="engineering-lab.html#cad-matrix" class="hover:text-teal-700 transition flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-600"></span>ASME B16.5 CAD Matrix</a></li>
+            <li><a href="engineering-lab.html#sizing-lab" class="hover:text-teal-700 transition flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-600"></span>Cv Flow Sizing Calculator</a></li>
+            <li><a href="engineering-lab.html#testing" class="hover:text-teal-700 transition flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-600"></span>API 598 Pressure Testing</a></li>
+            <li><a href="about.html" class="hover:text-teal-700 transition flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-600"></span>Ahmedabad Manufacturing Plant</a></li>
+            <li><a href="contact.html?tab=feedback" class="hover:text-teal-700 transition flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-teal-600"></span>Client Feedback Portal</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4 -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-extrabold tracking-widest text-slate-900 uppercase mb-4">AHMEDABAD FACILITY</h4>
+          <a id="footer-map-link" href="#" target="_blank" rel="noopener noreferrer" class="block text-sm text-slate-700 hover:text-teal-700 transition leading-relaxed group">
+            <span class="inline-flex items-start gap-2">
+              <svg class="w-4 h-4 text-teal-700 shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span id="footer-address-text"></span>
+            </span>
+            <span class="block text-xs text-teal-700 font-semibold mt-1 ml-6 group-hover:underline">Open in Google Maps &rarr;</span>
+          </a>
+
+          <div class="pt-1 text-sm text-slate-600 space-y-1.5">
+            <p>
+              <span class="text-slate-500">Direct:</span>
+              <a id="footer-phone-link" href="#" class="text-slate-900 hover:text-teal-700 font-mono font-semibold transition"></a>
+            </p>
+            <p>
+              <span class="text-slate-500">Email:</span>
+              <a id="footer-email-link" href="#" class="text-slate-900 hover:text-teal-700 transition"></a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Strip -->
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-500">
+        <p>&copy; 2026 DS Industries. All Rights Reserved.</p>
+        <p class="text-slate-600">Industrial &amp; High Pressure Valve Solutions &bull; <a href="index.html" class="text-teal-700 hover:underline">www.dsindustries.com</a></p>
+      </div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/catalog-data.js"></script>
+  <script>
+    let activeTab = 'contact';
+    let currentFeedbackRating = 5;
+
+    function initContactPage() {
+      // Populate Products Selector
+      const prodSelect = document.getElementById('contact-product');
+      if (prodSelect) {
+        CATALOG_DATA.products.forEach(p => {
+          const opt = document.createElement('option');
+          opt.value = p.name;
+          opt.textContent = `${p.name} (${p.sizeRange})`;
+          prodSelect.appendChild(opt);
+        });
+
+        // Pre-select if URL parameter passed
+        const params = new URLSearchParams(window.location.search);
+        const reqProd = params.get('product');
+        if (reqProd) {
+          prodSelect.value = reqProd;
+        }
+
+        const tabParam = params.get('tab');
+        if (tabParam === 'feedback') {
+          switchTab('feedback');
+        }
+      }
+    }
+
+    function switchTab(tab) {
+      activeTab = tab;
+      const btnContact = document.getElementById('tab-btn-contact');
+      const btnFeedback = document.getElementById('tab-btn-feedback');
+      const contentContact = document.getElementById('contact-tab-content');
+      const contentFeedback = document.getElementById('feedback-tab-content');
+
+      if (tab === 'contact') {
+        btnContact.className = 'flex-1 py-2.5 px-4 rounded-xl text-xs sm:text-sm font-semibold transition bg-gradient-to-r from-teal-700 to-cyan-600 text-white shadow-md';
+        btnFeedback.className = 'flex-1 py-2.5 px-4 rounded-xl text-xs sm:text-sm font-semibold transition text-slate-600 hover:text-slate-900';
+        contentContact.classList.remove('hidden');
+        contentFeedback.classList.add('hidden');
+      } else {
+        btnFeedback.className = 'flex-1 py-2.5 px-4 rounded-xl text-xs sm:text-sm font-semibold transition bg-gradient-to-r from-teal-700 to-cyan-600 text-white shadow-md';
+        btnContact.className = 'flex-1 py-2.5 px-4 rounded-xl text-xs sm:text-sm font-semibold transition text-slate-600 hover:text-slate-900';
+        contentFeedback.classList.remove('hidden');
+        contentContact.classList.add('hidden');
+      }
+    }
+
+    function setFeedbackRating(num) {
+      currentFeedbackRating = num;
+      document.querySelectorAll('.fb-star-btn').forEach((btn, idx) => {
+        if (idx + 1 === num) {
+          btn.className = 'fb-star-btn px-3.5 py-2 rounded-xl text-xs font-mono font-bold border transition bg-amber-500/20 text-amber-600 border-amber-400';
+        } else {
+          btn.className = 'fb-star-btn px-3.5 py-2 rounded-xl text-xs font-mono font-bold border transition bg-white text-slate-700 border-slate-300';
+        }
+      });
+    }
+
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('contact-name')?.value || 'Client';
+      showToast('Details Submitted', `Thank you, ${name}! Your contact and RFQ details have been received. Our team will contact you directly.`, 'success');
+      e.target.reset();
+    }
+
+    function sendFormOnWhatsApp() {
+      const name = document.getElementById('contact-name')?.value || '';
+      const company = document.getElementById('contact-company')?.value || '';
+      const email = document.getElementById('contact-email')?.value || '';
+      const phone = document.getElementById('contact-phone')?.value || '';
+      const product = document.getElementById('contact-product')?.value || 'General Inquiry';
+      const loc = document.getElementById('contact-location')?.value || '';
+      const msg = document.getElementById('contact-message')?.value || '';
+
+      let text = 'Hello DS Industries,%0A%0APlease find my contact and requirement details:%0A';
+      if (name) text += '• Name: ' + encodeURIComponent(name) + '%0A';
+      if (company) text += '• Company: ' + encodeURIComponent(company) + '%0A';
+      if (phone) text += '• Phone: ' + encodeURIComponent(phone) + '%0A';
+      if (email) text += '• Email: ' + encodeURIComponent(email) + '%0A';
+      if (loc) text += '• Location: ' + encodeURIComponent(loc) + '%0A';
+      text += '• Product Interest: ' + encodeURIComponent(product) + '%0A';
+      if (msg) text += '• Requirement Details: ' + encodeURIComponent(msg) + '%0A';
+
+      window.open('https://wa.me/' + SITE_CONFIG.phoneRaw.replace('+', '') + '?text=' + text, '_blank', 'noopener,noreferrer');
+    }
+
+    function handleFeedbackFormSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('fb-author-name')?.value || 'Client';
+      showToast('Feedback Recorded', `Thank you, ${name}! Your ${currentFeedbackRating}/5 rating has been logged.`, 'success');
+      e.target.reset();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initializeSharedPageElements();
+      initContactPage();
+    });
+  </script>
 </body>
 </html>
