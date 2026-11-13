@@ -1,223 +1,2297 @@
 {
-  "version": 3,
-  "lastModified": "2026-11-01T15:45:00Z",
+  "version": 4,
+  "lastModified": "2026-11-13T12:00:00Z",
   "branding": {
-    "companyName": "JASVI INDUSTRIES",
-    "division": "Precision Valves & Flow Control",
-    "tagline": "Advanced Fluid Engineering",
-    "badgeText": "Mfg. of High-Pressure Needle Valves, Manifold Blocks and Flow Control Systems",
+    "companyName": "DS INDUSTRIES",
+    "parentBrand": "Jasvi Engineering Ecosystem",
+    "division": "Heavy Industrial Process Valves & Flow Control",
+    "tagline": "Committed With Precision & Performance",
+    "badgeText": "India's Leading Industrial Valves Solution Provider",
     "portalUrl": "https://erp.jasviindustries.in/",
     "contact": {
-      "phone": "+91 98765 43210",
-      "email": "info@jasviindustries.in",
-      "whatsapp": "+919876543210",
-      "location": "Surat & Ahmedabad (Gujarat, India)"
+      "phone": "+91 95126 90771",
+      "email": "dsindustries89@gmail.com",
+      "web": "www.dsindustries.com",
+      "location": "H - 52, Darshanvilla Park, Nr. Gopal Chowk, Nikol - Naroda, Ahmedabad - 382345"
     }
   },
   "hero": {
-    "badgeTag": "JASVI VALVES",
-    "headline": "HIGH-PRESSURE PRECISION VALVES",
-    "subTagline": "Mfg. of High-Pressure Needle Valves, Manifold Blocks and Flow Control Systems",
+    "badgeTag": "DS INDUSTRIES \u2022 INDUSTRIAL VALVES",
+    "headline": "HIGH-PERFORMANCE INDUSTRIAL VALVES",
+    "subTagline": "Cast & Forged Process Valves, High-Performance Butterfly, Non-Return Check & Severe-Service Slurry Valves",
     "features": [
-      "Rated up to 10,000 PSI Working Pressure",
-      "100% API 598 Hydrostatic Shell & Helium Leak Tested",
-      "SS316, Duplex 2205, Inconel 625 & Monel 400 Metallurgy"
+      "Sizes from 1/2\" to 28\" (DN15 - DN700) \u2022 Pressure up to ASME Class 2500#",
+      "100% API 598 & API 6D Hydrostatic Shell & Helium Seat Leakage Tested",
+      "WCB, CF8, CF8M, A105, F316L, Duplex F51, Inconel 625 & Monel K400 Metallurgy"
     ],
-    "primaryCta": { "label": "Explore Valve Series", "anchor": "#products" },
-    "secondaryCta": { "label": "Configure Technical RFQ", "anchor": "#rfq" }
-  },
-  "welcome": {
-    "subtitle": "Mfg. of High-Pressure Needle Valves, Manifold Blocks and Flow Control Systems",
-    "heading": "Welcome To Jasvi Industries",
-    "paragraphs": [
-      "We \"Jasvi Industries\" are a leading Manufacturer, supplier and exporter of a wide range of High-Pressure Needle Valves, 2, 3 & 5-Way Manifold Blocks, Process Ball Valves, Check Valves, Double Block & Bleed (DBB) Valves etc. Situated in Surat & Ahmedabad (Gujarat, India), We have constructed a wide and well functional infrastructural unit that plays an important role in the growth of our company. We offer these precision severe-service products at reasonable rates and deliver these within the promised time-frame.",
-      "With the consistent innovations and precision engineering in fluid handling technology, everyone is resorting to severe-service valves for bringing efficiency that too at zero leakage. We have been consistently innovating and manufacturing our products with the help of the latest 5-axis CNC technology and have been successful in providing products and services which make industrial flow operations safer and much more dependable. This fact has made us a major manufacturer and supplier of severe-service instrumentation valves. Due to these reasons, we have extended domestic boundaries across India to international export markets spanning the Middle East, Southeast Asia, Africa, and Europe. The company is growing very rapidly and has plans to extend its operations in many more countries across the globe.",
-      "We have a huge number of talented engineers and CNC tooling specialists who are qualified and skillful because of their rich experience in this industry. These specialists work very efficiently in order to manufacture the best quality valves across the industry and provide quality service to the clients."
-    ],
-    "cta": { "label": "READ MORE ABOUT US →", "anchor": "#about" }
-  },
-  "trustBadges": [
-    {
-      "id": "trust-1",
-      "icon": "document",
-      "title": "FOUNDED IN THE YEAR 2017",
-      "description": "Providing best quality high-pressure instrumentation valves, manifold blocks, and severe-service fluid fittings to our precious customers in the industries."
+    "primaryCta": {
+      "label": "Explore Valve Catalog",
+      "anchor": "#products"
     },
-    {
-      "id": "trust-2",
-      "icon": "shield",
-      "title": "QUALITY ASSURANCE",
-      "description": "Our commitment to quality measures (ISO 9001:2015 & API 598 hydrostatic testing) and continuous improvement has earned us a reputation for excellence."
+    "secondaryCta": {
+      "label": "Configure Engineering RFQ",
+      "anchor": "#rfq"
     }
-  ],
-  "processSteps": [
-    {
-      "step": "1",
-      "icon": "meeting",
-      "title": "MEETING",
-      "description": "Technical consultation, process fluid parameter review & CAD engineering alignment."
-    },
-    {
-      "step": "2",
-      "icon": "manufacturing",
-      "title": "MANUFACTURING",
-      "description": "5-Axis simultaneous VMC machining, CNC turning & micron-tolerance spindle lapping."
-    },
-    {
-      "step": "3",
-      "icon": "delivery",
-      "title": "DELIVERY",
-      "description": "100% API 598 hydro shell tested, bubble-tight certified & worldwide export dispatch."
-    }
-  ],
+  },
   "valveCategories": [
-    { "key": "all", "label": "All Products" },
-    { "key": "needle", "label": "Needle Valves" },
-    { "key": "manifold", "label": "Manifold Blocks" },
-    { "key": "ball", "label": "Ball Valves" },
-    { "key": "check", "label": "Check Valves" },
-    { "key": "dbb", "label": "DBB Monoflange" }
+    {
+      "key": "all",
+      "label": "All Products"
+    },
+    {
+      "key": "cast-process",
+      "label": "Cast Process Valves"
+    },
+    {
+      "key": "butterfly",
+      "label": "Butterfly Valves"
+    },
+    {
+      "key": "check-valves",
+      "label": "Check & Non-Return"
+    },
+    {
+      "key": "slurry-pulp",
+      "label": "Slurry & Pulp Valves"
+    },
+    {
+      "key": "forged-valves",
+      "label": "Forged High-Pressure"
+    },
+    {
+      "key": "filtration",
+      "label": "Strainers & Filtration"
+    },
+    {
+      "key": "instrumentation",
+      "label": "Instrumentation"
+    }
   ],
   "valveProducts": [
     {
-      "id": "v-needle-6k",
-      "category": "needle",
-      "tag": "Needle Valve",
-      "ribbonTitle": "High-Pressure Needle Valve",
-      "title": "Forged High-Pressure Needle Valve (6,000 / 10,000 PSI)",
-      "meta": "One-piece forged body with non-rotating stem tip, safety back-seating, and packing below thread design for severe high-pressure isolation.",
-      "badges": ["SS316 / Monel", "6,000 - 10,000 PSI", "NACE MR0175"],
-      "sizes": ["1/4\"", "3/8\"", "1/2\"", "3/4\"", "1\""],
-      "endConnections": ["NPT Female x Female", "NPT Male x Female", "Twin Ferrule Tube OD"],
-      "materials": ["SS316/316L", "Duplex 2205", "Inconel 625", "Monel 400"],
-      "cv": "0.35 to 1.80",
-      "tempRange": "-54°C to 232°C (PTFE) / up to 450°C (Grafoil)",
+      "id": "prod-ball-valve",
+      "category": "cast-process",
+      "tag": "Ball Valve",
+      "ribbonTitle": "Bolted Side Piece Ball Valve",
+      "title": "Bolted Side Piece Cast Steel Ball Valve (Class 150# - 600#)",
+      "catalogPages": "Pages 2 & 3",
+      "meta": "2 & 3-Piece, Side Entry / Split Body, Fire Safe, Anti-static & Blow-out Proof Stem, Floating & Trunnion type Ball design. Full bore or reduced bore with live-loaded multiple V-Teflon packing.",
+      "badges": [
+        "2\" - 12\" (DN15 - DN300)",
+        "ASME Class 150# - 600#",
+        "Fire Safe API 607 / API 6FA"
+      ],
+      "sizes": [
+        "1/2\" (DN15)",
+        "3/4\" (DN20)",
+        "1\" (DN25)",
+        "1.25\" (DN32)",
+        "1.5\" (DN40)",
+        "2\" (DN50)",
+        "2.5\" (DN65)",
+        "3\" (DN80)",
+        "4\" (DN100)",
+        "6\" (DN150)",
+        "8\" (DN200)",
+        "10\" (DN250)",
+        "12\" (DN300)"
+      ],
+      "endConnections": [
+        "Flat Flanged",
+        "Raised Face (RF)",
+        "Ring Type Joint (RTJ)",
+        "Butt Welding (BW)"
+      ],
+      "materials": [
+        "WCB Cast Carbon Steel",
+        "CF8 Stainless Steel 304",
+        "CF8M Stainless Steel 316",
+        "Alloy Steel"
+      ],
+      "operations": [
+        "Lever (up to 6\")",
+        "Worm Gear (above 6\")",
+        "Pneumatic Actuator",
+        "Electrical Actuator"
+      ],
+      "standards": [
+        {
+          "item": "Design Standard",
+          "std": "API 6D / BS 5351"
+        },
+        {
+          "item": "Fire Safe Standard",
+          "std": "API 607 / API 6FA"
+        },
+        {
+          "item": "Pressure-Temp Rating",
+          "std": "ASME B16.34"
+        },
+        {
+          "item": "Face-to-Face",
+          "std": "ASME B16.10"
+        },
+        {
+          "item": "Testing Standard",
+          "std": "API 598 / BS 6755"
+        },
+        {
+          "item": "Flange Design",
+          "std": "ASME B16.5"
+        },
+        {
+          "item": "Butt Welding Design",
+          "std": "ASME B16.25"
+        },
+        {
+          "item": "Material Specification",
+          "std": "ASTM A216 WCB / A351 CF8 / CF8M"
+        }
+      ],
+      "bom": [
+        {
+          "part": "Body & Side Piece",
+          "mat1": "WCB",
+          "mat2": "CF8",
+          "mat3": "CF8M"
+        },
+        {
+          "part": "Ball",
+          "mat1": "WCB + ENP / CF8 / CF8M",
+          "mat2": "CF8 / CF8M",
+          "mat3": "CF8M"
+        },
+        {
+          "part": "Stem",
+          "mat1": "SS 410 / 17-4 PH / SS 304 / SS 316",
+          "mat2": "SS 304",
+          "mat3": "SS 316"
+        },
+        {
+          "part": "Seat Seal",
+          "mat1": "PTFE / CFT / GFT / VITON",
+          "mat2": "PTFE / CFT / GFT / VITON",
+          "mat3": "PTFE / CFT / GFT / VITON"
+        },
+        {
+          "part": "Gasket",
+          "mat1": "PTFE / CFT / GFT / VITON / Spiral Wound",
+          "mat2": "Spiral Wound SS304/Graphite",
+          "mat3": "Spiral Wound SS316/Graphite"
+        },
+        {
+          "part": "Trunnion MOC",
+          "mat1": "AISI 410 / SS 304 / SS 316",
+          "mat2": "SS 304 / SS 316",
+          "mat3": "SS 316"
+        },
+        {
+          "part": "Body/Side Piece Nut",
+          "mat1": "ASTM A194 GR. 2H",
+          "mat2": "ASTM A194 GR. 8",
+          "mat3": "ASTM A194 GR. 8M"
+        },
+        {
+          "part": "Body/Side Piece Stud",
+          "mat1": "ASTM A193 GR. B7",
+          "mat2": "ASTM A193 GR. B8",
+          "mat3": "ASTM A193 GR. B8M"
+        },
+        {
+          "part": "Lever / Handwheel",
+          "mat1": "Stainless Steel / Carbon Steel",
+          "mat2": "Stainless Steel",
+          "mat3": "Stainless Steel"
+        }
+      ],
+      "dimensions": {
+        "class150": [
+          {
+            "dn": 15,
+            "size": "1/2\"",
+            "ftof": 108,
+            "flangeDia": 90,
+            "rfd": 35,
+            "thk": 9.6,
+            "pcd": 60.3,
+            "holeDia": 15.9,
+            "noh": 4
+          },
+          {
+            "dn": 20,
+            "size": "3/4\"",
+            "ftof": 117,
+            "flangeDia": 100,
+            "rfd": 43,
+            "thk": 11.2,
+            "pcd": 69.9,
+            "holeDia": 15.9,
+            "noh": 4
+          },
+          {
+            "dn": 25,
+            "size": "1\"",
+            "ftof": 127,
+            "flangeDia": 110,
+            "rfd": 51,
+            "thk": 12.7,
+            "pcd": 79.4,
+            "holeDia": 15.9,
+            "noh": 4
+          },
+          {
+            "dn": 32,
+            "size": "1.25\"",
+            "ftof": 140,
+            "flangeDia": 115,
+            "rfd": 64,
+            "thk": 14.3,
+            "pcd": 88.9,
+            "holeDia": 15.9,
+            "noh": 4
+          },
+          {
+            "dn": 40,
+            "size": "1.5\"",
+            "ftof": 165,
+            "flangeDia": 125,
+            "rfd": 73,
+            "thk": 15.9,
+            "pcd": 98.4,
+            "holeDia": 15.9,
+            "noh": 4
+          },
+          {
+            "dn": 50,
+            "size": "2\"",
+            "ftof": 178,
+            "flangeDia": 150,
+            "rfd": 92,
+            "thk": 17.5,
+            "pcd": 120.7,
+            "holeDia": 19.05,
+            "noh": 4
+          },
+          {
+            "dn": 65,
+            "size": "2.5\"",
+            "ftof": 190,
+            "flangeDia": 180,
+            "rfd": 105,
+            "thk": 20.7,
+            "pcd": 139.7,
+            "holeDia": 19.05,
+            "noh": 4
+          },
+          {
+            "dn": 80,
+            "size": "3\"",
+            "ftof": 203,
+            "flangeDia": 190,
+            "rfd": 127,
+            "thk": 22.3,
+            "pcd": 152.4,
+            "holeDia": 19.05,
+            "noh": 4
+          },
+          {
+            "dn": 100,
+            "size": "4\"",
+            "ftof": 229,
+            "flangeDia": 230,
+            "rfd": 157,
+            "thk": 22.3,
+            "pcd": 190.5,
+            "holeDia": 19.05,
+            "noh": 8
+          },
+          {
+            "dn": 150,
+            "size": "6\"",
+            "ftof": 267,
+            "flangeDia": 280,
+            "rfd": 216,
+            "thk": 23.9,
+            "pcd": 241.3,
+            "holeDia": 22.22,
+            "noh": 8
+          },
+          {
+            "dn": 200,
+            "size": "8\"",
+            "ftof": 292,
+            "flangeDia": 345,
+            "rfd": 270,
+            "thk": 27.0,
+            "pcd": 298.5,
+            "holeDia": 22.22,
+            "noh": 8
+          },
+          {
+            "dn": 250,
+            "size": "10\"",
+            "ftof": 330,
+            "flangeDia": 405,
+            "rfd": 324,
+            "thk": 28.6,
+            "pcd": 362.0,
+            "holeDia": 25.4,
+            "noh": 12
+          },
+          {
+            "dn": 300,
+            "size": "12\"",
+            "ftof": 356,
+            "flangeDia": 485,
+            "rfd": 381,
+            "thk": 30.2,
+            "pcd": 431.8,
+            "holeDia": 25.4,
+            "noh": 12
+          }
+        ],
+        "class300": [
+          {
+            "dn": 15,
+            "size": "1/2\"",
+            "ftof": 140,
+            "flangeDia": 95,
+            "rfd": 35,
+            "thk": 12.7,
+            "pcd": 66.7,
+            "holeDia": 15.9,
+            "noh": 4
+          },
+          {
+            "dn": 20,
+            "size": "3/4\"",
+            "ftof": 152,
+            "flangeDia": 115,
+            "rfd": 43,
+            "thk": 14.3,
+            "pcd": 82.6,
+            "holeDia": 19.05,
+            "noh": 4
+          },
+          {
+            "dn": 25,
+            "size": "1\"",
+            "ftof": 165,
+            "flangeDia": 125,
+            "rfd": 51,
+            "thk": 15.9,
+            "pcd": 88.9,
+            "holeDia": 19.05,
+            "noh": 4
+          },
+          {
+            "dn": 32,
+            "size": "1.25\"",
+            "ftof": 178,
+            "flangeDia": 135,
+            "rfd": 64,
+            "thk": 17.5,
+            "pcd": 98.4,
+            "holeDia": 19.05,
+            "noh": 4
+          },
+          {
+            "dn": 40,
+            "size": "1.5\"",
+            "ftof": 190,
+            "flangeDia": 155,
+            "rfd": 73,
+            "thk": 19.1,
+            "pcd": 114.3,
+            "holeDia": 22.22,
+            "noh": 4
+          },
+          {
+            "dn": 50,
+            "size": "2\"",
+            "ftof": 216,
+            "flangeDia": 165,
+            "rfd": 92,
+            "thk": 20.7,
+            "pcd": 127.0,
+            "holeDia": 19.05,
+            "noh": 8
+          },
+          {
+            "dn": 65,
+            "size": "2.5\"",
+            "ftof": 241,
+            "flangeDia": 190,
+            "rfd": 105,
+            "thk": 23.9,
+            "pcd": 149.2,
+            "holeDia": 22.22,
+            "noh": 8
+          },
+          {
+            "dn": 80,
+            "size": "3\"",
+            "ftof": 282,
+            "flangeDia": 210,
+            "rfd": 127,
+            "thk": 27.0,
+            "pcd": 168.3,
+            "holeDia": 22.22,
+            "noh": 8
+          },
+          {
+            "dn": 100,
+            "size": "4\"",
+            "ftof": 305,
+            "flangeDia": 255,
+            "rfd": 157,
+            "thk": 30.2,
+            "pcd": 200.0,
+            "holeDia": 22.22,
+            "noh": 8
+          },
+          {
+            "dn": 150,
+            "size": "6\"",
+            "ftof": 403,
+            "flangeDia": 320,
+            "rfd": 216,
+            "thk": 35.0,
+            "pcd": 269.9,
+            "holeDia": 22.22,
+            "noh": 12
+          },
+          {
+            "dn": 200,
+            "size": "8\"",
+            "ftof": 502,
+            "flangeDia": 380,
+            "rfd": 270,
+            "thk": 39.7,
+            "pcd": 330.2,
+            "holeDia": 25.4,
+            "noh": 12
+          },
+          {
+            "dn": 250,
+            "size": "10\"",
+            "ftof": 568,
+            "flangeDia": 445,
+            "rfd": 324,
+            "thk": 46.1,
+            "pcd": 387.4,
+            "holeDia": 28.57,
+            "noh": 12
+          },
+          {
+            "dn": 300,
+            "size": "12\"",
+            "ftof": 648,
+            "flangeDia": 520,
+            "rfd": 381,
+            "thk": 49.3,
+            "pcd": 450.8,
+            "holeDia": 31.75,
+            "noh": 12
+          }
+        ],
+        "class600": [
+          {
+            "dn": 15,
+            "size": "1/2\"",
+            "ftof": 165,
+            "flangeDia": 95,
+            "rfd": 35,
+            "thk": 14.3,
+            "pcd": 66.7,
+            "holeDia": 15.9,
+            "noh": 4
+          },
+          {
+            "dn": 20,
+            "size": "3/4\"",
+            "ftof": 190,
+            "flangeDia": 115,
+            "rfd": 43,
+            "thk": 15.9,
+            "pcd": 82.6,
+            "holeDia": 19.05,
+            "noh": 4
+          },
+          {
+            "dn": 25,
+            "size": "1\"",
+            "ftof": 216,
+            "flangeDia": 125,
+            "rfd": 51,
+            "thk": 17.5,
+            "pcd": 88.9,
+            "holeDia": 19.05,
+            "noh": 4
+          },
+          {
+            "dn": 32,
+            "size": "1.25\"",
+            "ftof": 229,
+            "flangeDia": 135,
+            "rfd": 64,
+            "thk": 20.7,
+            "pcd": 98.4,
+            "holeDia": 19.05,
+            "noh": 4
+          },
+          {
+            "dn": 40,
+            "size": "1.5\"",
+            "ftof": 241,
+            "flangeDia": 155,
+            "rfd": 73,
+            "thk": 22.3,
+            "pcd": 114.3,
+            "holeDia": 22.22,
+            "noh": 4
+          },
+          {
+            "dn": 50,
+            "size": "2\"",
+            "ftof": 292,
+            "flangeDia": 165,
+            "rfd": 92,
+            "thk": 25.4,
+            "pcd": 127.0,
+            "holeDia": 19.05,
+            "noh": 8
+          },
+          {
+            "dn": 65,
+            "size": "2.5\"",
+            "ftof": 330,
+            "flangeDia": 190,
+            "rfd": 105,
+            "thk": 28.6,
+            "pcd": 149.2,
+            "holeDia": 22.22,
+            "noh": 8
+          },
+          {
+            "dn": 80,
+            "size": "3\"",
+            "ftof": 356,
+            "flangeDia": 210,
+            "rfd": 127,
+            "thk": 31.8,
+            "pcd": 168.3,
+            "holeDia": 22.22,
+            "noh": 8
+          },
+          {
+            "dn": 100,
+            "size": "4\"",
+            "ftof": 432,
+            "flangeDia": 275,
+            "rfd": 157,
+            "thk": 38.1,
+            "pcd": 215.9,
+            "holeDia": 25.4,
+            "noh": 8
+          },
+          {
+            "dn": 150,
+            "size": "6\"",
+            "ftof": 559,
+            "flangeDia": 355,
+            "rfd": 216,
+            "thk": 47.7,
+            "pcd": 292.1,
+            "holeDia": 28.57,
+            "noh": 12
+          },
+          {
+            "dn": 200,
+            "size": "8\"",
+            "ftof": 660,
+            "flangeDia": 420,
+            "rfd": 270,
+            "thk": 55.6,
+            "pcd": 349.2,
+            "holeDia": 31.75,
+            "noh": 12
+          },
+          {
+            "dn": 250,
+            "size": "10\"",
+            "ftof": 787,
+            "flangeDia": 510,
+            "rfd": 324,
+            "thk": 63.5,
+            "pcd": 431.8,
+            "holeDia": 34.92,
+            "noh": 16
+          },
+          {
+            "dn": 300,
+            "size": "12\"",
+            "ftof": 838,
+            "flangeDia": 560,
+            "rfd": 381,
+            "thk": 66.7,
+            "pcd": 489.0,
+            "holeDia": 34.92,
+            "noh": 20
+          }
+        ]
+      },
+      "image": "assets/images/hero_valve_ball.jpg",
+      "active": true
+    },
+    {
+      "id": "prod-gate-valve",
+      "category": "cast-process",
+      "tag": "Gate Valve",
+      "ribbonTitle": "Bolted Bonnet Gate Valve",
+      "title": "Bolted Bonnet Cast Carbon & Stainless Steel Gate Valve (2\" - 24\")",
+      "catalogPages": "Pages 4 & 5",
+      "meta": "Flexible wedge with centre stem-wedge contact in solid CA15 (13Cr) or hand faced with SS 316, Monel, or CoCr alloy. Non-rotating burnished acme stem with one-piece bonnet up to NPS 12.",
+      "badges": [
+        "2\" - 24\" (DN50 - DN600)",
+        "ASME Class 150# - 600#",
+        "API 600 & ISO 10434"
+      ],
+      "sizes": [
+        "2\"",
+        "2.5\"",
+        "3\"",
+        "4\"",
+        "6\"",
+        "8\"",
+        "10\"",
+        "12\"",
+        "14\"",
+        "16\"",
+        "18\"",
+        "20\"",
+        "24\""
+      ],
+      "endConnections": [
+        "Flanged Raised Face (RF)",
+        "Ring Type Joint (RTJ)",
+        "Butt Weld (BW)"
+      ],
+      "materials": [
+        "WCB Cast Carbon Steel",
+        "CF8 Stainless Steel",
+        "CF8M Stainless Steel",
+        "Alloy Steel"
+      ],
+      "standards": [
+        {
+          "item": "Design Standard (<= NPS 24)",
+          "std": "API 600, ISO 10434"
+        },
+        {
+          "item": "Design Standard (> NPS 24)",
+          "std": "ASME B16.34"
+        },
+        {
+          "item": "Pressure-Temp Rating",
+          "std": "ASME B16.34"
+        },
+        {
+          "item": "Face-to-Face Dimensions",
+          "std": "ASME B16.10"
+        },
+        {
+          "item": "Testing Standard",
+          "std": "API 598"
+        },
+        {
+          "item": "Flange Design",
+          "std": "ASME B16.5"
+        },
+        {
+          "item": "Butt Welding Design",
+          "std": "ASME B16.25"
+        },
+        {
+          "item": "Materials",
+          "std": "ASTM Standards"
+        }
+      ],
+      "bom": [
+        {
+          "part": "Body & Bonnet",
+          "mat1": "ASTM A216 WCB",
+          "mat2": "ASTM A351 CF8",
+          "mat3": "ASTM A351 CF8M"
+        },
+        {
+          "part": "Stem",
+          "mat1": "ASTM A276 SS 410",
+          "mat2": "ASTM A276 SS 304",
+          "mat3": "ASTM A276 SS 316"
+        },
+        {
+          "part": "Wedge",
+          "mat1": "CA15 / 13Cr Faced",
+          "mat2": "ASTM A351 CF8",
+          "mat3": "ASTM A351 CF8M"
+        },
+        {
+          "part": "Seat Ring",
+          "mat1": "13% Cr. Or Steel",
+          "mat2": "CoCr Alloy Faced",
+          "mat3": "CoCr Alloy Faced"
+        },
+        {
+          "part": "Gasket",
+          "mat1": "Class 150: Corrugated Steel/Graphite",
+          "mat2": "Class 300-1500: Spiral Wound SS/Graphite",
+          "mat3": "Spiral Wound SS316/Graphite"
+        },
+        {
+          "part": "Packing Ring",
+          "mat1": "Die-Formed Flexible Graphite",
+          "mat2": "Graphite",
+          "mat3": "Graphite"
+        },
+        {
+          "part": "Body/Bonnet Stud",
+          "mat1": "ASTM A193 Gr. B7",
+          "mat2": "ASTM A193 Gr. B8",
+          "mat3": "ASTM A193 Gr. B8M"
+        },
+        {
+          "part": "Body/Bonnet Nut",
+          "mat1": "ASTM A194 Gr. 2H",
+          "mat2": "ASTM A194 Gr. 8",
+          "mat3": "ASTM A194 Gr. 8M"
+        },
+        {
+          "part": "Stem Nut",
+          "mat1": "A 439 Austenitic Ductile Iron Gr. D-2C",
+          "mat2": "Gr. D-2C",
+          "mat3": "Gr. D-2C"
+        }
+      ],
+      "dimensions": {
+        "class150": [
+          {
+            "size": "2\"",
+            "ftof": 178,
+            "od": 150,
+            "thk": 17.5,
+            "rfd": 92,
+            "pcd": 121.0,
+            "holeDia": 19.1,
+            "noh": 4
+          },
+          {
+            "size": "2.5\"",
+            "ftof": 191,
+            "od": 180,
+            "thk": 20.7,
+            "rfd": 105,
+            "pcd": 139.7,
+            "holeDia": 19.05,
+            "noh": 4
+          },
+          {
+            "size": "3\"",
+            "ftof": 203,
+            "od": 190,
+            "thk": 22.3,
+            "rfd": 127,
+            "pcd": 152.0,
+            "holeDia": 19.1,
+            "noh": 4
+          },
+          {
+            "size": "4\"",
+            "ftof": 229,
+            "od": 230,
+            "thk": 22.3,
+            "rfd": 157,
+            "pcd": 191.0,
+            "holeDia": 19.1,
+            "noh": 8
+          },
+          {
+            "size": "6\"",
+            "ftof": 267,
+            "od": 280,
+            "thk": 25.4,
+            "rfd": 216,
+            "pcd": 241.0,
+            "holeDia": 22.2,
+            "noh": 8
+          },
+          {
+            "size": "8\"",
+            "ftof": 292,
+            "od": 345,
+            "thk": 28.6,
+            "rfd": 270,
+            "pcd": 299.0,
+            "holeDia": 22.2,
+            "noh": 8
+          },
+          {
+            "size": "10\"",
+            "ftof": 330,
+            "od": 405,
+            "thk": 30.2,
+            "rfd": 324,
+            "pcd": 362.0,
+            "holeDia": 25.4,
+            "noh": 12
+          },
+          {
+            "size": "12\"",
+            "ftof": 356,
+            "od": 485,
+            "thk": 31.8,
+            "rfd": 381,
+            "pcd": 432.0,
+            "holeDia": 25.4,
+            "noh": 12
+          },
+          {
+            "size": "14\"",
+            "ftof": 381,
+            "od": 535,
+            "thk": 33.4,
+            "rfd": 413,
+            "pcd": 476.0,
+            "holeDia": 28.6,
+            "noh": 12
+          },
+          {
+            "size": "16\"",
+            "ftof": 406,
+            "od": 595,
+            "thk": 35.0,
+            "rfd": 470,
+            "pcd": 540.0,
+            "holeDia": 28.6,
+            "noh": 16
+          },
+          {
+            "size": "18\"",
+            "ftof": 432,
+            "od": 635,
+            "thk": 38.1,
+            "rfd": 533,
+            "pcd": 578.0,
+            "holeDia": 31.8,
+            "noh": 16
+          },
+          {
+            "size": "20\"",
+            "ftof": 457,
+            "od": 700,
+            "thk": 41.3,
+            "rfd": 584,
+            "pcd": 635.0,
+            "holeDia": 31.8,
+            "noh": 20
+          },
+          {
+            "size": "24\"",
+            "ftof": 508,
+            "od": 815,
+            "thk": 46.1,
+            "rfd": 692,
+            "pcd": 749.0,
+            "holeDia": 34.9,
+            "noh": 20
+          }
+        ],
+        "class300": [
+          {
+            "size": "2\"",
+            "ftof": 216,
+            "od": 165,
+            "thk": 20.7,
+            "rfd": 92,
+            "pcd": 127.0,
+            "holeDia": 19.1,
+            "noh": 8
+          },
+          {
+            "size": "2.5\"",
+            "ftof": 241,
+            "od": 190,
+            "thk": 23.9,
+            "rfd": 105,
+            "pcd": 149.2,
+            "holeDia": 22.22,
+            "noh": 8
+          },
+          {
+            "size": "3\"",
+            "ftof": 282,
+            "od": 210,
+            "thk": 27.0,
+            "rfd": 127,
+            "pcd": 168.0,
+            "holeDia": 22.2,
+            "noh": 8
+          },
+          {
+            "size": "4\"",
+            "ftof": 305,
+            "od": 255,
+            "thk": 30.2,
+            "rfd": 157,
+            "pcd": 200.0,
+            "holeDia": 22.2,
+            "noh": 8
+          },
+          {
+            "size": "6\"",
+            "ftof": 403,
+            "od": 320,
+            "thk": 35.0,
+            "rfd": 216,
+            "pcd": 270.0,
+            "holeDia": 22.2,
+            "noh": 12
+          },
+          {
+            "size": "8\"",
+            "ftof": 419,
+            "od": 380,
+            "thk": 39.7,
+            "rfd": 270,
+            "pcd": 330.0,
+            "holeDia": 25.4,
+            "noh": 12
+          },
+          {
+            "size": "10\"",
+            "ftof": 457,
+            "od": 445,
+            "thk": 46.1,
+            "rfd": 324,
+            "pcd": 387.0,
+            "holeDia": 28.6,
+            "noh": 16
+          },
+          {
+            "size": "12\"",
+            "ftof": 501,
+            "od": 520,
+            "thk": 49.3,
+            "rfd": 381,
+            "pcd": 451.0,
+            "holeDia": 31.8,
+            "noh": 16
+          },
+          {
+            "size": "14\"",
+            "ftof": 762,
+            "od": 585,
+            "thk": 52.4,
+            "rfd": 413,
+            "pcd": 514.0,
+            "holeDia": 31.8,
+            "noh": 20
+          },
+          {
+            "size": "16\"",
+            "ftof": 838,
+            "od": 650,
+            "thk": 55.6,
+            "rfd": 470,
+            "pcd": 572.0,
+            "holeDia": 34.9,
+            "noh": 20
+          },
+          {
+            "size": "18\"",
+            "ftof": 914,
+            "od": 710,
+            "thk": 58.8,
+            "rfd": 533,
+            "pcd": 629.0,
+            "holeDia": 34.9,
+            "noh": 24
+          },
+          {
+            "size": "20\"",
+            "ftof": 990,
+            "od": 775,
+            "thk": 62.0,
+            "rfd": 584,
+            "pcd": 686.0,
+            "holeDia": 34.9,
+            "noh": 24
+          },
+          {
+            "size": "24\"",
+            "ftof": 1143,
+            "od": 915,
+            "thk": 68.3,
+            "rfd": 692,
+            "pcd": 813.0,
+            "holeDia": 41.3,
+            "noh": 24
+          }
+        ]
+      },
+      "image": "assets/images/product_dbb_valve.svg",
+      "active": true
+    },
+    {
+      "id": "prod-globe-valve",
+      "category": "cast-process",
+      "tag": "Globe Valve",
+      "ribbonTitle": "Bolted Bonnet Globe Valve",
+      "title": "Bolted Bonnet Cast Steel Globe Valve (2\" - 24\")",
+      "catalogPages": "Pages 6 & 7",
+      "meta": "Tapered plug disc accurately mates with hard-faced seat (13% Cr, CoCr alloy, or Monel). Precision non-rotating burnished double acme stem with renewable austenitic ductile iron stem nut.",
+      "badges": [
+        "2\" - 24\" (DN50 - DN600)",
+        "ASME Class 150# - 600#",
+        "API 600 & BS 1873"
+      ],
+      "sizes": [
+        "2\"",
+        "2.5\"",
+        "3\"",
+        "4\"",
+        "6\"",
+        "8\"",
+        "10\"",
+        "12\"",
+        "14\"",
+        "16\"",
+        "18\"",
+        "20\"",
+        "24\""
+      ],
+      "endConnections": [
+        "Flanged Raised Face (RF)",
+        "Ring Type Joint (RTJ)",
+        "Butt Welding (BW)"
+      ],
+      "materials": [
+        "WCB Cast Carbon Steel",
+        "CF8 Stainless Steel",
+        "CF8M Stainless Steel",
+        "Alloy Steel"
+      ],
+      "standards": [
+        {
+          "item": "Design Standard (<= NPS 24)",
+          "std": "API 600, BS 1873"
+        },
+        {
+          "item": "Design Standard (> NPS 24)",
+          "std": "ASME B16.34"
+        },
+        {
+          "item": "Face-to-Face Dimensions",
+          "std": "ASME B16.10"
+        },
+        {
+          "item": "Testing Standard",
+          "std": "API 598 / BS 6755"
+        },
+        {
+          "item": "Flange Design",
+          "std": "ASME B16.5"
+        }
+      ],
+      "dimensions": {
+        "class150": [
+          {
+            "size": "2\"",
+            "ftof": 203,
+            "od": 150,
+            "thk": 17.5,
+            "rfd": 92,
+            "pcd": 120.7,
+            "holeDia": 19.05,
+            "noh": 4
+          },
+          {
+            "size": "2.5\"",
+            "ftof": 216,
+            "od": 180,
+            "thk": 20.7,
+            "rfd": 105,
+            "pcd": 139.7,
+            "holeDia": 19.05,
+            "noh": 4
+          },
+          {
+            "size": "3\"",
+            "ftof": 241,
+            "od": 190,
+            "thk": 22.3,
+            "rfd": 127,
+            "pcd": 152.4,
+            "holeDia": 19.05,
+            "noh": 4
+          },
+          {
+            "size": "4\"",
+            "ftof": 292,
+            "od": 230,
+            "thk": 22.3,
+            "rfd": 157,
+            "pcd": 190.5,
+            "holeDia": 19.05,
+            "noh": 8
+          },
+          {
+            "size": "6\"",
+            "ftof": 356,
+            "od": 280,
+            "thk": 25.4,
+            "rfd": 216,
+            "pcd": 241.3,
+            "holeDia": 22.23,
+            "noh": 8
+          },
+          {
+            "size": "8\"",
+            "ftof": 495,
+            "od": 345,
+            "thk": 28.6,
+            "rfd": 270,
+            "pcd": 298.5,
+            "holeDia": 22.23,
+            "noh": 8
+          },
+          {
+            "size": "10\"",
+            "ftof": 622,
+            "od": 405,
+            "thk": 30.2,
+            "rfd": 324,
+            "pcd": 362.0,
+            "holeDia": 25.4,
+            "noh": 12
+          },
+          {
+            "size": "12\"",
+            "ftof": 699,
+            "od": 485,
+            "thk": 31.8,
+            "rfd": 381,
+            "pcd": 431.8,
+            "holeDia": 25.4,
+            "noh": 12
+          }
+        ]
+      },
+      "image": "assets/images/product_gauge_valve.svg",
+      "active": true
+    },
+    {
+      "id": "prod-swing-check",
+      "category": "check-valves",
+      "tag": "Swing Check Valve",
+      "ribbonTitle": "Bolted Bonnet Swing Check Valve",
+      "title": "Bolted Bonnet Cast Steel Swing Check Valve (2\" - 24\")",
+      "catalogPages": "Pages 8 & 9",
+      "meta": "One-piece non-rotating disc fastened to sturdy disc hanger with lock nut and cotter pin. Hard-faced with 13% Cr or CoCr alloy, ground and lapped with seat. Full top-cover accessibility.",
+      "badges": [
+        "2\" - 24\" (DN50 - DN600)",
+        "ASME Class 150# - 600#",
+        "API 600 & BS 1873"
+      ],
+      "sizes": [
+        "2\"",
+        "2.5\"",
+        "3\"",
+        "4\"",
+        "6\"",
+        "8\"",
+        "10\"",
+        "12\"",
+        "14\"",
+        "16\"",
+        "18\"",
+        "20\"",
+        "24\""
+      ],
+      "endConnections": [
+        "Flanged Raised Face (RF)",
+        "Ring Type Joint (RTJ)",
+        "Butt Welding (BW)"
+      ],
+      "materials": [
+        "WCB Cast Carbon Steel",
+        "CF8 Stainless Steel",
+        "CF8M Stainless Steel"
+      ],
+      "standards": [
+        {
+          "item": "Design Standard (<= NPS 24)",
+          "std": "API 600, BS 1873"
+        },
+        {
+          "item": "Design Standard (> NPS 24)",
+          "std": "ASME B16.34"
+        },
+        {
+          "item": "Testing Standard",
+          "std": "API 598"
+        }
+      ],
+      "dimensions": {
+        "class150": [
+          {
+            "size": "2\"",
+            "ftof": 203,
+            "od": 150,
+            "thk": 17.5,
+            "rfd": 92,
+            "pcd": 120.7,
+            "holeDia": 19.05,
+            "noh": 4
+          },
+          {
+            "size": "2.5\"",
+            "ftof": 216,
+            "od": 180,
+            "thk": 20.7,
+            "rfd": 105,
+            "pcd": 139.7,
+            "holeDia": 19.05,
+            "noh": 4
+          },
+          {
+            "size": "3\"",
+            "ftof": 241,
+            "od": 190,
+            "thk": 22.3,
+            "rfd": 127,
+            "pcd": 152.4,
+            "holeDia": 19.05,
+            "noh": 4
+          },
+          {
+            "size": "4\"",
+            "ftof": 292,
+            "od": 230,
+            "thk": 22.3,
+            "rfd": 157,
+            "pcd": 190.5,
+            "holeDia": 19.05,
+            "noh": 8
+          },
+          {
+            "size": "6\"",
+            "ftof": 356,
+            "od": 280,
+            "thk": 25.4,
+            "rfd": 216,
+            "pcd": 241.3,
+            "holeDia": 22.23,
+            "noh": 8
+          },
+          {
+            "size": "8\"",
+            "ftof": 495,
+            "od": 345,
+            "thk": 28.6,
+            "rfd": 270,
+            "pcd": 298.5,
+            "holeDia": 22.23,
+            "noh": 8
+          },
+          {
+            "size": "10\"",
+            "ftof": 622,
+            "od": 405,
+            "thk": 30.2,
+            "rfd": 324,
+            "pcd": 362.0,
+            "holeDia": 25.4,
+            "noh": 12
+          },
+          {
+            "size": "12\"",
+            "ftof": 699,
+            "od": 485,
+            "thk": 31.8,
+            "rfd": 381,
+            "pcd": 431.8,
+            "holeDia": 25.4,
+            "noh": 12
+          }
+        ]
+      },
+      "image": "assets/images/hero_valve_check.jpg",
+      "active": true
+    },
+    {
+      "id": "prod-dual-plate-check",
+      "category": "check-valves",
+      "tag": "Dual Plate Check",
+      "ribbonTitle": "Retainerless Dual Plate Check Valve",
+      "title": "Retainerless Wafer Dual Plate Check Valve (2\" - 24\")",
+      "catalogPages": "Page 10",
+      "meta": "Retainerless wafer design supplied as standard, conforming to API 594 face-to-face dimensions and ANSI B16.5 flanges. Spring-assisted closure eliminates water hammer and reverse surges.",
+      "badges": [
+        "2\" - 24\" (DN50 - DN600)",
+        "Class 150# - 600#",
+        "API 594 Retainerless"
+      ],
+      "sizes": [
+        "DN50 (2\")",
+        "DN65 (2.5\")",
+        "DN80 (3\")",
+        "DN100 (4\")",
+        "DN125 (5\")",
+        "DN150 (6\")",
+        "DN200 (8\")",
+        "DN250 (10\")",
+        "DN300 (12\")",
+        "DN350 (14\")",
+        "DN400 (16\")",
+        "DN450 (18\")",
+        "DN500 (20\")",
+        "DN600 (24\")"
+      ],
+      "endConnections": [
+        "Wafer Pattern",
+        "Lugged Pattern",
+        "Flanged Pattern"
+      ],
+      "materials": [
+        "WCB Carbon Steel",
+        "CF8 / CF8M Stainless",
+        "Alloy Steel"
+      ],
+      "standards": [
+        {
+          "item": "Design Standard",
+          "std": "API 594"
+        },
+        {
+          "item": "Wall Thickness",
+          "std": "ASME B16.34"
+        },
+        {
+          "item": "Testing Standard",
+          "std": "API 598"
+        },
+        {
+          "item": "Fire Safe Design",
+          "std": "API 609"
+        }
+      ],
+      "dimensions": {
+        "class150": [
+          {
+            "dn": 50,
+            "size": "2\"",
+            "l": 60,
+            "c": 60,
+            "d": 101
+          },
+          {
+            "dn": 65,
+            "size": "2.5\"",
+            "l": 67,
+            "c": 73,
+            "d": 120
+          },
+          {
+            "dn": 80,
+            "size": "3\"",
+            "l": 73,
+            "c": 89,
+            "d": 133
+          },
+          {
+            "dn": 100,
+            "size": "4\"",
+            "l": 73,
+            "c": 114,
+            "d": 171
+          },
+          {
+            "dn": 125,
+            "size": "5\"",
+            "l": 86,
+            "c": 141,
+            "d": 193
+          },
+          {
+            "dn": 150,
+            "size": "6\"",
+            "l": 98,
+            "c": 168,
+            "d": 218
+          },
+          {
+            "dn": 200,
+            "size": "8\"",
+            "l": 127,
+            "c": 219,
+            "d": 276
+          },
+          {
+            "dn": 250,
+            "size": "10\"",
+            "l": 146,
+            "c": 273,
+            "d": 336
+          },
+          {
+            "dn": 300,
+            "size": "12\"",
+            "l": 181,
+            "c": 324,
+            "d": 406
+          },
+          {
+            "dn": 350,
+            "size": "14\"",
+            "l": 184,
+            "c": 356,
+            "d": 447
+          },
+          {
+            "dn": 400,
+            "size": "16\"",
+            "l": 191,
+            "c": 406,
+            "d": 511
+          },
+          {
+            "dn": 450,
+            "size": "18\"",
+            "l": 203,
+            "c": 457,
+            "d": 546
+          },
+          {
+            "dn": 500,
+            "size": "20\"",
+            "l": 219,
+            "c": 508,
+            "d": 603
+          },
+          {
+            "dn": 600,
+            "size": "24\"",
+            "l": 222,
+            "c": 610,
+            "d": 714
+          }
+        ]
+      },
+      "image": "assets/images/product_check_valve.svg",
+      "active": true
+    },
+    {
+      "id": "prod-single-plate-check",
+      "category": "check-valves",
+      "tag": "Single Plate Check",
+      "ribbonTitle": "Single Plate Wafer Check Valve",
+      "title": "Single Plate Thin Wafer Check Valve (DN32 - DN600)",
+      "catalogPages": "Page 11",
+      "meta": "Compact wafer single plate check valve suitable for water, sewage, and natural liquid lines. Large opening angle and low head loss with optional spring-assisted return.",
+      "badges": [
+        "DN32 - DN600",
+        "Working Pressure PN10 / PN16",
+        "Temp -10\u00b0C to +80\u00b0C"
+      ],
+      "sizes": [
+        "DN32",
+        "DN40",
+        "DN50",
+        "DN65",
+        "DN80",
+        "DN100",
+        "DN125",
+        "DN150",
+        "DN200",
+        "DN250",
+        "DN300",
+        "DN350",
+        "DN400",
+        "DN450",
+        "DN500",
+        "DN600"
+      ],
+      "endConnections": [
+        "Wafer Mounting (EN1092-1)"
+      ],
+      "materials": [
+        "Body SS304 (ASTM A276)",
+        "Disc SS316",
+        "O-Ring EPDM",
+        "Eye Bolt SS304"
+      ],
+      "standards": [
+        {
+          "item": "Design Standard",
+          "std": "EN1074-3"
+        },
+        {
+          "item": "Flange Mounting",
+          "std": "EN1092-1"
+        },
+        {
+          "item": "Face to Face",
+          "std": "EN558-1"
+        },
+        {
+          "item": "Testing Standard",
+          "std": "EN12266-1"
+        }
+      ],
+      "image": "assets/images/hero_valve_check.jpg",
+      "active": true
+    },
+    {
+      "id": "prod-butterfly-valve",
+      "category": "butterfly",
+      "tag": "Butterfly Valve",
+      "ribbonTitle": "High-Performance Butterfly Valve",
+      "title": "High-Performance Cast Steel Butterfly Valve (1 1/2\" - 28\")",
+      "catalogPages": "Pages 12 & 13",
+      "meta": "Slim Seal, Wafer Type, Double Flanged, Double & Triple Eccentric. 100% tight shut-off in both flow directions with replaceable/molded rubber seats (EPDM/Nitrile/Viton/PTFE/PFA). Universal mounting (ANSI/BS/DIN/JIS).",
+      "badges": [
+        "1.5\" - 28\" (DN40 - DN700)",
+        "Rating: PN10 - PN25",
+        "ISO 5211 Actuator Ready"
+      ],
+      "sizes": [
+        "DN50 (2\")",
+        "DN65 (2.5\")",
+        "DN80 (3\")",
+        "DN100 (4\")",
+        "DN125 (5\")",
+        "DN150 (6\")",
+        "DN200 (8\")",
+        "DN250 (10\")",
+        "DN300 (12\")",
+        "DN350 (14\")",
+        "DN400 (16\")",
+        "DN450 (18\")",
+        "DN500 (20\")",
+        "DN600 (24\")"
+      ],
+      "endConnections": [
+        "Wafer Slim Seal",
+        "Lugged Type",
+        "Double Flanged"
+      ],
+      "materials": [
+        "Cast Iron (CI)",
+        "Cast Carbon WCB",
+        "Stainless CF8",
+        "Stainless CF8M"
+      ],
+      "operations": [
+        "Notched Lever (8 positions)",
+        "Enclosed Worm Gear",
+        "Pneumatic Double Acting",
+        "Rotary Electrical Actuator"
+      ],
+      "standards": [
+        {
+          "item": "Design Standards",
+          "std": "BS 5155 / API 609 / IS 13095 / AWWA C 504"
+        },
+        {
+          "item": "Actuator Flange",
+          "std": "ISO 5211 (F07 - F16)"
+        },
+        {
+          "item": "Testing Standard",
+          "std": "API 598 / BS 6755"
+        }
+      ],
+      "dimensions": {
+        "gearOperated": [
+          {
+            "dn": 50,
+            "a": 43,
+            "b": 104,
+            "c": 61,
+            "d": 28,
+            "e": 65,
+            "f": 185,
+            "g": 15
+          },
+          {
+            "dn": 65,
+            "a": 46,
+            "b": 111,
+            "c": 68,
+            "d": 48,
+            "e": 65,
+            "f": 185,
+            "g": 15
+          },
+          {
+            "dn": 80,
+            "a": 46,
+            "b": 124,
+            "c": 75,
+            "d": 67,
+            "e": 65,
+            "f": 230,
+            "g": 15
+          },
+          {
+            "dn": 100,
+            "a": 52,
+            "b": 140,
+            "c": 89,
+            "d": 88,
+            "e": 65,
+            "f": 230,
+            "g": 15
+          },
+          {
+            "dn": 125,
+            "a": 56,
+            "b": 158,
+            "c": 105,
+            "d": 114,
+            "e": 65,
+            "f": 230,
+            "g": 15
+          },
+          {
+            "dn": 150,
+            "a": 56,
+            "b": 180,
+            "c": 120,
+            "d": 142,
+            "e": 65,
+            "f": 265,
+            "g": 15
+          },
+          {
+            "dn": 200,
+            "a": 60,
+            "b": 230,
+            "c": 156,
+            "d": 194,
+            "e": 75,
+            "f": 325,
+            "g": 15
+          },
+          {
+            "dn": 250,
+            "a": 68,
+            "b": 266,
+            "c": 196,
+            "d": 243,
+            "e": 75,
+            "f": 385,
+            "g": 18
+          },
+          {
+            "dn": 300,
+            "a": 78,
+            "b": 300,
+            "c": 230,
+            "d": 292,
+            "e": 75,
+            "f": 385,
+            "g": 18
+          }
+        ],
+        "iso5211Flange": [
+          {
+            "dn": 100,
+            "a": 52,
+            "b": 157,
+            "c": 100,
+            "d": 88,
+            "e": 180,
+            "f": 200,
+            "g": 15,
+            "iso": "F07"
+          },
+          {
+            "dn": 150,
+            "a": 56,
+            "b": 181,
+            "c": 133,
+            "d": 142,
+            "e": 240,
+            "f": 250,
+            "g": 15,
+            "iso": "F07"
+          },
+          {
+            "dn": 200,
+            "a": 60,
+            "b": 230,
+            "c": 165,
+            "d": 194,
+            "e": 285,
+            "f": 350,
+            "g": 15,
+            "iso": "F10"
+          },
+          {
+            "dn": 250,
+            "a": 68,
+            "b": 266,
+            "c": 196,
+            "d": 243,
+            "e": 285,
+            "f": 350,
+            "g": 18,
+            "iso": "F10"
+          },
+          {
+            "dn": 300,
+            "a": 78,
+            "b": 300,
+            "c": 230,
+            "d": 292,
+            "e": 285,
+            "f": 350,
+            "g": 18,
+            "iso": "F10"
+          },
+          {
+            "dn": 400,
+            "a": 102,
+            "b": 385,
+            "c": 302,
+            "d": 375,
+            "e": 305,
+            "f": 350,
+            "g": 22,
+            "iso": "F14"
+          },
+          {
+            "dn": 500,
+            "a": 127,
+            "b": 465,
+            "c": 405,
+            "d": 470,
+            "e": 350,
+            "f": 500,
+            "g": 26,
+            "iso": "F16"
+          },
+          {
+            "dn": 600,
+            "a": 154,
+            "b": 540,
+            "c": 460,
+            "d": 570,
+            "e": 370,
+            "f": 600,
+            "g": 26,
+            "iso": "F16"
+          }
+        ]
+      },
+      "image": "assets/images/hero_valve_ball.jpg",
+      "active": true
+    },
+    {
+      "id": "prod-knife-gate-valve",
+      "category": "slurry-pulp",
+      "tag": "Knife Gate Valve",
+      "ribbonTitle": "MESCO Knife Edge Gate Valve",
+      "title": "\"MESCO\" Heavy-Duty Knife Edge Gate Valve (50mm - 600mm)",
+      "catalogPages": "Page 14",
+      "meta": "Batten knife-edge gate cuts through dense flowing media and abrasive slurries, ensuring tight shut-off even when solid particles settle at the bottom. Non-sliding contact prevents wear. Widely used in Mining, Power, Steel, Chemical, Paper, and Coal Ash.",
+      "badges": [
+        "50mm - 600mm",
+        "Rating: PN 10 Class",
+        "Slurry & Abrasive Solids"
+      ],
+      "sizes": [
+        "50mm",
+        "65mm",
+        "80mm",
+        "100mm",
+        "125mm",
+        "150mm",
+        "200mm",
+        "250mm",
+        "300mm",
+        "350mm",
+        "400mm",
+        "450mm",
+        "500mm",
+        "600mm"
+      ],
+      "endConnections": [
+        "Flanged End",
+        "Uni Lugged",
+        "Wafer Type",
+        "Two Lug",
+        "Wafer Flangeless"
+      ],
+      "materials": [
+        "WCB Cast Carbon Steel",
+        "CF8 / CF8M Stainless",
+        "Cast Iron",
+        "S.G. Iron"
+      ],
+      "operations": [
+        "Handwheel Manual",
+        "Pneumatic Cylinder Operated",
+        "Hydraulic Cylinder",
+        "Electric Actuator"
+      ],
+      "standards": [
+        {
+          "item": "Pressure Rating",
+          "std": "Up to PN 10 Class"
+        },
+        {
+          "item": "Drilling Standards",
+          "std": "ANSI B16.5, DIN, BS, JIS, AS Standard"
+        }
+      ],
+      "bom": [
+        {
+          "part": "Body & Yoke",
+          "mat1": "WCB",
+          "mat2": "CF8",
+          "mat3": "CF8M"
+        },
+        {
+          "part": "Disc (Knife Gate)",
+          "mat1": "S.S. 304",
+          "mat2": "S.S. 316",
+          "mat3": "Precision-Buffed SS316"
+        },
+        {
+          "part": "Gland Packing",
+          "mat1": "Graphite",
+          "mat2": "PTFE Braided",
+          "mat3": "High-Density Slurry PTFE"
+        },
+        {
+          "part": "Seat",
+          "mat1": "Renewable Soft Seat",
+          "mat2": "Metal-to-Metal",
+          "mat3": "Stellite Hardfaced"
+        }
+      ],
+      "image": "assets/images/product_dbb_valve.svg",
+      "active": true
+    },
+    {
+      "id": "prod-pulp-valve",
+      "category": "slurry-pulp",
+      "tag": "Pulp Valve",
+      "ribbonTitle": "Straight-Passage Pulp Plate Valve",
+      "title": "MESCO Pulp & Slurry Plate Valve (DN50 - DN400)",
+      "catalogPages": "Page 15",
+      "meta": "Unrestricted smooth flow of viscous fluids. Recess-free straight passage orifice minimizes body contact and avoids accumulation of solids, ensuring unaltered velocity. Designed for Sugar molasses, paper stock lines, cement hoppers, and coal ash slurries.",
+      "badges": [
+        "DN50 - DN400",
+        "Table E & Table D Flanges",
+        "Sugar & Paper Industry"
+      ],
+      "sizes": [
+        "DN50",
+        "DN65",
+        "DN80",
+        "DN100",
+        "DN125",
+        "DN150",
+        "DN200",
+        "DN250",
+        "DN300",
+        "DN350",
+        "DN400"
+      ],
+      "endConnections": [
+        "Table 'E' Flange",
+        "Table 'D' Flange",
+        "Custom Slurry Pattern"
+      ],
+      "materials": [
+        "Cast Iron (C.I.)",
+        "WCB Cast Steel",
+        "CF8 Stainless",
+        "CF8M Stainless"
+      ],
+      "operations": [
+        "Hand Wheel",
+        "Pneumatic Cylinder",
+        "Hydraulic Cylinder",
+        "Chain Wheel",
+        "Electric Motor",
+        "Bevel Gear"
+      ],
+      "image": "assets/images/product_dbb_valve.svg",
+      "active": true
+    },
+    {
+      "id": "prod-forged-gate",
+      "category": "forged-valves",
+      "tag": "Forged Gate Valve",
+      "ribbonTitle": "Forged High-Pressure Gate Valve",
+      "title": "High-Pressure Forged Steel Gate Valve (Class 800# - 2500#)",
+      "catalogPages": "Page 16",
+      "meta": "Compact forged gate valve conforming to API 602 and ASME B16.34. Available with Bolted Bonnet or Welded Bonnet. Socket weld, screwed NPT, butt-weld, or integral flanged ends.",
+      "badges": [
+        "15mm - 50mm (1/2\" - 2\")",
+        "Class 800# / 1500# / 2500#",
+        "API 602 & ASME B16.34"
+      ],
+      "sizes": [
+        "15 mm (1/2\")",
+        "20 mm (3/4\")",
+        "25 mm (1\")",
+        "32 mm (1.25\")",
+        "40 mm (1.5\")",
+        "50 mm (2\")"
+      ],
+      "endConnections": [
+        "Socket Weld (ASME B16.11)",
+        "Screwed NPT (ASME B1.20.1)",
+        "Butt-Weld (ASME B16.25)",
+        "Flanged RF (ASME B16.5)"
+      ],
+      "materials": [
+        "A105 Carbon Steel",
+        "LF2 Low Temp Steel",
+        "F5 / F9 / F11 / F22 Alloy",
+        "F304L / F316L Stainless",
+        "Duplex F51 / F53 / F55",
+        "Inconel 625",
+        "Monel K400"
+      ],
+      "standards": [
+        {
+          "item": "Design & Manufacture",
+          "std": "API 602"
+        },
+        {
+          "item": "Testing Standard",
+          "std": "API 598"
+        },
+        {
+          "item": "Pressure Rating",
+          "std": "ASME B16.34"
+        }
+      ],
+      "dimensions": {
+        "class800": [
+          {
+            "size": "15 mm",
+            "ftof": 87,
+            "op": 9.5,
+            "ho": 152,
+            "hc": 130,
+            "wh": 86,
+            "wt": 1.6
+          },
+          {
+            "size": "20 mm",
+            "ftof": 92,
+            "op": 13.0,
+            "ho": 158,
+            "hc": 133,
+            "wh": 86,
+            "wt": 1.9
+          },
+          {
+            "size": "25 mm",
+            "ftof": 106,
+            "op": 18.0,
+            "ho": 189,
+            "hc": 155,
+            "wh": 116,
+            "wt": 3.1
+          },
+          {
+            "size": "32 mm",
+            "ftof": 127,
+            "op": 24.0,
+            "ho": 239,
+            "hc": 200,
+            "wh": 150,
+            "wt": 6.3
+          },
+          {
+            "size": "40 mm",
+            "ftof": 127,
+            "op": 29.0,
+            "ho": 239,
+            "hc": 200,
+            "wh": 150,
+            "wt": 6.4
+          },
+          {
+            "size": "50 mm",
+            "ftof": 142,
+            "op": 37.0,
+            "ho": 288,
+            "hc": 235,
+            "wh": 150,
+            "wt": 9.8
+          }
+        ],
+        "flanged150": [
+          {
+            "size": "15 mm",
+            "ftof": 108,
+            "dia": 90,
+            "ft": 9.6,
+            "wt": 2.6
+          },
+          {
+            "size": "20 mm",
+            "ftof": 117,
+            "dia": 100,
+            "ft": 11.0,
+            "wt": 3.5
+          },
+          {
+            "size": "25 mm",
+            "ftof": 127,
+            "dia": 110,
+            "ft": 13.0,
+            "wt": 5.1
+          },
+          {
+            "size": "32 mm",
+            "ftof": 140,
+            "dia": 115,
+            "ft": 14.0,
+            "wt": 8.7
+          },
+          {
+            "size": "40 mm",
+            "ftof": 165,
+            "dia": 125,
+            "ft": 16.0,
+            "wt": 9.3
+          },
+          {
+            "size": "50 mm",
+            "ftof": 178,
+            "dia": 150,
+            "ft": 18.0,
+            "wt": 15.0
+          }
+        ]
+      },
       "image": "assets/images/hero_valve_needle.jpg",
       "active": true
     },
     {
-      "id": "v-manifold-5w",
-      "category": "manifold",
-      "tag": "Manifold Block",
-      "ribbonTitle": "Hydraulic & Instrument Manifold Block",
-      "title": "2, 3 & 5-Way Instrumentation Manifold Block",
-      "meta": "Direct-mount and remote-mount manifold blocks designed for differential pressure transmitters, incorporating isolate, equalize, and vent valves.",
-      "badges": ["5-Valve Direct Mount", "6,000 PSI Rating", "API 598 Tested"],
-      "sizes": ["1/2\" NPT Process", "1/4\" NPT Vent", "Flange to Transmitter IEC 61518"],
-      "endConnections": ["Flange x NPT", "NPT Female x NPT Female", "Coplanar Mount"],
-      "materials": ["SS316", "Super Duplex 2507", "Hastelloy C-276"],
-      "cv": "0.45 to 0.70 per valve line",
-      "tempRange": "-50°C to 240°C (PTFE) / 450°C (Graphite)",
-      "image": "assets/images/hero_valve_manifold.jpg",
-      "active": false
-    },
-    {
-      "id": "v-ball-trunnion",
-      "category": "ball",
-      "tag": "Ball Valve",
-      "ribbonTitle": "Precision Process Ball Valve",
-      "title": "Severe-Service Process Ball Valve (Class 150 - 2500)",
-      "meta": "Two-piece and three-piece forged body ball valve featuring floating and trunnion-mounted balls, fire-safe graphite seals, and blowout-proof stems.",
-      "badges": ["Class 150-2500", "Fire Safe API 607", "Zero Bubble Leak"],
-      "sizes": ["1/2\"", "3/4\"", "1\"", "1-1/2\"", "2\"", "3\"", "4\""],
-      "endConnections": ["ASME B16.5 Flanged", "Socket Weld", "Threaded NPT/BSPT"],
-      "materials": ["ASTM A182 F316", "A105 Forged Carbon", "Duplex F51"],
-      "cv": "8.5 to 480.0",
-      "tempRange": "-196°C to +350°C",
-      "image": "assets/images/hero_valve_ball.jpg",
-      "active": false
-    },
-    {
-      "id": "v-check-piston",
-      "category": "check",
-      "tag": "Check Valve",
-      "ribbonTitle": "High-Pressure Check Valve",
-      "title": "High-Pressure Piston & Ball Check Valve (6,000 PSI)",
-      "meta": "Unidirectional severe-service non-return valve engineered for back-flow prevention with fast-shut cracking pressure springs.",
-      "badges": ["Zero Backflow", "6,000 PSI Rated", "Cracking 1/3/10 PSI"],
-      "sizes": ["1/4\"", "3/8\"", "1/2\"", "3/4\"", "1\""],
-      "endConnections": ["Double Ferrule Compression", "NPT Female", "Male NPT"],
-      "materials": ["SS316", "Brass Alloy", "Alloy 400"],
-      "cv": "0.40 to 3.20",
-      "tempRange": "-40°C to 200°C (Viton / Kalrez O-Rings)",
-      "image": "assets/images/hero_valve_check.jpg",
-      "active": false
-    },
-    {
-      "id": "v-dbb-monoflange",
-      "category": "dbb",
-      "tag": "DBB Monoflange",
-      "ribbonTitle": "Double Block & Bleed (DBB) Valve",
-      "title": "Slimline DBB Monoflange Valve Assembly",
-      "meta": "Integrates primary isolate, secondary isolate, and bleed needles into a single forged monoflange body, eliminating multiple piping leak paths.",
-      "badges": ["ASME B16.5 Monoflange", "Weight & Leak Saver", "API 6D Design"],
-      "sizes": ["1/2\" to 2\" Flanged RF / RTJ", "Vent 1/4\" NPT"],
-      "endConnections": ["ASME 150# to 2500# Flanged Inlet", "NPT Instrument Outlet"],
-      "materials": ["SS316/316L", "Inconel 825", "Duplex 2205"],
-      "cv": "0.35 to 1.20",
-      "tempRange": "-54°C to 450°C",
-      "image": "assets/images/hero_valve_dbb.jpg",
-      "active": false
-    },
-    {
-      "id": "v-gauge-bleed",
-      "category": "needle",
-      "tag": "Gauge Valve",
-      "ribbonTitle": "Multi-Port Gauge & Bleed Valve",
-      "title": "Multi-Port Gauge Isolation & Calibration Valve",
-      "meta": "Forged multi-port valve with one inlet and three outlet/vent ports, ideal for pressure gauge mounting, venting, and field calibration ports.",
-      "badges": ["Multi-Port 1/2\" NPT", "6,000 PSI Rating", "Bleed Plug Included"],
-      "sizes": ["1/2\" NPT Male x 1/2\" NPT Female (3 Outlets)"],
-      "endConnections": ["NPT Male Inlet x NPT Female Outlets"],
-      "materials": ["SS316", "Carbon Steel A105", "Alloy 20"],
-      "cv": "0.55",
-      "tempRange": "-54°C to 232°C",
+      "id": "prod-forged-globe",
+      "category": "forged-valves",
+      "tag": "Forged Globe Valve",
+      "ribbonTitle": "Forged High-Pressure Globe Valve",
+      "title": "High-Pressure Forged Steel Globe Valve (Class 800# - 2500#)",
+      "catalogPages": "Page 17",
+      "meta": "API 602 / ISO 15761 forged globe valve engineered for severe high-pressure throttling and thermal power isolation. Bolted or welded bonnet with renewable Stellite seating surfaces.",
+      "badges": [
+        "15mm - 50mm",
+        "Class 800# / 1500# / 2500#",
+        "API 602 & ISO 15761"
+      ],
+      "sizes": [
+        "15 mm",
+        "20 mm",
+        "25 mm",
+        "32 mm",
+        "40 mm",
+        "50 mm"
+      ],
+      "endConnections": [
+        "Socket Weld",
+        "Screwed NPT",
+        "Butt-Weld",
+        "Flanged 150# / 300# / 600#"
+      ],
+      "materials": [
+        "A105",
+        "LF2",
+        "F11",
+        "F22",
+        "F304L",
+        "F316L",
+        "Duplex F51"
+      ],
       "image": "assets/images/hero_valve_gauge.jpg",
-      "active": false
+      "active": true
+    },
+    {
+      "id": "prod-forged-check",
+      "category": "forged-valves",
+      "tag": "Forged Check Valve",
+      "ribbonTitle": "Forged High-Pressure Check Valve",
+      "title": "High-Pressure Forged Piston & Ball Check Valve (Class 800# - 2500#)",
+      "catalogPages": "Page 18",
+      "meta": "API 602 / ISO 15761 forged check valve with bolted or welded cover. Rapid closure prevents fluid shock and backflow in high-pressure steam, oil, and gas lines.",
+      "badges": [
+        "15mm - 50mm",
+        "Class 800# / 1500# / 2500#",
+        "API 602 Non-Return"
+      ],
+      "sizes": [
+        "15 mm",
+        "20 mm",
+        "25 mm",
+        "32 mm",
+        "40 mm",
+        "50 mm"
+      ],
+      "endConnections": [
+        "Socket Weld",
+        "Screwed NPT",
+        "Butt-Weld",
+        "Flanged RF"
+      ],
+      "materials": [
+        "A105",
+        "F316L",
+        "F11",
+        "Inconel 625"
+      ],
+      "image": "assets/images/hero_valve_check.jpg",
+      "active": true
+    },
+    {
+      "id": "prod-3pc-ball",
+      "category": "forged-valves",
+      "tag": "3-Piece Ball Valve",
+      "ribbonTitle": "3-Piece Forged Steel Ball Valve",
+      "title": "3-Piece Forged & Flanged Ball Valve (Class 800# / 150# - 600#)",
+      "catalogPages": "Page 19",
+      "meta": "ISO 17292 3-piece bolted body ball valve allowing inline swing-out maintenance without disturbing piping connections. Precision mirror-buffed ball with zero-leakage PTFE/CFT seats.",
+      "badges": [
+        "15mm - 50mm",
+        "Class 800# & Flanged 150#-600#",
+        "ISO 17292 Certified"
+      ],
+      "sizes": [
+        "15 mm",
+        "20 mm",
+        "25 mm",
+        "32 mm",
+        "40 mm",
+        "50 mm"
+      ],
+      "endConnections": [
+        "Socket Weld (ASME B16.11)",
+        "Screwed NPT (ASME B1.20.1)",
+        "Butt Weld",
+        "Flanged ASME B16.5"
+      ],
+      "materials": [
+        "A105 Carbon Steel",
+        "LF2",
+        "F304L",
+        "F316L",
+        "Duplex F51"
+      ],
+      "image": "assets/images/hero_valve_ball.jpg",
+      "active": true
+    },
+    {
+      "id": "prod-y-strainer",
+      "category": "filtration",
+      "tag": "Y-Type Strainer",
+      "ribbonTitle": "High-Pressure Y-Type Strainer",
+      "title": "Industrial Cast & Forged Y-Type Strainer (Class 150# - 1500#)",
+      "catalogPages": "Page 20",
+      "meta": "Low pressure drop streamlined design with large stainless steel strainer screens. Protects downstream pumps, meters, and valves from foreign particles and pipeline debris.",
+      "badges": [
+        "Class 150# - 1500#",
+        "Flat/RF/RTJ/Butt Weld",
+        "SS304/SS316 Mesh"
+      ],
+      "sizes": [
+        "1/2\" to 24\" (DN15 - DN600)"
+      ],
+      "endConnections": [
+        "Flat Faced",
+        "Raised Face",
+        "RTJ Flanged",
+        "Butt Weld",
+        "Threaded NPT",
+        "Socket Weld"
+      ],
+      "materials": [
+        "Cast Steel (WCB)",
+        "Stainless Steel (CF8 / CF8M)",
+        "Special Alloys"
+      ],
+      "image": "assets/images/product_manifold_block.svg",
+      "active": true
+    },
+    {
+      "id": "prod-basket-strainer",
+      "category": "filtration",
+      "tag": "Basket Strainer",
+      "ribbonTitle": "Simplex & Duplex Basket Strainers",
+      "title": "Simplex & Continuous Flow Duplex Strainers (Class 125# - 600#)",
+      "catalogPages": "Pages 20 & 21",
+      "meta": "Offset and inline basket housing with mesh or wedge-wire lining. Swing-bolt quick element changeout. Duplex models allow continuous fluid flow without system shutdown during basket cleaning.",
+      "badges": [
+        "Simplex & Duplex Models",
+        "Swing Bolt Quick Closure",
+        "Davit Arm Mechanism"
+      ],
+      "sizes": [
+        "1\" to 24\" (DN25 - DN600)"
+      ],
+      "endConnections": [
+        "Flat Faced Flanged",
+        "Raised Face Flanged",
+        "Ring Joint Flanged",
+        "Butt Weld Ends"
+      ],
+      "materials": [
+        "Cast Steel",
+        "Stainless Steel SS304/SS316",
+        "Carbon Steel"
+      ],
+      "image": "assets/images/hero_valve_manifold.jpg",
+      "active": true
     }
   ],
   "workstations": [
     {
       "id": "ws-1",
-      "name": "DMG MORI 5-Axis Simultaneous VMC",
-      "badge": "Sub-Micron Machining",
+      "name": "5-Axis Heavy Machining Center",
+      "badge": "Large Valve Machining",
       "image": "assets/images/machine_vmc_5axis.jpg",
-      "desc": "Simultaneous 5-axis high-speed machining for complex valve body profiles, angle seats, and manifold internal chambers with ±0.005mm accuracy."
+      "desc": "High-torque multi-axis machining centers for precision boring, flange facing, and seat contouring of 2\" to 24\" cast and forged valve bodies."
     },
     {
       "id": "ws-2",
-      "name": "Doosan High-Precision CNC Turning Suite",
-      "badge": "Spindle & Stem Turning",
+      "name": "CNC Spindle & Stem Turning Cell",
+      "badge": "Double Acme Stem Finishing",
       "image": "assets/images/machine_cnc_turning.jpg",
-      "desc": "Rigid dual-spindle CNC turning centers generating super-finished non-rotating valve stems, bonnet threads, and bubble-tight valve seat contours."
+      "desc": "Heavy-duty CNC lathes producing burnished acme valve stems, trunnion shafts, and micro-lapped balls with zero run-out."
     },
     {
       "id": "ws-3",
-      "name": "Zeiss 3D CNC Coordinate Measuring Machine (CMM)",
-      "badge": "Laser Metrology & Inspection",
+      "name": "CMM 3D Metrology & Flange Inspection",
+      "badge": "ISO 9001:2015 Quality",
       "image": "assets/images/quality_cmm_inspection.jpg",
-      "desc": "Sub-micron volumetric laser and probe metrology validating dimensional geometry, roundness, and seat finishes according to ISO 9001:2015."
+      "desc": "Volumetric laser and touch-probe CMM validating bolt circle PCD, flange thickness, and wall tolerances against ASME B16.34."
     },
     {
       "id": "ws-4",
-      "name": "Cleanroom Valve Assembly & Hydro-Test Bay",
-      "badge": "API 598 & ISO 15848 Testing",
+      "name": "Hydrostatic & Helium Leak Testing Bay",
+      "badge": "API 598 & API 6D Certified",
       "image": "assets/images/hero_smart_factory.jpg",
-      "desc": "Climate-controlled cleanroom assembly equipped with automated 10,000 PSI hydrostatic shell test benches and helium mass spectrometer leak detection."
-    },
-    {
-      "id": "ws-5",
-      "name": "10,000 PSI Needle & Gauge Valve Finishing Cell",
-      "badge": "Severe-Service Barstock Cell",
-      "image": "assets/images/hero_valve_needle.jpg",
-      "desc": "Dedicated CNC barstock machining, thread rolling, and micro-lapping cell for forged SS316, Duplex 2205, and Inconel 625 instrumentation needle valves."
-    },
-    {
-      "id": "ws-6",
-      "name": "5-Way Manifold Deep-Hole Drilling & Honing Suite",
-      "badge": "IEC 61518 Manifold Production",
-      "image": "assets/images/hero_valve_manifold.jpg",
-      "desc": "High-precision gun-drilling, burr-free intersection honing, and automated seat pressure verification for 2-way, 3-way, and 5-way manifold blocks."
+      "desc": "Multi-station high-pressure test benches executing 1.5x hydrostatic shell tests and bubble-tight helium seat leakage certification."
     }
   ]
 }

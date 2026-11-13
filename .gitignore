@@ -18,3 +18,7 @@ $RECYCLE.BIN/
 *.log
 *.tmp
 *.bak
+
+
+# Antigravity local agent internal config
+.agents/
